@@ -1,0 +1,873 @@
+ RecipeEntity(
+                name = "Pomidor Yumurta",
+                description = "Klassik Azərbaycan səhər yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 15,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Pomidorların qabığını soyub xırda kubik şəklində doğrayın.\n2. Soğanı incə doğrayıb tavada kərə yağında qızılı rəng alana qədər qovurun.\n3. Doğranmış pomidorları əlavə edin, suyunu çəkib yağa düşənədək bişirin.\n4. Çırpılmış yumurtaları və duz-istiotu əlavə edin.\n5. Yumurta bərkiyənədək zəif odda bişirib isti təqdim edin."
+            ) to listOf(
+                Triple("Pomidor", "3", "ədəd"),
+                Triple("Yumurta", "3", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Kərə yağı", "40", "qram"),
+                Triple("Duz", "1", "ç.q."),
+                Triple("Istiot", "0.5", "ç.q.")
+            ),
+
+            // 2. Kartof Qızartması
+            RecipeEntity(
+                name = "Kartof Qızartması",
+                description = "Xırçıltılı və ləzzətli ev kartofu",
+                category = "Qəlyanaltı",
+                prepTime = 20,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofları soyun və bərabər ölçüdə uzunsov dilimləyin.\n2. Kartofları soyuq suda yuyub dəsmalla tam qurudun.\n3. Tavada duru yağı yaxşıca qızdırın.\n4. Kartofları hissə-hissə əlavə edərək qızılı rəng alana qədər qızardın.\n5. Tavadan çıxardıqdan sonra üzərinə duz səpib təqdim edin."
+            ) to listOf(
+                Triple("Kartof", "5", "ədəd"),
+                Triple("Duru yağ", "100", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            // 3. Qırmızı Mərcimək Şorbası
+            RecipeEntity(
+                name = "Mərcimək Şorbası",
+                description = "Krem konsistensiyalı türk üsulu şorba",
+                category = "Şorbalar",
+                prepTime = 30,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Qazanda duru yağda doğranmış soğan və yerkökünü soteleyin.\n2. Tomat pastasını əlavə edib 1 dəqiqə qovurun.\n3. Yuyulmuş mərciməyi və 1 litr qaynar suyu əlavə edin.\n4. Mərciməklər tam yumşalana qədər orta odda bişirin.\n5. Şorbanı blenderdən keçirin, duz, istiot və limon suyu vuraraq servis edin."
+            ) to listOf(
+                Triple("Qırmızı mərcimək", "1", "stəkan"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Yerkökü", "1", "ədəd"),
+                Triple("Tomat pastası", "1", "x.q."),
+                Triple("Duru yağ", "2", "x.q."),
+                Triple("Limon suyu", "1", "x.q."),
+                Triple("Duz", "1", "ç.q."),
+                Triple("Istiot", "0.5", "ç.q.")
+            ),
+
+            // 4. Yarpaq Dolması
+            RecipeEntity(
+                name = "Yarpaq Dolması",
+                description = "Milli mətbəximizin şah yeməklərindən biri",
+                category = "Ana Yeməklər",
+                prepTime = 90,
+                difficulty = "Çətin",
+                imageResource = "",
+                instructions = "1. Qiyməyə xırda doğranmış soğan, yuyulmuş düyü, incə kıyılmış göyərti, duz, istiot və sarıkök əlavə edib yaxşıca qarışdırın.\n2. Təzə və ya şoraba tənək yarpaqlarını qaynar suda yumşaldın.\n3. Bükümləri kiçik və səliqəli şəkildə hazırlayıb qazana sıx yığın.\n4. Üzərinə kərə yağı dilimləri qoyun, boşqab çevirin və yarısına qədər qaynar su tökün.\n5. Zəif odda düyü və ət bişənədək təxminən 45-60 dəqiqə bişirin."
+            ) to listOf(
+                Triple("Qiymə", "500", "qram"),
+                Triple("Düyü", "0.5", "stəkan"),
+                Triple("Soğan", "2", "ədəd"),
+                Triple("Göyərti", "1", "Dəstə"),
+                Triple("Kərə yağı", "50", "qram"),
+                Triple("Sarıkök", "0.5", "ç.q."),
+                Triple("Duz", "1", "ç.q."),
+                Triple("Istiot", "1", "ç.q.")
+            ),
+
+            // 5. Toyuq Çığırtması
+            RecipeEntity(
+                name = "Toyuq Çığırtması",
+                description = "Bol soğanlı və yumurtalı toyuq yeməyi",
+                category = "Ana Yeməklər",
+                prepTime = 45,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Toyuq ətini tikələrə bölüb az suda yarıbişmiş vəziyyətə gətirin.\n2. Başqa tavada bol halqa doğranmış soğanı kərə yağında qızılı olanadək qovurun.\n3. Toyuq tikələrini soğanın üzərinə düzün, sarıkök, duz və istiot əlavə edin.\n4. Çırpılmış yumurtaları toyuqların üzərinə bərabər paylayın.\n5. Tavanın qapağını bağlayıb yumurta bişənədək zəif odda saxlamaq lazımdır."
+            ) to listOf(
+                Triple("Toyuq əti", "700", "qram"),
+                Triple("Soğan", "3", "ədəd"),
+                Triple("Yumurta", "4", "ədəd"),
+                Triple("Kərə yağı", "60", "qram"),
+                Triple("Sarıkök", "0.5", "ç.q."),
+                Triple("Duz", "1.5", "ç.q."),
+                Triple("Istiot", "1", "ç.q.")
+            ),
+
+            // 6. Paytaxt Salatı
+            RecipeEntity(
+                name = "Paytaxt Salatı",
+                description = "Bayram süfrələrinin əvəzolunmaz salatı",
+                category = "Salatlar",
+                prepTime = 40,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qaynadılmış kartof, yerkökü, yumurta və toyuq ətini xırda kubiklər şəklində doğrayın.\n2. Təzə və turşu xiyarları da eyni ölçüdə doğrayın.\n3. Yaşıl nöxud və incə doğranmış şüyüdü əlavə edin.\n4. Mayonez, xama, duz və istiot vuraraq səliqəli qarışdırın.\n5. Soyuducuda 1 saat saxladıqdan sonra servis edin."
+            ) to listOf(
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Yerkökü", "2", "ədəd"),
+                Triple("Yumurta", "3", "ədəd"),
+                Triple("Toyuq əti", "250", "qram"),
+                Triple("Xiyar", "2", "ədəd"),
+                Triple("Mayonez", "4", "x.q."),
+                Triple("Xama", "2", "x.q."),
+                Triple("Şüyüd", "0.5", "Dəstə"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            // 7. Düşbərə
+            RecipeEntity(
+                name = "Abşeron Düşbərəsi",
+                description = "Sirkə-sarımsaqla təqdim edilən miniatür xəmir yeməyi",
+                category = "Şorbalar",
+                prepTime = 75,
+                difficulty = "Çətin",
+                imageResource = "",
+                instructions = "1. Un, yumurta, su və duzdan bərk xəmir yoğurun, 20 dəqiqə dinləndirin.\n2. Qiyməyə xırda sürtgəcdən keçirilmiş soğan, duz və istiot qatın.\n3. Xəmiri nazik yayın, 1.5x1.5 sm ölçüdə kvadratlar kəsin.\n4. Kvadratların ortasına ət qoyub düşbərələri bükün.\n5. Bulyonda düşbərələri 5-7 dəqiqə qaynadın. Üzərinə quru nanə səpib sirkə-sarımsaqla servis edin."
+            ) to listOf(
+                Triple("Un", "2", "stəkan"),
+                Triple("Yumurta", "1", "ədəd"),
+                Triple("Qiymə", "300", "qram"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Nane", "1", "ç.q."),
+                Triple("Sirkə", "1", "x.q."),
+                Triple("Sarımsaq", "2", "Diş"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            // 8. Qutab (Göy Qutabı)
+            RecipeEntity(
+                name = "Göy Qutabı",
+                description = "Yaz ətirli nazik göyərti qutabı",
+                category = "Un Yeməkləri",
+                prepTime = 50,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Un, su və duzdan yumşaq xəmir tutun.\n2. Müxtəlif göyərtiləri (ispanaq, göy soğan, keşniş, şüyüd) yuyub xırda doğrayın.\n3. Göyərtiyə azca duz və dağ edilmiş kərə yağı vurub qarışdırın.\n4. Xəmirdən kündələr tutub nazik yayın, içlik qoyub yarımay şəklində bükün.\n5. Yağsız tavada hər iki üzünü qızardın və isti ikən bol kərə yağı ilə yağlayın."
+            ) to listOf(
+                Triple("Un", "3", "stəkan"),
+                Triple("İspanaq", "1", "Dəstə"),
+                Triple("Göy soğan", "1", "Dəstə"),
+                Triple("Keşniş", "1", "Dəstə"),
+                Triple("Şüyüd", "1", "Dəstə"),
+                Triple("Kərə yağı", "80", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            // 9. Küftə Bozbaş
+            RecipeEntity(
+                name = "Küftə Bozbaş",
+                description = "İçərisində albuxara olan doyumlu milli şorba",
+                category = "Şorbalar",
+                prepTime = 60,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Gecədən isladılmış noxudu yarıbişmiş olana qədər qaynadın.\n2. Qiyməyə yuyulmuş düyü, xırda soğan, duz və istiot qataraq böyük küftələr tutun (ortasına turşu qoyun).\n3. Bulyona küftələri, noxudu və iridilimlənmiş kartofları əlavə edin.\n4. Sarıkök və tomat pastası əlavə edib zəif odda bişirin.\n5. Servis edərkən üzərinə quru nanə səpin."
+            ) to listOf(
+                Triple("Qiymə", "400", "qram"),
+                Triple("Noxud", "0.5", "stəkan"),
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Düyü", "2", "x.q."),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Tomat pastası", "1", "x.q."),
+                Triple("Sarıkök", "0.5", "ç.q."),
+                Triple("Nane", "1", "ç.q."),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            // 10. Mərciməkli Plov
+            RecipeEntity(
+                name = "Mərciməkli Plov",
+                description = "Sadə və çox ləzzətli gündəlik plov",
+                category = "Ana Yeməklər",
+                prepTime = 40,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Qəhvəyi mərciməyi ayrı qazanda yarıbişmiş olana dək qaynadın.\n2. Düyünü duzlu suda qaynadıb süzməyə yaxın mərciməyi əlavə edin və birlikdə süzün.\n3. Qazanın dibinə kərə yağı sürün və xəmir və ya kartofdan qazmaq edin.\n4. Düyü ilə mərcimək qarışığını qazana töküb üzərinə əridilmiş kərə yağı və zəif zəfəran şirəsi gəzdirin.\n5. Low heat-də 30 dəqiqə dəmə qoyun."
+            ) to listOf(
+                Triple("Düyü", "2", "stəkan"),
+                Triple("Mərcimək", "0.5", "stəkan"),
+                Triple("Kərə yağı", "100", "qram"),
+                Triple("Sarıkök", "0.5", "ç.q."),
+                Triple("Duz", "1.5", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Dovğa",
+                description = "Sərinlədici qatıq şorbası",
+                category = "Şorbalar",
+                prepTime = 35,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Qatığı su ilə qarışdırıb qaynadın (daim qarışdıraraq).\n2. Düyünü əlavə edin.\n3. Doğranmış göyərtini (nanə, şüyüd, kəvər) qatın.\n4. Duz vurub bir neçə dəqiqə də qaynadın."
+            ) to listOf(
+                Triple("Qatıq", "1", "litr"),
+                Triple("Düyü", "0.5", "stəkan"),
+                Triple("Göyərti", "100", "qram"),
+                Triple("Yumurta", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Piti",
+                description = "Saxsı qabda bişən ənənəvi ət şorbası",
+                category = "Şorbalar",
+                prepTime = 90,
+                difficulty = "Çətin",
+                imageResource = "",
+                instructions = "1. Ətı, noxudu və kartofu saxsı qaba yığın.\n2. Su və duz əlavə edib bağlayın.\n3. Sobada uzun müddət bişirin."
+            ) to listOf(
+                Triple("Toyuq əti", "300", "qram"),
+                Triple("Kartof", "2", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Düyü Sıyığı",
+                description = "Südlü şirin səhər yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Düyünü suda yumşalana qədər bişirin.\n2. Süd əlavə edib qarışdırın.\n3. İstəyə görə şəkər vurun."
+            ) to listOf(
+                Triple("Düyü", "0.5", "stəkan"),
+                Triple("Süd", "500", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qatıqlı Xiyar Salatı",
+                description = "Yüngül yay salatı",
+                category = "Salatlar",
+                prepTime = 10,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Xiyarı nazik doğrayın.\n2. Qatıqla qarışdırın.\n3. Sarımsaq və duz əlavə edin."
+            ) to listOf(
+                Triple("Xiyar", "2", "ədəd"),
+                Triple("Qatıq", "200", "ml"),
+                Triple("Sarımsaq", "1", "diş"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Omlet",
+                description = "Sadə və sürətli səhər yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 10,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Yumurtaları çırpın.\n2. Süd əlavə edin.\n3. Kərə yağında hər iki tərəfdən qızardın."
+            ) to listOf(
+                Triple("Yumurta", "3", "ədəd"),
+                Triple("Süd", "50", "ml"),
+                Triple("Kərə yağı", "20", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Kartof Pörtlaması",
+                description = "Ət və kartofdan hazırlanan doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 50,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Əti qovurun.\n2. Soğan və pomidoru əlavə edin.\n3. Kartofu doğrayıb qatın, su əlavə edib bişirin."
+            ) to listOf(
+                Triple("Toyuq əti", "400", "qram"),
+                Triple("Kartof", "5", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Pomidor", "2", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sarımsaqlı Xama Sousu",
+                description = "Universal sous",
+                category = "Souslar",
+                prepTime = 5,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Xamanı sarımsaqla qarışdırın.\n2. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Xama", "200", "ml"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Kükü",
+                description = "Göyərtili yumurta yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 20,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Göyərtini xırda doğrayın.\n2. Yumurta ilə qarışdırın.\n3. Tavada hər iki tərəfdən qızardın."
+            ) to listOf(
+                Triple("Yumurta", "4", "ədəd"),
+                Triple("Göyərti", "150", "qram"),
+                Triple("Un", "2", "x.q."),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Bibər Dolması",
+                description = "Qiymə ilə doldurulmuş bibər",
+                category = "Ana Yeməklər",
+                prepTime = 60,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Bibərin içini təmizləyin.\n2. Qiymə, düyü və soğanı qarışdırıb doldurun.\n3. Qazanda bişirin."
+            ) to listOf(
+                Triple("Bibər", "6", "ədəd"),
+                Triple("Qiymə", "300", "qram"),
+                Triple("Düyü", "0.5", "stəkan"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Kartof Püresi",
+                description = "Yumşaq qarnir",
+                category = "Qəlyanaltı",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu qaynadın.\n2. Əzin.\n3. Süd və kərə yağı əlavə edib qarışdırın."
+            ) to listOf(
+                Triple("Kartof", "5", "ədəd"),
+                Triple("Süd", "100", "ml"),
+                Triple("Kərə yağı", "30", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Yumurta-Pomidor Salatı",
+                description = "Sadə qəlyanaltı salat",
+                category = "Salatlar",
+                prepTime = 15,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Yumurtanı qaynadıb doğrayın.\n2. Pomidoru doğrayın.\n3. Qarışdırıb duz vurun."
+            ) to listOf(
+                Triple("Yumurta", "2", "ədəd"),
+                Triple("Pomidor", "2", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qiymə ilə Kartof Qızartması",
+                description = "Doyumlu qəlyanaltı",
+                category = "Ana Yeməklər",
+                prepTime = 35,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qiyməni qovurun.\n2. Kartofu doğrayıb əlavə edin.\n3. Duz vurub bişirin."
+            ) to listOf(
+                Triple("Qiymə", "250", "qram"),
+                Triple("Kartof", "4", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Düyü Plovu",
+                description = "Sadə gündəlik plov",
+                category = "Ana Yeməklər",
+                prepTime = 45,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Toyuğu qovurun.\n2. Düyünü yumşalana qədər bişirin.\n3. Toyuqla qarışdırıb kərə yağı əlavə edin."
+            ) to listOf(
+                Triple("Toyuq əti", "400", "qram"),
+                Triple("Düyü", "2", "stəkan"),
+                Triple("Kərə yağı", "50", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sarımsaqlı Qızardılmış Bibər",
+                description = "Sürətli qəlyanaltı",
+                category = "Qəlyanaltı",
+                prepTime = 15,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Bibəri doğrayın.\n2. Duru yağda qızardın.\n3. Sarımsaq və duz əlavə edin."
+            ) to listOf(
+                Triple("Bibər", "3", "ədəd"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Duru yağ", "50", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Şəkərbura",
+                description = "Ənənəvi Novruz şirniyyatı (qoz içliyi ilə)",
+                category = "Şirniyyat",
+                prepTime = 90,
+                difficulty = "Çətin",
+                imageResource = "",
+                instructions = "1. Xəmiri hazırlayın.\n2. Qoz və şəkərdən iç hazırlayın.\n3. Doldurub bişirin."
+            ) to listOf(
+                Triple("Un", "500", "qram"),
+                Triple("Kərə yağı", "200", "qram"),
+                Triple("Yumurta", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qutab",
+                description = "Göyərtili nazik qutab",
+                category = "Qəlyanaltı",
+                prepTime = 40,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Xəmiri yayın.\n2. Göyərti ilə doldurun.\n3. Quru tavada bişirin."
+            ) to listOf(
+                Triple("Un", "300", "qram"),
+                Triple("Göyərti", "200", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuq Bulyonu",
+                description = "Sadə şəffaf şorba",
+                category = "Şorbalar",
+                prepTime = 60,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu suda bişirin.\n2. Yerkökü və soğan əlavə edin.\n3. Duz vurub süzün."
+            ) to listOf(
+                Triple("Toyuq əti", "500", "qram"),
+                Triple("Yerkökü", "1", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Kartof Çipsi (Evdə)",
+                description = "Nazik doğranmış qızardılmış kartof",
+                category = "Qəlyanaltı",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu çox nazik doğrayın.\n2. Qızğın yağda qızardın.\n3. Duz səpin."
+            ) to listOf(
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Duru yağ", "200", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Toyuq Sinəsi Qrilli",
+                description = "Sağlam ana yemək",
+                category = "Ana Yeməklər",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuq sinəsini ədviyyatla ovxalayın.\n2. Tavada hər iki tərəfdən qızardın."
+            ) to listOf(
+                Triple("Toyuq əti", "400", "qram"),
+                Triple("Duru yağ", "20", "ml"),
+                Triple("Istiot", "1", "ç.q."),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Mərcimək Pörtlaması",
+                description = "Vegetarian doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 35,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Mərciməyi soğanla qovurun.\n2. Su əlavə edib bişirin.\n3. Tomat pastası qatın."
+            ) to listOf(
+                Triple("Qırmızı mərcimək", "1", "stəkan"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Tomat pastası", "1", "x.q."),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qatıqlı Sarımsaq Sousu (Toyuq üçün)",
+                description = "Qrilli ətlərlə uyğun sous",
+                category = "Souslar",
+                prepTime = 5,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qatığı sarımsaqla qarışdırın.\n2. Duz vurub soyuducuda saxlayın."
+            ) to listOf(
+                Triple("Qatıq", "200", "ml"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Kartof Şorbası",
+                description = "Doyumlu ailə şorbası",
+                category = "Şorbalar",
+                prepTime = 40,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu bişirin.\n2. Kartof və yerkökü əlavə edin.\n3. Duz vurub bişməyə davam edin."
+            ) to listOf(
+                Triple("Toyuq əti", "300", "qram"),
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Yerkökü", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Pendirli Sendviç",
+                description = "Sürətli səhər yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 5,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Çörəyi dilimləyin.\n2. Pendir və göyərti qoyun."
+            ) to listOf(
+                Triple("Un", "0", "-"),
+                Triple("Göyərti", "20", "qram"),
+                Triple("Duz", "0.5", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Sarımsaqlı Kartof Qızartması",
+                description = "Ədviyyatlı doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 40,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Toyuğu doğrayıb qovurun.\n2. Kartofu əlavə edin.\n3. Sarımsaq və duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Toyuq əti", "350", "qram"),
+                Triple("Kartof", "4", "ədəd"),
+                Triple("Sarımsaq", "3", "diş"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Yumurta Qaynadılması",
+                description = "Bazaya salat üçün əlavə material",
+                category = "Səhər Yeməyi",
+                prepTime = 10,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Yumurtaları suda 8-10 dəqiqə qaynadın.\n2. Soyudub qabığını soyun."
+            ) to listOf(
+                Triple("Yumurta", "4", "ədəd"),
+                Triple("Duz", "0.5", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qırmızı Mərcimək Kütləsi (Pesto tərzi)",
+                description = "Sadə mərcimək əzməsi",
+                category = "Qəlyanaltı",
+                prepTime = 30,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Mərciməyi bişirin.\n2. Sarımsaq və duru yağla əzin.\n3. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Qırmızı mərcimək", "1", "stəkan"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Duru yağ", "50", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Göyərtili Şorba",
+                description = "Yüngül şorba",
+                category = "Şorbalar",
+                prepTime = 35,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu bişirin.\n2. Göyərti doğrayıb əlavə edin.\n3. Duz vurub bişirməyə davam edin."
+            ) to listOf(
+                Triple("Toyuq əti", "300", "qram"),
+                Triple("Göyərti", "100", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Xiyar-Pomidor Doğraması",
+                description = "Hər yeməyə uyğun əlavə",
+                category = "Salatlar",
+                prepTime = 10,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Xiyar və pomidoru xırda doğrayın.\n2. Duru yağ və duz vurun."
+            ) to listOf(
+                Triple("Xiyar", "2", "ədəd"),
+                Triple("Pomidor", "2", "ədəd"),
+                Triple("Duru yağ", "20", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sarımsaqlı Qiymə Köftəsi",
+                description = "Doyumlu ana yemək",
+                category = "Ana Yeməklər",
+                prepTime = 40,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Qiyməni sarımsaq və duzla yoğurun.\n2. Kiçik köftələr düzəldib qızardın."
+            ) to listOf(
+                Triple("Qiymə", "400", "qram"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Yumurta", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Un Xəmiri (Baza)",
+                description = "Qutab, kükü kimi yeməklər üçün baza xəmir",
+                category = "Souslar",
+                prepTime = 15,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Un, su və duzu qarışdırın.\n2. Yumşaq xəmir yoğurun.\n3. 20 dəqiqə dincə qoyun."
+            ) to listOf(
+                Triple("Un", "300", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Xama Sousunda Kartof",
+                description = "Krem sousda doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 45,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Toyuğu qovurun.\n2. Kartofu əlavə edin.\n3. Xama qatıb bişirin."
+            ) to listOf(
+                Triple("Toyuq əti", "350", "qram"),
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Xama", "150", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Qatıq İçkisi (Ayran)",
+                description = "Sərinlədici içki",
+                category = "İçkilər",
+                prepTime = 5,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qatığı su ilə qarışdırın.\n2. Duz vurub yaxşıca çalxalayın."
+            ) to listOf(
+                Triple("Qatıq", "300", "ml"),
+                Triple("Duz", "0.5", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Un Krepi",
+                description = "Sürətli şirin səhər yeməyi",
+                category = "Səhər Yeməyi",
+                prepTime = 20,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Un, süd və yumurtanı qarışdırın.\n2. Nazik tavada bişirin."
+            ) to listOf(
+                Triple("Un", "150", "qram"),
+                Triple("Süd", "300", "ml"),
+                Triple("Yumurta", "2", "ədəd"),
+                Triple("Duz", "0.5", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Bibərli Qiymə Qovurması",
+                description = "Sürətli ana yemək",
+                category = "Ana Yeməklər",
+                prepTime = 30,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qiyməni qovurun.\n2. Bibəri doğrayıb əlavə edin.\n3. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Qiymə", "300", "qram"),
+                Triple("Bibər", "2", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Kartof-Yumurta Qızartması",
+                description = "Sürətli qəlyanaltı",
+                category = "Qəlyanaltı",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu qızardın.\n2. Üzərinə yumurta çırpın.\n3. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Kartof", "3", "ədəd"),
+                Triple("Yumurta", "2", "ədəd"),
+                Triple("Duru yağ", "50", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Sarımsaqlı Şorba",
+                description = "Ədviyyatlı isti şorba",
+                category = "Şorbalar",
+                prepTime = 35,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu bişirin.\n2. Sarımsaq və göyərti əlavə edin.\n3. Duz vurub davam edin."
+            ) to listOf(
+                Triple("Toyuq əti", "300", "qram"),
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Göyərti", "50", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Yumurta-Xama Qəlyanaltısı",
+                description = "Sürətli hazırlanan qəlyanaltı",
+                category = "Qəlyanaltı",
+                prepTime = 10,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Yumurtanı qaynadın.\n2. Xama ilə qarışdırın.\n3. Duz vurun."
+            ) to listOf(
+                Triple("Yumurta", "3", "ədəd"),
+                Triple("Xama", "100", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Qiymə-Kartof Sıyığı",
+                description = "Bişirilməsi asan olan doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 40,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Qiyməni qovurun.\n2. Kartofu doğrayıb əlavə edin.\n3. Su qatıb bişirin."
+            ) to listOf(
+                Triple("Qiymə", "300", "qram"),
+                Triple("Kartof", "4", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Şirin Düyü Puddinqi",
+                description = "Şirniyyat üçün sadə variant",
+                category = "Şirniyyat",
+                prepTime = 30,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Düyünü süddə bişirin.\n2. Şəkər əlavə edin.\n3. Soyudub təqdim edin."
+            ) to listOf(
+                Triple("Düyü", "0.5", "stəkan"),
+                Triple("Süd", "500", "ml")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Bibərli Qızartma",
+                description = "Ədviyyatlı ana yemək",
+                category = "Ana Yeməklər",
+                prepTime = 30,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu doğrayıb qovurun.\n2. Bibər əlavə edin.\n3. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Toyuq əti", "350", "qram"),
+                Triple("Bibər", "2", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Sarımsaqlı Çörək Qızartması",
+                description = "Qutab, kükü ilə yeyilən köməkçi yemək",
+                category = "Qəlyanaltı",
+                prepTime = 15,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Çörəyi dilimləyin.\n2. Sarımsaqlı yağda hər iki tərəfdən qızardın."
+            ) to listOf(
+                Triple("Sarımsaq", "2", "diş"),
+                Triple("Kərə yağı", "30", "qram")
+            ),
+
+            RecipeEntity(
+                name = "Qiymə-Bibər Dolması (Kiçik)",
+                description = "Qəlyanaltı ölçüdə dolma",
+                category = "Qəlyanaltı",
+                prepTime = 45,
+                difficulty = "Orta",
+                imageResource = "",
+                instructions = "1. Kiçik bibərləri təmizləyin.\n2. Qiymə ilə doldurun.\n3. Bişirin."
+            ) to listOf(
+                Triple("Bibər", "8", "ədəd"),
+                Triple("Qiymə", "200", "qram"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Xiyar-Qatıq Salatı",
+                description = "Yüngül əsas yemək salatı",
+                category = "Salatlar",
+                prepTime = 20,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu bişirib doğrayın.\n2. Xiyarla qarışdırın.\n3. Qatıq və duz əlavə edin."
+            ) to listOf(
+                Triple("Toyuq əti", "200", "qram"),
+                Triple("Xiyar", "2", "ədəd"),
+                Triple("Qatıq", "150", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Kartof-Sarımsaq Pörtlaması",
+                description = "Vegetarian doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 30,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu doğrayın.\n2. Sarımsaqla qovurun.\n3. Su qatıb bişirin."
+            ) to listOf(
+                Triple("Kartof", "5", "ədəd"),
+                Triple("Sarımsaq", "3", "diş"),
+                Triple("Duru yağ", "50", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Mərcimək-Kartof Şorbası",
+                description = "Doyumlu vegetarian şorba",
+                category = "Şorbalar",
+                prepTime = 40,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Mərcimək və kartofu bişirin.\n2. Soğan qovurub qatın.\n3. Duz vurub davam edin."
+            ) to listOf(
+                Triple("Qırmızı mərcimək", "1", "stəkan"),
+                Triple("Kartof", "2", "ədəd"),
+                Triple("Soğan", "1", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Toyuqlu Yumurta Qovurması",
+                description = "Sadə doyumlu yemək",
+                category = "Ana Yeməklər",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Toyuğu qovurun.\n2. Yumurta çırpıb üzərinə tökün.\n3. Duz vurub qarışdırın."
+            ) to listOf(
+                Triple("Toyuq əti", "300", "qram"),
+                Triple("Yumurta", "3", "ədəd"),
+                Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "Sadə Xamalı Kartof Salatı",
+                description = "Doyumlu soyuq qəlyanaltı",
+                category = "Salatlar",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu qaynadıb doğrayın.\n2. Xama ilə qarışdırın.\n3. Duz vurun."
+            ) to listOf(
+                Triple("Kartof", "4", "ədəd"),
+                Triple("Xama", "150", "ml"),
+                Triple("Duz", "1", "ç.q.")
+            )
