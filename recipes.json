@@ -870,4 +870,18 @@
                 Triple("Kartof", "4", "ədəd"),
                 Triple("Xama", "150", "ml"),
                 Triple("Duz", "1", "ç.q.")
+            ),
+
+            RecipeEntity(
+                name = "test github",
+                description = "Doyumlu soyuq qəlyanaltı",
+                category = "Salatlar",
+                prepTime = 25,
+                difficulty = "Asan",
+                imageResource = "",
+                instructions = "1. Kartofu qaynadıb doğrayın.\n2. Xama ilə qarışdırın.\n3. Duz vurun."
+            ) to listOf(
+                Triple("Kartof", "4", "ədəd"),
+                Triple("Xama", "150", "ml"),
+                Triple("Duz", "1", "ç.q.")
             )
