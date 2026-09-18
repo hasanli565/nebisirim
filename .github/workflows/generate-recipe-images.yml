@@ -1,7 +1,3 @@
-      - name: Test Replicate
-        env:
-          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
-        run: python test_replicate.py
 name: Generate Recipe Images
 
 on:
@@ -15,10 +11,11 @@ on:
         options:
           - "true"
           - "false"
+
       max_images:
         description: "Bu ishe salinmada max nece shekil yaradilsin"
         required: false
-        default: "20"
+        default: "1"
 
 permissions:
   contents: write
@@ -26,6 +23,7 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -37,6 +35,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -U -r scripts/requirements.txt
+
+      - name: Test Replicate
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+        run: python test_replicate.py
 
       - name: Run image generation script
         env:
