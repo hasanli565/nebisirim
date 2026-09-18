@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
 """
 recipes.json faylini oxuyur, imageResource sahesi bos olan reseptleri tapir,
-her biri ucun prompt qurur ve OpenAI Image API ile shekil yaradir.
+her biri ucun prompt qurur ve Replicate (flux-schnell) ile shekil yaradir,
+images/ qovluguna yazir ve recipes.json-u avtomatik yenileyir.
 
 Env deyisenleri:
-  OPENAI_API_KEY   - OpenAI API acari (GitHub Secrets-den gelir)
-  RECIPES_JSON_PATH - recipes.json-un yolu (defolt: recipes.json)
-  IMAGES_DIR        - shekillerin yazilacagi qovluq (defolt: images)
-  IMAGE_BASE_URL    - imageResource-a yazilacaq public URL-in prefiksi
-                       meselen: https://raw.githubusercontent.com/<user>/<repo>/main/images
-  OPENAI_IMAGE_MODEL - istifade olunacaq model (defolt: gpt-image-1-mini)
-  OPENAI_IMAGE_QUALITY - low | medium | high (defolt: medium)
-  DRY_RUN            - "true" olsa, API-ye pul xerclemeden yalniz
-                        hansi reseptlerin shekli olmadigini ve hansi
-                        promptun qurulacagini ekrana yazir.
-  MAX_IMAGES_PER_RUN - bir ishe salinmada max nece shekil yaradilsin (defolt: 20)
+  REPLICATE_API_TOKEN - Replicate API tokeni (GitHub Secrets-den gelir)
+  RECIPES_JSON_PATH    - recipes.json-un yolu (defolt: recipes.json)
+  IMAGES_DIR            - shekillerin yazilacagi qovluq (defolt: images)
+  IMAGE_BASE_URL         - imageResource-a yazilacaq public URL prefiksi
+                            meselen: https://raw.githubusercontent.com/<user>/<repo>/main/images
+  REPLICATE_MODEL         - istifade olunacaq model (defolt: black-forest-labs/flux-schnell)
+  DRY_RUN                  - "true" olsa, API-ye pul xerclemeden yalniz
+                              hansi reseptlerin shekli olmadigini ve hansi
+                              promptun qurulacagini ekrana yazir.
+  MAX_IMAGES_PER_RUN       - bir ishe salinmada max nece shekil yaradilsin (defolt: 20)
 """
 
-import base64
 import json
 import os
 import re
@@ -25,14 +24,23 @@ import sys
 import time
 import unicodedata
 import urllib.request
-import urllib.error
+
+try:
+    import replicate
+except ImportError:
+    print("XETA: 'replicate' paketi qurulmayib -> pip install -U replicate", file=sys.stderr)
+    sys.exit(1)
+
+try:
+    import httpx
+except ImportError:
+    httpx = None
 
 RECIPES_JSON_PATH = os.environ.get("RECIPES_JSON_PATH", "recipes.json")
 IMAGES_DIR = os.environ.get("IMAGES_DIR", "images")
 IMAGE_BASE_URL = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
-OPENAI_IMAGE_MODEL = os.environ.get("OPENAI_IMAGE_MODEL", "gpt-image-1-mini")
-OPENAI_IMAGE_QUALITY = os.environ.get("OPENAI_IMAGE_QUALITY", "medium")
+API_TOKEN = os.environ.get("REPLICATE_API_TOKEN", "")
+MODEL = os.environ.get("REPLICATE_MODEL", "black-forest-labs/flux-schnell")
 DRY_RUN = os.environ.get("DRY_RUN", "true").lower() == "true"
 MAX_IMAGES_PER_RUN = int(os.environ.get("MAX_IMAGES_PER_RUN", "20"))
 
@@ -60,43 +68,65 @@ def build_prompt(recipe: dict) -> str:
     else:
         ing_text = str(ingredients)
 
-    prompt = (
+    return (
         f"Professional food photography of {name}. "
-        f"{description}. "
-        f"Key ingredients: {ing_text}. "
-        "Top-down or 45-degree angle shot, on a clean plate, natural lighting, "
-        "shallow depth of field, appetizing, realistic, high resolution, no text, no watermark."
-    )
-    return prompt.strip()
+        f"{description}. Key ingredients: {ing_text}. "
+        "Top-down angle, clean plate, natural lighting, shallow depth of field, "
+        "appetizing, realistic, high resolution, no text, no watermark."
+    ).strip()
 
 
-def call_openai_image_api(prompt: str) -> bytes:
-    url = "https://api.openai.com/v1/images/generations"
-    payload = {
-        "model": OPENAI_IMAGE_MODEL,
-        "prompt": prompt,
-        "size": "1024x1024",
-        "quality": OPENAI_IMAGE_QUALITY,
-    }
-    data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        url,
-        data=data,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {OPENAI_API_KEY}",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            body = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        err_body = e.read().decode("utf-8", errors="ignore")
-        raise RuntimeError(f"OpenAI API xetasi ({e.code}): {err_body}") from e
+def make_client():
+    if httpx is not None:
+        timeout = httpx.Timeout(connect=20.0, read=20.0, write=20.0, pool=20.0)
+        return replicate.Client(api_token=API_TOKEN, timeout=timeout)
+    return replicate.Client(api_token=API_TOKEN)
 
-    b64 = body["data"][0]["b64_json"]
-    return base64.b64decode(b64)
+
+def generate_image(client, prompt: str) -> bytes:
+    owner, name = MODEL.split("/")
+
+    prediction = None
+    last_err = None
+    for attempt in range(1, 4):
+        try:
+            prediction = client.models.predictions.create(
+                model=(owner, name),
+                input={
+                    "prompt": prompt,
+                    "aspect_ratio": "1:1",
+                    "output_format": "png",
+                },
+            )
+            break
+        except Exception as e:
+            last_err = e
+            msg = str(e)
+            if "version" in msg and "not allowed" in msg:
+                raise RuntimeError(
+                    "'replicate' paketi kohnedir -> pip install -U replicate"
+                ) from e
+            time.sleep(3)
+
+    if prediction is None:
+        raise RuntimeError(f"Prediction yaradila bilmedi: {last_err}")
+
+    while prediction.status not in ("succeeded", "failed", "canceled"):
+        time.sleep(2)
+        try:
+            prediction.reload()
+        except Exception:
+            continue
+
+    if prediction.status != "succeeded":
+        raise RuntimeError(f"Prediction ugursuz oldu: {prediction.status} - {prediction.error}")
+
+    output = prediction.output
+    result = output[0] if isinstance(output, list) else output
+    image_url = str(result)
+
+    with urllib.request.urlopen(image_url, timeout=60) as resp:
+        return resp.read()
 
 
 def main():
@@ -107,10 +137,7 @@ def main():
     with open(RECIPES_JSON_PATH, "r", encoding="utf-8") as f:
         recipes = json.load(f)
 
-    if isinstance(recipes, dict) and "recipes" in recipes:
-        recipe_list = recipes["recipes"]
-    else:
-        recipe_list = recipes
+    recipe_list = recipes["recipes"] if isinstance(recipes, dict) and "recipes" in recipes else recipes
 
     missing = [r for r in recipe_list if not r.get("imageResource")]
     print(f"Cemi resept: {len(recipe_list)}, sekli olmayan: {len(missing)}")
@@ -122,7 +149,9 @@ def main():
     todo = missing[:MAX_IMAGES_PER_RUN]
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
+    client = None if DRY_RUN else make_client()
     changed = False
+
     for i, recipe in enumerate(todo, 1):
         name = recipe.get("name") or recipe.get("title") or f"recipe-{i}"
         slug = slugify(name)
@@ -136,12 +165,12 @@ def main():
             print("  DRY_RUN=true -> API cagirilmadi, shekil yaradilmadi.")
             continue
 
-        if not OPENAI_API_KEY:
-            print("  XETA: OPENAI_API_KEY tapilmadi, bu resept atlanir.", file=sys.stderr)
+        if not API_TOKEN:
+            print("  XETA: REPLICATE_API_TOKEN tapilmadi, bu resept atlanir.", file=sys.stderr)
             continue
 
         try:
-            image_bytes = call_openai_image_api(prompt)
+            image_bytes = generate_image(client, prompt)
         except Exception as e:
             print(f"  XETA: {e}", file=sys.stderr)
             continue
@@ -150,14 +179,11 @@ def main():
         with open(file_path, "wb") as img_f:
             img_f.write(image_bytes)
 
-        if IMAGE_BASE_URL:
-            recipe["imageResource"] = f"{IMAGE_BASE_URL}/{slug}.png"
-        else:
-            recipe["imageResource"] = f"{IMAGES_DIR}/{slug}.png"
-
+        recipe["imageResource"] = (
+            f"{IMAGE_BASE_URL}/{slug}.png" if IMAGE_BASE_URL else f"{IMAGES_DIR}/{slug}.png"
+        )
         changed = True
         print(f"  OK -> {file_path}")
-        time.sleep(1)  # sade rate-limit qorumasi
 
     if changed:
         with open(RECIPES_JSON_PATH, "w", encoding="utf-8") as f:
