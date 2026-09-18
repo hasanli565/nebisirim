@@ -1,1 +1,53 @@
+name: Generate Recipe Images
 
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true olsa API cagirilmir, yalniz prompt-lar gosterilir"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      max_images:
+        description: "Bu ishe salinmada max nece shekil yaradilsin"
+        required: false
+        default: "20"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run image generation script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RECIPES_JSON_PATH: "recipes.json"
+          IMAGES_DIR: "images"
+          IMAGE_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/images"
+          OPENAI_IMAGE_MODEL: "gpt-image-1-mini"
+          OPENAI_IMAGE_QUALITY: "medium"
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          MAX_IMAGES_PER_RUN: ${{ github.event.inputs.max_images }}
+        run: python scripts/generate_images.py
+
+      - name: Commit and push changes
+        if: ${{ github.event.inputs.dry_run == 'false' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add recipes.json images/
+          git diff --staged --quiet && echo "Deyisiklik yoxdur" || git commit -m "Auto: generate recipe images"
+          git push
