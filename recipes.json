@@ -1397,7 +1397,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-un-krepi.png",
     "instructions": "1. Un, süd və yumurtanı qarışdırın.\n2. Nazik tavada bişirin.",
     "ingredients": [
       {
@@ -1428,7 +1428,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/biberli-qiyme-qovurmasi.png",
     "instructions": "1. Qiyməni qovurun.\n2. Bibəri doğrayıb əlavə edin.\n3. Duz vurub qarışdırın.",
     "ingredients": [
       {
@@ -1459,7 +1459,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-kartof-yumurta-qizartmasi.png",
     "instructions": "1. Kartofu qızardın.\n2. Üzərinə yumurta çırpın.\n3. Duz vurub qarışdırın.",
     "ingredients": [
       {
@@ -1490,7 +1490,7 @@
     "category": "Şorbalar",
     "prepTime": 35,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-sarimsaqli-sorba.png",
     "instructions": "1. Toyuğu bişirin.\n2. Sarımsaq və göyərti əlavə edin.\n3. Duz vurub davam edin.",
     "ingredients": [
       {
@@ -1521,7 +1521,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-yumurta-xama-qelyanaltisi.png",
     "instructions": "1. Yumurtanı qaynadın.\n2. Xama ilə qarışdırın.\n3. Duz vurun.",
     "ingredients": [
       {
@@ -1547,7 +1547,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qiyme-kartof-siyigi.png",
     "instructions": "1. Qiyməni qovurun.\n2. Kartofu doğrayıb əlavə edin.\n3. Su qatıb bişirin.",
     "ingredients": [
       {
@@ -1578,7 +1578,7 @@
     "category": "Şirniyyat",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-sirin-duyu-puddinqi.png",
     "instructions": "1. Düyünü süddə bişirin.\n2. Şəkər əlavə edin.\n3. Soyudub təqdim edin.",
     "ingredients": [
       {
@@ -1599,7 +1599,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-biberli-qizartma.png",
     "instructions": "1. Toyuğu doğrayıb qovurun.\n2. Bibər əlavə edin.\n3. Duz vurub qarışdırın.",
     "ingredients": [
       {
@@ -1625,7 +1625,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-sarimsaqli-corek-qizartmasi.png",
     "instructions": "1. Çörəyi dilimləyin.\n2. Sarımsaqlı yağda hər iki tərəfdən qızardın.",
     "ingredients": [
       {
@@ -1646,7 +1646,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qiyme-biber-dolmasi-kicik.png",
     "instructions": "1. Kiçik bibərləri təmizləyin.\n2. Qiymə ilə doldurun.\n3. Bişirin.",
     "ingredients": [
       {
@@ -1672,7 +1672,7 @@
     "category": "Salatlar",
     "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-xiyar-qatiq-salati.png",
     "instructions": "1. Toyuğu bişirib doğrayın.\n2. Xiyarla qarışdırın.\n3. Qatıq və duz əlavə edin.",
     "ingredients": [
       {
@@ -1703,7 +1703,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-kartof-sarimsaq-portlamasi.png",
     "instructions": "1. Kartofu doğrayın.\n2. Sarımsaqla qovurun.\n3. Su qatıb bişirin.",
     "ingredients": [
       {
@@ -1734,7 +1734,7 @@
     "category": "Şorbalar",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-mercimek-kartof-sorbasi.png",
     "instructions": "1. Mərcimək və kartofu bişirin.\n2. Soğan qovurub qatın.\n3. Duz vurub davam edin.",
     "ingredients": [
       {
@@ -1765,7 +1765,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-yumurta-qovurmasi.png",
     "instructions": "1. Toyuğu qovurun.\n2. Yumurta çırpıb üzərinə tökün.\n3. Duz vurub qarışdırın.",
     "ingredients": [
       {
@@ -1791,7 +1791,7 @@
     "category": "Salatlar",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-xamali-kartof-salati.png",
     "instructions": "1. Kartofu qaynadıb doğrayın.\n2. Xama ilə qarışdırın.\n3. Duz vurun.",
     "ingredients": [
       {
@@ -1817,7 +1817,7 @@
     "category": "Makaron",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaqli-toyuq-alfredo.png",
     "instructions": "1. Makaronu duzlu suda al dente bişirib suyundan yarım stəkan saxlayın.\n2. Toyuq filesini zolaqlara doğrayıb kərə yağında qızılı rəngədək bişirin.\n3. Sarımsağı əlavə edib 30 saniyə qovurun, qaymağı töküb zəif odda 3-4 dəqiqə saxlayın.\n4. Parmezanı və bir neçə qaşıq makaron suyunu əlavə edib hamar sous yaradın.\n5. Makaronu sousa qatıb 1-2 dəqiqə qarışdırın və isti servis edin.",
     "ingredients": [
       {
@@ -1858,7 +1858,7 @@
     "category": "Əsas yeməklər",
     "prepTime": 55,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/besamel-souslu-toyuq-krep.png",
     "instructions": "1. Krep üçün yumurta, süd, un və duzu hamar qarışdırın və nazik kreplər bişirin.\n2. Toyuğu xırda doğrayıb soğanla birlikdə bişirin.\n3. Toyuğa krem pendir və qara istiot qatıb içlik hazırlayın.\n4. Krepləri doldurub bükün və soba qabına düzün.\n5. Üzərinə beşamel və kaşar səpib 190°C-də 15 dəqiqə qızardın.",
     "ingredients": [
       {
@@ -1899,7 +1899,7 @@
     "category": "Əsas yeməklər",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/mal-eti-stroqanov.png",
     "instructions": "1. Mal ətini nazik zolaqlara doğrayıb qurulayın.\n2. Güclü odda az yağla hissə-hissə qızardın və kənara alın.\n3. Soğan və göbələyi eyni tavada qızardın.\n4. Xama, bir neçə qaşıq isti su və qara istiot əlavə edin.\n5. Əti sousa qaytarıb 5-7 dəqiqə zəif odda bişirin.",
     "ingredients": [
       {
@@ -1940,7 +1940,7 @@
     "category": "Balıq",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sobada-baliq-ve-kartof.png",
     "instructions": "1. Kartofları nazik dilimləyib 200°C sobada 20 dəqiqə ön bişirin.\n2. Balıq filesini duz, istiot və limonla ədviyyatlayın.\n3. Balığı kartofların üzərinə yerləşdirib zeytun yağı gəzdirin.\n4. Sarımsaq və cəfəri əlavə edin.\n5. Daha 15-18 dəqiqə bişirib isti servis edin.",
     "ingredients": [
       {
@@ -1981,7 +1981,7 @@
     "category": "Balıq",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaqli-somon.png",
     "instructions": "1. Somon porsiyalarını duz və istiotlayın, tavada hər tərəfini 2-3 dəqiqə qızardın.\n2. Balığı kənara alın, eyni tavada sarımsağı kərə yağında qısa qovurun.\n3. Qaymaq və limon qabığı əlavə edib 3 dəqiqə bişirin.\n4. İspanağı sousa qatıb solana qədər saxlayın.\n5. Somonu sousa qaytarıb 3-4 dəqiqə tamamlayın.",
     "ingredients": [
       {
