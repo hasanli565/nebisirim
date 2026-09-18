@@ -29,16 +29,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -U -r scripts/requirements.txt
 
       - name: Run image generation script
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           RECIPES_JSON_PATH: "recipes.json"
           IMAGES_DIR: "images"
           IMAGE_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/images"
-          OPENAI_IMAGE_MODEL: "gpt-image-1-mini"
-          OPENAI_IMAGE_QUALITY: "medium"
+          REPLICATE_MODEL: "black-forest-labs/flux-schnell"
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           MAX_IMAGES_PER_RUN: ${{ github.event.inputs.max_images }}
         run: python scripts/generate_images.py
