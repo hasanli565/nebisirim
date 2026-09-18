@@ -1,457 +1,374 @@
-import json
 import os
+import json
 import re
-import sys
 import time
-import unicodedata
-import urllib.request
+from pathlib import Path
 
-try:
-    import replicate
-except ImportError:
-    print(
-        "XETA: 'replicate' paketi qurulmayıb -> pip install -U replicate",
-        file=sys.stderr,
-    )
-    sys.exit(1)
-
-try:
-    import httpx
-except ImportError:
-    httpx = None
+import requests
 
 
-RECIPES_JSON_PATH = os.environ.get("RECIPES_JSON_PATH", "recipes.json")
-IMAGES_DIR = os.environ.get("IMAGES_DIR", "images")
-IMAGE_BASE_URL = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
-
-API_TOKEN = os.environ.get("REPLICATE_API_TOKEN", "")
-
-MODEL = os.environ.get(
-    "REPLICATE_MODEL",
-    "black-forest-labs/flux-schnell"
+RECIPES_JSON_PATH = os.getenv("RECIPES_JSON_PATH", "recipes.json")
+IMAGES_DIR = Path(os.getenv("IMAGES_DIR", "images"))
+IMAGE_BASE_URL = os.getenv(
+    "IMAGE_BASE_URL",
+    "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images"
 )
 
-# GitHub Actions-da bunu false etməliyik
-DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
+REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
 
-MAX_IMAGES_PER_RUN = int(
-    os.environ.get("MAX_IMAGES_PER_RUN", "20")
+DRY_RUN = os.getenv("DRY_RUN", "false").lower() == "true"
+
+try:
+    MAX_IMAGES = int(os.getenv("MAX_IMAGES_PER_RUN", "1"))
+except ValueError:
+    MAX_IMAGES = 1
+
+
+REPLICATE_URL = (
+    "https://api.replicate.com/v1/models/"
+    "black-forest-labs/flux-schnell/predictions"
 )
 
-MAX_ATTEMPTS = 5
+
+def slugify(text):
+    text = str(text).strip().lower()
+
+    replacements = {
+        "ə": "e",
+        "ı": "i",
+        "ö": "o",
+        "ü": "u",
+        "ş": "s",
+        "ç": "c",
+        "ğ": "g",
+    }
+
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    text = re.sub(r"-+", "-", text)
+
+    return text.strip("-")
 
 
-AZ_MAP = {
-    "ə": "e",
-    "Ə": "E",
-    "ı": "i",
-    "İ": "I",
-    "ö": "o",
-    "Ö": "O",
-    "ü": "u",
-    "Ü": "U",
-    "ç": "c",
-    "Ç": "C",
-    "ş": "sh",
-    "Ş": "Sh",
-    "ğ": "g",
-    "Ğ": "G",
-}
-
-
-def slugify(name: str) -> str:
-    for src, dst in AZ_MAP.items():
-        name = name.replace(src, dst)
-
-    name = (
-        unicodedata
-        .normalize("NFKD", name)
-        .encode("ascii", "ignore")
-        .decode()
-    )
-
-    name = re.sub(
-        r"[^a-zA-Z0-9]+",
-        "-",
-        name
-    ).strip("-").lower()
-
-    return name or "recipe"
-
-
-def build_prompt(recipe: dict) -> str:
-    name = (
-        recipe.get("name")
-        or recipe.get("title")
-        or "yemek"
-    )
-
-    description = recipe.get("description", "")
-
+def get_ingredient_text(recipe):
     ingredients = recipe.get("ingredients", [])
 
-    if isinstance(ingredients, list):
-        parts = []
+    if not ingredients:
+        return ""
 
-        for item in ingredients[:8]:
-            if isinstance(item, dict):
-                ing_name = item.get("name", "")
-                quantity = item.get("quantity", "")
-                unit = item.get("unit", "")
+    result = []
 
-                parts.append(
-                    f"{ing_name} {quantity} {unit}".strip()
-                )
-            else:
-                parts.append(str(item))
+    for item in ingredients:
+        if isinstance(item, str):
+            result.append(item)
 
-        ing_text = ", ".join(parts)
+        elif isinstance(item, dict):
+            name = (
+                item.get("name")
+                or item.get("ingredient")
+                or item.get("title")
+                or ""
+            )
 
-    else:
-        ing_text = str(ingredients)
+            amount = (
+                item.get("amount")
+                or item.get("quantity")
+                or item.get("measure")
+                or ""
+            )
 
-    return (
+            if name:
+                if amount:
+                    result.append(f"{name} {amount}")
+                else:
+                    result.append(name)
+
+    return ", ".join(result)
+
+
+def create_prompt(recipe):
+    name = recipe.get("name", "Food")
+    description = recipe.get("description", "")
+
+    ingredient_text = get_ingredient_text(recipe)
+
+    prompt = (
         f"Professional food photography of {name}. "
         f"{description}. "
-        f"Key ingredients: {ing_text}. "
+        f"Key ingredients: {ingredient_text}. "
         "Top-down angle, clean plate, natural lighting, "
         "shallow depth of field, appetizing, realistic, "
         "high resolution, no text, no watermark."
-    ).strip()
-
-
-def make_client():
-    if httpx is not None:
-
-        timeout = httpx.Timeout(
-            connect=60.0,
-            read=300.0,
-            write=60.0,
-            pool=60.0,
-        )
-
-        return replicate.Client(
-            api_token=API_TOKEN,
-            timeout=timeout,
-        )
-
-    return replicate.Client(
-        api_token=API_TOKEN
     )
 
+    return prompt
 
-def download_image(image_url: str) -> bytes:
-    """
-    Replicate-in qaytardığı şəkli yükləyir.
-    Timeout 5 dəqiqədir.
-    """
 
-    request = urllib.request.Request(
-        image_url,
-        headers={
-            "User-Agent": "Mozilla/5.0"
+def create_prediction(prompt):
+    headers = {
+        "Authorization": f"Bearer {REPLICATE_API_TOKEN}",
+        "Content-Type": "application/json",
+    }
+
+    data = {
+        "input": {
+            "prompt": prompt,
+            "aspect_ratio": "1:1",
+            "output_format": "png",
         }
+    }
+
+    response = requests.post(
+        REPLICATE_URL,
+        headers=headers,
+        json=data,
+        timeout=60,
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=300
-    ) as response:
+    response.raise_for_status()
 
-        return response.read()
+    return response.json()
 
 
-def generate_image(client, prompt: str) -> bytes:
+def wait_for_prediction(prediction):
+    prediction_url = prediction["urls"]["get"]
 
-    last_err = None
+    headers = {
+        "Authorization": f"Bearer {REPLICATE_API_TOKEN}"
+    }
 
-    for attempt in range(1, MAX_ATTEMPTS + 1):
+    for i in range(60):
+        time.sleep(5)
 
+        response = requests.get(
+            prediction_url,
+            headers=headers,
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        result = response.json()
+
+        status = result.get("status")
+
+        print(f"      [{i + 1}/60] Status: {status}")
+
+        if status == "succeeded":
+            return result
+
+        if status in ("failed", "canceled"):
+            raise Exception(
+                f"Prediction uğursuz oldu: {result.get('error')}"
+            )
+
+    raise Exception("Prediction 5 dəqiqə ərzində tamamlanmadı")
+
+
+def generate_image(prompt, output_path):
+    last_error = None
+
+    for attempt in range(1, 6):
         try:
+            print(f"    API sorğusu göndərilir ({attempt}/5)...")
+
+            prediction = create_prediction(prompt)
 
             print(
-                f"    API sorğusu göndərilir "
-                f"({attempt}/{MAX_ATTEMPTS})..."
+                f"    Prediction yaradıldı: "
+                f"{prediction.get('id')}"
             )
 
-            output = client.run(
-                MODEL,
-                input={
-                    "prompt": prompt,
-                    "aspect_ratio": "1:1",
-                    "output_format": "png",
-                },
+            print(
+                f"    Status: "
+                f"{prediction.get('status')}"
             )
+
+            result = wait_for_prediction(prediction)
+
+            output = result.get("output")
 
             if not output:
-                raise RuntimeError(
-                    "Replicate boş nəticə qaytardı."
-                )
+                raise Exception("Replicate output boşdur")
 
-            result = (
-                output[0]
-                if isinstance(output, list)
-                else output
+            if isinstance(output, list):
+                image_url = output[0]
+            else:
+                image_url = output
+
+            print(f"    Şəkil URL-i alındı")
+
+            image_response = requests.get(
+                image_url,
+                timeout=120,
             )
 
-            # URL kimi gəlibsə
-            if isinstance(result, str):
+            image_response.raise_for_status()
 
-                image_url = result
-
-                if not image_url.startswith("http"):
-                    raise RuntimeError(
-                        f"Naməlum nəticə: {image_url}"
-                    )
-
-                print(
-                    "    Şəkil yaradıldı, "
-                    "fayl yüklənir..."
-                )
-
-                return download_image(image_url)
-
-            # FileOutput / obyekt kimi gəlibsə
-            if hasattr(result, "read"):
-
-                print(
-                    "    Şəkil yaradıldı, "
-                    "fayl oxunur..."
-                )
-
-                return result.read()
-
-            # bytes kimi gəlibsə
-            if isinstance(result, bytes):
-                return result
-
-            raise RuntimeError(
-                f"Naməlum Replicate nəticəsi: {type(result)}"
+            output_path.parent.mkdir(
+                parents=True,
+                exist_ok=True
             )
 
-        except Exception as e:
-
-            last_err = e
+            output_path.write_bytes(image_response.content)
 
             print(
-                f"    Cəhd {attempt}/{MAX_ATTEMPTS} "
-                f"uğursuz oldu: {e}"
+                f"    Şəkil yadda saxlanıldı: "
+                f"{output_path}"
             )
 
-            if attempt < MAX_ATTEMPTS:
+            return True
 
-                wait_time = attempt * 5
+        except Exception as e:
+            last_error = e
+
+            print(
+                f"    Cəhd {attempt}/5 uğursuz oldu: {e}"
+            )
+
+            if attempt < 5:
+                wait_seconds = attempt * 5
 
                 print(
-                    f"    {wait_time} saniyə gözlənilir..."
+                    f"    {wait_seconds} saniyə gözlənilir..."
                 )
 
-                time.sleep(wait_time)
+                time.sleep(wait_seconds)
 
-    raise RuntimeError(
-        f"Şəkil yaradıla bilmədi: {last_err}"
+    print(
+        f"    XETA: Şəkil yaradıla bilmədi: "
+        f"{last_error}"
     )
+
+    return False
 
 
 def main():
-
-    if not os.path.exists(RECIPES_JSON_PATH):
-
-        print(
-            f"XETA: {RECIPES_JSON_PATH} tapılmadı.",
-            file=sys.stderr
+    if not REPLICATE_API_TOKEN:
+        raise Exception(
+            "REPLICATE_API_TOKEN tapılmadı!"
         )
-
-        sys.exit(1)
 
     with open(
         RECIPES_JSON_PATH,
         "r",
         encoding="utf-8"
     ) as f:
-
         recipes = json.load(f)
 
-    recipe_list = (
-        recipes["recipes"]
-        if isinstance(recipes, dict)
-        and "recipes" in recipes
-        else recipes
-    )
-
-    missing = [
-        r
-        for r in recipe_list
-        if not r.get("imageResource")
-    ]
-
-    print(
-        f"Cəmi resept: {len(recipe_list)}, "
-        f"şəkli olmayan: {len(missing)}"
-    )
-
-    if not missing:
-
-        print(
-            "Hamısının şəkli var, görüləcək iş yoxdur."
+    if not isinstance(recipes, list):
+        raise Exception(
+            "recipes.json siyahı formatında olmalıdır."
         )
 
-        return
-
-    todo = missing[:MAX_IMAGES_PER_RUN]
-
-    print(
-        f"Bu işə salınmada maksimum "
-        f"{len(todo)} şəkil yaradılacaq."
-    )
-
-    os.makedirs(
-        IMAGES_DIR,
+    IMAGES_DIR.mkdir(
+        parents=True,
         exist_ok=True
     )
 
-    if DRY_RUN:
+    missing = []
 
-        print(
-            "\n!!! DRY_RUN=true !!!"
-        )
+    for recipe in recipes:
+        image_resource = recipe.get("imageResource")
 
-        print(
-            "API çağırılmayacaq, "
-            "şəkil yaradılmayacaq."
-        )
+        if not image_resource:
+            missing.append(recipe)
 
-    if not DRY_RUN and not API_TOKEN:
-
-        print(
-            "\nXETA: REPLICATE_API_TOKEN tapılmadı.",
-            file=sys.stderr
-        )
-
-        sys.exit(1)
-
-    client = (
-        None
-        if DRY_RUN
-        else make_client()
+    print()
+    print(
+        f"Cəmi resept: {len(recipes)}, "
+        f"şəkli olmayan: {len(missing)}"
     )
 
-    changed = False
+    print(
+        f"Bu işə salınmada maksimum "
+        f"{MAX_IMAGES} şəkil yaradılacaq."
+    )
 
-    success_count = 0
-    error_count = 0
+    if DRY_RUN:
+        print()
+        print("DRY RUN aktivdir.")
+        print("API çağırılmayacaq.")
 
-    for i, recipe in enumerate(todo, 1):
+        for recipe in missing[:MAX_IMAGES]:
+            slug = slugify(recipe.get("name", "recipe"))
+            prompt = create_prompt(recipe)
 
-        name = (
-            recipe.get("name")
-            or recipe.get("title")
-            or f"recipe-{i}"
-        )
+            print()
+            print(recipe.get("name"))
+            print("slug:", slug)
+            print("prompt:", prompt)
 
+        return
+
+    successful = 0
+    failed = 0
+
+    for index, recipe in enumerate(
+        missing[:MAX_IMAGES],
+        start=1
+    ):
+        name = recipe.get("name", "Recipe")
         slug = slugify(name)
 
-        prompt = build_prompt(recipe)
+        image_path = IMAGES_DIR / f"{slug}.png"
 
-        file_path = os.path.join(
-            IMAGES_DIR,
-            f"{slug}.png"
-        )
-
+        print()
         print(
-            f"\n[{i}/{len(todo)}] {name}"
+            f"[{index}/{min(MAX_IMAGES, len(missing))}] "
+            f"{name}"
         )
 
         print(
             f"  slug   : {slug}"
         )
 
+        prompt = create_prompt(recipe)
+
         print(
             f"  prompt : {prompt}"
         )
 
-        # Fayl artıq varsa, yenidən yaratma
-        if os.path.exists(file_path):
-
+        if image_path.exists():
             print(
-                f"  KEÇİLDİ -> {file_path} artıq mövcuddur."
+                "  Şəkil artıq mövcuddur, keçilir."
             )
-
-            if not recipe.get("imageResource"):
-
-                recipe["imageResource"] = (
-                    f"{IMAGE_BASE_URL}/{slug}.png"
-                    if IMAGE_BASE_URL
-                    else f"{IMAGES_DIR}/{slug}.png"
-                )
-
-                changed = True
-
-            continue
-
-        if DRY_RUN:
-
-            print(
-                "  DRY_RUN=true -> "
-                "API çağırılmadı."
-            )
-
-            continue
-
-        try:
-
-            image_bytes = generate_image(
-                client,
-                prompt
-            )
-
-            if not image_bytes:
-
-                raise RuntimeError(
-                    "Şəkil faylı boş gəldi."
-                )
-
-            with open(
-                file_path,
-                "wb"
-            ) as img_f:
-
-                img_f.write(image_bytes)
 
             recipe["imageResource"] = (
                 f"{IMAGE_BASE_URL}/{slug}.png"
-                if IMAGE_BASE_URL
-                else f"{IMAGES_DIR}/{slug}.png"
             )
 
-            changed = True
-            success_count += 1
-
-            print(
-                f"  OK -> {file_path}"
-            )
-
-        except Exception as e:
-
-            error_count += 1
-
-            print(
-                f"  XETA: {e}",
-                file=sys.stderr
-            )
-
-            # Növbəti reseptə keçir
+            successful += 1
             continue
 
-    if changed:
+        ok = generate_image(
+            prompt,
+            image_path
+        )
 
+        if ok:
+            recipe["imageResource"] = (
+                f"{IMAGE_BASE_URL}/{slug}.png"
+            )
+
+            successful += 1
+
+            print(
+                f"  imageResource: "
+                f"{recipe['imageResource']}"
+            )
+
+        else:
+            failed += 1
+
+    if not DRY_RUN:
         with open(
             RECIPES_JSON_PATH,
             "w",
             encoding="utf-8"
         ) as f:
-
             json.dump(
                 recipes,
                 f,
@@ -459,19 +376,19 @@ def main():
                 indent=2
             )
 
-        print(
-            f"\n{RECIPES_JSON_PATH} yeniləndi."
-        )
+    remaining = sum(
+        1
+        for recipe in recipes
+        if not recipe.get("imageResource")
+    )
 
-    print("\n==============================")
+    print()
+    print("==============================")
     print("NƏTİCƏ")
     print("==============================")
-    print(f"Uğurlu: {success_count}")
-    print(f"Xətalı: {error_count}")
-    print(
-        f"Qalan şəkilsiz: "
-        f"{len(missing) - success_count}"
-    )
+    print(f"Uğurlu: {successful}")
+    print(f"Xətalı: {failed}")
+    print(f"Qalan şəkilsiz: {remaining}")
 
 
 if __name__ == "__main__":
