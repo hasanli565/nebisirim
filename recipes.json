@@ -532,7 +532,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/duyu-siyigi.png",
     "instructions": "1. Düyünü suda yumşalana qədər bişirin.\n2. Süd əlavə edib qarışdırın.\n3. İstəyə görə şəkər vurun.",
     "ingredients": [
       {
@@ -558,7 +558,7 @@
     "category": "Salatlar",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qatiqli-xiyar-salati.png",
     "instructions": "1. Xiyarı nazik doğrayın.\n2. Qatıqla qarışdırın.\n3. Sarımsaq və duz əlavə edin.",
     "ingredients": [
       {
@@ -589,7 +589,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/omlet.png",
     "instructions": "1. Yumurtaları çırpın.\n2. Süd əlavə edin.\n3. Kərə yağında hər iki tərəfdən qızardın.",
     "ingredients": [
       {
@@ -620,7 +620,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kartof-portlamasi.png",
     "instructions": "1. Əti qovurun.\n2. Soğan və pomidoru əlavə edin.\n3. Kartofu doğrayıb qatın, su əlavə edib bişirin.",
     "ingredients": [
       {
@@ -656,7 +656,7 @@
     "category": "Souslar",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sarimsaqli-xama-sousu.png",
     "instructions": "1. Xamanı sarımsaqla qarışdırın.\n2. Duz vurub qarışdırın.",
     "ingredients": [
       {
@@ -682,7 +682,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 20,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kuku.png",
     "instructions": "1. Göyərtini xırda doğrayın.\n2. Yumurta ilə qarışdırın.\n3. Tavada hər iki tərəfdən qızardın.",
     "ingredients": [
       {
@@ -713,7 +713,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/biber-dolmasi.png",
     "instructions": "1. Bibərin içini təmizləyin.\n2. Qiymə, düyü və soğanı qarışdırıb doldurun.\n3. Qazanda bişirin.",
     "ingredients": [
       {
@@ -749,7 +749,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-kartof-puresi.png",
     "instructions": "1. Kartofu qaynadın.\n2. Əzin.\n3. Süd və kərə yağı əlavə edib qarışdırın.",
     "ingredients": [
       {
@@ -780,7 +780,7 @@
     "category": "Salatlar",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/yumurta-pomidor-salati.png",
     "instructions": "1. Yumurtanı qaynadıb doğrayın.\n2. Pomidoru doğrayın.\n3. Qarışdırıb duz vurun.",
     "ingredients": [
       {
@@ -806,7 +806,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 35,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qiyme-ile-kartof-qizartmasi.png",
     "instructions": "1. Qiyməni qovurun.\n2. Kartofu doğrayıb əlavə edin.\n3. Duz vurub bişirin.",
     "ingredients": [
       {
