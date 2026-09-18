@@ -5,7 +5,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pomidor-yumurta.png",
     "instructions": "1. Pomidorların qabığını soyub xırda kubik şəklində doğrayın.\n2. Soğanı incə doğrayıb tavada kərə yağında qızılı rəng alana qədər qovurun.\n3. Doğranmış pomidorları əlavə edin, suyunu çəkib yağa düşənədək bişirin.\n4. Çırpılmış yumurtaları və duz-istiotu əlavə edin.\n5. Yumurta bərkiyənədək zəif odda bişirib isti təqdim edin.",
     "ingredients": [
       {
