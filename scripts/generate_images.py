@@ -1,11 +1,3 @@
-```python
-#!/usr/bin/env python3
-"""
-recipes.json-dan imageResource sahəsi boş olan reseptləri tapır,
-Replicate (FLUX Schnell) ilə şəkil yaradır,
-images/ qovluğuna yazır və recipes.json-u yeniləyir.
-"""
-
 import json
 import os
 import re
@@ -484,4 +476,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
