@@ -3910,36 +3910,5 @@
         "unit": "qram"
       }
     ]
-  },
-  {
-    "name": "test resept",
-    "description": "Mango püresi və kokos südü ilə hazırlanan tropik, yumşaq desert.",
-    "category": "Şirniyyat",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "instructions": "1. Manqonu blenderdə hamar püre edin.\n2. Kokos südü və şəkəri qazanda qızdırın.\n3. Qarğıdalı nişastasını az soyuq su ilə açıb qarışığa əlavə edin.\n4. Qatılaşana qədər davamlı qarışdırın.\n5. Mango püresini qatıb porsiya qablarına tökün və soyudun.",
-    "ingredients": [
-      {
-        "name": "Mango",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kokos südü",
-        "quantity": "400",
-        "unit": "ml"
-      },
-      {
-        "name": "Şəkər",
-        "quantity": "60",
-        "unit": "qram"
-      },
-      {
-        "name": "Qarğıdalı nişastası",
-        "quantity": "25",
-        "unit": "qram"
-      }
-    ]
   }
 ]
