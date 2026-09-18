@@ -78,55 +78,38 @@ def build_prompt(recipe: dict) -> str:
 
 def make_client():
     if httpx is not None:
-        timeout = httpx.Timeout(connect=20.0, read=20.0, write=20.0, pool=20.0)
+        timeout = httpx.Timeout(connect=30.0, read=120.0, write=30.0, pool=30.0)
         return replicate.Client(api_token=API_TOKEN, timeout=timeout)
     return replicate.Client(api_token=API_TOKEN)
 
 
 def generate_image(client, prompt: str) -> bytes:
-    owner, name = MODEL.split("/")
-
-    prediction = None
     last_err = None
     for attempt in range(1, 4):
         try:
-            prediction = client.models.predictions.create(
-                model=(owner, name),
+            output = client.run(
+                MODEL,
                 input={
                     "prompt": prompt,
                     "aspect_ratio": "1:1",
                     "output_format": "png",
                 },
             )
-            break
+            result = output[0] if isinstance(output, list) else output
+            image_url = str(result)
+
+            if image_url.startswith("http"):
+                with urllib.request.urlopen(image_url, timeout=60) as resp:
+                    return resp.read()
+            else:
+                # bezi versiyalarda FileOutput obyekti birbasa bytes verir
+                return result.read()
         except Exception as e:
             last_err = e
-            msg = str(e)
-            if "version" in msg and "not allowed" in msg:
-                raise RuntimeError(
-                    "'replicate' paketi kohnedir -> pip install -U replicate"
-                ) from e
+            print(f"    Cehd {attempt}/3 alinmadi ({e}), yeniden cehd edilir...")
             time.sleep(3)
 
-    if prediction is None:
-        raise RuntimeError(f"Prediction yaradila bilmedi: {last_err}")
-
-    while prediction.status not in ("succeeded", "failed", "canceled"):
-        time.sleep(2)
-        try:
-            prediction.reload()
-        except Exception:
-            continue
-
-    if prediction.status != "succeeded":
-        raise RuntimeError(f"Prediction ugursuz oldu: {prediction.status} - {prediction.error}")
-
-    output = prediction.output
-    result = output[0] if isinstance(output, list) else output
-    image_url = str(result)
-
-    with urllib.request.urlopen(image_url, timeout=60) as resp:
-        return resp.read()
+    raise RuntimeError(f"Shekil yaradila bilmedi: {last_err}")
 
 
 def main():
