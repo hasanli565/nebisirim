@@ -1834,6 +1834,2105 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "ç.q."
+      },
+
+      {
+    "name": "Qaymaqlı Toyuq Alfredo",
+    "description": "Parmezan və qaymaqla hazırlanan ipək teksturalı italyan üslublu makaron.",
+    "category": "Makaron",
+    "prepTime": 35,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Makaronu duzlu suda al dente bişirib suyundan yarım stəkan saxlayın.\n2. Toyuq filesini zolaqlara doğrayıb kərə yağında qızılı rəngədək bişirin.\n3. Sarımsağı əlavə edib 30 saniyə qovurun, qaymağı töküb zəif odda 3-4 dəqiqə saxlayın.\n4. Parmezanı və bir neçə qaşıq makaron suyunu əlavə edib hamar sous yaradın.\n5. Makaronu sousa qatıb 1-2 dəqiqə qarışdırın və isti servis edin.",
+    "ingredients": [
+      {
+        "name": "Fettuccine",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Qaymaq",
+        "quantity": "250",
+        "unit": "ml"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "80",
+        "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "30",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Beşamel Souslu Toyuq Krep",
+    "description": "Toyuq və pendir içliyi ilə doldurulmuş, beşamel sousunda sobada tamamlanan krep.",
+    "category": "Əsas yeməklər",
+    "prepTime": 55,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Krep üçün yumurta, süd, un və duzu hamar qarışdırın və nazik kreplər bişirin.\n2. Toyuğu xırda doğrayıb soğanla birlikdə bişirin.\n3. Toyuğa krem pendir və qara istiot qatıb içlik hazırlayın.\n4. Krepləri doldurub bükün və soba qabına düzün.\n5. Üzərinə beşamel və kaşar səpib 190°C-də 15 dəqiqə qızardın.",
+    "ingredients": [
+      {
+        "name": "Un",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Süd",
+        "quantity": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Krem pendir",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Kaşar pendiri",
+        "quantity": "100",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Mal Əti Stroqanov",
+    "description": "Göbələk və xama əsaslı klassik sousda yumşaq mal əti.",
+    "category": "Əsas yeməklər",
+    "prepTime": 40,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Mal ətini nazik zolaqlara doğrayıb qurulayın.\n2. Güclü odda az yağla hissə-hissə qızardın və kənara alın.\n3. Soğan və göbələyi eyni tavada qızardın.\n4. Xama, bir neçə qaşıq isti su və qara istiot əlavə edin.\n5. Əti sousa qaytarıb 5-7 dəqiqə zəif odda bişirin.",
+    "ingredients": [
+      {
+        "name": "Mal əti",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Göbələk",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Xama",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Duru yağ",
+        "quantity": "2",
+        "unit": "x.q."
+      },
+      {
+        "name": "Xardal",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Sobada Balıq və Kartof",
+    "description": "Limon və göyərti ilə birlikdə sobada bişən balıq-kartof kombinasiyası.",
+    "category": "Balıq",
+    "prepTime": 50,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Kartofları nazik dilimləyib 200°C sobada 20 dəqiqə ön bişirin.\n2. Balıq filesini duz, istiot və limonla ədviyyatlayın.\n3. Balığı kartofların üzərinə yerləşdirib zeytun yağı gəzdirin.\n4. Sarımsaq və cəfəri əlavə edin.\n5. Daha 15-18 dəqiqə bişirib isti servis edin.",
+    "ingredients": [
+      {
+        "name": "Balıq filesi",
+        "quantity": "600",
+        "unit": "qram"
+      },
+      {
+        "name": "Kartof",
+        "quantity": "600",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "3",
+        "unit": "x.q."
+      },
+      {
+        "name": "Cəfəri",
+        "quantity": "20",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Qaymaqlı Somon",
+    "description": "Limon, sarımsaq və ispanaqlı qaymaqlı sousda bişirilmiş somon.",
+    "category": "Balıq",
+    "prepTime": 30,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Somon porsiyalarını duz və istiotlayın, tavada hər tərəfini 2-3 dəqiqə qızardın.\n2. Balığı kənara alın, eyni tavada sarımsağı kərə yağında qısa qovurun.\n3. Qaymaq və limon qabığı əlavə edib 3 dəqiqə bişirin.\n4. İspanağı sousa qatıb solana qədər saxlayın.\n5. Somonu sousa qaytarıb 3-4 dəqiqə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Somon filesi",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Qaymaq",
+        "quantity": "200",
+        "unit": "ml"
+      },
+      {
+        "name": "İspanaq",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "20",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Toyuqlu Teriyaki Düyü",
+    "description": "Parlaq teriyaki souslu toyuq və tərəvəzlərlə servis edilən düyü bowl.",
+    "category": "Asiya mətbəxi",
+    "prepTime": 35,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuğu kub doğrayıb yüksək odda qızardın.\n2. Soya sousu, bal, sarımsaq və zəncəfili qarışdırın.\n3. Sousu toyuğa əlavə edib 4-5 dəqiqə qatılaşdırın.\n4. Bişmiş düyünü qaba yerləşdirib üstünə toyuq və buxarda bişmiş tərəvəz qoyun.\n5. Küncüt və yaşıl soğanla tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "450",
+        "unit": "qram"
+      },
+      {
+        "name": "Bişmiş düyü",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Soya sousu",
+        "quantity": "3",
+        "unit": "x.q."
+      },
+      {
+        "name": "Bal",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Zəncəfil",
+        "quantity": "1",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Küncüt",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Tərəvəzli Kremli Risotto",
+    "description": "Parmesan və mövsümi tərəvəzlərlə hazırlanan klassik kremli risotto.",
+    "category": "Düyü yeməkləri",
+    "prepTime": 45,
+    "difficulty": "Çətin",
+    "imageResource": "",
+    "instructions": "1. Soğanı kərə yağında şəffaflaşana qədər qovurun.\n2. Risotto düyüsünü əlavə edib 1-2 dəqiqə qovurun.\n3. İsti bulyonu kepçə-kepçə əlavə edərək davamlı qarışdırın.\n4. Balqabaq və bibəri bişmənin ortasında əlavə edin.\n5. Düyü al dente və kremli olduqda parmezan və kərə yağı ilə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Risotto düyüsü",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Tərəvəz bulyonu",
+        "quantity": "900",
+        "unit": "ml"
+      },
+      {
+        "name": "Balqabaq",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "70",
+        "unit": "qram"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "40",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Noxudlu Tərəvəz Karrisi",
+    "description": "Kokos südü, noxud və tərəvəzlərlə hazırlanan aromatik vegetarian kari.",
+    "category": "Vegetarian",
+    "prepTime": 40,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Soğanı yağda yumşaldın, sarımsaq və zəncəfil əlavə edin.\n2. Kari və zirəni əlavə edib 30 saniyə qovurun.\n3. Kök, bibər və pomidoru əlavə edib 5 dəqiqə bişirin.\n4. Noxud və kokos südünü əlavə edib 15 dəqiqə zəif odda bişirin.\n5. Limon suyu ilə dadı balanslaşdırıb düyü ilə servis edin.",
+    "ingredients": [
+      {
+        "name": "Qaynadılmış noxud",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Kokos südü",
+        "quantity": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kari",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Badımcan Parmigiana",
+    "description": "Pomidor sousu, mozzarella və badımcan qatlarından hazırlanan italyan soba yeməyi.",
+    "category": "Vegetarian",
+    "prepTime": 65,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Badımcanları dilimləyib duzlayın, 15 dəqiqə saxlayıb qurulayın.\n2. Dilimləri az yağla tavada və ya sobada yüngül qızardın.\n3. Pomidor sousunu sarımsaqla 10 dəqiqə bişirin.\n4. Qabda badımcan, sous, mozzarella və parmezan qatlarını düzün.\n5. 190°C-də 30 dəqiqə bişirib 10 dəqiqə dincəldin.",
+    "ingredients": [
+      {
+        "name": "Badımcan",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor püresi",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Mozzarella",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "3",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Fırında Karnabahar Beşamel",
+    "description": "Karnabaharın pendirli beşamel sousunda qızılı qabıq bağladığı garnir.",
+    "category": "Vegetarian",
+    "prepTime": 45,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Karnabaharı çiçəklərə ayırıb 4 dəqiqə qaynar suda saxlayın və süzün.\n2. Kərə yağı və undan roux hazırlayıb süd əlavə edin.\n3. Sousu qatılaşana qədər qarışdırıb pendir, duz və istiot qatın.\n4. Karnabaharı soba qabına yerləşdirib sousu üzərinə tökün.\n5. 200°C-də 20-25 dəqiqə qızılı rəngədək bişirin.",
+    "ingredients": [
+      {
+        "name": "Karnabahar",
+        "quantity": "700",
+        "unit": "qram"
+      },
+      {
+        "name": "Süd",
+        "quantity": "500",
+        "unit": "ml"
+      },
+      {
+        "name": "Un",
+        "quantity": "35",
+        "unit": "qram"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "35",
+        "unit": "qram"
+      },
+      {
+        "name": "Kaşar pendiri",
+        "quantity": "150",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Kinoa Tərəvəz Bowl",
+    "description": "Kinoa, avokado və tərəvəzlərlə hazırlanan balanslı birqab yeməyi.",
+    "category": "Sağlam yeməklər",
+    "prepTime": 25,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Kinoanı yaxşı yuyub 2 hissə su ilə yumşalana qədər bişirin.\n2. Pomidor, xiyar, avokado və kökü doğrayın.\n3. Limon suyu və zeytun yağı ilə sous hazırlayın.\n4. Kinoanı qaba yerləşdirib tərəvəzləri bölmələr şəklində düzün.\n5. Sousu üzərinə gəzdirib qoz və göyərti ilə servis edin.",
+    "ingredients": [
+      {
+        "name": "Kinoa",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Avokado",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Xiyar",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Meksika Toyuq Tacos",
+    "description": "Ədviyyatlı toyuq, tərəvəz və qatıq sousu ilə yumşaq taco.",
+    "category": "Dünya mətbəxi",
+    "prepTime": 30,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuğu nazik zolaqlara doğrayıb paprika, zirə və duzla qarışdırın.\n2. Güclü odda toyuğu qızılı rəngədək bişirin.\n3. Soğan və bibəri ayrıca qısa qovurun.\n4. Tortillaları qızdırıb toyuq və tərəvəzlə doldurun.\n5. Qatıq, limon və sarımsaq sousu əlavə edib servis edin.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Taco tortilla",
+        "quantity": "8",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "120",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Paprika",
+        "quantity": "1",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Zirə",
+        "quantity": "0.5",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Mal Ətli Tacos",
+    "description": "Ədviyyatlı qiymə, lobya, pomidor və pendirlə hazırlanan Meksika üslublu taco.",
+    "category": "Dünya mətbəxi",
+    "prepTime": 30,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Qiyməni soğanla birlikdə tam qızardın.\n2. Zirə, paprika və tomat pastası əlavə edib 2 dəqiqə bişirin.\n3. Lobyanı əlavə edib 5 dəqiqə qarışdırın.\n4. Taco qabıqlarını qızdırıb qiymə qarışığını doldurun.\n5. Pomidor, pendir və göyərti ilə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Mal qiyməsi",
+        "quantity": "450",
+        "unit": "qram"
+      },
+      {
+        "name": "Taco qabığı",
+        "quantity": "8",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Qırmızı lobya",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kaşar pendiri",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Paprika",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Toyuq Pad Thai",
+    "description": "Düyü əriştəsi, toyuq, yumurta və fıstıqla hazırlanan Tayland üslublu yemək.",
+    "category": "Asiya mətbəxi",
+    "prepTime": 35,
+    "difficulty": "Çətin",
+    "imageResource": "",
+    "instructions": "1. Düyü əriştəsini yumşalana qədər isladıb süzün.\n2. Toyuğu wokda yüksək odda qızardın.\n3. Yumurtanı əlavə edib tez qarışdırın.\n4. Əriştə və sousu əlavə edib 2-3 dəqiqə yüksək odda qarışdırın.\n5. Cücərti, yaşıl soğan və doğranmış fıstıqla servis edin.",
+    "ingredients": [
+      {
+        "name": "Düyü əriştəsi",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soya sousu",
+        "quantity": "2",
+        "unit": "x.q."
+      },
+      {
+        "name": "Limon suyu",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Fıstıq",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Yaşıl soğan",
+        "quantity": "3",
+        "unit": "ədəd"
+      }
+    ]
+  },
+  {
+    "name": "Tərəvəzli Çin Spring Roll",
+    "description": "Xırtıldayan xəmir içində kələm, kök və bibər içliyi.",
+    "category": "Qəlyanaltılar",
+    "prepTime": 40,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Kələm, kök və bibəri nazik doğrayın.\n2. Güclü odda yağda 3-4 dəqiqə qovurub soya sousu əlavə edin.\n3. İçliyi tam soyudun.\n4. Spring roll xəmirinə içlik qoyub sıx bükün və kənarını unlu su ilə bağlayın.\n5. 180°C yağda qızılı rəng alana qədər qızardın.",
+    "ingredients": [
+      {
+        "name": "Spring roll xəmiri",
+        "quantity": "10",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Ağ kələm",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soya sousu",
+        "quantity": "2",
+        "unit": "x.q."
+      },
+      {
+        "name": "Duru yağ",
+        "quantity": "300",
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "name": "Sarımsaqlı Karides",
+    "description": "Kərə yağı, sarımsaq və limonla 10 dəqiqəyə hazırlanan karides.",
+    "category": "Dəniz məhsulları",
+    "prepTime": 15,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Karidesləri təmizləyib kağız dəsmalla qurulayın.\n2. Tavada kərə yağını əridib sarımsağı 30 saniyə qovurun.\n3. Karidesləri əlavə edib yüksək odda hər tərəfini 2 dəqiqə bişirin.\n4. Limon suyu, paprika və cəfəri əlavə edin.\n5. Daha 1 dəqiqə qarışdırıb isti servis edin.",
+    "ingredients": [
+      {
+        "name": "Karides",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "40",
+        "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "4",
+        "unit": "diş"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Paprika",
+        "quantity": "0.5",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Cəfəri",
+        "quantity": "20",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Ton Balıqlı Makaron",
+    "description": "Ton balığı, pomidor və zeytunla hazırlanan sürətli Aralıq dənizi makaronu.",
+    "category": "Makaron",
+    "prepTime": 25,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Makaronu al dente bişirib suyundan bir qədər saxlayın.\n2. Zeytun yağında sarımsağı qısa qovurun.\n3. Pomidor püresi və zeytunu əlavə edib 8 dəqiqə bişirin.\n4. Ton balığını iri hissələrə bölüb sousa qatın.\n5. Makaronu və az miqdarda makaron suyunu əlavə edib 2 dəqiqə qarışdırın.",
+    "ingredients": [
+      {
+        "name": "Spagetti",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Ton balığı konservi",
+        "quantity": "2",
+        "unit": "qutu"
+      },
+      {
+        "name": "Pomidor püresi",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Zeytun",
+        "quantity": "70",
+        "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Pesto Gnocchi",
+    "description": "Kartof gnocchi, pesto və pomidorla hazırlanan sürətli italyan yeməyi.",
+    "category": "Makaron",
+    "prepTime": 20,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Gnocchini duzlu suda üzə çıxana qədər bişirib süzün.\n2. Tavada zeytun yağını qızdırıb çerri pomidorları 2-3 dəqiqə qovurun.\n3. Gnocchini tavaya əlavə edin.\n4. Pesto və bir neçə qaşıq bişirmə suyunu qatıb qarışdırın.\n5. Parmezan və reyhanla isti servis edin.",
+    "ingredients": [
+      {
+        "name": "Gnocchi",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Pesto",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Çerri pomidor",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "50",
+        "unit": "qram"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Limonlu Toyuq Orzo",
+    "description": "Orzo makaronu, toyuq və limonla bir qazanda hazırlanan kremli yemək.",
+    "category": "Makaron",
+    "prepTime": 40,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuq tikələrini zeytun yağında qızardıb kənara alın.\n2. Soğanı və sarımsağı eyni qazanda yumşaldın.\n3. Orzonu əlavə edib 1 dəqiqə qovurun.\n4. Bulyonu əlavə edib qarışdıraraq 12-15 dəqiqə bişirin.\n5. Toyuğu, limon qabığını və parmezanı qatıb 2 dəqiqə dincəldin.",
+    "ingredients": [
+      {
+        "name": "Orzo",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq bulyonu",
+        "quantity": "750",
+        "unit": "ml"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      }
+    ]
+  },
+  {
+    "name": "Mal Əti ilə Qızardılmış Noodle",
+    "description": "Mal əti və tərəvəzlərin yüksək odda noodle ilə qızardıldığı sürətli wok yeməyi.",
+    "category": "Asiya mətbəxi",
+    "prepTime": 25,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Mal ətini nazik zolaqlara doğrayın.\n2. Wok-u çox yaxşı qızdırıb əti qısa müddətdə qızardın və kənara alın.\n3. Kələm, kök və bibəri yüksək odda qovurun.\n4. Bişmiş noodle, ət və soya sousunu əlavə edin.\n5. 2-3 dəqiqə güclü odda qarışdırıb küncütlə servis edin.",
+    "ingredients": [
+      {
+        "name": "Mal əti",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Noodle",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Ağ kələm",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soya sousu",
+        "quantity": "3",
+        "unit": "x.q."
+      },
+      {
+        "name": "Küncüt",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Fırında Doldurulmuş Balqabaq",
+    "description": "Kinoa, tərəvəz və pendirlə doldurulmuş balqabağın sobada bişirilmiş variantı.",
+    "category": "Vegetarian",
+    "prepTime": 50,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Balqabaqları uzununa ikiyə bölüb içini azca çıxarın.\n2. Kinoanı əvvəlcədən bişirin.\n3. Soğan, bibər və pomidoru tavada qovurub kinoaya qatın.\n4. Qarışığı balqabaqların içinə doldurub pendir səpin.\n5. 190°C-də 25-30 dəqiqə bişirin.",
+    "ingredients": [
+      {
+        "name": "Balqabaq",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kinoa",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Mozzarella",
+        "quantity": "120",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Noxudlu Falafel Burger",
+    "description": "Falafel köftəsi, tahin sousu və tərəvəzlərlə vegetarian burger.",
+    "category": "Vegetarian",
+    "prepTime": 45,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Noxudu, soğanı, sarımsağı və cəfərini xırdalayın.\n2. Zirə, duz və unu əlavə edib yoğurun.\n3. Burger ölçüsündə köftələr formalaşdırın.\n4. Tavada az yağda hər tərəfini qızılı rəngədək bişirin.\n5. Çörəyə tahin sousu, kahı, pomidor və falafel yerləşdirin.",
+    "ingredients": [
+      {
+        "name": "Qaynadılmış noxud",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Burger çörəyi",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Cəfəri",
+        "quantity": "30",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Un",
+        "quantity": "40",
+        "unit": "qram"
+      },
+      {
+        "name": "Tahin",
+        "quantity": "80",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Mozzarellalı Toyuq Roll",
+    "description": "Mozzarella və ispanaqla doldurulmuş, sobada bişirilən toyuq filesi rulonu.",
+    "category": "Əsas yeməklər",
+    "prepTime": 50,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuq filesini ikiqat açıb nazikləşdirin və duz-istiotlayın.\n2. İspanağı tavada solana qədər bişirin.\n3. Toyuğun üzərinə ispanaq və mozzarella yayın.\n4. Sıx rulon büküb diş çöpü ilə sabitləyin.\n5. 200°C-də 25-30 dəqiqə bişirib 5 dəqiqə dincəldikdən sonra dilimləyin.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "600",
+        "unit": "qram"
+      },
+      {
+        "name": "Mozzarella",
+        "quantity": "180",
+        "unit": "qram"
+      },
+      {
+        "name": "İspanaq",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "1",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Qatıq Souslu Toyuq Şiş",
+    "description": "Marinad edilmiş toyuq tikələrinin sobada və ya qrildə bişirilən yumşaq şişi.",
+    "category": "Əsas yeməklər",
+    "prepTime": 45,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Qatıq, limon suyu, sarımsaq, paprika və duzu qarışdırın.\n2. Toyuq tikələrini marinada salıb ən azı 30 dəqiqə saxlayın.\n3. Toyuqları şişlərə aralı şəkildə keçirin.\n4. 220°C sobada və ya qrildə hər tərəfini qızılı rəngədək bişirin.\n5. 5 dəqiqə dincəldib tərəvəz və lavaşla servis edin.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "600",
+        "unit": "qram"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "3",
+        "unit": "diş"
+      },
+      {
+        "name": "Paprika",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Balzamikli Toyuq",
+    "description": "Balzamik sirkə və bal ilə qatılaşdırılmış şirin-turş souslu toyuq.",
+    "category": "Əsas yeməklər",
+    "prepTime": 35,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuq filesini duz və istiotla ədviyyatlayın.\n2. Tavada zeytun yağında hər iki tərəfini qızardın.\n3. Sarımsağı əlavə edib 30 saniyə qovurun.\n4. Balzamik sirkə və balı əlavə edib sousu 3-4 dəqiqə qatılaşdırın.\n5. Toyuğu sousla örtüb göyərti ilə servis edin.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Balzamik sirkə",
+        "quantity": "3",
+        "unit": "x.q."
+      },
+      {
+        "name": "Bal",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Qırmızı Şərab Sousunda Mal Əti",
+    "description": "Göbələk və ətirli tərəvəzlərlə uzun bişirilən zəngin mal əti yeməyi.",
+    "category": "Əsas yeməklər",
+    "prepTime": 120,
+    "difficulty": "Çətin",
+    "imageResource": "",
+    "instructions": "1. Mal ətini iri kub doğrayıb güclü odda qızardın.\n2. Soğan, kök və sarımsağı əlavə edib 5 dəqiqə qovurun.\n3. Tomat pastası və un əlavə edib qarışdırın.\n4. Bulyon və qırmızı üzüm şirəsini əlavə edib qapaqlı şəkildə zəif odda bişirin.\n5. Göbələyi son 20 dəqiqədə əlavə edib ət tam yumşalana qədər bişirin.",
+    "ingredients": [
+      {
+        "name": "Mal əti",
+        "quantity": "700",
+        "unit": "qram"
+      },
+      {
+        "name": "Göbələk",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Kök",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Tomat pastası",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Un",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Mal bulyonu",
+        "quantity": "600",
+        "unit": "ml"
+      },
+      {
+        "name": "Qırmızı üzüm şirəsi",
+        "quantity": "250",
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "name": "Sulu Küftə",
+    "description": "Ədviyyatlı qiymə küftələri və tərəvəzlərlə hazırlanan ev sayağı sulu yemək.",
+    "category": "Əsas yeməklər",
+    "prepTime": 60,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Qiyməyə düyü, soğan, duz və istiot qatıb kiçik küftələr hazırlayın.\n2. Küftələri az yağda yüngül qızardın.\n3. Qazana soğan, kök və kartof əlavə edib 5 dəqiqə qovurun.\n4. Su və pomidor püresi əlavə edib qaynadın.\n5. Küftələri salıb zəif odda 25 dəqiqə bişirin.",
+    "ingredients": [
+      {
+        "name": "Mal qiyməsi",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Düyü",
+        "quantity": "50",
+        "unit": "qram"
+      },
+      {
+        "name": "Kartof",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor püresi",
+        "quantity": "250",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Ətli Kələm Dolması",
+    "description": "Kələm yarpaqlarına bükülmüş qiymə və düyü içliyinin yavaş bişirilmiş klassik variantı.",
+    "category": "Azərbaycan mətbəxi",
+    "prepTime": 90,
+    "difficulty": "Çətin",
+    "imageResource": "",
+    "instructions": "1. Kələmin yarpaqlarını qaynar suda yumşaldıb süzün.\n2. Qiymə, düyü, soğan, göyərti və ədviyyatları qarışdırın.\n3. Hər yarpağa uyğun miqdarda içlik qoyub möhkəm bükün.\n4. Dolmaları qazana sıx düzərək üzərinə pomidor sousu və isti su əlavə edin.\n5. Qapaqlı şəkildə zəif odda 50-60 dəqiqə bişirin.",
+    "ingredients": [
+      {
+        "name": "Ağ kələm",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Mal qiyməsi",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Düyü",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor püresi",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Göyərti",
+        "quantity": "40",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Badımcan İmam Bayıldı",
+    "description": "Soğan, pomidor və sarımsaqla doldurulmuş zeytun yağlı badımcan yeməyi.",
+    "category": "Azərbaycan mətbəxi",
+    "prepTime": 70,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Badımcanları uzununa yarın, duzlayıb 15 dəqiqə saxlayın.\n2. Zeytun yağında badımcanları yumşalana qədər yüngül qızardın.\n3. Soğanı, sarımsağı və pomidoru ayrıca bişirib yumşaq içlik hazırlayın.\n4. Badımcanların ortasını açıb içliyi doldurun.\n5. 180°C-də 25 dəqiqə bişirib ilıq servis edin.",
+    "ingredients": [
+      {
+        "name": "Badımcan",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "4",
+        "unit": "diş"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "100",
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "name": "Kartoflu Piroq",
+    "description": "Kartof, soğan və pendir içliyi ilə sobada bişən qızılı xəmir yeməyi.",
+    "category": "Un yeməkləri",
+    "prepTime": 70,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Un, yumurta, qatıq və kərə yağı ilə yumşaq xəmir hazırlayın və 20 dəqiqə dincəldin.\n2. Kartofu qaynadıb əzin, qovrulmuş soğan və pendirlə qarışdırın.\n3. Xəmirin yarısını qəlibə yayın, içliyi bərabər paylayın.\n4. Qalan xəmirlə üstünü bağlayıb yumurta sarısı sürtün.\n5. 180°C-də 35-40 dəqiqə qızılı rəngədək bişirin.",
+    "ingredients": [
+      {
+        "name": "Un",
+        "quantity": "450",
+        "unit": "qram"
+      },
+      {
+        "name": "Kartof",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Ağ pendir",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "100",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Toyuqlu Pide",
+    "description": "Nazik xəmir üzərində ədviyyatlı toyuq və pendirlə hazırlanan soba pide.",
+    "category": "Un yeməkləri",
+    "prepTime": 75,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Maya, ilıq su, un və duzla yumşaq xəmir yoğurub 45 dəqiqə mayalandırın.\n2. Toyuğu xırda doğrayıb soğan, bibər, pomidor və ədviyyatlarla qarışdırın.\n3. Xəmiri uzunsov açıb içliyi ortasına yayın və kənarlarını qaldırın.\n4. Üzərinə pendir səpin.\n5. 240°C-də 12-15 dəqiqə bişirib dilimləyin.",
+    "ingredients": [
+      {
+        "name": "Un",
+        "quantity": "450",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kaşar pendiri",
+        "quantity": "120",
+        "unit": "qram"
+      },
+      {
+        "name": "Quru maya",
+        "quantity": "7",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Ispanaqlı Pendirli Börek",
+    "description": "Xırtıldayan yuxa qatları arasında ispanaq və pendir içliyi.",
+    "category": "Un yeməkləri",
+    "prepTime": 60,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. İspanağı yuyub xırdalayın və suyunu yaxşı sıxın.\n2. İspanağı pendir, yumurta və qara istiotla qarışdırın.\n3. Yuxaları yağlayaraq qəlibə qat-qat sərib içliyi paylayın.\n4. Üst qatı yağlayıb küncüt səpin.\n5. 190°C-də 30-35 dəqiqə qızılı rəngədək bişirin.",
+    "ingredients": [
+      {
+        "name": "Yuxa",
+        "quantity": "6",
+        "unit": "ədəd"
+      },
+      {
+        "name": "İspanaq",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Ağ pendir",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "80",
+        "unit": "qram"
+      },
+      {
+        "name": "Küncüt",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Mini Lahmacun",
+    "description": "Nazik xəmir üzərində qiymə, pomidor və bibərdən hazırlanan xırtıldayan lahmacun.",
+    "category": "Un yeməkləri",
+    "prepTime": 55,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Un, maya, su və duzla xəmir yoğurub 40 dəqiqə mayalandırın.\n2. Qiyməni pomidor, soğan, bibər, sarımsaq və ədviyyatlarla xırda doğranmış qarışıqla birləşdirin.\n3. Xəmirdən kiçik dairələr açıb qiyməli qarışığı çox nazik yayın.\n4. 240°C sobada 7-9 dəqiqə bişirin.\n5. Limon və göyərti ilə isti servis edin.",
+    "ingredients": [
+      {
+        "name": "Un",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Mal qiyməsi",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
+      },
+      {
+        "name": "Paprika",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Göbələkli Kremli Toyuq Şorbası",
+    "description": "Toyuq, göbələk və qaymaqla hazırlanan zəngin krem şorba.",
+    "category": "Şorbalar",
+    "prepTime": 45,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuq filesini suda bişirib xırda doğrayın.\n2. Soğan və göbələyi kərə yağında qovurun.\n3. Un əlavə edib 1 dəqiqə qarışdırın.\n4. Bulyonu və südü əlavə edib 10 dəqiqə bişirin.\n5. Toyuq və qaymağı qatıb daha 5 dəqiqə zəif odda saxlayın.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Göbələk",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Süd",
+        "quantity": "500",
+        "unit": "ml"
+      },
+      {
+        "name": "Qaymaq",
+        "quantity": "100",
+        "unit": "ml"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Un",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "30",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Toyuq Şorbası Əriştə ilə",
+    "description": "Toyuq bulyonunda tərəvəz və ev sayağı əriştə ilə doyumlu şorba.",
+    "category": "Şorbalar",
+    "prepTime": 50,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Toyuq filesini su, soğan və köklə birlikdə bişirin.\n2. Toyuğu çıxarıb didin, bulyonu süzün.\n3. Kartof və kökü bulyona əlavə edib yarıbişmiş hala gətirin.\n4. Əriştə və didilmiş toyuğu əlavə edin.\n5. Əriştə bişdikdə duz, istiot və cəfəri ilə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Toyuq filesi",
+        "quantity": "350",
+        "unit": "qram"
+      },
+      {
+        "name": "Əriştə",
+        "quantity": "120",
+        "unit": "qram"
+      },
+      {
+        "name": "Kartof",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kök",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Cəfəri",
+        "quantity": "20",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Brokkoli və Çedar Şorbası",
+    "description": "Brokkoli və çedar pendirinin kremli birləşməsindən hazırlanan qatı şorba.",
+    "category": "Şorbalar",
+    "prepTime": 40,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Soğanı kərə yağında yumşaldın.\n2. Un əlavə edib 1 dəqiqə qarışdırın.\n3. Bulyon və südü əlavə edib qaynadın.\n4. Brokkolini qatıb yumşalana qədər 10-12 dəqiqə bişirin.\n5. Çedar pendirini əlavə edib əridin, istəsəniz blenderlə qismən püre edin.",
+    "ingredients": [
+      {
+        "name": "Brokkoli",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Çedar pendiri",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Süd",
+        "quantity": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Tərəvəz bulyonu",
+        "quantity": "500",
+        "unit": "ml"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Un",
+        "quantity": "30",
+        "unit": "qram"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "30",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Minestrone",
+    "description": "Paxlalılar, tərəvəz və makaronla hazırlanan klassik italyan tərəvəz şorbası.",
+    "category": "Şorbalar",
+    "prepTime": 50,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Soğan, kök və kərəvizi zeytun yağında 5-6 dəqiqə qovurun.\n2. Pomidor püresi və bulyon əlavə edin.\n3. Kartof və lobyanı qatıb 15 dəqiqə bişirin.\n4. Kiçik makaronu əlavə edib yumşalana qədər bişirin.\n5. Duz, istiot və reyhanla tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Pomidor püresi",
+        "quantity": "400",
+        "unit": "qram"
+      },
+      {
+        "name": "Ağ lobya",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Kartof",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kərəviz",
+        "quantity": "1",
+        "unit": "sap"
+      },
+      {
+        "name": "Kiçik makaron",
+        "quantity": "100",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Yay Tərəvəz Şorbası",
+    "description": "Pomidor, balqabaq və yaşıl lobya ilə hazırlanan yüngül mövsümi şorba.",
+    "category": "Şorbalar",
+    "prepTime": 35,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Soğan və kökü zeytun yağında qovurun.\n2. Pomidor və tomat pastasını əlavə edib 3 dəqiqə bişirin.\n3. Balqabaq və yaşıl lobyanı qatın.\n4. Su əlavə edib tərəvəzlər yumşalana qədər 15-20 dəqiqə bişirin.\n5. Duz, istiot və göyərti ilə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Pomidor",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Balqabaq",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Yaşıl lobya",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Kök",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Soğan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Tomat pastası",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Noxudlu Aralıq Dənizi Salatı",
+    "description": "Noxud, feta, pomidor və xiyarla hazırlanan proteinli təravətli salat.",
+    "category": "Salatlar",
+    "prepTime": 15,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Noxudu süzüb yaxşı yuyun.\n2. Pomidor, xiyar və qırmızı soğanı doğrayın.\n3. Feta və zeytunu əlavə edin.\n4. Limon suyu, zeytun yağı və oregano ilə sous hazırlayın.\n5. Sousu salata qatıb 10 dəqiqə dincəldin.",
+    "ingredients": [
+      {
+        "name": "Qaynadılmış noxud",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Pomidor",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Xiyar",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Feta pendiri",
+        "quantity": "120",
+        "unit": "qram"
+      },
+      {
+        "name": "Zeytun",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Toyuqlu Sezar Pasta Salatı",
+    "description": "Toyuq, makaron, kahı və parmezanın yüngül Sezar sousunda birləşməsi.",
+    "category": "Salatlar",
+    "prepTime": 30,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Makaronu bişirib tam soyudun.\n2. Toyuq filesini qızardıb dilimləyin.\n3. Kahını doğrayıb makaron və toyuqla birləşdirin.\n4. Qatıq, mayonez, limon və sarımsaqla yüngül sous hazırlayın.\n5. Sousu salata əlavə edib parmezan və krutonla servis edin.",
+    "ingredients": [
+      {
+        "name": "Makaron",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Toyuq filesi",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Romen kahısı",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "50",
+        "unit": "qram"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Mayonez",
+        "quantity": "50",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "0.5",
+        "unit": "ədəd"
+      }
+    ]
+  },
+  {
+    "name": "Kök və Alma Salatı",
+    "description": "Kök, alma və qozun limonlu yüngül sousla birləşdiyi xırtıldayan salat.",
+    "category": "Salatlar",
+    "prepTime": 10,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Kökü sürtgəcdən keçirin.\n2. Almanı nazik doğrayıb limon suyu ilə qarışdırın.\n3. Qoz və kişmişi əlavə edin.\n4. Qatıq, bal və limonla sous hazırlayın.\n5. Sousu salata qatıb dərhal servis edin.",
+    "ingredients": [
+      {
+        "name": "Kök",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Alma",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Qoz",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Bal",
+        "quantity": "1",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Limon",
+        "quantity": "0.5",
+        "unit": "ədəd"
+      }
+    ]
+  },
+  {
+    "name": "Kartof və Tuna Salatı",
+    "description": "Qaynadılmış kartof, ton balığı və yaşıl lobya ilə doyumlu salat.",
+    "category": "Salatlar",
+    "prepTime": 25,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Kartofları kub doğrayıb yumşalana qədər qaynadın və soyudun.\n2. Yaşıl lobyanı 4-5 dəqiqə bişirib soyudun.\n3. Ton balığını süzüb tərəvəzlərlə birləşdirin.\n4. Zeytun yağı, limon, xardal və duzla sous hazırlayın.\n5. Sousu salata qatıb ilıq və ya soyuq servis edin.",
+    "ingredients": [
+      {
+        "name": "Kartof",
+        "quantity": "500",
+        "unit": "qram"
+      },
+      {
+        "name": "Ton balığı konservi",
+        "quantity": "1",
+        "unit": "qutu"
+      },
+      {
+        "name": "Yaşıl lobya",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Xardal",
+        "quantity": "1",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "3",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Sezar Sousu",
+    "description": "Salatlar üçün kremli, limonlu və parmezanlı klassik sous.",
+    "category": "Souslar",
+    "prepTime": 10,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Mayonez və qatığı qarışdırın.\n2. Sarımsaq, limon suyu və xardal əlavə edin.\n3. Rəndələnmiş parmezanı qatın.\n4. Qara istiotla dadını tənzimləyin.\n5. Soyuducuda 20 dəqiqə saxlayıb salatda istifadə edin.",
+    "ingredients": [
+      {
+        "name": "Mayonez",
+        "quantity": "120",
+        "unit": "qram"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Parmezan",
+        "quantity": "30",
+        "unit": "qram"
+      },
+      {
+        "name": "Limon suyu",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "1",
+        "unit": "diş"
+      },
+      {
+        "name": "Xardal",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Avokadolu Ton Balığı Tostu",
+    "description": "Ton balığı və avokadonun limonlu qarışığı ilə hazırlanan sürətli tost.",
+    "category": "Səhər Yeməyi",
+    "prepTime": 10,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Avokadonu çəngəllə əzin.\n2. Ton balığını süzüb avokadoya qatın.\n3. Limon suyu, duz və istiot əlavə edin.\n4. Çörək dilimlərini qızardın.\n5. Qarışığı tostların üzərinə yayın və göyərti ilə tamamlayın.",
+    "ingredients": [
+      {
+        "name": "Avokado",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Ton balığı konservi",
+        "quantity": "1",
+        "unit": "qutu"
+      },
+      {
+        "name": "Tam taxıllı çörək",
+        "quantity": "4",
+        "unit": "dilim"
+      },
+      {
+        "name": "Limon",
+        "quantity": "0.5",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Şüyüd",
+        "quantity": "10",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Fransız Tostu",
+    "description": "Darçınlı yumurta-süd qarışığında isladılmış qızılı çörək dilimləri.",
+    "category": "Səhər Yeməyi",
+    "prepTime": 15,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Yumurta, süd, darçın və vanili çalın.\n2. Çörək dilimlərini qarışıqda hər iki tərəfdən qısa isladın.\n3. Tavada kərə yağını əridin.\n4. Çörəkləri hər iki tərəfdən qızılı rəngədək bişirin.\n5. Bal, meyvə və ya şəkər pudrası ilə servis edin.",
+    "ingredients": [
+      {
+        "name": "Tost çörəyi",
+        "quantity": "4",
+        "unit": "dilim"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Süd",
+        "quantity": "100",
+        "unit": "ml"
+      },
+      {
+        "name": "Darçın",
+        "quantity": "0.5",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Vanil",
+        "quantity": "0.5",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "20",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Menemen",
+    "description": "Pomidor, bibər və yumurtadan hazırlanan şirəli türk səhər yeməyi.",
+    "category": "Səhər Yeməyi",
+    "prepTime": 20,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Bibərləri zeytun yağında yumşaldın.\n2. Doğranmış pomidorları əlavə edib suyunu bir qədər çəkdirin.\n3. Yumurtaları ayrıca çalın və tavaya tökün.\n4. Spatula ilə yumşaq qarışdıraraq yumurtanı tam qurutmadan bişirin.\n5. Duz və istiot əlavə edib isti çörəklə servis edin.",
+    "ingredients": [
+      {
+        "name": "Pomidor",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Yaşıl bibər",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "4",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Zeytun yağı",
+        "quantity": "2",
+        "unit": "x.q."
+      },
+      {
+        "name": "Duz",
+        "quantity": "1",
+        "unit": "ç.q."
+      }
+    ]
+  },
+  {
+    "name": "Yulaflı Alma Sıyığı",
+    "description": "Alma, darçın və süd ilə hazırlanan isti və doyumlu yulaf sıyığı.",
+    "category": "Səhər Yeməyi",
+    "prepTime": 15,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Südü qazanda qızdırın.\n2. Yulafı əlavə edib zəif odda 5-7 dəqiqə qarışdırın.\n3. Rəndələnmiş almanı və darçını əlavə edin.\n4. 2 dəqiqə daha bişirin.\n5. Bal və qozla ilıq servis edin.",
+    "ingredients": [
+      {
+        "name": "Yulaf lopası",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Süd",
+        "quantity": "300",
+        "unit": "ml"
+      },
+      {
+        "name": "Alma",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Darçın",
+        "quantity": "0.5",
+        "unit": "ç.q."
+      },
+      {
+        "name": "Bal",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Qoz",
+        "quantity": "30",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Qatıqlı Meyvə Bowl",
+    "description": "Qatıq, banan, giləmeyvə və qranola ilə hazırlanan sürətli səhər yeməyi.",
+    "category": "Səhər Yeməyi",
+    "prepTime": 10,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Qatığı dərin qaba tökün.\n2. Bananı dilimləyib üstünə düzün.\n3. Giləmeyvə və qranola əlavə edin.\n4. Balı nazik şəkildə üzərinə gəzdirin.\n5. İstəyə görə çia toxumu səpib dərhal servis edin.",
+    "ingredients": [
+      {
+        "name": "Qatıq",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Banan",
+        "quantity": "1",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Giləmeyvə",
+        "quantity": "150",
+        "unit": "qram"
+      },
+      {
+        "name": "Qranola",
+        "quantity": "70",
+        "unit": "qram"
+      },
+      {
+        "name": "Bal",
+        "quantity": "1",
+        "unit": "x.q."
+      },
+      {
+        "name": "Çia toxumu",
+        "quantity": "1",
+        "unit": "x.q."
+      }
+    ]
+  },
+  {
+    "name": "Çiyələkli Cheesecake Stəkan",
+    "description": "Peçenye qatı, krem pendir və çiyələkdən hazırlanan porsiyalı bişməyən desert.",
+    "category": "Şirniyyat",
+    "prepTime": 25,
+    "difficulty": "Orta",
+    "imageResource": "",
+    "instructions": "1. Peçenyeni xırdalayıb əridilmiş kərə yağı ilə qarışdırın.\n2. Krem pendiri şəkər pudrası və vanillə hamarlaşdırın.\n3. Qaymağı çalaraq krem pendirə qatın.\n4. Stəkanlara peçenye, krem və doğranmış çiyələk qatlarını düzün.\n5. Ən azı 1 saat soyudub servis edin.",
+    "ingredients": [
+      {
+        "name": "Peçenye",
+        "quantity": "200",
+        "unit": "qram"
+      },
+      {
+        "name": "Krem pendir",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
+        "name": "Qaymaq",
+        "quantity": "150",
+        "unit": "ml"
+      },
+      {
+        "name": "Çiyələk",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
+        "name": "Şəkər pudrası",
+        "quantity": "70",
+        "unit": "qram"
+      },
+      {
+        "name": "Kərə yağı",
+        "quantity": "60",
+        "unit": "qram"
+      }
+    ]
+  },
+  {
+    "name": "Mango Puding",
+    "description": "Mango püresi və kokos südü ilə hazırlanan tropik, yumşaq desert.",
+    "category": "Şirniyyat",
+    "prepTime": 20,
+    "difficulty": "Asan",
+    "imageResource": "",
+    "instructions": "1. Manqonu blenderdə hamar püre edin.\n2. Kokos südü və şəkəri qazanda qızdırın.\n3. Qarğıdalı nişastasını az soyuq su ilə açıb qarışığa əlavə edin.\n4. Qatılaşana qədər davamlı qarışdırın.\n5. Mango püresini qatıb porsiya qablarına tökün və soyudun.",
+    "ingredients": [
+      {
+        "name": "Mango",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Kokos südü",
+        "quantity": "400",
+        "unit": "ml"
+      },
+      {
+        "name": "Şəkər",
+        "quantity": "60",
+        "unit": "qram"
+      },
+      {
+        "name": "Qarğıdalı nişastası",
+        "quantity": "25",
+        "unit": "qram"
       }
     ]
   }
