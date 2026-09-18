@@ -72,7 +72,7 @@
     "category": "Şorbalar",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/mercimek-sorbasi.png",
     "instructions": "1. Qazanda duru yağda doğranmış soğan və yerkökünü soteleyin.\n2. Tomat pastasını əlavə edib 1 dəqiqə qovurun.\n3. Yuyulmuş mərciməyi və 1 litr qaynar suyu əlavə edin.\n4. Mərciməklər tam yumşalana qədər orta odda bişirin.\n5. Şorbanı blenderdən keçirin, duz, istiot və limon suyu vuraraq servis edin.",
     "ingredients": [
       {
@@ -123,7 +123,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/yarpaq-dolmasi.png",
     "instructions": "1. Qiyməyə xırda doğranmış soğan, yuyulmuş düyü, incə kıyılmış göyərti, duz, istiot və sarıkök əlavə edib yaxşıca qarışdırın.\n2. Təzə və ya şoraba tənək yarpaqlarını qaynar suda yumşaldın.\n3. Bükümləri kiçik və səliqəli şəkildə hazırlayıb qazana sıx yığın.\n4. Üzərinə kərə yağı dilimləri qoyun, boşqab çevirin və yarısına qədər qaynar su tökün.\n5. Zəif odda düyü və ət bişənədək təxminən 45-60 dəqiqə bişirin.",
     "ingredients": [
       {
@@ -174,7 +174,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-cigirtmasi.png",
     "instructions": "1. Toyuq ətini tikələrə bölüb az suda yarıbişmiş vəziyyətə gətirin.\n2. Başqa tavada bol halqa doğranmış soğanı kərə yağında qızılı olanadək qovurun.\n3. Toyuq tikələrini soğanın üzərinə düzün, sarıkök, duz və istiot əlavə edin.\n4. Çırpılmış yumurtaları toyuqların üzərinə bərabər paylayın.\n5. Tavanın qapağını bağlayıb yumurta bişənədək zəif odda saxlamaq lazımdır.",
     "ingredients": [
       {
@@ -220,7 +220,7 @@
     "category": "Salatlar",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/paytaxt-salati.png",
     "instructions": "1. Qaynadılmış kartof, yerkökü, yumurta və toyuq ətini xırda kubiklər şəklində doğrayın.\n2. Təzə və turşu xiyarları da eyni ölçüdə doğrayın.\n3. Yaşıl nöxud və incə doğranmış şüyüdü əlavə edin.\n4. Mayonez, xama, duz və istiot vuraraq səliqəli qarışdırın.\n5. Soyuducuda 1 saat saxladıqdan sonra servis edin.",
     "ingredients": [
       {
@@ -276,7 +276,7 @@
     "category": "Şorbalar",
     "prepTime": 75,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/abseron-dusberesi.png",
     "instructions": "1. Un, yumurta, su və duzdan bərk xəmir yoğurun, 20 dəqiqə dinləndirin.\n2. Qiyməyə xırda sürtgəcdən keçirilmiş soğan, duz və istiot qatın.\n3. Xəmiri nazik yayın, 1.5x1.5 sm ölçüdə kvadratlar kəsin.\n4. Kvadratların ortasına ət qoyub düşbərələri bükün.\n5. Bulyonda düşbərələri 5-7 dəqiqə qaynadın. Üzərinə quru nanə səpib sirkə-sarımsaqla servis edin.",
     "ingredients": [
       {
@@ -327,7 +327,7 @@
     "category": "Un Yeməkləri",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/goy-qutabi.png",
     "instructions": "1. Un, su və duzdan yumşaq xəmir tutun.\n2. Müxtəlif göyərtiləri (ispanaq, göy soğan, keşniş, şüyüd) yuyub xırda doğrayın.\n3. Göyərtiyə azca duz və dağ edilmiş kərə yağı vurub qarışdırın.\n4. Xəmirdən kündələr tutub nazik yayın, içlik qoyub yarımay şəklində bükün.\n5. Yağsız tavada hər iki üzünü qızardın və isti ikən bol kərə yağı ilə yağlayın.",
     "ingredients": [
       {
@@ -373,7 +373,7 @@
     "category": "Şorbalar",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kufte-bozbas.png",
     "instructions": "1. Gecədən isladılmış noxudu yarıbişmiş olana qədər qaynadın.\n2. Qiyməyə yuyulmuş düyü, xırda soğan, duz və istiot qataraq böyük küftələr tutun (ortasına turşu qoyun).\n3. Bulyona küftələri, noxudu və iridilimlənmiş kartofları əlavə edin.\n4. Sarıkök və tomat pastası əlavə edib zəif odda bişirin.\n5. Servis edərkən üzərinə quru nanə səpin.",
     "ingredients": [
       {
@@ -429,7 +429,7 @@
     "category": "Ana Yeməklər",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/mercimekli-plov.png",
     "instructions": "1. Qəhvəyi mərciməyi ayrı qazanda yarıbişmiş olana dək qaynadın.\n2. Düyünü duzlu suda qaynadıb süzməyə yaxın mərciməyi əlavə edin və birlikdə süzün.\n3. Qazanın dibinə kərə yağı sürün və xəmir və ya kartofdan qazmaq edin.\n4. Düyü ilə mərcimək qarışığını qazana töküb üzərinə əridilmiş kərə yağı və zəif zəfəran şirəsi gəzdirin.\n5. Low heat-də 30 dəqiqə dəmə qoyun.",
     "ingredients": [
       {
@@ -465,7 +465,7 @@
     "category": "Şorbalar",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/dovga.png",
     "instructions": "1. Qatığı su ilə qarışdırıb qaynadın (daim qarışdıraraq).\n2. Düyünü əlavə edin.\n3. Doğranmış göyərtini (nanə, şüyüd, kəvər) qatın.\n4. Duz vurub bir neçə dəqiqə də qaynadın.",
     "ingredients": [
       {
@@ -501,7 +501,7 @@
     "category": "Şorbalar",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/piti.png",
     "instructions": "1. Ətı, noxudu və kartofu saxsı qaba yığın.\n2. Su və duz əlavə edib bağlayın.\n3. Sobada uzun müddət bişirin.",
     "ingredients": [
       {
