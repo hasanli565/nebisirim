@@ -509,6 +509,7 @@ def create_photorealistic_reference(
         if step.get("type") != "model_output":
             continue
 
-        for content in step.get(
-            "content",
-
+for content in step.get(
+    "content",
+    []
+):
