@@ -17,98 +17,40 @@ on:
 
 jobs:
   generate-videos:
-
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
 
     steps:
-
-      # ==========================================
-      # 1. REPOSITORY
-      # ==========================================
-
       - name: Checkout repository
         uses: actions/checkout@v4
-
-
-      # ==========================================
-      # 2. PYTHON
-      # ==========================================
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-
-      # ==========================================
-      # 3. LIBRARIES
-      # ==========================================
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install replicate python-dotenv requests
 
-
-      # ==========================================
-      # 4. VIDEO GENERATION
-      # ==========================================
-
       - name: Generate recipe videos
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           VIDEO_COUNT: ${{ inputs.video_count }}
-        run: |
-          python generate_video.py
-
-
-      # ==========================================
-      # 5. CHECK CHANGES
-      # ==========================================
-
-      - name: Check generated files
-        run: |
-          echo "=========================================="
-          echo "Generated videos:"
-          echo "=========================================="
-
-          ls -lah videos/ || true
-
-          echo ""
-          echo "=========================================="
-          echo "Git status:"
-          echo "=========================================="
-
-          git status --short
-
-
-      # ==========================================
-      # 6. COMMIT
-      # ==========================================
+        run: python generate_video.py
 
       - name: Commit changes
         run: |
-
           git config user.name "github-actions[bot]"
-
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add recipes.json videos/
-
           if git diff --cached --quiet; then
-
             echo "Yeni dəyişiklik yoxdur."
-
           else
-
-            git commit \
-              -m "Generate ${{ inputs.video_count }} recipe videos"
-
+            git commit -m "Generate recipe videos"
             git push
-
           fi
 ```
