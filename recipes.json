@@ -1280,7 +1280,7 @@
     "category": "Əsas Yemək",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/ev-sayagi-toyuq-qovurmasi.png",
     "instructions": "1. Toyuq ətini hissələrə bölüb tavada qızardın.\n2. Kartofu təmizləyib uzunsov doğrayın və ayrı tavada qızardın.\n3. Soğan və bolqar bibərini yarımhalqa şəklində doğrayıb toyuqla birlikdə qovurun.\n4. Sonda kartofu, duz, istiot və sarıkök əlavə edib 10 dəqiqə qapağı bağlı halda bişirin.",
     "ingredients": [
       {
@@ -1331,7 +1331,7 @@
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kelem-dolmasi.png",
     "instructions": "1. Kələm yarpaqlarını qaynar suda yumşalana qədər haşlayın.\n2. Qiyməni yuyulmuş düyü, xırda doğranmış soğan, göyərti, duz və istiotla qarışdırın.\n3. Hazırladığınız içliyi kələm yarpaqlarına qoyub səliqəli şəkildə bükün.\n4. Dolmaları qazana yığın, üzərinə pomidor sousu və su əlavə edin.\n5. Zəif odda təxminən 40 dəqiqə bişirin.",
     "ingredients": [
       {
@@ -1382,7 +1382,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sulu-xengel.png",
     "instructions": "1. Un, su və duzdan sərt xəmir yoğurun və nazik yayaraq kvadratlar şəklində kəsin.\n2. Əti soğanla birlikdə qovurub su əlavə edin və bulyon hazırlayın.\n3. Hazırladığınız xəmir parçalarını qaynayan bulyonda bişirin.\n4. Süfrəyə verərkən üzərinə sarımsaqlı qatıq və quru nanə əlavə edin.",
     "ingredients": [
       {
@@ -1433,7 +1433,7 @@
     "category": "Şorba",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/merci-sorbasi.png",
     "instructions": "1. Mərciyi yaxşıca yuyun və qazana əlavə edin.\n2. Üzərinə su, kub doğranmış kartof və soğan əlavə edib qaynadın.\n3. Tərəvəzlər yumşaldıqdan sonra blenderdən keçirərək püre halına gətirin.\n4. Ayrı tavada kərə yağında un və pomidor pastasını qovurub şorbaya əlavə edin.\n5. Duz, istiot və nanə vurub 5 dəqiqə də qaynadın.",
     "ingredients": [
       {
@@ -1494,7 +1494,7 @@
     "category": "Şorba",
     "prepTime": 35,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelek-sorbasi.png",
     "instructions": "1. Göbələk və soğanı doğrayıb kərə yağında qovurun.\n2. Üzərinə un əlavə edib qoxusu çıxana qədər qovurmağa davam edin.\n3. Tədricən isti su əlavə edib qarışdırın və qaynara düşməsini gözləyin.\n4. Qaymaq əlavə edib blenderdən keçirin, duz və istiot vurub süfrəyə verin.",
     "ingredients": [
       {
@@ -1545,7 +1545,7 @@
     "category": "Şorba",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/eristeli-lobya-sorbasi.png",
     "instructions": "1. Lobyanı əvvəlcədən isladıb yumşalana qədər qaynadın.\n2. Qazana su, bişmiş lobya və xırda doğranmış soğanı əlavə edin.\n3. Qaynayan suya eriştəni tökün və bişməyə qoyun.\n4. Kərə yağında qırmızı bibər qızardıb şorbaya əlavə edin, duz vurub ocaqdan götürün.",
     "ingredients": [
       {
@@ -1591,7 +1591,7 @@
     "category": "Şorba",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/payiz-terevez-sorbasi.png",
     "instructions": "1. Kök, balqabaq və kartofu kiçik kublar şəklində doğrayın.\n2. Soğanı və sarımsağı xırda doğrayıb zeytun yağında yüngülcə qovurun.\n3. Üzərinə digər tərəvəzləri əlavə edib su əlavə edin və tərəvəzlər yumşalana qədər bişirin.\n4. Duz, istiot və xırda doğranmış cəfəri əlavə edib süfrəyə verin.",
     "ingredients": [
       {
@@ -1647,7 +1647,7 @@
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/nar-ve-qoz-ile-toyuq-salat.png",
     "instructions": "1. Toyuq ətini qaynadıb uzunsov liflərə ayırın.\n2. Qoz ləpəsini və göyərtini xırda doğrayın.\n3. Qabda toyuq əti, qoz, göyərti və nar dənələrini qarışdırın.\n4. Mayonez, duz və istiot əlavə edib yaxşıca qarışdırın.",
     "ingredients": [
       {
@@ -1693,7 +1693,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/terevezli-pendir-salati.png",
     "instructions": "1. Pomidor və xiyarları iri kublar şəklində doğrayın.\n2. Qırmızı soğanı halqa-halqa doğrayıb qaba əlavə edin.\n3. Zeytun və kub doğranmış pendiri tərəvəzlərin üzərinə düzün.\n4. Zeytun yağı, limon suyu və duz əlavə edib yüngülcə qarışdırın.",
     "ingredients": [
       {
@@ -1744,7 +1744,7 @@
     "category": "Salat",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qirmizi-cugundur-salati.png",
     "instructions": "1. Çuğunduru əvvəlcədən yumşalana qədər qaynadın və sürtgəcdən keçirin.\n2. Sarımsağı əzin və çuğundura əlavə edin.\n3. Qoz ləpəsini xırda doğrayıb qarışığa qatın.\n4. Mayonez, duz və istiot əlavə edib hamarlaşana qədər qarışdırın.",
     "ingredients": [
       {
@@ -1785,7 +1785,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/yerkoku-ve-alma-salati.png",
     "instructions": "1. Yerkökü və almanın qabığını soyub sürtgəcdən keçirin.\n2. Üzərinə limon suyu əlavə edin ki, alma qaralmasın.\n3. Bir qədər kişmiş və xırdalanmış qoz əlavə edin.\n4. Bal və zeytun yağı qarışığını üzərinə tökərək qarışdırın.",
     "ingredients": [
       {
@@ -1831,7 +1831,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-ve-goyertili-rulet.png",
     "instructions": "1. Lavaşın üzərinə krem pendir çəkin.\n2. Üzərinə xırda doğranmış göyərti və rəndələnmiş pendir səpələyin.\n3. Lavaşı bərk rulet şəklində bükün və halqalar şəklində doğrayın.",
     "ingredients": [
       {
@@ -1862,7 +1862,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 20,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qizardilmis-pendir-cubuqlari.png",
     "instructions": "1. Pendiri uzunsov çubuqlar şəklində doğrayın.\n2. Hər bir çubuğu əvvəlcə unlayın, sonra çalınmış yumurtaya və sonda suxariyə batırın.\n3. Qızğın duru yağda qızılı rəng alana qədər qızardın.",
     "ingredients": [
       {
@@ -1898,7 +1898,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kartof-kroketleri.png",
     "instructions": "1. Kartofu qaynadıb püre edin, üzərinə duz, istiot və yumurta sarısı əlavə edin.\n2. Soyuduqdan sonra kiçik toplar formalaşdırın.\n3. Topları yumurtaya və suxariyə batırıb qızğın yağda qızardın.",
     "ingredients": [
       {
@@ -1939,7 +1939,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-lepesi.png",
     "instructions": "1. Badımcanları sobada bişirib qabığını soyun və əzin.\n2. Qoz ləpəsini və sarımsağı ətçəkəndən keçirin.\n3. Badımcanla qozu qarışdırıb üzərinə sarımsaq, duz və bitki yağı əlavə edin.",
     "ingredients": [
       {
@@ -1975,7 +1975,7 @@
     "category": "Şirniyyat",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sokoladli-biskvit.png",
     "instructions": "1. Yumurta və şəkər tozunu mikserlə köpüklənənə qədər çalın.\n2. Üzərinə süd və duru yağ əlavə edin.\n3. Un, kakao və qabartma tozunu ələyərək qarışığa əlavə edin.\n4. Sobanın sinisinə töküb 180 dərəcədə 25 dəqiqə bişirin.",
     "ingredients": [
       {
@@ -2021,7 +2021,7 @@
     "category": "Şirniyyat",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/alma-pecenyesi.png",
     "instructions": "1. Almanın qabığını soyub sürtgəcdən keçirin, şəkər və darçınla qovurun.\n2. Yumşaq kərə yağı, xama, şəkər tozu və un ilə xəmir yoğurun.\n3. Xəmiri kiçik hissələrə bölüb içərisinə alma püresi qoyun və bükün.\n4. Sobada 180 dərəcədə qızılı rəng alana qədər bişirin.",
     "ingredients": [
       {
@@ -2059,7 +2059,7 @@
   {
     "description": "Ətirli və ədviyyatlı yumşaq bulkalar.",
     "instructions": "1. Mayanı ilıq süd və şəkər tozunda əridib köpməsini gözləyin.\n2. Un, duz, yumurta və kərə yağı əlavə edərək yumşaq xəmir yoğurun.\n3. Xəmir gəldikdən sonra kiçik kündələrə ayırıb istədiyiniz formanı verin.\n4. Üzərinə yumurta sarısı çəkib sobada bişirin.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sade-bulka.png",
     "category": "Şirniyyat",
     "name": "Sadə Bulka",
     "prepTime": 60,
@@ -2108,7 +2108,7 @@
     "category": "İçki",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/limonlu-ve-naneli-serinlesdirici-i-cki.png",
     "instructions": "1. Limonların suyunu sıxın və qabıqlarını nazik doğrayın.\n2. Təzə nanə yarpaqlarını şəkər tozu ilə birlikdə əzin.\n3. Qaba su, limon suyu və nanəli qarışığı əlavə edib şəkər əriyənə qədər qarışdırın.\n4. Süzgəcdən keçirib soyuducuda soyutduqdan sonra buzla süfrəyə verin.",
     "ingredients": [
       {
@@ -2139,7 +2139,7 @@
     "category": "İçki",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qara-cay-ve-murebbe.png",
     "instructions": "1. Çaynikə quru qara çay əlavə edin və üzərinə qaynar su tökün.\n2. Çaynik zəif odda və ya buxar üzərində 10 dəqiqə dəmlənsin.\n3. Stəkanlara süzüb yanında sevdiyiniz mürəbbə ilə süfrəyə verin.",
     "ingredients": [
       {
