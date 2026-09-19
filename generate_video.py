@@ -501,7 +501,7 @@ def create_photorealistic_reference(
     # FALLBACK: STEPS
     # --------------------------------------------------------
 
-    for step in data.get(
+   or step in data.get(
         "steps",
         []
     ):
@@ -509,7 +509,33 @@ def create_photorealistic_reference(
         if step.get("type") != "model_output":
             continue
 
-for content in step.get(
-    "content",
-    []
-):
+        for content in step.get(
+            "content",
+            []
+        ):
+
+            if content.get("type") != "image":
+                continue
+
+            image_data = content.get(
+                "data"
+            )
+
+            if image_data:
+
+                with open(
+                    output_path,
+                    "wb"
+                ) as f:
+
+                    f.write(
+                        base64.b64decode(
+                            image_data
+                        )
+                    )
+
+                return
+
+    raise RuntimeError(
+        "Gemini cavab verdi, amma image tapilmadi!"
+    )
