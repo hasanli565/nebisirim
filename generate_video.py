@@ -2,6 +2,7 @@
 import os
 import re
 import json
+import base64
 from pathlib import Path
 
 import requests
@@ -10,19 +11,25 @@ from dotenv import load_dotenv
 
 
 # ============================================================
-# SETTINGS
+# AYARLAR
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
 
 RECIPES_FILE = BASE_DIR / "recipes.json"
 VIDEOS_DIR = BASE_DIR / "videos"
+TEMP_DIR = BASE_DIR / "temp_video_reference"
 
 VIDEO_COUNT = int(os.getenv("VIDEO_COUNT", "1"))
 
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-MODEL = "wan-video/wan-2.2-5b-fast"
+# Gemini photorealistic image model
+GEMINI_IMAGE_MODEL = "gemini-3.1-flash-image"
+
+# Replicate video model
+REPLICATE_MODEL = "wan-video/wan-2.2-5b-fast"
 
 GITHUB_VIDEO_BASE = (
     "https://raw.githubusercontent.com/"
@@ -31,23 +38,30 @@ GITHUB_VIDEO_BASE = (
 
 
 # ============================================================
-# LOAD .ENV
+# ENV
 # ============================================================
 
 load_dotenv(BASE_DIR / ".env")
 
 REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not REPLICATE_API_TOKEN:
     raise RuntimeError(
         "REPLICATE_API_TOKEN tapilmadi!"
     )
 
+if not GEMINI_API_KEY:
+    raise RuntimeError(
+        "GEMINI_API_KEY tapilmadi! "
+        "GitHub Secrets-e GEMINI_API_KEY elave et."
+    )
+
 os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
 
 
 # ============================================================
-# CREATE VIDEOS DIRECTORY
+# QOVLUQLAR
 # ============================================================
 
 VIDEOS_DIR.mkdir(
@@ -55,14 +69,19 @@ VIDEOS_DIR.mkdir(
     exist_ok=True
 )
 
+TEMP_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
 
 # ============================================================
-# LOAD RECIPES
+# RECIPES.JSON
 # ============================================================
 
 if not RECIPES_FILE.exists():
     raise FileNotFoundError(
-        f"recipes.json tapilmadi: {RECIPES_FILE}"
+        "recipes.json tapilmadi."
     )
 
 with open(
@@ -70,7 +89,6 @@ with open(
     "r",
     encoding="utf-8"
 ) as f:
-
     recipes = json.load(f)
 
 
@@ -81,13 +99,10 @@ if not isinstance(recipes, list):
 
 
 # ============================================================
-# HELPER FUNCTIONS
+# HELPER
 # ============================================================
 
 def text_value(value):
-    """
-    Müxtəlif JSON strukturlarını prompt üçün mətnə çevirir.
-    """
 
     if value is None:
         return ""
@@ -102,7 +117,6 @@ def text_value(value):
         for item in value:
 
             if isinstance(item, str):
-
                 result.append(item.strip())
 
             elif isinstance(item, dict):
@@ -110,7 +124,6 @@ def text_value(value):
                 parts = []
 
                 for key, val in item.items():
-
                     parts.append(
                         f"{key}: {val}"
                     )
@@ -120,10 +133,7 @@ def text_value(value):
                 )
 
             else:
-
-                result.append(
-                    str(item)
-                )
+                result.append(str(item))
 
         return "\n".join(
             x for x in result if x
@@ -145,10 +155,6 @@ def text_value(value):
 
 
 def safe_filename(name):
-    """
-    Azərbaycan hərflərini sadələşdirib
-    təhlükəsiz fayl adı yaradır.
-    """
 
     name = name.lower().strip()
 
@@ -163,11 +169,7 @@ def safe_filename(name):
     }
 
     for old, new in replacements.items():
-
-        name = name.replace(
-            old,
-            new
-        )
+        name = name.replace(old, new)
 
     name = re.sub(
         r"[^a-z0-9]+",
@@ -175,15 +177,10 @@ def safe_filename(name):
         name
     )
 
-    name = name.strip("-")
-
-    return name
+    return name.strip("-")
 
 
 def save_recipes():
-    """
-    recipes.json-u saxlayır.
-    """
 
     with open(
         RECIPES_FILE,
@@ -199,10 +196,11 @@ def save_recipes():
         )
 
 
-def build_prompt(recipe):
-    """
-    Konkret resept üçün video promptu yaradır.
-    """
+# ============================================================
+# RECIPE PROMPT
+# ============================================================
+
+def build_recipe_data(recipe):
 
     name = text_value(
         recipe.get("name")
@@ -228,20 +226,298 @@ def build_prompt(recipe):
         recipe.get("prepTime")
     )
 
-    prompt = f"""
-Create a realistic vertical cooking video specifically for this recipe.
-
-RECIPE NAME:
+    return f"""
+Recipe name:
 {name}
 
-CATEGORY:
+Category:
 {category}
 
-DESCRIPTION:
+Description:
 {description}
 
-PREPARATION TIME:
-{prep_time} minutes
+Preparation time:
+{prep_time}
+
+Ingredients:
+{ingredients}
+
+Cooking instructions:
+{instructions}
+""".strip()
+
+
+# ============================================================
+# GEMINI PHOTO-REALISTIC REFERENCE PROMPT
+# ============================================================
+
+def build_reference_prompt(recipe):
+
+    recipe_data = build_recipe_data(
+        recipe
+    )
+
+    return f"""
+Create a completely new, highly photorealistic food photograph
+of the exact dish described below.
+
+The attached image is only a visual reference for identifying
+the dish and its general appearance. Do NOT preserve its
+illustration, cartoon, CGI, 3D-rendered or artificial visual style.
+
+The new image must look like a real photograph taken in a real kitchen
+by a professional food photographer.
+
+IMPORTANT:
+- Keep the correct dish identity.
+- Keep the correct ingredients.
+- Keep the recognizable appearance of the recipe.
+- Make the food physically realistic.
+- Use realistic food textures.
+- Use realistic ingredients.
+- Use natural imperfections.
+- Use realistic oil, moisture and steam where appropriate.
+- Use realistic shadows and reflections.
+- Use a real frying pan, pot, plate or cooking vessel appropriate
+  for the recipe.
+- Make the final food look genuinely edible.
+- Do not make it look like computer graphics.
+
+Photography:
+professional food photography,
+full-frame camera,
+natural kitchen lighting,
+realistic depth of field,
+natural shadows,
+realistic lens behavior,
+subtle background blur,
+authentic food texture,
+high photographic realism.
+
+Composition:
+vertical 9:16 composition,
+food clearly visible,
+dish centered,
+clean realistic kitchen environment.
+
+ABSOLUTELY AVOID:
+cartoon,
+anime,
+illustration,
+digital painting,
+3D render,
+CGI,
+plastic food,
+fake food,
+synthetic texture,
+fantasy food,
+video-game graphics,
+unrealistic colors,
+glowing ingredients,
+perfect artificial surfaces,
+oversaturated colors,
+watermark,
+logo,
+text,
+letters,
+captions.
+
+RECIPE:
+{recipe_data}
+""".strip()
+
+
+# ============================================================
+# GEMINI IMAGE GENERATION
+# ============================================================
+
+def create_photorealistic_reference(
+    recipe,
+    original_image_url,
+    output_path
+):
+
+    print()
+    print(
+        "[1/2] Gemini photorealistic reference yaradir..."
+    )
+
+    print(
+        f"Reference: {original_image_url}"
+    )
+
+    # Original AI image-i internetden götür
+    response = requests.get(
+        original_image_url,
+        timeout=120
+    )
+
+    response.raise_for_status()
+
+    image_bytes = response.content
+
+    content_type = (
+        response.headers.get(
+            "Content-Type",
+            "image/png"
+        )
+    )
+
+    if ";" in content_type:
+        content_type = content_type.split(";")[0]
+
+    # Gemini Interactions API
+    url = (
+        "https://generativelanguage.googleapis.com/"
+        "v1beta/interactions"
+    )
+
+    prompt = build_reference_prompt(
+        recipe
+    )
+
+    payload = {
+        "model": GEMINI_IMAGE_MODEL,
+
+        "input": [
+            {
+                "type": "text",
+                "text": prompt
+            },
+            {
+                "type": "image",
+                "data": base64.b64encode(
+                    image_bytes
+                ).decode("utf-8"),
+                "mime_type": content_type
+            }
+        ],
+
+        "response_format": {
+            "type": "image",
+            "aspect_ratio": "9:16",
+            "image_size": "1K"
+        }
+    }
+
+    headers = {
+        "x-goog-api-key": GEMINI_API_KEY,
+        "Content-Type": "application/json"
+    }
+
+    result = requests.post(
+        url,
+        headers=headers,
+        json=payload,
+        timeout=600
+    )
+
+    if not result.ok:
+
+        raise RuntimeError(
+            "Gemini image generation xetasi: "
+            + result.text
+        )
+
+    data = result.json()
+
+    # Yeni Interactions API
+    output_image = data.get(
+        "output_image"
+    )
+
+    if output_image:
+
+        image_data = output_image.get(
+            "data"
+        )
+
+        if image_data:
+
+            with open(
+                output_path,
+                "wb"
+            ) as f:
+
+                f.write(
+                    base64.b64decode(
+                        image_data
+                    )
+                )
+
+            return
+
+
+    # Bəzi cavablarda image steps daxilində ola bilər
+    for step in data.get("steps", []):
+
+        for content in step.get(
+            "content",
+            []
+        ):
+
+            if content.get(
+                "type"
+            ) == "image":
+
+                image_data = content.get(
+                    "data"
+                )
+
+                if image_data:
+
+                    with open(
+                        output_path,
+                        "wb"
+                    ) as f:
+
+                        f.write(
+                            base64.b64decode(
+                                image_data
+                            )
+                        )
+
+                    return
+
+    raise RuntimeError(
+        "Gemini cavab verdi, amma image tapilmadi."
+    )
+
+
+# ============================================================
+# VIDEO PROMPT
+# ============================================================
+
+def build_video_prompt(recipe):
+
+    name = text_value(
+        recipe.get("name")
+    )
+
+    description = text_value(
+        recipe.get("description")
+    )
+
+    ingredients = text_value(
+        recipe.get("ingredients")
+    )
+
+    instructions = text_value(
+        recipe.get("instructions")
+    )
+
+    return f"""
+Create a REAL LIVE-ACTION cooking video of "{name}".
+
+The input image is a photorealistic reference image of the exact dish.
+
+The video must look like genuine footage recorded by a professional
+food videographer in a real kitchen.
+
+Show the actual cooking process of this exact recipe.
+
+RECIPE DESCRIPTION:
+{description}
 
 INGREDIENTS:
 {ingredients}
@@ -249,82 +525,111 @@ INGREDIENTS:
 COOKING INSTRUCTIONS:
 {instructions}
 
-IMPORTANT:
+The cooking actions must logically follow the recipe.
 
-Use the provided recipe image as the visual reference for the dish.
+Show realistic preparation and cooking:
+cutting,
+adding ingredients,
+mixing,
+stirring,
+frying,
+boiling,
+simmering,
+baking,
+plating
 
-The final dish must closely resemble the reference image.
+only when those actions are appropriate to the recipe.
 
-The video must show the actual cooking process of this exact recipe,
-following the ingredients and cooking instructions above.
+Keep the food visually consistent with the reference image.
 
-Show the ingredients being prepared and added in a logical sequence.
+The final result must closely match the reference dish.
 
-Show realistic cooking actions such as cutting, mixing, stirring,
-frying, boiling, baking or simmering only when appropriate for this recipe.
+REAL FOOD.
+REAL KITCHEN.
+REAL HUMAN HANDS.
+REAL COOKING.
+REAL INGREDIENTS.
+REAL STEAM.
+REAL OIL.
+REAL FOOD TEXTURES.
 
-The cooking process must match the recipe.
+Professional food cinematography.
+Natural kitchen lighting.
+Natural shadows.
+Realistic reflections.
+Realistic depth of field.
+Natural camera movement.
+Realistic motion blur.
+Macro food photography.
 
-Do not invent completely different ingredients or a different dish.
+The result must look like a real cooking video recorded with
+a professional camera, NOT an AI animation.
 
-Maintain visual consistency throughout the entire video.
-
-Show realistic food textures, realistic ingredients and natural cooking
-movements.
-
-Use a clean modern kitchen environment.
-
-Use close-up food photography and natural camera movement.
-
-Make the food look fresh, realistic and appetizing.
-
-Vertical 9:16 format.
-
-Short social-media style cooking video.
-
-No talking people.
-No narration.
+No cartoon.
+No anime.
+No illustration.
+No CGI.
+No 3D render.
+No plastic-looking food.
+No synthetic textures.
+No fantasy ingredients.
+No glowing food.
+No text.
 No subtitles.
 No captions.
-No text.
 No logo.
 No watermark.
+No talking.
+No narration.
 
-Photorealistic food.
-Realistic hands.
-Realistic utensils.
-Realistic cooking.
-Natural lighting.
-Professional food video.
+Vertical 9:16.
+Photorealistic live-action food video.
 """.strip()
 
-    return prompt
 
+# ============================================================
+# VIDEO NEGATIVE PROMPT
+# ============================================================
 
-def negative_prompt():
+def build_negative_prompt():
+
     return """
 cartoon,
 anime,
 illustration,
+digital painting,
+3D render,
 CGI,
+computer graphics,
+video game graphics,
+plastic food,
+fake food,
+synthetic food,
 unrealistic food,
-wrong food,
-wrong ingredients,
-different dish,
+unrealistic ingredients,
+fantasy food,
+glowing food,
+oversaturated food,
+perfect artificial surfaces,
 deformed food,
-melted food,
-unrealistic cooking,
+melting food,
+floating objects,
 floating ingredients,
-floating utensils,
-duplicate objects,
+duplicate ingredients,
+duplicate utensils,
 deformed hands,
 extra fingers,
 missing fingers,
 bad anatomy,
+unrealistic cooking,
+unrealistic physics,
+jerky motion,
+morphing,
+flickering,
 blurry,
-low resolution,
-distorted,
+low quality,
 text,
+letters,
 subtitles,
 captions,
 logo,
@@ -334,28 +639,38 @@ face close-up
 """.strip()
 
 
-def save_output(output, destination):
-    """
-    Replicate output-unu MP4 faylı kimi saxlayır.
-    """
+# ============================================================
+# SAVE VIDEO OUTPUT
+# ============================================================
+
+def save_video_output(
+    output,
+    destination
+):
 
     # FileOutput / file-like object
-    if hasattr(output, "read"):
-
-        data = output.read()
+    if hasattr(
+        output,
+        "read"
+    ):
 
         with open(
             destination,
             "wb"
         ) as f:
 
-            f.write(data)
+            f.write(
+                output.read()
+            )
 
         return
 
 
-    # String URL
-    if isinstance(output, str):
+    # URL
+    if isinstance(
+        output,
+        str
+    ):
 
         response = requests.get(
             output,
@@ -376,10 +691,16 @@ def save_output(output, destination):
         return
 
 
-    # Object with URL
-    if hasattr(output, "url"):
+    # Object with url
+    if hasattr(
+        output,
+        "url"
+    ):
 
         url = output.url
+
+        if callable(url):
+            url = url()
 
         response = requests.get(
             url,
@@ -400,15 +721,18 @@ def save_output(output, destination):
         return
 
 
-    # List output
-    if isinstance(output, list):
+    # List
+    if isinstance(
+        output,
+        list
+    ):
 
         if not output:
             raise RuntimeError(
-                "Replicate boş output qaytardı."
+                "Replicate output bosdur."
             )
 
-        save_output(
+        save_video_output(
             output[0],
             destination
         )
@@ -417,17 +741,23 @@ def save_output(output, destination):
 
 
     raise RuntimeError(
-        f"Tanınmayan Replicate output tipi: {type(output)}"
+        f"Taninmayan output tipi: {type(output)}"
     )
 
 
 # ============================================================
-# FIND RECIPES WITHOUT VIDEO
+# FIND PENDING RECIPES
 # ============================================================
 
 pending = []
 
-for index, recipe in enumerate(recipes):
+for index, recipe in enumerate(
+    recipes
+):
+
+    name = text_value(
+        recipe.get("name")
+    )
 
     video_url = text_value(
         recipe.get("videoUrl")
@@ -437,25 +767,18 @@ for index, recipe in enumerate(recipes):
         recipe.get("imageResource")
     )
 
-    name = text_value(
-        recipe.get("name")
-    )
-
-    # Video artıq varsa keç
     if video_url:
         continue
 
-    # Ad yoxdursa keç
     if not name:
         print(
-            "[SKIP] Resept adı yoxdur."
+            "[SKIP] Resept adi yoxdur."
         )
         continue
 
-    # Şəkil yoxdursa video yaratmaq mümkün deyil
     if not image_url:
         print(
-            f"[SKIP] Reference image yoxdur: {name}"
+            f"[SKIP] imageResource yoxdur: {name}"
         )
         continue
 
@@ -465,27 +788,33 @@ for index, recipe in enumerate(recipes):
 
 
 # ============================================================
-# INFO
+# START
 # ============================================================
 
 print()
-print("=" * 60)
-print("NƏ BİŞİRİM - RECIPE VIDEO GENERATOR")
-print("=" * 60)
+print("=" * 65)
+print(
+    "NƏ BİŞİRİM - PHOTOREALISTIC VIDEO GENERATOR"
+)
+print("=" * 65)
 
 print(
-    f"Cəmi resept: {len(recipes)}"
+    f"Cəmi resept       : {len(recipes)}"
 )
 
 print(
-    f"Video gözləyən: {len(pending)}"
+    f"Video gözləyən    : {len(pending)}"
 )
 
 print(
-    f"Bu run üçün limit: {VIDEO_COUNT}"
+    f"Bu run limiti     : {VIDEO_COUNT}"
 )
 
-print("=" * 60)
+print(
+    "Pipeline          : Original → Gemini → Wan → MP4"
+)
+
+print("=" * 65)
 
 
 if not pending:
@@ -501,13 +830,13 @@ if not pending:
 # REPLICATE CLIENT
 # ============================================================
 
-client = replicate.Client(
+replicate_client = replicate.Client(
     api_token=REPLICATE_API_TOKEN
 )
 
 
 # ============================================================
-# GENERATE VIDEOS
+# MAIN LOOP
 # ============================================================
 
 generated_count = 0
@@ -518,67 +847,62 @@ for index, recipe in pending:
     if generated_count >= VIDEO_COUNT:
         break
 
-
-    # --------------------------------------------------------
-    # RECIPE DATA
-    # --------------------------------------------------------
-
     name = text_value(
         recipe.get("name")
     )
 
-    image_url = text_value(
+    original_image_url = text_value(
         recipe.get("imageResource")
     )
 
-    slug = safe_filename(name)
+    slug = safe_filename(
+        name
+    )
 
     if not slug:
 
         print(
-            f"[SKIP] Fayl adı yaradıla bilmədi: {name}"
+            f"[SKIP] Fayl adi yaradıla bilmədi: {name}"
         )
 
         continue
 
 
-    filename = (
+    video_filename = (
         f"{slug}.mp4"
     )
 
     video_path = (
-        VIDEOS_DIR / filename
+        VIDEOS_DIR /
+        video_filename
+    )
+
+    reference_path = (
+        TEMP_DIR /
+        f"{slug}-reference.png"
     )
 
     video_url = (
         GITHUB_VIDEO_BASE +
-        filename
+        video_filename
     )
 
 
     print()
-    print("=" * 60)
+    print("=" * 65)
     print(
-        f"VIDEO {generated_count + 1}/{VIDEO_COUNT}"
+        f"RESEPT {generated_count + 1}/{VIDEO_COUNT}"
     )
-    print("=" * 60)
+    print("=" * 65)
 
     print(
-        f"Resept: {name}"
-    )
-
-    print(
-        f"Reference image: {image_url}"
-    )
-
-    print(
-        f"Output: videos/{filename}"
+        f"Ad: {name}"
     )
 
 
-    # --------------------------------------------------------
-    # EXISTING LOCAL VIDEO
-    # --------------------------------------------------------
+    # ========================================================
+    # ƏGƏR VIDEO ARTİQ VARSA
+    # ========================================================
 
     if (
         video_path.exists()
@@ -594,86 +918,32 @@ for index, recipe in pending:
 
         save_recipes()
 
-        print(
-            "[OK] videoUrl əlavə edildi."
-        )
-
         generated_count += 1
+
+        print(
+            "[OK] videoUrl JSON-a yazıldı."
+        )
 
         continue
 
 
-    # --------------------------------------------------------
-    # BUILD RECIPE-SPECIFIC PROMPT
-    # --------------------------------------------------------
-
-    prompt = build_prompt(
-        recipe
-    )
-
-    negative = negative_prompt()
-
-
-    print(
-        "[INFO] Resept prompta daxil edildi."
-    )
-
-    print(
-        "[INFO] Reference image Replicate-ə göndərilir."
-    )
-
-    print(
-        "[INFO] Video yaradılır..."
-    )
-
-
-    # --------------------------------------------------------
-    # GENERATE
-    # --------------------------------------------------------
+    # ========================================================
+    # 1. PHOTOREALISTIC IMAGE
+    # ========================================================
 
     try:
 
-        output = client.run(
-
-            MODEL,
-
-            input={
-
-                # Mövcud yemək şəklini reference
-                "image": image_url,
-
-                # Konkret reseptə uyğun prompt
-                "prompt": prompt,
-
-                # Mənfi prompt
-                "negative_prompt": negative,
-
-                # 81 frame
-                "num_frames": 81,
-
-                # 480p
-                "resolution": "480p",
-
-                # Telefon üçün
-                "aspect_ratio": "9:16",
-
-                # Sürətli rejim
-                "go_fast": True,
-
-                # Model parametri
-                "sample_shift": 12,
-
-                # FPS
-                "frames_per_second": 16,
-            }
+        create_photorealistic_reference(
+            recipe,
+            original_image_url,
+            reference_path
         )
-
 
     except Exception as error:
 
         print()
         print(
-            "[ERROR] Replicate video yaratmadı!"
+            "[ERROR] Photorealistic reference yaradıla bilmədi!"
         )
 
         print(
@@ -687,13 +957,104 @@ for index, recipe in pending:
         continue
 
 
-    # --------------------------------------------------------
-    # SAVE VIDEO
-    # --------------------------------------------------------
+    if (
+        not reference_path.exists()
+        or
+        reference_path.stat().st_size == 0
+    ):
+
+        print(
+            "[ERROR] Gemini reference şəkli boşdur."
+        )
+
+        continue
+
+
+    print(
+        "[OK] Photorealistic reference hazırdır."
+    )
+
+    print(
+        f"Reference size: "
+        f"{reference_path.stat().st_size / 1024:.1f} KB"
+    )
+
+
+    # ========================================================
+    # 2. VIDEO
+    # ========================================================
+
+    prompt = build_video_prompt(
+        recipe
+    )
+
+    negative = build_negative_prompt()
+
+
+    print()
+    print(
+        "[2/2] Wan video yaradır..."
+    )
+
 
     try:
 
-        save_output(
+        # Local photorealistic image
+        # Replicate özü faylı upload edir.
+        with open(
+            reference_path,
+            "rb"
+        ) as image_file:
+
+            output = replicate_client.run(
+
+                REPLICATE_MODEL,
+
+                input={
+
+                    "image": image_file,
+
+                    "prompt": prompt,
+
+                    "negative_prompt":
+                        negative,
+
+                    "num_frames": 81,
+
+                    "resolution": "480p",
+
+                    "aspect_ratio": "9:16",
+
+                    "go_fast": True,
+
+                    "sample_shift": 12,
+
+                    "frames_per_second": 16
+                }
+            )
+
+
+    except Exception as error:
+
+        print()
+        print(
+            "[ERROR] Wan video yarada bilmədi!"
+        )
+
+        print(
+            str(error)
+        )
+
+        continue
+
+
+    # ========================================================
+    # SAVE VIDEO
+    # ========================================================
+
+    try:
+
+        save_video_output(
             output,
             video_path
         )
@@ -702,14 +1063,13 @@ for index, recipe in pending:
 
         print()
         print(
-            "[ERROR] Video saxlanmadı!"
+            "[ERROR] Video fayla yazılmadı!"
         )
 
         print(
             str(error)
         )
 
-        # Yarımçıq fayl varsa sil
         if video_path.exists():
 
             try:
@@ -720,9 +1080,9 @@ for index, recipe in pending:
         continue
 
 
-    # --------------------------------------------------------
-    # VERIFY FILE
-    # --------------------------------------------------------
+    # ========================================================
+    # VERIFY
+    # ========================================================
 
     if (
         not video_path.exists()
@@ -731,40 +1091,60 @@ for index, recipe in pending:
     ):
 
         print(
-            "[ERROR] Video faylı boşdur."
+            "[ERROR] Video fayli bosdur."
         )
 
         continue
 
 
-    # --------------------------------------------------------
+    # ========================================================
     # UPDATE JSON
-    # --------------------------------------------------------
+    # ========================================================
 
     recipe["videoUrl"] = video_url
 
     save_recipes()
 
-
     generated_count += 1
 
 
     print()
+    print("=" * 65)
+    print("[SUCCESS] VIDEO HAZIRDIR")
+    print("=" * 65)
+
     print(
-        "[SUCCESS] Video hazırdır!"
+        f"Resept : {name}"
     )
 
     print(
-        f"Fayl: {video_path}"
+        f"Video  : videos/{video_filename}"
     )
 
     print(
-        f"URL: {video_url}"
+        f"URL    : {video_url}"
     )
 
     print(
-        f"Ölçü: {video_path.stat().st_size / 1024 / 1024:.2f} MB"
+        f"Size   : "
+        f"{video_path.stat().st_size / 1024 / 1024:.2f} MB"
     )
+
+    print("=" * 65)
+
+
+# ============================================================
+# CLEAN TEMP REFERENCES
+# ============================================================
+
+for file in TEMP_DIR.glob(
+    "*-reference.png"
+):
+
+    try:
+        file.unlink()
+    except Exception:
+        pass
 
 
 # ============================================================
@@ -772,17 +1152,16 @@ for index, recipe in pending:
 # ============================================================
 
 print()
-print("=" * 60)
+print("=" * 65)
 print("İŞ BİTDİ")
-print("=" * 60)
+print("=" * 65)
 
 print(
-    f"Yeni yaradılan video: {generated_count}"
+    f"Yeni video sayı: {generated_count}"
 )
 
 print(
-    f"Limit: {VIDEO_COUNT}"
+    f"Limit          : {VIDEO_COUNT}"
 )
 
-print("=" * 60)
-
+print("=" * 65)
