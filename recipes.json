@@ -2262,7 +2262,7 @@
     "category": "Şorba",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qatiq-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda yumşalana qədər qaynadın.\n2. Qatığı yumurta və az miqdarcıq un ilə bir qabda çalın.\n3. Qaynayan düyülü suyun üzərinə qatıq qarışığını fasiləsiz qarışdıraraq asta-asta tökün.\n4. Qaynamağa başladıqdan sonra xırda doğranmış keşniş və şüyüdü əlavə edin.\n5. Duzunu tənzimləyib ocaqdan götürün.",
     "ingredients": [
