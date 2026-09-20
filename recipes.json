@@ -9436,7 +9436,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-kesmik.png",
     "videoUrl": "",
     "instructions": "1. Kəsməyi çəngüllə əzin.\n2. Pendiri sürtgəcdən keçirib kəsmiyə qatın.\n3. Zərif qarışım əldə olunana qədər qarışdırın.",
     "ingredients": [
@@ -9463,7 +9463,7 @@
     "category": "Şorba",
     "prepTime": 45,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kelem-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Kələmi və kökəni doğrayın.\n2. Bulyona əlavə edib qaynadın.\n3. Kartof və ədviyyat qatın.",
     "ingredients": [
@@ -9490,7 +9490,7 @@
     "category": "Şorba",
     "prepTime": 180,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/seki-piti-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Ət və noxudu saxsı qaba yığın.\n2. Quyruq və şabalıd əlavə edin.\n3. Od üzərində zəif odda bişirin.",
     "ingredients": [
@@ -9517,7 +9517,7 @@
     "category": "Salat",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-kahi-salati.png",
     "videoUrl": "",
     "instructions": "1. Toyuq ətini bişirib didin.\n2. Kahını əllə doğrayın.\n3. Sous ilə qarışdırın.",
     "ingredients": [
@@ -9544,7 +9544,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ruleti.png",
     "videoUrl": "",
     "instructions": "1. Badımcanı uzunsov dilimləyib qızardın.\n2. İçlik üçün qoz və sarımsağı əzin.\n3. Badımcanın evinə içlik qoyub bükün.",
     "ingredients": [
@@ -9571,7 +9571,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-qovurmasi.png",
     "videoUrl": "",
     "instructions": "1. Toyuğu doğrayıb qızardın.\n2. Kartof əlavə edib bişirin.\n3. Soğan və ədviyyat qatın.",
     "ingredients": [
@@ -9598,7 +9598,7 @@
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-qovurmasi.png",
     "videoUrl": "",
     "instructions": "1. Quzu ətini doğrayıb öz yağında qovurun.\n2. Soğan və duz əlavə edin.\n3. Qızarana qədər bişirin.",
     "ingredients": [
@@ -9625,7 +9625,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaq-ve-bal.png",
     "videoUrl": "",
     "instructions": "1. Qaymağı boşqaba çəkin.\n2. Üzərinə süzmə bal əlavə edin.\n3. Təzə çörəklə süfrəyə verin.",
     "ingredients": [
@@ -9647,7 +9647,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/yumurta-qovurmasi.png",
     "videoUrl": "",
     "instructions": "1. Tavada kərə yağını əridin.\n2. Yumurtaları tavaya sındırın.\n3. Duz səpib istədiyiniz qədər bişirin.",
     "ingredients": [
@@ -9669,7 +9669,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmik-ve-goyerti.png",
     "videoUrl": "",
     "instructions": "1. Kəsmiyi qaba qoyun.\n2. Göyərtiləri xırda doğrayıb kəsmiyə qatın.\n3. Xama və duz əlavə edib qarışdırın.",
     "ingredients": [
@@ -9696,7 +9696,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sirin-plov.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda qaynadasınız.\n2. Quru meyvələri kərə yağında qovurun.\n3. Qazanın dibinə qazmaq qoyub düyü və meyvələri qat-qat yığın.\n4. Dəmə qoyun.",
     "ingredients": [
@@ -9728,7 +9728,7 @@
     "category": "Əsas Yemək",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-qelyasi.png",
     "videoUrl": "",
     "instructions": "1. Toyuq ətini doğrayıb qızardın.\n2. Soğan və bibər əlavə edib qovurun.\n3. Ədviyyatları səpib bişirin.",
     "ingredients": [
@@ -9755,7 +9755,7 @@
     "category": "Əsas Yemək",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/baliq-qizartmasi.png",
     "videoUrl": "",
     "instructions": "1. Balığı təmizləyib hissələrə bölün.\n2. Duzlayıb unu bulayın.\n3. Tavada bitki yağında qızardın.",
     "ingredients": [
@@ -9782,7 +9782,7 @@
     "category": "Şorba",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/duyulu-sorba.png",
     "videoUrl": "",
     "instructions": "1. Toyuq bulyonunda düyünü bişirin.\n2. Kartof və yerkökü əlavə edin.\n3. Hazır olanda göyərti səpib ocaqdan götürün.",
     "ingredients": [
@@ -9809,7 +9809,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/coban-salat.png",
     "videoUrl": "",
     "instructions": "1. Xiyar və pomidorları kubik doğrayın.\n2. Göyərti və soğanı əlavə edin.\n3. Duz, zeytun yağı və sirkə ilə qarışdırın.",
     "ingredients": [
@@ -9841,7 +9841,7 @@
     "category": "Salat",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/nar-salat.png",
     "videoUrl": "",
     "instructions": "1. Toyuq ətini qaynadıbdidikləyin.\n2. Qoz əzin.\n3. Mayonez ilə qarışdırıb üzərinə nar səp.",
     "ingredients": [
@@ -9873,7 +9873,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-qelyanalti.png",
     "videoUrl": "",
     "instructions": "1. Lavaşın evinə pendir qoyun.\n2. Konvert şəklində bükün.\n3. Tavada qızardın.",
     "ingredients": [
@@ -9895,7 +9895,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-qelyanalti.png",
     "videoUrl": "",
     "instructions": "1. Göbələyin ayaqlarını təmizləyin.\n2. İçiə pendir doldurun.\n3. Sobada bişirin.",
     "ingredients": [
@@ -9917,7 +9917,7 @@
     "category": "Şirniyyat",
     "prepTime": 45,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/keks.png",
     "videoUrl": "",
     "instructions": "1. Yağ və şəkəri qarışdırın.\n2. Yumurta və un əlavə edin.\n3. Qəlibdə bişirin.",
     "ingredients": [
@@ -9949,7 +9949,7 @@
     "category": "İçki",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qara-cay.png",
     "videoUrl": "",
     "instructions": "1. Çaynikə quru çay töküb qaynar su əlavə edin.\n2. Dəmlənməyə qoyun.\n3. Stəkanlara süzün.",
     "ingredients": [
@@ -9971,7 +9971,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaqli-siyiq.png",
     "videoUrl": "",
     "instructions": "1. Balqabağı təmizləyib kubiklərə doğrayın və suda bişirin.\n2. Yumşaldıqdan sonra əzin və süd əlavə edin.\n3. Düyü unu və şəkər qatıb qatılaşana qədər bişirin.",
     "ingredients": [
@@ -9998,7 +9998,7 @@
     "category": "Şorba",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/parca-bozbas.png",
     "videoUrl": "",
     "instructions": "1. Ət və noxudu qazana qoyub üzərinə su töküb kəfini yığaraq bişirin.\n2. Kartof, soğan və pomidor pastası əlavə edin.\n3. Zəfəran dəmləməsi və duz qataraq tam bişənə qədər qaynadaq.",
     "ingredients": [
@@ -10035,7 +10035,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaqli-kesmik-siyigi.png",
     "videoUrl": "",
     "instructions": "1. Kiçik bir qazanda qaymağı və südü qarışdıraraq bir qədər qızdırın.\n2. Üzərinə düyü ununu əlavə edib dayanmadan qarışdırın.\n3. Kəsmiyi əzərək qazana əlavə edin və qatılaşana qədər bişirin.\n4. Zövqə görə duz əlavə edib isti şəkildə süfrəyə verin.",
     "ingredients": [
@@ -10072,7 +10072,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-goyerti-kukusu.png",
     "videoUrl": "",
     "instructions": "1. Göyərtiləri təmizləyib xırda-xırda doğrayın.\n2. Qoz ləpəsini blenderdə və ya bıçaqla xırdalayın.\n3. Yumurtaları dərin qaba qırıb duz və istiotla çalın.\n4. Doğranmış göyərtiləri və qozu yumurtaya qatışdırın.\n5. Tavada kərə yağını əridib qarışığı tökün və hər iki üzünü qızardın.",
     "ingredients": [
@@ -10109,7 +10109,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 45,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/seher-pendir-bulkasi.png",
     "videoUrl": "",
     "instructions": "1. Maya və ilıq südü qarışdırıb on dəqiqə gözlədin.\n2. Un, duz, yumurta və kərə yağını əlavə edib yumşaq xəmir yoğurun.\n3. Xəmiri mayalanmağa qoyun, sonra kiçik kündələrə ayırın.\n4. Hər kündənin içinə rəndələnmiş pendir qoyub bükün.\n5. Sobada qızılı rəng alana qədər bişirin.",
     "ingredients": [
@@ -10156,7 +10156,7 @@
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-levengisi.png",
     "videoUrl": "",
     "instructions": "1. Badımcanların ortasını yarıb duzlu suda bir az saxlayın, sonra qurulayın.\n2. Qoz ləpəsini və soğanı ətçəkəndən keçirin.\n3. Üzərinə turşu, duz və istiot əlavə edib qarışdırın.\n4. Badımcanların içini bu qarışıqla doldurun.\n5. Tavada az yağda qapağı bağlı şəkildə bişirin.",
     "ingredients": [
@@ -10198,7 +10198,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-buglama.png",
     "videoUrl": "",
     "instructions": "1. Quzu ətini iri doğrayıb qazana yığın.\n2. Üzərinə irəddən doğranmış soğan, pomidor və bibər düzün.\n3. Duz, istiot və dəfnə yarpağı əlavə edin.\n4. Zəif odda öz şirəsində təxminən bir saat yarı bişirin.",
     "ingredients": [
@@ -10240,7 +10240,7 @@
     "category": "Əsas Yemək",
     "prepTime": 70,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaqli-duyu-plovu.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda islağa qoyun, sonra yarıbişmiş şəkildə süzün.\n2. Balqabağı kubiklərə doğrayıb kərə yağında azca qovurun.\n3. Qazan dibinə qazmaq qoyub üzərinə düyü və balqabaq qatlarını növbə ilə yığın.\n4. Dəmlənməyə qoyun və süfrəyə verərkən qarışdırın.",
     "ingredients": [
@@ -10277,7 +10277,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kelem-ve-kok-salati.png",
     "videoUrl": "",
     "instructions": "1. Kələmi incə şəkildə doğrayın.\n2. Yerkökünü sürtgəcdən keçirin.\n3. Şəkər tozu və duz əlavə edib əlinizlə bir az ovun.\n4. Zeytun yağı və limon suyu əlavə edib yaxşıca qarışdırın.",
     "ingredients": [
@@ -10319,7 +10319,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/bananli-ve-qozlu-smuzi.png",
     "videoUrl": "",
     "instructions": "1. Bananı dilimləyin.\n2. Blenderə banan, süd və qoz əlavə edin.\n3. Hamar kütlə alınana qədər blendersidən keçirin.",
     "ingredients": [
@@ -10346,7 +10346,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sutlu-ve-qatiqli-corek.png",
     "videoUrl": "",
     "instructions": "1. Çörək dilimlərini tavada qızardın.\n2. Üzərinə sarımsaqlı qatıq çəkin.\n3. Xırda doğranmış şüyüd səpib süfrəyə verin.",
     "ingredients": [
@@ -10378,7 +10378,7 @@
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/xengel.png",
     "videoUrl": "",
     "instructions": "1. Un, su və duzdan bərk xəmir yoğurun, nazik yayılaraq kvadratlar kəsin.\n2. Xəmir kvadratlarını duzlu suda bişirib süzün.\n3. Üzərinə qovrulmuş qiymə və sarımsaqlı qatıq əlavə edin.",
     "ingredients": [
@@ -10420,7 +10420,7 @@
     "category": "Əsas Yemək",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/tabaka.png",
     "videoUrl": "",
     "instructions": "1. Çolpanı ortadan kəsib azca döyün və duz-istiot vurun.\n2. Tavaya kərə yağı töküb çolpanı qoyun.\n3. Üzərinə ağır yük qoyaraq hər iki tərəfini qızardın.",
     "ingredients": [
@@ -10452,7 +10452,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/dana-basdirmasi.png",
     "videoUrl": "",
     "instructions": "1. Dana ətini iri kubiklərə doğrayın.\n2. Soğan, duz və istiotla qarışdırıb 2 saat saxlayın.\n3. Tavada və ya manqalda qızardın.",
     "ingredients": [
@@ -10484,7 +10484,7 @@
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-salati.png",
     "videoUrl": "",
     "instructions": "1. Toyuq sinə ətini qaynadıb uzunsov parça şəklində didin.\n2. Bolqar bibəri və kahını nazik doğrayın.\n3. Mayonez və duz ilə qarışdırın.",
     "ingredients": [
@@ -10516,7 +10516,7 @@
     "category": "Salat",
     "prepTime": 35,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/cugundur-ve-qoz-salati.png",
     "videoUrl": "",
     "instructions": "1. Çuğunduru qaynadıb sürtgəcdən keçirin.\n2. Qozu xırda döyün və çuğundura əlavə edin.\n3. Sarımsaq və mayonez ilə dadlandırın.",
     "ingredients": [
@@ -10548,7 +10548,7 @@
     "category": "Şorba",
     "prepTime": 180,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/piti.png",
     "videoUrl": "",
     "instructions": "1. Noxudu əvvəlcədən suda isladın.\n2. Ət, noxud, kartof və şabalıdı piti küpünə yığın.\n3. Üstünə su və quyruq əlavə edib sobada və ya zəif odda uzun müddət bişirin.\n4. Süfrəyə verərkən əvvəl suyunu, sonra ətini qaba çəkin.",
     "ingredients": [
@@ -10585,7 +10585,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/du-bere.png",
     "videoUrl": "",
     "instructions": "1. Un, su və duzdan bərk xəmir yoğurun, kvadratlar kəsin.\n2. İçinə ət qiyməsi qoyub üçbucaq formada bükün.\n3. Qaynayan bulyona atıb bişirin.\n4. Süfrəyə sirkə-sarımsaqla verin.",
     "ingredients": [
@@ -10622,7 +10622,7 @@
     "category": "Salat",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/xiyar-ve-goyerti-salati.png",
     "videoUrl": "",
     "instructions": "1. Xiyarları dairəvi doğrayın.\n2. Göyərtiləri xırda doğrayıb xiyarlara qatın.\n3. Sarımsaqlı qatıq və duz əlavə edib qarışdırın.\n4. Soyuq halda süfrəyə verin.",
     "ingredients": [
@@ -10654,7 +10654,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/motal-pendiri-ve-corek.png",
     "videoUrl": "",
     "instructions": "1. Təzə çörəyi dilimleyin.\n2. Motal pendirini qaba qoyun.\n3. Süfrəyə çay ilə birlikdə verin.",
     "ingredients": [
@@ -10676,7 +10676,7 @@
     "category": "Əsas Yemək",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/levengi-qutab.png",
     "videoUrl": "",
     "instructions": "1. Un, su və duzdan xəmir yoğurun.\n2. Qozu və soğanı ətçəkəndən keçirib narşərab əlavə edin.\n3. Xəmiri açıb içliyi qoyun və tavada bişirin.",
     "ingredients": [
@@ -10713,7 +10713,7 @@
     "category": "Salat",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/nar-ve-qoz-salati.png",
     "videoUrl": "",
     "instructions": "1. Çuğunduru bişirib sürtgəcdən keçirin.\n2. Qozu döyün və çuğundura qatın.\n3. Mayonez ilə qarışdırıb üzərinə nar dənələri düzün.",
     "ingredients": [
@@ -10745,7 +10745,7 @@
     "category": "Şirniyyat",
     "prepTime": 35,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badamli-pecenye.png",
     "videoUrl": "",
     "instructions": "1. Yumurta, şəkər və kərə yağını çalın.\n2. Un əlavə edib xəmir yoğurun və peçenye forması verin.\n3. Üzərinə badam qoyub sobada bişirin.",
     "ingredients": [
@@ -10782,7 +10782,7 @@
     "category": "Şorba",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaqli-balqabaq-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Balqabaq və soğanı təmizləyib kubşəkilli doğrayın.\n2. Qazanda kərə yağını əridib soğan və balqabağı qovurun.\n3. Üzərinə tərəvəz bulyonu əlavə edib yumşalana qədər bişirin.\n4. Blenderdən keçirib qaymaq əlavə edin və bir dəfə qaynadın.",
     "ingredients": [
@@ -10819,7 +10819,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-i-spanaq-salati.png",
     "videoUrl": "",
     "instructions": "1. İspanaq yarpaqlarını yuyub qurulayın və dərin qaba qoyun.\n2. Qoz ləpəsini quru tavada bir az qovurub xırdalayın.\n3. Salatın üzərinə xırdalanmış qoz səpin.\n4. Zeytun yağı və limon suyu qarışığını üzərinə gəzdirib süfrəyə verin.",
     "ingredients": [
@@ -10851,7 +10851,7 @@
     "category": "Əsas Yemək",
     "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/etli-ve-goyertili-piti.png",
     "videoUrl": "",
     "instructions": "1. Noxudlu əti saxsı qablara bölün.\n2. Üzərinə kartof və su əlavə edin.\n3. Sobada zəif odda uzun müddət bişirin.\n4. Süfrəyə verərkən göyərti əlavə edin.",
     "ingredients": [
@@ -10888,7 +10888,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmikli-ve-suyudlu-blincik.png",
     "videoUrl": "",
     "instructions": "1. Un, süd, yumurta və duzdan blinçik xəmiri hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Kəsmiyi şüyüd və duz ilə qarışdırıb içlik hazırlayın.\n4. İçliyi blinçiklərin içinə qoyub bükün və tavada azca qızardın.",
     "ingredients": [
@@ -10930,7 +10930,7 @@
     "category": "Şirniyyat",
     "prepTime": 60,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-badamli-sirniyyat.png",
     "videoUrl": "",
     "instructions": "1. Un, kərə yağı və xamanı qarışdırıb xəmir yoğurun.\n2. Qoz və badamı ətçəkəndən keçirib şəkər tozu ilə qarışdırın.\n3. Xəmirdən kündələr düzəldib içlik qoyun və bükün.\n4. Sobada qızılı rəng alana qədər bişirin.",
     "ingredients": [
@@ -10972,7 +10972,7 @@
     "category": "Şorba",
     "prepTime": 45,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/duyulu-ve-goyertili-toyuq-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin və əti didikləyin.\n2. Bulyona yuyulmuş düyü əlavə edib bişirin.\n3. Doğranmış göyərtini şorbaya qatın.\n4. Duz və istiot vurub süfrəyə verin.",
     "ingredients": [
@@ -11009,7 +11009,7 @@
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/cugundur-ve-turp-salati.png",
     "videoUrl": "",
     "instructions": "1. Çuğunduru qaynadıb sürtgəcdən keçirin.\n2. Turpu da təmizləyib sürtgəcdən keçirin.\n3. Tərəvəzləri qarışdırıb zeytun yağı əlavə edin.\n4. Duz və limon suyu əlavə edib servis edin.",
     "ingredients": [
@@ -11046,7 +11046,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/nar-qovurmasi.png",
     "videoUrl": "",
     "instructions": "1. Əti kiçik tikələrə doğrayıb tavada qovurun.\n2. Soğanı əlavə edib qızardın.\n3. Nar dənələrini və duz əlavə edib bir müddət bişirin.\n4. İsti halda süfrəyə verin.",
     "ingredients": [
@@ -11083,7 +11083,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-yumurta-kokesi.png",
     "videoUrl": "",
     "instructions": "1. Un, yumurta və qatığı qarışdırıb xəmir hazırlayın.\n2. İçinə doğranmış pendir qatın.\n3. Tavada hər iki üzünü qızardın.",
     "ingredients": [
@@ -11115,7 +11115,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-qelyanalti-ruleti.png",
     "videoUrl": "",
     "instructions": "1. Göbələk və soğanı doğrayıb tavada qovurun.\n2. Lavaşın üzərinə qatığı çəkin.\n3. Qovrulmuş göbələyi lavaşın üzərinə yayım bükün.\n4. Dilimlərə kəsib süfrəyə verin.",
     "ingredients": [
@@ -11144,7 +11144,7 @@
   {
     "description": "Təravətli və yüngül xiyar salatı",
     "instructions": "1. Xiyarları yuyub halqa və ya kubşəkilli doğrayın.\n2. Göyərtiləri xırda doğrayıb xiyarlara qatın.\n3. Duz və zeytun yağı əlavə edib qarışdırın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/xiyar-ve-goyerti-salatasi.png",
     "videoUrl": "",
     "category": "Salat",
     "name": "Xiyar və Göyərti Salatası",
@@ -11179,7 +11179,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-kuku.png",
     "videoUrl": "",
     "instructions": "1. Göbələyi doğrayıb tavada qovurun.\n2. Yumurtaları duz ilə çalın və göbələyin üzərinə tökün.\n3. Qapağını örtüb bişirin.",
     "ingredients": [
@@ -11211,7 +11211,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/suzme-ve-qara-zeytun.png",
     "videoUrl": "",
     "instructions": "1. Süzməni boşqaba çəkin.\n2. Üzərinə qara zeytunları düzün.\n3. Zeytun yağı və kəklikotu əlavə edərək süfrəyə verin.",
     "ingredients": [
@@ -11238,7 +11238,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 20,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-kesmik-coreyi.png",
     "videoUrl": "",
     "instructions": "1. Kəsmiyi və rəndələnmiş pendiri bir qabda qarışdırın.\n2. Üzərinə yumurta və un əlavə edib xəmir yoğurun.\n3. Tavada hər iki tərəfini qızardın.",
     "ingredients": [
@@ -11270,7 +11270,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/goyertili-pendirli-blincik.png",
     "videoUrl": "",
     "instructions": "1. Süd, un, yumurta və duzdan blinçik xəmiri hazırlayıb nazik bişirin.\n2. Göyərtiləri xırda doğrayıb pendirlə qarışdırın.\n3. İçliyi blinçiklərin içərisinə qoyub bükün.",
     "ingredients": [
@@ -11307,7 +11307,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaq-puresi-seher-yemeyi.png",
     "videoUrl": "",
     "instructions": "1. Balqabağı suda yumşalana qədər qaynadın.\n2. Suyunu süzüb blenderdə əzmə halına gətirin.\n3. Üzərinə bal və darçın əlavə edib yeyin.",
     "ingredients": [
@@ -11334,7 +11334,7 @@
     "category": "Şorba",
     "prepTime": 360,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/xas-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Mal paça və ayaqlarını təmizləyib suda uzun müddət bişirin.\n2. Bişmə zamanı köpüyünü yığın.\n3. Sarımsaq və sirkə ilə süfrəyə verin.",
     "ingredients": [
@@ -11363,7 +11363,7 @@
   {
     "description": "Qırmızı lobya və ev üsulu əriştədən hazırlanan doyurucu şorba.",
     "instructions": "1. Lobyanı əvvəlcədən isladıb bişirin.\n2. Soğanı yağda qovurub qazana tökün.\n3. Əriştəni və duzu əlavə edib bişənə qədər qaynadın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/eristeli-lobya-sorbasi.png",
     "videoUrl": "",
     "category": "Şorba",
     "name": "Əriştəli lobya şorbası",
@@ -11398,7 +11398,7 @@
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-eti-ve-kahi-salati.png",
     "videoUrl": "",
     "instructions": "1. Toyuq filesini qaynadıb uzunsov parça-parça didin.\n2. Kahını əllərinizlə xırda hissələrə bölün.\n3. Mayonez və duz əlavə edib qarışdırın.",
     "ingredients": [
@@ -11425,7 +11425,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 60,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaynadilmis-et-ruleti.png",
     "videoUrl": "",
     "instructions": "1. Əti nazik şəkildə açın.\n2. İçinə duz, istiot və sarımsaq çəkib rulet şəklində bükün.\n3. Sapla bağlayıb suda bişirin və soyudub dilimleyin.",
     "ingredients": [
@@ -11454,7 +11454,7 @@
   {
     "description": "Qoz və soğandan hazırlanan ləvəngi məhlulu ilə ət qovurması.",
     "instructions": "1. Qozu və soğanı ətçəkəndən keçirin.\n2. Əti tavada qovurub üzərinə ləvəngi qarışığını əlavə edin.\n3. Zəif odda bişməyə buraxın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/levengi-qovurma.png",
     "videoUrl": "",
     "category": "Əsas Yemək",
     "name": "Ləvəngi qovurma",
@@ -11489,7 +11489,7 @@
     "category": "Əsas Yemək",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-qovurmasi.png",
     "videoUrl": "",
     "instructions": "1. Badımcanları doğrayıb duzlu suda saxlaxın.\n2. Tavada yağda pomidor və bibərlə birlikdə qovurun.\n3. Üzərinə göyərtilər səpib ocaqdan götürün.",
     "ingredients": [
@@ -11521,7 +11521,7 @@
     "category": "İçki",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/movsumi-kompot.png",
     "videoUrl": "",
     "instructions": "1. Meyvələri yuyub təmizləyin.\n2. Qazana su və şəkər tozu əlavə edib qaynadın.\n3. Meyvələri qazana töküb 15 dəqiqə zəif odda bişirin.",
     "ingredients": [
@@ -11548,7 +11548,7 @@
     "category": "Şorba",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qatiqli-sarmisaqli-sorba.png",
     "videoUrl": "",
     "instructions": "1. Qazanda düyünü su ilə bişirin.\n2. Ayrı qabda qatıq, un və yumurtanı qarışdırın.\n3. Qaynayan suya qarışığı asta-asta əlavə edin.\n4. Sonda əzilmiş sarımsaq və duz əlavə edin.",
     "ingredients": [
@@ -11585,7 +11585,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/movsumi-terevez-salati.png",
     "videoUrl": "",
     "instructions": "1. Kahı və göyərtiləri doğrayın.\n2. Xiyar və pomidorları kubşəkilli doğrayıb qarışdırın.\n3. Üzərinə zeytun yağı, limon suyu və duz əlavə edin.",
     "ingredients": [
@@ -11622,7 +11622,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-badimcan-qelyanaltisi.png",
     "videoUrl": "",
     "instructions": "1. Badımcanları uzunsov dilimlərə doğrayıb duzlu suda saxlayın, sonra qızardın.\n2. Qozu, sarımsağı və göyərtini ətçəkəndən keçirin.\n3. Badımcan dilimlərinin içinə bu qarışıqdan qoyub rulon şəklində bükün.",
     "ingredients": [
@@ -11659,7 +11659,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/suzme-ve-goyertili-lavas.png",
     "videoUrl": "",
     "instructions": "1. Göyərtiləri xırda doğrayın.\n2. Süzməni duzla qarışdırıb göyərtiləri əlavə edin.\n3. Lavaşın üzərinə çəkib bükərək servis edin.",
     "ingredients": [
@@ -11686,7 +11686,7 @@
     "category": "İçki",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/i-sti-naneli-limonad.png",
     "videoUrl": "",
     "instructions": "1. Çaynikə təzə nanə yarpaqları və limon dilimləri qoyun.\n2. Üzərinə qaynar su töküb 10 dəqiqə dəmləyin.\n3. Zövqə görə bal əlavə edərək içə bilərsiniz.",
     "ingredients": [
@@ -11718,7 +11718,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/bogma-et.png",
     "videoUrl": "",
     "instructions": "1. Qazana quzu ətini və irəli doğranmış soğanları yığın.\n2. Kərə yağı və duz əlavə edib zəif odda öz şirəsində bişirin.",
     "ingredients": [
@@ -11750,7 +11750,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/esh-as.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda isladın.\n2. Əti soğanla birlikdə qovurun.\n3. Düyünü süzüb qazana tökün, üzərinə yağ və ət əlavə edib dəmə qoyun.",
     "ingredients": [
@@ -11782,7 +11782,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sirdag.png",
     "videoUrl": "",
     "instructions": "1. Badımcanları halqavari doğrayıb duza qoyun, sonra yuyub qızardın.\n2. Pomidor və sarımsaqdan sous hazırlayın.\n3. Badımcanları sousla qatlayıb zəif odda bişirin.",
     "ingredients": [
@@ -11814,7 +11814,7 @@
     "category": "Əsas Yemək",
     "prepTime": 80,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/colpa-levengisi.png",
     "videoUrl": "",
     "instructions": "1. Qozu ətçəkəndən keçirin, xırda doğranmış soğan və turşuluqla qarışdırın.\n2. Çolpanı təmizləyib duzlayın və içini hazırladığınız qarışıqla doldurun.\n3. Sobada qızılı rəng alanadək bişirin.",
     "ingredients": [
@@ -11846,7 +11846,7 @@
     "category": "Əsas Yemək",
     "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gurze.png",
     "videoUrl": "",
     "instructions": "1. Un, su və duzdan xəmir yoğurun.\n2. Əti soğan və ədviyyatla qarışdırıb qiymə hazırlayın.\n3. Xəmiri açıb dairələr kəsin, qiymə qoyub kənarlarını hörük şəklində bükün və suda bişirin.",
     "ingredients": [
@@ -11878,7 +11878,7 @@
     "category": "Şorba",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qatiqli-sarimsaqli-sorba.png",
     "videoUrl": "",
     "instructions": "1. Qatığı azca un və yumurta ilə çalın.\n2. Qaynar su əlavə edib qarışdıraraq bişirin.\n3. Süfrəyə verdikdə sarımsaq əlavə edin.",
     "ingredients": [
@@ -11910,7 +11910,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sor-ketesi.png",
     "videoUrl": "",
     "instructions": "1. Xəmiri yoğurub kündələrə ayırın.\n2. İçlik üçün şoru göyərti və duzla qarışdırın.\n3. Xəmiri açıb içliyi qoyun və bükərək sobada bişirin.",
     "ingredients": [
@@ -11942,7 +11942,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaqli-balqabaq-siyigi.png",
     "videoUrl": "",
     "instructions": "1. Balqabağı təmizləyib kub şəklində doğrayın və suda qaynadın.\n2. Üzərinə yuyulmuş düyü əlavə edin.\n3. Yumşaldıqdan sonra qaymaq əlavə edib qarışdırın.",
     "ingredients": [
@@ -11974,7 +11974,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sebze-qovurma.png",
     "videoUrl": "",
     "instructions": "1. Quzu ətini tikələrə doğrayıb qovurun.\n2. Çeşidli göyərtiləri xırda doğrayıb ətə əlavə edin.\n3. Zəfəran məhlulu tökərək vam odda bişirin.",
     "ingredients": [
@@ -12006,7 +12006,7 @@
     "category": "Şorba",
     "prepTime": 60,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-dusberesi.png",
     "videoUrl": "",
     "instructions": "1. Un, su və duzdan sərt xəmir yoğurun.\n2. Xəmiri açıb kiçik kvadratlara kəsin və içinə toyuq qiyməsi qoyub bükün.\n3. Toyuq bulyonunda düşbərələri bişirin.",
     "ingredients": [
@@ -12038,7 +12038,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-badimcan-bukumleri.png",
     "videoUrl": "",
     "instructions": "1. Badımcanları uzunsov nazik dilimlərə doğrayıb qızardın.\n2. Qoz, sarımsaq və mayonezi qarışdıraraq içlik hazırlayın.\n3. İçliyi badımcan dilimlərinə qoyub bükün.",
     "ingredients": [
@@ -12070,7 +12070,7 @@
     "category": "Şorba",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/mercimek-sorbasi.png",
     "videoUrl": "",
     "instructions": "1. Mərciməyi yuyub suya qoyun.\n2. Soğan və kökü doğrayıb qovurun.\n3. Mərcimək, tərəvəz və suyu qazana əlavə edib bişirin.\n4. Blenderdən keçirib ədviyyat əlavə edin.",
     "ingredients": [
@@ -12102,7 +12102,7 @@
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gavali-salati.png",
     "videoUrl": "",
     "instructions": "1. Gavalı qurusunu suda yumşaldıb doğrayın.\n2. Qozu xırdalayın.\n3. Sarımsaq və mayonez əlavə edib qarışdırın.",
     "ingredients": [
@@ -12134,7 +12134,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kahi-salati.png",
     "videoUrl": "",
     "instructions": "1. Kahını və xiyarları doğrayın.\n2. Göyərtiləri əlavə edin.\n3. Zeytun yağı və duz tökərək qarışdırın.",
     "ingredients": [
@@ -12166,7 +12166,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qizardilmis-noxud.png",
     "videoUrl": "",
     "instructions": "1. Bişmiş noxudları qurudun.\n2. Yağ və duz əlavə edin.\n3. Tavada qızardın.",
     "ingredients": [
@@ -12193,7 +12193,7 @@
     "category": "Şorba",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-sorba.png",
     "videoUrl": "",
     "instructions": "1. Göbələk və soğanı doğrayıb qovurun.\n2. Su və qaymaq əlavə edin.\n3. Blenderdən keçirib süfrəyə verin.",
     "ingredients": [
@@ -12225,7 +12225,7 @@
     "category": "Əsas Yemək",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/tabaka-toyuq.png",
     "videoUrl": "",
     "instructions": "1. Toyuğu ortadan kəsib açın.\n2. Duz və istiotlayın.\n3. Tavaya qoyub üzərinə ağırlıq qoyun və qızardın.",
     "ingredients": [
@@ -12252,7 +12252,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qovurmali-plov.png",
     "videoUrl": "",
     "instructions": "1. Düyünü suda qaynadıb süzün.\n2. Əti soğanla qovurun.\n3. Düyü və əti qazanda qovuşdurub dəmə qoyun.",
     "ingredients": [
@@ -12284,7 +12284,7 @@
     "category": "Salat",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pomidor-salati.png",
     "videoUrl": "",
     "instructions": "1. Pomidorları doğrayın.\n2. Göyərti əlavə edin.\n3. Duz və zeytun yağı qatın.",
     "ingredients": [
@@ -12311,7 +12311,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 40,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-badimcan.png",
     "videoUrl": "",
     "instructions": "1. Badımcanları uzunsov doğrayıb qızardın.\n2. Qoz və sarımsağı əzin.\n3. Badımcanların evinə qozlu qarışıq qoyub bükün.",
     "ingredients": [
@@ -12343,7 +12343,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kend-sayagi-kuku.png",
     "videoUrl": "",
     "instructions": "1. Göyərtiləri xırda doğrayın.\n2. Yumurtaları bir qabda çalın və duz, istiot əlavə edin.\n3. Doğranmış göyərtiləri yumurtaya qatın və qarışdırın.\n4. Tavada kərə yağı əridin və qarışığı tövün.\n5. Hər iki üzünü qızardaraq bişirin.",
     "ingredients": [
@@ -12380,7 +12380,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/seher-kesmik-coreyi.png",
     "videoUrl": "",
     "instructions": "1. Kəsmiyi çəngəl ilə əzin.\n2. Üzərinə yumurta, duz və az un əlavə edib yoğurun.\n3. Kiçik kündələrə ayırıb tavada qızardın.",
     "ingredients": [
@@ -12409,7 +12409,7 @@
   {
     "description": "İçərisi pendir və göyərti ilə doldurulmuş yumşaq səhər kökəsi.",
     "instructions": "1. Xəmir üçün un, su və duzu qarışdırıb yoğurun.\n2. İçlik üçün pendir və şüyüdü doğrayıb qarışdırın.\n3. Xəmiri yayaraq içliyi qoyun və bükün.\n4. Quru tavada hər iki üzünü qızardın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-goyertili-kete.png",
     "videoUrl": "",
     "category": "Səhər Yeməyi",
     "name": "Pendirli göyərtili kətə",
@@ -12449,7 +12449,7 @@
     "category": "Qəlyanaltı",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/goyertili-pendir-qelyanaltisi.png",
     "videoUrl": "",
     "instructions": "1. Pendiri çəngəl ilə əzin.\n2. Xırda doğranmış şüyüd və kərə yağı əlavə edib qarışdırın.\n3. Kiçik toplar düzəldərək süfrəyə verin.",
     "ingredients": [
@@ -12473,7 +12473,7 @@
   {
     "description": "Xüsusi kvadrat xəmirlər və qovrulmuş ət ilə hazırlanan yemək.",
     "instructions": "1. Xəmiri açıb kiçik kvadratlara kəsin və suda bişirin.\n2. Mal ətini soğanla ayrıca tavada qovurun.\n3. Bişmiş xəmirlərin üzərinə ət və əridilmiş kərə yağı tökün.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/seki-xingeli.png",
     "videoUrl": "",
     "category": "Əsas Yemək",
     "name": "Şəki xingəli",
@@ -12508,7 +12508,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/seher-kesmiyi.png",
     "videoUrl": "",
     "instructions": "1. Kəsmiyi dərin qaba qoyun.\n2. Üzərinə xama və bal əlavə edin.\n3. Yüngülcə qarışdırıb çörəklə yeyin.",
     "ingredients": [
@@ -12535,7 +12535,7 @@
     "category": "Səhər Yeməyi",
     "prepTime": 25,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmik-kukusu.png",
     "videoUrl": "",
     "instructions": "1. Kəsmiklə yumurtanı qarışdırın.\n2. Xırda doğranmış göyərtiləri əlavə edin.\n3. Tavada hər iki üzünü qızardın.",
     "ingredients": [
@@ -12567,7 +12567,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/uc-baci.png",
     "videoUrl": "",
     "instructions": "1. Tərəvəzlərin içini oyub çıxarın.\n2. Qiyməni soğan və ədviyyatla qovurun.\n3. Tərəvəzləri doldurub qazanda bişirin.",
     "ingredients": [
@@ -12601,7 +12601,7 @@
   {
     "description": "Mərci və əriştə qarışığından hazırlanan dadlı şorba",
     "instructions": "1. Mərciyi suda yumşalana qədər bişirin.\n2. Əriştəni və qovrulmuş soğanı əlavə edin.\n3. Ədviyyat vurub qaynadın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/eristeli-merci.png",
     "videoUrl": "",
     "category": "Şorba",
     "name": "Əriştəli Mərci",
