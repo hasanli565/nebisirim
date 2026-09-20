@@ -2,7 +2,7 @@
   {
     "description": "Cənub bölgəmizin məşhur toyuq ləvəngisi.",
     "instructions": "1. Qoz içi ətçəkəndən keçirilir.\n2. Soğan sürtgəcdən keçirilib suyu sıxılır və qozla qarışdırılır.\n3. Üzərinə turşu əlavə olunub içlik hazıralanır.\n4. Toyuq içliklə doldurulub sobada qızardılır.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/levengi.png",
     "videoUrl": "",
     "category": "Əsas Yemək",
     "name": "Ləvəngi",
