@@ -31306,42 +31306,5 @@
         "unit": "çay qaşığı"
       }
     ]
-  },
-  {
-    "name": "test resept",
-    "description": "Ənənəvi Azərbaycan mətbəxinə aid, göyərti və qatıqla hazırlanan sərinləşdirici və dadlı şorba növü.",
-    "category": "Şorba",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyünü yuyub duzlu suda yumşalana qədər bişirin.\n2. Göyərtiləri xırda doğrayın.\n3. Qatığı çalın və az miqdarda su ilə durulaşdırın, bişmiş düyü və doğranmış göyərtiləri əlavə edin.\n4. Qarışığı odda qızdırın, lakin qaynatmayın ki, qatıq kəsilməsin.\n5. Soyuq və ya ilıq şəkildə süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Qatıq",
-        "quantity": "1",
-        "unit": "litr"
-      },
-      {
-        "name": "Düyü",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "2",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Su",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
   }
 ]
