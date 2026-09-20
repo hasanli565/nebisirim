@@ -74,7 +74,7 @@
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/coban-salati.png",
     "videoUrl": "",
     "instructions": "1. Pomidor və xiyarlar kiçik kubiklər şəklində doğranır.\n2. Göyərtilər və qırmızı soğan incə şəkildə doğranıb tərəvəzlərə qatılır.\n3. Duz, zeytun yağı və limon suyu əlavə olunub qarışdırılır.",
     "ingredients": [
