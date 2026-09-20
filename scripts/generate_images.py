@@ -5,53 +5,63 @@ import time
 from pathlib import Path
 
 import requests
+from google import genai
+from google.genai import types
 
 
 # ============================================================
 # SETTINGS
 # ============================================================
 
-RECIPES_JSON_PATH = os.getenv(
-    "RECIPES_JSON_PATH",
-    "recipes.json"
-)
+RECIPES_JSON_PATH = os.getenv("RECIPES_JSON_PATH", "recipes.json")
 
-IMAGES_DIR = Path(
-    os.getenv("IMAGES_DIR", "images")
-)
+IMAGES_DIR = Path(os.getenv("IMAGES_DIR", "images"))
 
 IMAGE_BASE_URL = os.getenv(
     "IMAGE_BASE_URL",
     "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images"
 )
 
-REPLICATE_API_TOKEN = os.getenv(
-    "REPLICATE_API_TOKEN"
+VISUAL_CACHE_PATH = Path(
+    os.getenv("VISUAL_CACHE_PATH", "visual_cache.json")
 )
 
-DRY_RUN = (
-    os.getenv("DRY_RUN", "false").lower() == "true"
+REPLICATE_API_TOKEN = os.getenv("REPLICATE_API_TOKEN")
+BRAVE_SEARCH_API_KEY = os.getenv("BRAVE_SEARCH_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+DRY_RUN = os.getenv("DRY_RUN", "false").lower() == "true"
+
+MAX_IMAGES_PER_RUN = int(
+    os.getenv("MAX_IMAGES_PER_RUN", "1")
 )
 
-try:
-    MAX_IMAGES = int(
-        os.getenv("MAX_IMAGES_PER_RUN", "1")
-    )
-except ValueError:
-    MAX_IMAGES = 1
+REFERENCE_IMAGES_PER_RECIPE = int(
+    os.getenv("REFERENCE_IMAGES_PER_RECIPE", "5")
+)
 
+GEMINI_MODEL = os.getenv(
+    "GEMINI_MODEL",
+    "gemini-2.5-flash-lite"
+)
 
-REPLICATE_URL = (
+REPLICATE_MODEL_URL = (
     "https://api.replicate.com/v1/models/"
     "black-forest-labs/flux-schnell/predictions"
 )
 
+BRAVE_IMAGE_SEARCH_URL = (
+    "https://api.search.brave.com/res/v1/images/search"
+)
+
 
 # ============================================================
-# AZERBAIJANI -> ENGLISH FOOD TERMS
+# TRANSLATIONS
 # ============================================================
 
 FOOD_TRANSLATIONS = {
+
+    # Əsas ərzaqlar
     "pomidor": "tomato",
     "pomidorlar": "tomatoes",
 
@@ -63,29 +73,6 @@ FOOD_TRANSLATIONS = {
 
     "sarımsaq": "garlic",
 
-    "kərə yağı": "butter",
-    "yağ": "oil",
-    "bitki yağı": "vegetable oil",
-    "zeytun yağı": "olive oil",
-
-    "duz": "salt",
-    "istiot": "black pepper",
-    "qara istiot": "black pepper",
-    "qırmızı istiot": "red pepper",
-
-    "ət": "meat",
-    "mal əti": "beef",
-    "quzu əti": "lamb",
-    "toyuq əti": "chicken",
-    "toyuq": "chicken",
-
-    "dana əti": "beef",
-    "qiymə": "ground meat",
-    "qiymə ət": "ground meat",
-
-    "düyü": "rice",
-    "basmati düyüsü": "basmati rice",
-
     "kartof": "potato",
     "kartoflar": "potatoes",
 
@@ -93,210 +80,215 @@ FOOD_TRANSLATIONS = {
     "yerkökü": "carrot",
 
     "badımcan": "eggplant",
+    "badımcanlar": "eggplants",
+
     "bibər": "bell pepper",
-    "yaşıl bibər": "green bell pepper",
-    "qırmızı bibər": "red bell pepper",
+    "şirin bibər": "sweet bell pepper",
+    "acı bibər": "chili pepper",
 
     "xiyar": "cucumber",
+
     "kələm": "cabbage",
+    "gül kələmi": "cauliflower",
+    "brokoli": "broccoli",
 
-    "göyərti": "fresh herbs",
-    "keşniş": "cilantro",
-    "cəfəri": "parsley",
-    "şüyüd": "dill",
-
-    "nanə": "mint",
+    "ispanaq": "spinach",
 
     "lobya": "beans",
     "noxud": "chickpeas",
     "mərcimək": "lentils",
 
-    "un": "flour",
-    "şəkər": "sugar",
+    "düyü": "rice",
+    "bulqur": "bulgur",
 
-    "süd": "milk",
-    "qaymaq": "cream",
-    "qatıq": "yogurt",
+    "un": "flour",
+    "çörək": "bread",
 
     "pendir": "cheese",
+    "kəsmik": "curd cheese",
+    "qatıq": "yogurt",
+    "süd": "milk",
+    "qaymaq": "cream",
 
-    "limon": "lemon",
+    "kərə yağı": "butter",
+    "yağ": "oil",
+    "zeytun yağı": "olive oil",
+
+    "toyuq": "chicken",
+    "toyuq əti": "chicken",
+    "toyuq filesi": "chicken breast",
+
+    "mal əti": "beef",
+    "quzu əti": "lamb",
+    "qoyun əti": "lamb",
+
+    "qiymə": "ground meat",
+    "ət": "meat",
+
+    "balıq": "fish",
 
     "qoz": "walnuts",
     "fındıq": "hazelnuts",
     "badam": "almonds",
 
-    "ərik": "apricot",
-    "alma": "apple",
-    "armud": "pear",
-
     "kişmiş": "raisins",
-    "zəfəran": "saffron",
 
-    "lavaş": "lavash flatbread",
-    "çörək": "bread",
+    "göyərti": "fresh herbs",
+    "keşniş": "cilantro",
+    "cəfəri": "parsley",
+    "şüyüd": "dill",
+    "nanə": "mint",
 
-    "vermişel": "vermicelli",
+    "duz": "salt",
+    "istiot": "black pepper",
+    "qara istiot": "black pepper",
+
+    "şəkər": "sugar",
+    "bal": "honey",
+
+    "limon": "lemon",
+    "limon suyu": "lemon juice",
 
     "sirkə": "vinegar",
-    "mayonez": "mayonnaise",
 
-    "sous": "sauce",
+    "darçın": "cinnamon",
+
+    "şokolad": "chocolate",
+    "kakao": "cocoa powder",
+
+    "vanil": "vanilla",
+    "vanilin": "vanilla",
+
+    "qabartma tozu": "baking powder",
+    "maya": "yeast",
+
+    "su": "water",
 }
 
 
 # ============================================================
-# DISH-SPECIFIC KNOWLEDGE
+# DISH KNOWLEDGE
 # ============================================================
 
 DISH_KNOWLEDGE = {
 
     "pomidor yumurta": {
-        "english": "Azerbaijani-style tomato and scrambled eggs",
-        "description": (
-            "eggs gently scrambled with cooked tomatoes and onion "
-            "in butter, prepared as a traditional homemade breakfast"
-        ),
+        "identity": "Azerbaijani-style eggs cooked with tomatoes",
         "appearance": (
-            "soft scrambled eggs mixed with visible pieces of "
-            "cooked red tomatoes and onion"
+            "soft scrambled or fried eggs mixed with visibly cooked "
+            "red tomatoes"
         ),
+        "serving": "served hot in a shallow pan or plate",
     },
 
     "pomidorlu yumurta": {
-        "english": "Azerbaijani-style tomato and scrambled eggs",
-        "description": (
-            "eggs gently scrambled with cooked tomatoes and onion "
-            "in butter, prepared as a traditional homemade breakfast"
-        ),
+        "identity": "Azerbaijani-style eggs cooked with tomatoes",
         "appearance": (
-            "soft scrambled eggs mixed with visible pieces of "
-            "cooked red tomatoes and onion"
+            "yellow eggs surrounded by soft red tomato pieces "
+            "with visible tomato juices"
         ),
+        "serving": "served hot in a shallow pan",
     },
 
     "plov": {
-        "english": "traditional Azerbaijani rice pilaf",
-        "description": (
-            "fluffy long-grain rice prepared in the traditional "
-            "Azerbaijani style"
-        ),
+        "identity": "traditional Azerbaijani rice pilaf",
         "appearance": (
-            "separate fluffy grains of white and lightly golden rice"
+            "fluffy separate white or golden rice grains, "
+            "often accompanied by meat, dried fruits or chestnuts"
         ),
+        "serving": "large traditional serving platter",
     },
 
     "dolma": {
-        "english": "traditional Azerbaijani dolma",
-        "description": (
-            "grape leaves or vegetables stuffed with seasoned "
-            "ground meat and rice"
-        ),
+        "identity": "Azerbaijani dolma",
         "appearance": (
-            "neatly rolled stuffed grape leaves or stuffed vegetables "
-            "arranged closely together"
+            "small stuffed grape leaves or vegetables containing "
+            "a rice and meat filling"
         ),
+        "serving": "arranged closely on a serving plate",
     },
 
     "düşbərə": {
-        "english": "traditional Azerbaijani dushbara dumplings",
-        "description": (
-            "small handmade meat-filled dumplings served in a "
-            "clear golden broth"
-        ),
+        "identity": "Azerbaijani dumpling soup",
         "appearance": (
-            "many tiny dumplings floating in a clear golden broth"
+            "many tiny meat-filled dumplings in a clear golden broth"
         ),
+        "serving": "deep soup bowl",
     },
 
     "kükü": {
-        "english": "Azerbaijani herb kuku",
-        "description": (
-            "a thick savory egg dish made with eggs and fresh herbs"
-        ),
+        "identity": "Azerbaijani herb and egg kuku",
         "appearance": (
-            "thick golden-green herb and egg cake cut into wedges"
+            "thick round green-flecked egg dish with abundant fresh herbs"
         ),
+        "serving": "cut into wedges on a plate",
     },
 
     "qutab": {
-        "english": "traditional Azerbaijani qutab",
-        "description": (
-            "thin Azerbaijani flatbread filled with meat, herbs, "
-            "pumpkin or other traditional filling"
-        ),
+        "identity": "Azerbaijani qutab",
         "appearance": (
-            "thin golden half-moon flatbreads with a lightly browned surface"
+            "thin half-moon shaped flatbread filled with herbs, "
+            "meat or other filling, lightly browned on the surface"
         ),
+        "serving": "stacked or overlapping on a plate",
     },
 
     "piti": {
-        "english": "traditional Azerbaijani piti stew",
-        "description": (
-            "slow-cooked lamb and chickpea stew prepared in a traditional "
-            "clay pot"
-        ),
+        "identity": "traditional Azerbaijani piti stew",
         "appearance": (
-            "rich golden broth with tender lamb and chickpeas in a clay pot"
+            "rich golden broth with chunks of lamb, chickpeas "
+            "and vegetables"
         ),
+        "serving": "traditional individual clay pot",
     },
 
     "şorba": {
-        "english": "traditional Azerbaijani soup",
-        "description": (
-            "a hearty homemade soup prepared with the listed ingredients"
-        ),
+        "identity": "traditional soup",
         "appearance": (
-            "hot flavorful broth with clearly visible pieces of the ingredients"
+            "hot soup with clearly visible main ingredients "
+            "and natural broth"
         ),
+        "serving": "deep soup bowl",
+    },
+
+    "ləvəngi": {
+        "identity": "Azerbaijani lavangi",
+        "appearance": (
+            "whole roasted chicken or fish stuffed with a dark "
+            "walnut, onion and dried fruit mixture"
+        ),
+        "serving": "whole roasted centerpiece on a serving platter",
+    },
+
+    "lavangi": {
+        "identity": "Azerbaijani lavangi",
+        "appearance": (
+            "whole roasted chicken or fish filled with walnut "
+            "and onion stuffing"
+        ),
+        "serving": "whole roasted dish on a traditional platter",
     },
 }
 
 
 # ============================================================
-# SLUG
-# ============================================================
-
-def slugify(text):
-    text = str(text).strip().lower()
-
-    replacements = {
-        "ə": "e",
-        "ı": "i",
-        "ö": "o",
-        "ü": "u",
-        "ş": "s",
-        "ç": "c",
-        "ğ": "g",
-    }
-
-    for old, new in replacements.items():
-        text = text.replace(old, new)
-
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    text = re.sub(r"-+", "-", text)
-
-    return text.strip("-")
-
-
-# ============================================================
-# NORMALIZE TEXT
+# HELPERS
 # ============================================================
 
 def normalize_text(text):
     if not text:
         return ""
 
-    text = str(text).strip().lower()
+    text = str(text).lower().strip()
 
     replacements = {
         "ə": "e",
         "ı": "i",
         "ö": "o",
         "ü": "u",
+        "ğ": "g",
         "ş": "s",
         "ç": "c",
-        "ğ": "g",
     }
 
     for old, new in replacements.items():
@@ -305,109 +297,77 @@ def normalize_text(text):
     return text
 
 
-# ============================================================
-# INGREDIENTS
-# ============================================================
+def slugify(text):
+    text = normalize_text(text)
 
-def get_ingredients(recipe):
-    ingredients = recipe.get("ingredients", [])
+    text = re.sub(
+        r"[^a-z0-9]+",
+        "-",
+        text
+    )
 
-    if not ingredients:
-        return []
+    return text.strip("-")
 
-    result = []
-
-    for item in ingredients:
-
-        if isinstance(item, str):
-            result.append(item.strip())
-
-        elif isinstance(item, dict):
-
-            name = (
-                item.get("name")
-                or item.get("ingredient")
-                or item.get("title")
-                or ""
-            )
-
-            amount = (
-                item.get("amount")
-                or item.get("quantity")
-                or item.get("measure")
-                or ""
-            )
-
-            if name:
-
-                if amount:
-                    result.append(
-                        f"{name} {amount}"
-                    )
-                else:
-                    result.append(name)
-
-    return result
-
-
-# ============================================================
-# TRANSLATE INGREDIENT
-# ============================================================
 
 def translate_ingredient(text):
-
-    original = str(text).strip()
-
-    if not original:
+    if not text:
         return ""
 
-    normalized = normalize_text(original)
+    original = str(text).strip()
+    normalized = original.lower()
 
-    # Əvvəl uzun ifadələri yoxla
-    for az, en in sorted(
-        FOOD_TRANSLATIONS.items(),
-        key=lambda x: len(x[0]),
-        reverse=True
-    ):
+    if normalized in FOOD_TRANSLATIONS:
+        return FOOD_TRANSLATIONS[normalized]
 
-        az_normalized = normalize_text(az)
-
-        if normalized.startswith(
-            az_normalized
-        ):
-
-            remainder = normalized[
-                len(az_normalized):
-            ].strip()
-
-            if remainder:
-                return f"{en} {remainder}"
-
-            return en
-
-    # Sadə söz axtarışı
+    # Miqdarı ayırmağa çalışırıq
     words = normalized.split()
 
     translated_words = []
 
     for word in words:
 
-        translated = None
+        clean_word = re.sub(
+            r"[^a-zəğıöüşç]",
+            "",
+            word
+        )
 
-        for az, en in FOOD_TRANSLATIONS.items():
-
-            if normalize_text(az) == word:
-                translated = en
-                break
-
-        if translated:
+        if clean_word in FOOD_TRANSLATIONS:
             translated_words.append(
-                translated
+                FOOD_TRANSLATIONS[clean_word]
             )
         else:
-            translated_words.append(word)
+            translated_words.append(clean_word)
 
-    return " ".join(translated_words)
+    result = " ".join(translated_words)
+
+    return result
+
+
+def get_ingredients(recipe):
+    ingredients = recipe.get("ingredients", [])
+
+    result = []
+
+    if isinstance(ingredients, list):
+
+        for item in ingredients:
+
+            if isinstance(item, str):
+                result.append(item)
+
+            elif isinstance(item, dict):
+
+                name = (
+                    item.get("name")
+                    or item.get("ingredient")
+                    or item.get("ad")
+                )
+
+                if name:
+                    result.append(str(name))
+
+    return result
 
 
 def get_translated_ingredients(recipe):
@@ -418,9 +378,7 @@ def get_translated_ingredients(recipe):
 
     for ingredient in ingredients:
 
-        value = translate_ingredient(
-            ingredient
-        )
+        value = translate_ingredient(ingredient)
 
         if value:
             translated.append(value)
@@ -428,32 +386,284 @@ def get_translated_ingredients(recipe):
     return translated
 
 
-# ============================================================
-# FIND DISH KNOWLEDGE
-# ============================================================
+def get_dish_knowledge(recipe):
 
-def get_dish_knowledge(name):
+    name = recipe.get("name", "")
 
     normalized = normalize_text(name)
 
-    for dish_name, info in DISH_KNOWLEDGE.items():
+    for dish_name, knowledge in DISH_KNOWLEDGE.items():
 
         if normalize_text(dish_name) in normalized:
-
-            return info
+            return knowledge
 
     return None
 
 
 # ============================================================
-# CREATE ENGLISH VISUAL PROMPT
+# VISUAL CACHE
 # ============================================================
 
-def create_prompt(recipe):
+def load_visual_cache():
 
-    name = recipe.get(
+    if not VISUAL_CACHE_PATH.exists():
+        return {}
+
+    try:
+
+        with open(
+            VISUAL_CACHE_PATH,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            return json.load(f)
+
+    except Exception as e:
+
+        print(
+            f"Visual cache oxunmadi: {e}"
+        )
+
+        return {}
+
+
+def save_visual_cache(cache):
+
+    with open(
+        VISUAL_CACHE_PATH,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            cache,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+
+# ============================================================
+# BRAVE IMAGE SEARCH
+# ============================================================
+
+def brave_image_search(recipe):
+
+    if not BRAVE_SEARCH_API_KEY:
+        raise RuntimeError(
+            "BRAVE_SEARCH_API_KEY tapilmadi."
+        )
+
+    name = recipe.get("name", "").strip()
+
+    category = recipe.get(
+        "category",
+        ""
+    )
+
+    # Əvvəl Azərbaycan dilində axtarırıq.
+    query = (
+        f'"{name}" resepti yemek'
+    )
+
+    print(
+        f"🔎 Brave Image Search: {query}"
+    )
+
+    headers = {
+        "Accept": "application/json",
+        "X-Subscription-Token":
+            BRAVE_SEARCH_API_KEY
+    }
+
+    params = {
+        "q": query,
+        "count": 20,
+        "search_lang": "az",
+        "country": "AZ",
+        "safesearch": "strict",
+    }
+
+    response = requests.get(
+        BRAVE_IMAGE_SEARCH_URL,
+        headers=headers,
+        params=params,
+        timeout=30
+    )
+
+    if response.status_code != 200:
+
+        print(
+            "Brave AZ search failed:",
+            response.status_code,
+            response.text[:500]
+        )
+
+        # İngilis dilində ikinci cəhd
+        query = (
+            f'"{name}" Azerbaijani recipe food'
+        )
+
+        print(
+            f"🔎 İkinci axtarış: {query}"
+        )
+
+        params = {
+            "q": query,
+            "count": 20,
+            "search_lang": "en",
+            "country": "ALL",
+            "safesearch": "strict",
+        }
+
+        response = requests.get(
+            BRAVE_IMAGE_SEARCH_URL,
+            headers=headers,
+            params=params,
+            timeout=30
+        )
+
+    response.raise_for_status()
+
+    data = response.json()
+
+    results = data.get(
+        "results",
+        []
+    )
+
+    references = []
+
+    for item in results:
+
+        title = item.get(
+            "title",
+            ""
+        )
+
+        thumbnail = item.get(
+            "thumbnail",
+            {}).get(
+                "src"
+            )
+
+        properties = item.get(
+            "properties",
+            {}
+        )
+
+        original_url = properties.get(
+            "url"
+        )
+
+        source_url = item.get(
+            "url",
+            ""
+        )
+
+        if not thumbnail:
+            continue
+
+        references.append({
+            "title": title,
+            "thumbnail": thumbnail,
+            "image_url": original_url or thumbnail,
+            "source_url": source_url,
+        })
+
+        if len(references) >= REFERENCE_IMAGES_PER_RECIPE:
+            break
+
+    return references
+
+
+# ============================================================
+# DOWNLOAD REFERENCE IMAGE
+# ============================================================
+
+def download_reference_image(
+    url,
+    index,
+    recipe_slug
+):
+
+    try:
+
+        response = requests.get(
+            url,
+            timeout=20,
+            headers={
+                "User-Agent":
+                    "Mozilla/5.0"
+            }
+        )
+
+        if response.status_code != 200:
+            return None
+
+        content_type = response.headers.get(
+            "Content-Type",
+            ""
+        )
+
+        if (
+            "image" not in content_type
+            and not url.lower().endswith(
+                (".jpg", ".jpeg", ".png", ".webp")
+            )
+        ):
+            return None
+
+        data = response.content
+
+        if len(data) < 5000:
+            return None
+
+        path = Path(
+            f"/tmp/{recipe_slug}_ref_{index}.jpg"
+        )
+
+        with open(
+            path,
+            "wb"
+        ) as f:
+
+            f.write(data)
+
+        return path
+
+    except Exception as e:
+
+        print(
+            f"Şəkil yüklənmədi: {e}"
+        )
+
+        return None
+
+
+# ============================================================
+# GEMINI VISUAL ANALYSIS
+# ============================================================
+
+def analyze_reference_images(
+    recipe,
+    references
+):
+
+    if not GEMINI_API_KEY:
+
+        raise RuntimeError(
+            "GEMINI_API_KEY tapilmadi."
+        )
+
+    client = genai.Client(
+        api_key=GEMINI_API_KEY
+    )
+
+    recipe_name = recipe.get(
         "name",
-        "Traditional food"
+        ""
     )
 
     description = recipe.get(
@@ -461,132 +671,324 @@ def create_prompt(recipe):
         ""
     )
 
-    translated_ingredients = (
-        get_translated_ingredients(recipe)
+    ingredients = get_ingredients(
+        recipe
     )
 
-    dish = get_dish_knowledge(name)
-
-    # --------------------------------------------------------
-    # Dish identity
-    # --------------------------------------------------------
-
-    if dish:
-
-        dish_name = dish["english"]
-
-        dish_description = (
-            dish["description"]
-        )
-
-        appearance = (
-            dish["appearance"]
-        )
-
-    else:
-
-        dish_name = (
-            f"traditional Azerbaijani {name}"
-        )
-
-        if description:
-            dish_description = (
-                f"{description}. "
-                "Prepare it as an authentic homemade Azerbaijani dish."
-            )
-        else:
-            dish_description = (
-                "an authentic homemade Azerbaijani dish "
-                "prepared using the listed ingredients"
-            )
-
-        appearance = (
-            "the food should look naturally prepared, "
-            "fresh, authentic and appetizing"
-        )
-
-    # --------------------------------------------------------
-    # Ingredients
-    # --------------------------------------------------------
-
-    if translated_ingredients:
-
-        ingredients_text = ", ".join(
-            translated_ingredients
-        )
-
-    else:
-
-        ingredients_text = (
-            "the traditional ingredients of the dish"
-        )
-
-    # --------------------------------------------------------
-    # Final prompt
-    # --------------------------------------------------------
+    knowledge = get_dish_knowledge(
+        recipe
+    )
 
     prompt = f"""
-Create a highly realistic professional food photograph of
-{dish_name}.
+You are an expert food photographer and food recognition AI.
 
-Dish description:
-{dish_description}.
+We are generating a NEW original food photograph for an Azerbaijani
+recipe.
 
-Main ingredients:
-{ingredients_text}.
+Recipe name:
+{recipe_name}
 
-Visual appearance:
-{appearance}.
+Description:
+{description}
 
-The food must look like a real freshly prepared Azerbaijani
-homemade dish, with realistic ingredient proportions and natural
-cooking textures.
+Ingredients:
+{json.dumps(ingredients, ensure_ascii=False)}
 
-Show the complete finished dish clearly.
-Use an appropriate traditional serving plate or bowl.
-Do not show raw ingredients separately.
-Do not add ingredients that are not appropriate for the dish.
+Your task is NOT to copy any reference photograph.
 
-Professional food photography, appetizing presentation,
-natural daylight, realistic colors, realistic food texture,
-high detail, subtle shadows, shallow depth of field,
-clean background, elegant composition,
-slightly elevated three-quarter camera angle,
-no people, no hands, no text, no labels, no watermark,
-photorealistic, high resolution.
+Analyze the reference photographs and determine what the REAL finished
+dish should visually look like.
+
+Important:
+- Ingredients such as salt, water and oil should NOT automatically appear
+  as visible objects.
+- Only ingredients that materially affect the final appearance should be
+  emphasized.
+- Identify the actual dish shape.
+- Identify the dominant colors.
+- Identify texture.
+- Identify cooking method visible from the result.
+- Identify serving style.
+- Identify whether the dish should be whole, sliced, folded, stuffed,
+  liquid, layered, etc.
+- Pay special attention to traditional Azerbaijani appearance.
+- Do not invent ingredients that are not present.
+- The final image must look like a realistic professional food photograph.
+
+If the reference images disagree, use the majority visual pattern and
+the recipe information.
+
+Return ONLY a concise visual description in English with these sections:
+
+DISH IDENTITY:
+APPEARANCE:
+VISIBLE INGREDIENTS:
+TEXTURE:
+COLOR:
+SHAPE:
+SERVING:
+CAMERA:
+LIGHTING:
+IMPORTANT DETAILS:
+
+Do not mention the reference photographs in the final description.
 """
 
-    return " ".join(
-        prompt.split()
+    if knowledge:
+
+        prompt += f"""
+
+Additional known information about this traditional dish:
+
+Identity:
+{knowledge["identity"]}
+
+Expected appearance:
+{knowledge["appearance"]}
+
+Expected serving:
+{knowledge["serving"]}
+"""
+
+    contents = [prompt]
+
+    recipe_slug = slugify(
+        recipe_name
     )
+
+    temp_files = []
+
+    for index, reference in enumerate(
+        references
+    ):
+
+        image_url = (
+            reference.get("thumbnail")
+            or reference.get("image_url")
+        )
+
+        if not image_url:
+            continue
+
+        path = download_reference_image(
+            image_url,
+            index,
+            recipe_slug
+        )
+
+        if not path:
+            continue
+
+        temp_files.append(path)
+
+        try:
+
+            with open(
+                path,
+                "rb"
+            ) as f:
+
+                image_bytes = f.read()
+
+            contents.append(
+                types.Part.from_bytes(
+                    data=image_bytes,
+                    mime_type="image/jpeg"
+                )
+            )
+
+        except Exception as e:
+
+            print(
+                f"Gemini image əlavə edilə bilmədi: {e}"
+            )
+
+    if len(contents) == 1:
+
+        print(
+            "⚠️ Analiz üçün şəkil tapılmadı."
+        )
+
+        return None
+
+    try:
+
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=contents
+        )
+
+        text = response.text
+
+        if not text:
+            return None
+
+        return text.strip()
+
+    except Exception as e:
+
+        print(
+            f"Gemini visual analysis xətası: {e}"
+        )
+
+        return None
 
 
 # ============================================================
-# CREATE REPLICATE PREDICTION
+# FLUX PROMPT
+# ============================================================
+
+def create_flux_prompt(
+    recipe,
+    visual_analysis
+):
+
+    name = recipe.get(
+        "name",
+        ""
+    )
+
+    description = recipe.get(
+        "description",
+        ""
+    )
+
+    ingredients = get_translated_ingredients(
+        recipe
+    )
+
+    ingredient_text = ", ".join(
+        ingredients[:15]
+    )
+
+    if visual_analysis:
+
+        visual_part = visual_analysis
+
+    else:
+
+        knowledge = get_dish_knowledge(
+            recipe
+        )
+
+        if knowledge:
+
+            visual_part = f"""
+DISH IDENTITY:
+{knowledge["identity"]}
+
+APPEARANCE:
+{knowledge["appearance"]}
+
+SERVING:
+{knowledge["serving"]}
+"""
+
+        else:
+
+            visual_part = f"""
+The dish should visually correspond to the recipe:
+{name}
+
+Description:
+{description}
+
+Main ingredients:
+{ingredient_text}
+"""
+
+    prompt = f"""
+Create a completely NEW, photorealistic professional food photograph.
+
+Dish:
+{name}
+
+Recipe description:
+{description}
+
+Main ingredients:
+{ingredient_text}
+
+VISUAL RECIPE ANALYSIS:
+{visual_part}
+
+STRICT VISUAL RULES:
+
+- The food must be the exact finished dish described above.
+- Do not turn the dish into a generic Western food.
+- Preserve the traditional Azerbaijani appearance when applicable.
+- Do not randomly add ingredients.
+- Do not show raw ingredients unless they naturally belong in the finished dish.
+- Salt, water and cooking oil should not appear as separate visible objects.
+- The food must look cooked and ready to eat.
+- Correct natural food proportions.
+- Realistic textures.
+- Realistic colors.
+- No artificial plastic appearance.
+- No illustration.
+- No cartoon.
+- No CGI look.
+- No text.
+- No labels.
+- No watermark.
+- No utensils covering the food.
+
+PHOTOGRAPHY:
+
+Professional restaurant-quality food photography,
+natural realistic food texture,
+soft natural window lighting,
+subtle shadows,
+realistic highlights,
+45-degree camera angle unless the dish is better photographed from above,
+shallow depth of field,
+sharp focus on the food,
+natural background,
+realistic ceramic serving dish,
+high detail,
+photorealistic,
+editorial food photography.
+
+The image should look like a real photograph taken by a professional
+food photographer, not an AI-generated illustration.
+"""
+
+    return prompt.strip()
+
+
+# ============================================================
+# REPLICATE
 # ============================================================
 
 def create_prediction(prompt):
 
+    if not REPLICATE_API_TOKEN:
+
+        raise RuntimeError(
+            "REPLICATE_API_TOKEN tapilmadi."
+        )
+
     headers = {
-        "Authorization": (
-            f"Bearer {REPLICATE_API_TOKEN}"
-        ),
-        "Content-Type": "application/json",
+        "Authorization":
+            f"Bearer {REPLICATE_API_TOKEN}",
+        "Content-Type":
+            "application/json",
     }
 
-    data = {
+    payload = {
         "input": {
             "prompt": prompt,
             "aspect_ratio": "1:1",
             "output_format": "png",
+            "output_quality": 95,
         }
     }
 
     response = requests.post(
-        REPLICATE_URL,
+        REPLICATE_MODEL_URL,
         headers=headers,
-        json=data,
-        timeout=60,
+        json=payload,
+        timeout=60
     )
 
     response.raise_for_status()
@@ -594,181 +996,147 @@ def create_prediction(prompt):
     return response.json()
 
 
-# ============================================================
-# WAIT FOR REPLICATE
-# ============================================================
-
-def wait_for_prediction(prediction):
-
-    prediction_url = (
-        prediction["urls"]["get"]
-    )
+def wait_for_prediction(
+    prediction_id,
+    max_wait=180
+):
 
     headers = {
-        "Authorization": (
+        "Authorization":
             f"Bearer {REPLICATE_API_TOKEN}"
-        )
     }
 
-    for i in range(60):
+    url = (
+        f"https://api.replicate.com/v1/predictions/"
+        f"{prediction_id}"
+    )
 
-        time.sleep(5)
+    start = time.time()
+
+    while time.time() - start < max_wait:
 
         response = requests.get(
-            prediction_url,
+            url,
             headers=headers,
-            timeout=30,
+            timeout=30
         )
 
         response.raise_for_status()
 
-        result = response.json()
+        data = response.json()
 
-        status = result.get(
+        status = data.get(
             "status"
         )
 
         print(
-            f"      [{i + 1}/60] Status: {status}"
+            f"   FLUX status: {status}"
         )
 
         if status == "succeeded":
-
-            return result
+            return data
 
         if status in (
             "failed",
             "canceled"
         ):
 
-            raise Exception(
-                "Prediction uğursuz oldu: "
-                f"{result.get('error')}"
+            print(
+                "FLUX error:",
+                data.get("error")
             )
 
-    raise Exception(
-        "Prediction 5 dəqiqə ərzində tamamlanmadı"
+            return None
+
+        time.sleep(3)
+
+    print(
+        "⚠️ FLUX timeout."
     )
 
+    return None
 
-# ============================================================
-# GENERATE IMAGE
-# ============================================================
 
 def generate_image(
     prompt,
-    output_path
+    retries=3
 ):
 
-    last_error = None
-
-    for attempt in range(1, 6):
+    for attempt in range(
+        1,
+        retries + 1
+    ):
 
         try:
 
             print(
-                f"    API sorğusu göndərilir "
-                f"({attempt}/5)..."
+                f"🖼️ FLUX cəhd {attempt}/{retries}"
             )
 
-            prediction = (
-                create_prediction(prompt)
+            prediction = create_prediction(
+                prompt
             )
 
-            print(
-                "    Prediction yaradıldı: "
-                f"{prediction.get('id')}"
+            result = wait_for_prediction(
+                prediction["id"]
             )
 
-            print(
-                "    Status: "
-                f"{prediction.get('status')}"
-            )
+            if result:
 
-            result = (
-                wait_for_prediction(
-                    prediction
-                )
-            )
-
-            output = result.get(
-                "output"
-            )
-
-            if not output:
-
-                raise Exception(
-                    "Replicate output boşdur"
+                output = result.get(
+                    "output"
                 )
 
-            if isinstance(
-                output,
-                list
-            ):
+                if isinstance(
+                    output,
+                    list
+                ):
 
-                image_url = output[0]
+                    return output[0]
 
-            else:
+                if isinstance(
+                    output,
+                    str
+                ):
 
-                image_url = output
-
-            print(
-                "    Şəkil URL-i alındı"
-            )
-
-            image_response = requests.get(
-                image_url,
-                timeout=120,
-            )
-
-            image_response.raise_for_status()
-
-            output_path.parent.mkdir(
-                parents=True,
-                exist_ok=True
-            )
-
-            output_path.write_bytes(
-                image_response.content
-            )
-
-            print(
-                "    Şəkil yadda saxlanıldı: "
-                f"{output_path}"
-            )
-
-            return True
+                    return output
 
         except Exception as e:
 
-            last_error = e
-
             print(
-                f"    Cəhd {attempt}/5 "
-                f"uğursuz oldu: {e}"
+                f"FLUX xətası: {e}"
             )
 
-            if attempt < 5:
+            if attempt < retries:
+                time.sleep(5)
 
-                wait_seconds = (
-                    attempt * 5
-                )
+    return None
 
-                print(
-                    f"    {wait_seconds} "
-                    "saniyə gözlənilir..."
-                )
 
-                time.sleep(
-                    wait_seconds
-                )
+# ============================================================
+# SAVE GENERATED IMAGE
+# ============================================================
 
-    print(
-        "    XETA: Şəkil yaradıla bilmədi: "
-        f"{last_error}"
+def save_generated_image(
+    image_url,
+    image_path
+):
+
+    response = requests.get(
+        image_url,
+        timeout=60
     )
 
-    return False
+    response.raise_for_status()
+
+    with open(
+        image_path,
+        "wb"
+    ) as f:
+
+        f.write(
+            response.content
+        )
 
 
 # ============================================================
@@ -777,11 +1145,20 @@ def generate_image(
 
 def main():
 
-    if not REPLICATE_API_TOKEN:
+    print()
+    print("=" * 60)
+    print("NƏ BİŞİRİM? — SMART RECIPE IMAGE GENERATOR")
+    print("=" * 60)
+    print()
 
-        raise Exception(
-            "REPLICATE_API_TOKEN tapılmadı!"
-        )
+    IMAGES_DIR.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    # --------------------------------------------------------
+    # LOAD RECIPES
+    # --------------------------------------------------------
 
     with open(
         RECIPES_JSON_PATH,
@@ -796,184 +1173,303 @@ def main():
         list
     ):
 
-        raise Exception(
-            "recipes.json siyahı formatında olmalıdır."
+        raise RuntimeError(
+            "recipes.json list formatında deyil."
         )
 
-    IMAGES_DIR.mkdir(
-        parents=True,
-        exist_ok=True
+    print(
+        f"📚 Cəmi resept: {len(recipes)}"
     )
+
+    # --------------------------------------------------------
+    # CACHE
+    # --------------------------------------------------------
+
+    visual_cache = load_visual_cache()
+
+    print(
+        f"🧠 Visual cache: {len(visual_cache)} resept"
+    )
+
+    # --------------------------------------------------------
+    # FIND MISSING IMAGES
+    # --------------------------------------------------------
 
     missing = []
 
     for recipe in recipes:
 
-        image_resource = (
-            recipe.get(
-                "imageResource"
-            )
-        )
-
-        if not image_resource:
-
-            missing.append(recipe)
-
-    print()
-
-    print(
-        f"Cəmi resept: {len(recipes)}, "
-        f"şəkli olmayan: {len(missing)}"
-    )
-
-    print(
-        "Bu işə salınmada maksimum "
-        f"{MAX_IMAGES} şəkil yaradılacaq."
-    )
-
-    # ========================================================
-    # DRY RUN
-    # ========================================================
-
-    if DRY_RUN:
-
-        print()
-        print(
-            "DRY RUN aktivdir."
-        )
-
-        print(
-            "API çağırılmayacaq."
-        )
-
-        for recipe in missing[
-            :MAX_IMAGES
-        ]:
-
-            name = recipe.get(
-                "name",
-                "Recipe"
-            )
-
-            slug = slugify(name)
-
-            prompt = create_prompt(
-                recipe
-            )
-
-            print()
-            print(
-                name
-            )
-
-            print(
-                "slug:",
-                slug
-            )
-
-            print(
-                "prompt:",
-                prompt
-            )
-
-        return
-
-    # ========================================================
-    # GENERATION
-    # ========================================================
-
-    successful = 0
-    failed = 0
-
-    total_to_generate = min(
-        MAX_IMAGES,
-        len(missing)
-    )
-
-    for index, recipe in enumerate(
-        missing[:MAX_IMAGES],
-        start=1
-    ):
-
         name = recipe.get(
             "name",
-            "Recipe"
+            ""
+        ).strip()
+
+        if not name:
+            continue
+
+        image_resource = recipe.get(
+            "imageResource"
         )
 
-        slug = slugify(name)
+        if image_resource:
+            continue
 
-        image_path = (
-            IMAGES_DIR /
-            f"{slug}.png"
-        )
-
-        print()
-        print(
-            f"[{index}/{total_to_generate}] "
-            f"{name}"
-        )
-
-        print(
-            f"  slug   : {slug}"
-        )
-
-        prompt = create_prompt(
+        missing.append(
             recipe
         )
 
+    print(
+        f"🖼️ Şəkilsiz resept: {len(missing)}"
+    )
+
+    if not missing:
+
         print(
-            f"  prompt : {prompt}"
+            "✅ Bütün reseptlərin şəkli var."
         )
 
+        return
+
+    # --------------------------------------------------------
+    # PROCESS
+    # --------------------------------------------------------
+
+    processed = 0
+
+    for recipe in missing:
+
+        if processed >= MAX_IMAGES_PER_RUN:
+            break
+
+        name = recipe.get(
+            "name",
+            ""
+        ).strip()
+
+        slug = slugify(
+            name
+        )
+
+        image_filename = (
+            f"{slug}.png"
+        )
+
+        image_path = (
+            IMAGES_DIR /
+            image_filename
+        )
+
+        image_url = (
+            f"{IMAGE_BASE_URL}/"
+            f"{image_filename}"
+        )
+
+        print()
+        print("-" * 60)
+        print(
+            f"🍽️ RESEPT: {name}"
+        )
+        print("-" * 60)
+
         # ----------------------------------------------------
-        # Existing image
+        # EXISTING LOCAL IMAGE
         # ----------------------------------------------------
 
         if image_path.exists():
 
             print(
-                "  Şəkil artıq mövcuddur, keçilir."
+                "📁 Lokal şəkil artıq var."
             )
 
-            recipe["imageResource"] = (
-                f"{IMAGE_BASE_URL}/"
-                f"{slug}.png"
-            )
+            recipe[
+                "imageResource"
+            ] = image_url
 
-            successful += 1
+            processed += 1
 
             continue
 
         # ----------------------------------------------------
-        # Generate
+        # CACHE KEY
         # ----------------------------------------------------
 
-        ok = generate_image(
-            prompt,
-            image_path
+        cache_key = slug
+
+        visual_analysis = visual_cache.get(
+            cache_key
         )
 
-        if ok:
+        references = []
 
-            recipe["imageResource"] = (
-                f"{IMAGE_BASE_URL}/"
-                f"{slug}.png"
-            )
+        # ----------------------------------------------------
+        # WEB SEARCH
+        # ----------------------------------------------------
 
-            successful += 1
+        if visual_analysis:
 
             print(
-                "  imageResource: "
-                f"{recipe['imageResource']}"
+                "🧠 Visual analysis cache-dən götürüldü."
             )
 
         else:
 
-            failed += 1
+            if DRY_RUN:
 
-    # ========================================================
-    # SAVE JSON
-    # ========================================================
+                print(
+                    "DRY RUN → Brave/Gemini işlədilmir."
+                )
+
+                visual_analysis = (
+                    "Visual analysis would be generated here."
+                )
+
+            else:
+
+                try:
+
+                    references = brave_image_search(
+                        recipe
+                    )
+
+                    print(
+                        f"🔎 Tapılan reference şəkillər: "
+                        f"{len(references)}"
+                    )
+
+                except Exception as e:
+
+                    print(
+                        f"⚠️ Brave Search xətası: {e}"
+                    )
+
+                    references = []
+
+                # ------------------------------------------------
+                # GEMINI
+                # ------------------------------------------------
+
+                if references:
+
+                    visual_analysis = (
+                        analyze_reference_images(
+                            recipe,
+                            references
+                        )
+                    )
+
+                    if visual_analysis:
+
+                        print()
+                        print(
+                            "🧠 Gemini visual analysis:"
+                        )
+                        print(
+                            visual_analysis
+                        )
+
+                        visual_cache[
+                            cache_key
+                        ] = visual_analysis
+
+                        save_visual_cache(
+                            visual_cache
+                        )
+
+                    else:
+
+                        print(
+                            "⚠️ Gemini analiz vermədi."
+                        )
+
+        # ----------------------------------------------------
+        # CREATE FLUX PROMPT
+        # ----------------------------------------------------
+
+        prompt = create_flux_prompt(
+            recipe,
+            visual_analysis
+        )
+
+        print()
+        print(
+            "🎨 FLUX PROMPT:"
+        )
+        print(prompt)
+
+        # ----------------------------------------------------
+        # DRY RUN
+        # ----------------------------------------------------
+
+        if DRY_RUN:
+
+            print()
+            print(
+                "✅ DRY RUN tamamlandı."
+            )
+
+            processed += 1
+            continue
+
+        # ----------------------------------------------------
+        # GENERATE
+        # ----------------------------------------------------
+
+        generated_url = generate_image(
+            prompt
+        )
+
+        if not generated_url:
+
+            print(
+                "❌ Şəkil yaradılmadı."
+            )
+
+            continue
+
+        # ----------------------------------------------------
+        # SAVE
+        # ----------------------------------------------------
+
+        try:
+
+            save_generated_image(
+                generated_url,
+                image_path
+            )
+
+        except Exception as e:
+
+            print(
+                f"❌ Şəkil yadda saxlanmadı: {e}"
+            )
+
+            continue
+
+        # ----------------------------------------------------
+        # UPDATE JSON
+        # ----------------------------------------------------
+
+        recipe[
+            "imageResource"
+        ] = image_url
+
+        print()
+        print(
+            f"✅ Şəkil hazırdır: {image_filename}"
+        )
+
+        print(
+            f"🔗 {image_url}"
+        )
+
+        processed += 1
+
+        # API-lərə çox sürətli yüklənməmək üçün
+        time.sleep(2)
+
+    # --------------------------------------------------------
+    # SAVE RECIPES
+    # --------------------------------------------------------
 
     with open(
         RECIPES_JSON_PATH,
@@ -988,47 +1484,13 @@ def main():
             indent=2
         )
 
-    # ========================================================
-    # RESULT
-    # ========================================================
-
-    remaining = sum(
-        1
-        for recipe in recipes
-        if not recipe.get(
-            "imageResource"
-        )
-    )
-
     print()
+    print("=" * 60)
     print(
-        "=============================="
+        f"✅ Bu run-da hazırlanan şəkil: {processed}"
     )
+    print("=" * 60)
 
-    print(
-        "NƏTİCƏ"
-    )
-
-    print(
-        "=============================="
-    )
-
-    print(
-        f"Uğurlu: {successful}"
-    )
-
-    print(
-        f"Xətalı: {failed}"
-    )
-
-    print(
-        f"Qalan şəkilsiz: {remaining}"
-    )
-
-
-# ============================================================
-# START
-# ============================================================
 
 if __name__ == "__main__":
     main()
