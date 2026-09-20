@@ -42,7 +42,7 @@ REFERENCE_IMAGES_PER_RECIPE = int(
 
 GEMINI_MODEL = os.getenv(
     "GEMINI_MODEL",
-    "gemini-2.5-flash-lite"
+    "gemini-3.5-flash-lite"
 )
 
 REPLICATE_MODEL_URL = (
@@ -319,7 +319,6 @@ def translate_ingredient(text):
     if normalized in FOOD_TRANSLATIONS:
         return FOOD_TRANSLATIONS[normalized]
 
-    # Miqdarı ayırmağa çalışırıq
     words = normalized.split()
 
     translated_words = []
@@ -457,12 +456,6 @@ def brave_image_search(recipe):
 
     name = recipe.get("name", "").strip()
 
-    category = recipe.get(
-        "category",
-        ""
-    )
-
-    # Əvvəl Azərbaycan dilində axtarırıq.
     query = (
         f'"{name}" resepti yemek'
     )
@@ -477,10 +470,11 @@ def brave_image_search(recipe):
             BRAVE_SEARCH_API_KEY
     }
 
+    # Azərbaycan dili üçün search_lang="az" istifadə etmirik,
+    # çünki Brave "az" kodunu qəbul etmir.
     params = {
         "q": query,
         "count": 20,
-        "search_lang": "az",
         "country": "AZ",
         "safesearch": "strict",
     }
@@ -991,6 +985,17 @@ def create_prediction(prompt):
         timeout=60
     )
 
+    # Kredit problemi
+    if response.status_code == 402:
+        print()
+        print("❌ REPLICATE: KREDİT YOXDUR.")
+        print(
+            response.text[:1000]
+        )
+        raise RuntimeError(
+            "Replicate account requires credit."
+        )
+
     response.raise_for_status()
 
     return response.json()
@@ -1013,102 +1018,237 @@ def wait_for_prediction(
 
     start = time.time()
 
+    api_errors = 0
+
     while time.time() - start < max_wait:
 
-        response = requests.get(
-            url,
-            headers=headers,
-            timeout=30
-        )
+        try:
 
-        response.raise_for_status()
-
-        data = response.json()
-
-        status = data.get(
-            "status"
-        )
-
-        print(
-            f"   FLUX status: {status}"
-        )
-
-        if status == "succeeded":
-            return data
-
-        if status in (
-            "failed",
-            "canceled"
-        ):
-
-            print(
-                "FLUX error:",
-                data.get("error")
+            response = requests.get(
+                url,
+                headers=headers,
+                timeout=30
             )
 
-            return None
+            # ------------------------------------------------
+            # SERVER / RATE LIMIT ERROR
+            # ------------------------------------------------
+            #
+            # ƏN VACİB HİSSƏ:
+            #
+            # Burada YENİ prediction yaradılmır.
+            # Eyni prediction ID yenidən yoxlanılır.
+            #
+            # ------------------------------------------------
 
-        time.sleep(3)
+            if response.status_code in (
+                429,
+                500,
+                502,
+                503,
+                504
+            ):
+
+                api_errors += 1
+
+                print(
+                    f"⚠️ Replicate status API xətası: "
+                    f"{response.status_code}"
+                )
+
+                print(
+                    f"   Eyni prediction yoxlanılır: "
+                    f"{prediction_id}"
+                )
+
+                if api_errors >= 6:
+
+                    print(
+                        "❌ Eyni prediction statusu "
+                        "6 dəfə oxunmadı."
+                    )
+
+                    print(
+                        "❌ Yeni prediction yaradılmayacaq."
+                    )
+
+                    return None
+
+                wait_seconds = min(
+                    api_errors * 5,
+                    30
+                )
+
+                print(
+                    f"⏳ {wait_seconds} saniyə gözlənilir..."
+                )
+
+                time.sleep(
+                    wait_seconds
+                )
+
+                continue
+
+            response.raise_for_status()
+
+            data = response.json()
+
+            # API düzəldisə error sayını sıfırla
+            api_errors = 0
+
+            status = data.get(
+                "status"
+            )
+
+            print(
+                f"   FLUX status: {status}"
+            )
+
+            if status == "succeeded":
+
+                return data
+
+            if status in (
+                "failed",
+                "canceled"
+            ):
+
+                print(
+                    "FLUX error:",
+                    data.get("error")
+                )
+
+                return None
+
+            time.sleep(3)
+
+        except requests.RequestException as e:
+
+            api_errors += 1
+
+            print(
+                f"⚠️ Prediction status sorğusunda xəta: {e}"
+            )
+
+            print(
+                f"   Eyni prediction saxlanılır: "
+                f"{prediction_id}"
+            )
+
+            if api_errors >= 6:
+
+                print(
+                    "❌ Prediction statusu "
+                    "6 dəfə oxunmadı."
+                )
+
+                print(
+                    "❌ Yeni prediction yaradılmayacaq."
+                )
+
+                return None
+
+            wait_seconds = min(
+                api_errors * 5,
+                30
+            )
+
+            print(
+                f"⏳ {wait_seconds} saniyə gözlənilir..."
+            )
+
+            time.sleep(
+                wait_seconds
+            )
 
     print(
         "⚠️ FLUX timeout."
     )
 
+    print(
+        "❌ Yeni prediction yaradılmayacaq."
+    )
+
     return None
 
 
-def generate_image(
-    prompt,
-    retries=3
-):
+def generate_image(prompt):
 
-    for attempt in range(
-        1,
-        retries + 1
-    ):
+    # ========================================================
+    # CƏMİ 1 PREDICTION
+    # ========================================================
 
-        try:
+    print(
+        "🖼️ FLUX prediction yaradılır..."
+    )
 
-            print(
-                f"🖼️ FLUX cəhd {attempt}/{retries}"
-            )
+    try:
 
-            prediction = create_prediction(
-                prompt
-            )
+        prediction = create_prediction(
+            prompt
+        )
 
-            result = wait_for_prediction(
-                prediction["id"]
-            )
+        prediction_id = prediction.get(
+            "id"
+        )
 
-            if result:
-
-                output = result.get(
-                    "output"
-                )
-
-                if isinstance(
-                    output,
-                    list
-                ):
-
-                    return output[0]
-
-                if isinstance(
-                    output,
-                    str
-                ):
-
-                    return output
-
-        except Exception as e:
+        if not prediction_id:
 
             print(
-                f"FLUX xətası: {e}"
+                "❌ Replicate prediction ID qaytarmadı."
             )
 
-            if attempt < retries:
-                time.sleep(5)
+            return None
+
+        print(
+            f"✅ Prediction yaradıldı: "
+            f"{prediction_id}"
+        )
+
+        # ----------------------------------------------------
+        # EYNİ PREDICTION ID İZLƏNİR
+        # ----------------------------------------------------
+
+        result = wait_for_prediction(
+            prediction_id
+        )
+
+        if not result:
+
+            return None
+
+        output = result.get(
+            "output"
+        )
+
+        if isinstance(
+            output,
+            list
+        ):
+
+            if output:
+                return output[0]
+
+        if isinstance(
+            output,
+            str
+        ):
+
+            return output
+
+        print(
+            "❌ Replicate output qaytarmadı."
+        )
+
+    except Exception as e:
+
+        print(
+            f"FLUX xətası: {e}"
+        )
+
+        print(
+            "⚠️ Təkrar prediction yaradılmayacaq."
+        )
 
     return None
 
