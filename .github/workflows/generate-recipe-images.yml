@@ -41,9 +41,11 @@ jobs:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
         run: python test_replicate.py
 
-      - name: Run image generation script
+       - name: Run image generation script
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           RECIPES_JSON_PATH: "recipes.json"
           IMAGES_DIR: "images"
           IMAGE_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/images"
