@@ -1,5 +1,4 @@
 [
-  
   {
     "description": "Cənub bölgəmizin məşhur toyuq ləvəngisi.",
     "instructions": "1. Qoz içi ətçəkəndən keçirilir.\n2. Soğan sürtgəcdən keçirilib suyu sıxılır və qozla qarışdırılır.\n3. Üzərinə turşu əlavə olunub içlik hazıralanır.\n4. Toyuq içliklə doldurulub sobada qızardılır.",
@@ -225,23 +224,23 @@
     ]
   },
   {
-    "name": "Badımcan salatı",
-    "description": "Közlənmiş badımcan və pomidordan hazırlanan təam.",
+    "name": "Badımcan və pomidor salatı",
+    "description": "Qızardılmış badımcan və pomidordan hazırlanan ləzzətli salat.",
     "category": "Salat",
-    "prepTime": 45,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-salati.png",
+    "prepTime": 30,
+    "difficulty": "Asan",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-salati.png",
     "videoUrl": "",
-    "instructions": "1. Badımcan və bibərlər közlənir, qabıqları təmizlənir.\n2. Tərəvəzlər xırda doğranır.\n3. Üzərinə sarımsaq, göyərti və zeytun yağı əlavə olunub qarışdırılır.",
+    "instructions": "1. Badımcanları kubiklərə doğrayıb duzlu suda saxlayın, sonra qızardın.\n2. Pomidorları da kubik şəklində doğrayın.\n3. Sarınsaq, zeytun yağı və duzu qarışdıraraq sous hazırlayın.\n4. Bütün tərkib hissələrini qarışdırıb süfrəyə verin.",
     "ingredients": [
       {
         "name": "Badımcan",
-        "quantity": "3",
+        "quantity": "2",
         "unit": "ədəd"
       },
       {
-        "name": "Bibər",
-        "quantity": "2",
+        "name": "Pomidor",
+        "quantity": "3",
         "unit": "ədəd"
       },
       {
@@ -251,8 +250,13 @@
       },
       {
         "name": "Zeytun yağı",
-        "quantity": "2",
+        "quantity": "3",
         "unit": "xörək qaşığı"
+      },
+      {
+        "name": "Duz",
+        "quantity": "0.5",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -422,19 +426,24 @@
     ]
   },
   {
-    "name": "Pendirli Blinçik",
-    "description": "İçlikli nazik blinçiklərdən ibarət səhər yeməyi.",
+    "name": "Göyərtili pendirli blinçik",
+    "description": "İçliyi göyərtili pendirdən olan nazik blinçiklər.",
     "category": "Səhər Yeməyi",
     "prepTime": 35,
     "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-blincik.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/goyertili-pendirli-blincik.png",
     "videoUrl": "",
-    "instructions": "1. Süd, yumurta, un, şəkər tozu və duzu qarışdıraraq duru xəmir hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Hər blinçiyin içinə pendir qoyub bükün.\n4. Tavada kərə yağında yüngülcə qızardın.",
+    "instructions": "1. Süd, un, yumurta və duzdan blinçik xəmiri hazırlayıb nazik bişirin.\n2. Göyərtiləri xırda doğrayıb pendirlə qarışdırın.\n3. İçliyi blinçiklərin içərisinə qoyub bükün.",
     "ingredients": [
       {
         "name": "Süd",
-        "quantity": "500",
+        "quantity": "300",
         "unit": "ml"
+      },
+      {
+        "name": "Un",
+        "quantity": "150",
+        "unit": "qram"
       },
       {
         "name": "Yumurta",
@@ -442,8 +451,8 @@
         "unit": "ədəd"
       },
       {
-        "name": "Un",
-        "quantity": "200",
+        "name": "Göyərti",
+        "quantity": "50",
         "unit": "qram"
       },
       {
@@ -806,34 +815,44 @@
     ]
   },
   {
-    "description": "Qat-qat yığılan dadlı və görünüşlü salat.",
-    "instructions": "1. Kartof, yerkökü, yumurta və pendiri sürtgəcdən keçirin.\n2. Qabın dibinə kartof düzüb mayonez çəkin.\n3. Üstünə toyuq əti, yerkökü və yumurta sarısını qat-qat yığın.\n4. Hər qata az miqdarda mayonez çəkin.",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/mimoza-salati.png",
-    "videoUrl": "",
+    "name": "Mimoza Salatası",
+    "description": "Qat-qat yığılan pendirli və toyuqlu bayram salatı.",
     "category": "Salat",
-    "name": "Mimoza salatı",
-    "prepTime": 45,
+    "prepTime": 50,
     "difficulty": "Orta",
+    "imageResource": "",
+    "videoUrl": "",
+    "instructions": "1. Toyuq əti, kartof, yerkökü və yumurta qaynadılır.\n2. Sürtgəcdən keçirilmiş məhsullar qaba qat-qat yığılır: kartof, toyuq, yerkökü, yumurta ağı, pendir və yumurta sarısı.\n3. Hər qatın arası mayonezlənir.",
     "ingredients": [
       {
-        "unit": "ədəd",
+        "name": "Toyuq sinə əti",
+        "quantity": "300",
+        "unit": "qram"
+      },
+      {
         "name": "Kartof",
-        "quantity": "3"
+        "quantity": "3",
+        "unit": "ədəd"
       },
       {
-        "unit": "ədəd",
         "name": "Yerkökü",
-        "quantity": "2"
+        "quantity": "2",
+        "unit": "ədəd"
       },
       {
-        "unit": "ədəd",
         "name": "Yumurta",
-        "quantity": "4"
+        "quantity": "4",
+        "unit": "ədəd"
       },
       {
-        "unit": "qram",
         "name": "Pendir",
-        "quantity": "150"
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Mayonez",
+        "quantity": "200",
+        "unit": "qram"
       }
     ]
   },
@@ -993,14 +1012,14 @@
     ]
   },
   {
-    "name": "Şorqoğal",
-    "description": "Ədviyyatlı içliklə hazırlanan qat-qat milli şirniyyat.",
+    "name": "Şor Qogalı",
+    "description": "Novruz bayramının əsas simvolu olan, ədviyyatlı və qat-qat xəmirli milli şirniyyat.",
     "category": "Şirniyyat",
     "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sorqogal.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Mayalı xəmir yoğurub kündələyin və yağlayaraq qat-qat açın.\n2. İçlik üçün un, kərə yağı və müxtəlif ədviyyatları qarışdırın.\n3. Xəmirin içine içlik qoyub dairəvi formada bükün.\n4. Üzərinə yumurta sarısı çəkib sobada bişirin.",
+    "instructions": "1. Un, maya və sudan yumşaq xəmir yoğurub acımağa qoyun.\n2. İçlik üçün un, əridilmiş kərə yağı və ədviyyatları qarışdırın.\n3. Acımış xəmirin kündələrini açıb aralarına yağ sürtərək qat-qat yığın.\n4. İçlik qoyub dairəvi formada bükün və üzərinə yumurta sarısı çəkib sobada bişirin.",
     "ingredients": [
       {
         "name": "Un",
@@ -1013,14 +1032,19 @@
         "unit": "qram"
       },
       {
-        "name": "Şəkər tozu",
-        "quantity": "50",
+        "name": "Maya",
+        "quantity": "10",
         "unit": "qram"
       },
       {
-        "name": "Maya",
+        "name": "Yumurta",
         "quantity": "1",
-        "unit": "çay qaşığı"
+        "unit": "ədəd"
+      },
+      {
+        "name": "Duz",
+        "quantity": "5",
+        "unit": "qram"
       }
     ]
   },
@@ -2073,19 +2097,19 @@
     ]
   },
   {
-    "name": "Alma Peçenyəsi",
-    "description": "İçlikli yumşaq alma peçenyəsi.",
+    "name": "Almalı peçenye",
+    "description": "İçərisində təzə alma və darçın olan ev sayağı xırtıldayan peçenye.",
     "category": "Şirniyyat",
     "prepTime": 45,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/alma-pecenyesi.png",
+    "difficulty": "Asan",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/almali-pecenye.png",
     "videoUrl": "",
-    "instructions": "1. Almanın qabığını soyub sürtgəcdən keçirin, şəkər və darçınla qovurun.\n2. Yumşaq kərə yağı, xama, şəkər tozu və un ilə xəmir yoğurun.\n3. Xəmiri kiçik hissələrə bölüb içərisinə alma püresi qoyun və bükün.\n4. Sobada 180 dərəcədə qızılı rəng alana qədər bişirin.",
+    "instructions": "1. Un, kərə yağı, xama və çimdik duzu qarışdıraraq yumşaq xəmir yoğurun.\n2. Almaları sürtgəcdən keçirib şəkər tozu və darçın ilə tavada bir az bişirin.\n3. Xəmiri açıb üçbucaq formalı dilimlərə kəsin, içərisinə alma qoyub bükün.\n4. Sobada qızılı rəng alana qədər bişirin.",
     "ingredients": [
       {
-        "name": "Alma",
-        "quantity": "3",
-        "unit": "ədəd"
+        "name": "Un",
+        "quantity": "2.5",
+        "unit": "stəkan"
       },
       {
         "name": "Kərə yağı",
@@ -2098,19 +2122,14 @@
         "unit": "xörək qaşığı"
       },
       {
+        "name": "Alma",
+        "quantity": "2",
+        "unit": "ədəd"
+      },
+      {
         "name": "Şəkər tozu",
         "quantity": "0.5",
         "unit": "stəkan"
-      },
-      {
-        "name": "Un",
-        "quantity": "2.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Darçın",
-        "quantity": "1",
-        "unit": "çay qaşığı"
       }
     ]
   },
@@ -3180,39 +3199,49 @@
     ]
   },
   {
-    "name": "Kəsmikli blinçik",
-    "description": "İçərisi kəsmiklə doldurulmuş ənənəvi blinçiklər.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmikli-blincik.png",
+    "description": "İçliyi kəsmiklə doldurulmuş nazik qızardılmış blinçiklər",
+    "instructions": "1. Süd, yumurta, un, şəkər tozu və duzu qarışdıraraq duru xəmir hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Kəsmiyi şəkər tozu və vanil ilə qarışdıraraq içlik hazırlayın.\n4. Hər blinçiyin ortasına kəsmik qoyub bükün.\n5. Kərə yağında hər iki üzünü qızardın.",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Süd, yumurta, un, şəkər və duzu qarışdıraraq xəmir hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Kəsmiyi şəkər tozu ilə qarışdırıb içlik hazırlayın.\n4. Blinçiklərin içinə kəsmik qoyub bükün və az yağda qızardın.",
+    "category": "Səhər Yeməyi",
+    "name": "Kəsmi̇kli̇ Blinçik",
+    "prepTime": 40,
+    "difficulty": "Orta",
     "ingredients": [
       {
-        "name": "Un",
-        "quantity": "1.5",
-        "unit": "stəkan"
-      },
-      {
+        "unit": "stəkan",
         "name": "Süd",
-        "quantity": "2",
-        "unit": "stəkan"
+        "quantity": "2"
       },
       {
+        "unit": "ədəd",
         "name": "Yumurta",
-        "quantity": "2",
-        "unit": "ədəd"
+        "quantity": "2"
       },
       {
-        "name": "Kəsmik",
-        "quantity": "300",
-        "unit": "qram"
+        "unit": "stəkan",
+        "name": "Un",
+        "quantity": "1.5"
       },
       {
+        "unit": "xörək qaşığı",
         "name": "Şəkər tozu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
+        "quantity": "3"
+      },
+      {
+        "unit": "qram",
+        "name": "Kəsmik",
+        "quantity": "300"
+      },
+      {
+        "unit": "paket",
+        "name": "Vanil",
+        "quantity": "1"
+      },
+      {
+        "unit": "qram",
+        "name": "Kərə yağı",
+        "quantity": "50"
       }
     ]
   },
@@ -3488,43 +3517,6 @@
     ]
   },
   {
-    "name": "Eriştəli toyuq şorbası",
-    "description": "Ev sayağı əriştə və toyuq ətindən hazırlanan isti şorba.",
-    "category": "Şorba",
-    "prepTime": 45,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/eristeli-toyuq-sorbasi.png",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıb əti didin, suyunu süzün.\n2. Toyuq suyuna kartof və yerkökü doğrayıb əlavə edin.\n3. Tərəvəzlər yumşaldıqdan sonra əriştə və didilmiş əti qatın.\n4. Duz, istiot vurub 10 dəqiqə qaynadın.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Eriştə",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Düyülü pomidor şorbası",
     "description": "Təzə pomidordan hazırlanan yüngül şorba.",
     "category": "Şorba",
@@ -3557,43 +3549,6 @@
       {
         "name": "Duz",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan və pomidor salatı",
-    "description": "Qızardılmış badımcan və pomidordan hazırlanan ləzzətli salat.",
-    "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları kubiklərə doğrayıb duzlu suda saxlayın, sonra qızardın.\n2. Pomidorları da kubik şəklində doğrayın.\n3. Sarınsaq, zeytun yağı və duzu qarışdıraraq sous hazırlayın.\n4. Bütün tərkib hissələrini qarışdırıb süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
@@ -3673,14 +3628,14 @@
     ]
   },
   {
-    "name": "Pendirli və göbələkli tartalet",
-    "description": "Qəlyanaltı süfrələri üçün ləzzətli kiçik səbətlər.",
+    "name": "Göbələkli və pendirli tartalet",
+    "description": "Xırtıldayan səbətciklər içərisində göbələk və pendir qarışığı.",
     "category": "Qəlyanaltı",
     "prepTime": 30,
     "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-ve-gobelekli-tartalet.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-ve-pendirli-tartalet.png",
     "videoUrl": "",
-    "instructions": "1. Göbələk və soğanı xırda doğrayıb tavada qızardın.\n2. Tartalet səbətlərinin içinə qızardılmış qarışığı doldurun.\n3. Üzərinə sürtgəcdən keçirilmiş pendir səpib sobada pendir əriyənədək bişirin.",
+    "instructions": "1. Hazır tartalet səbətciklərini sobaya hazırlayın.\n2. Göbələk və soğanı xırda doğrayıb tavada yağda qovurun.\n3. Üzərinə az miqdər qaymaq əlavə edib qatılaşana qədər bişirin.\n4. Hazır kütləni səbətciklərə doldurun, üzərinə sürtgəcdən keçirilmiş pendir səpib sobada əridin.",
     "ingredients": [
       {
         "name": "Göbələk",
@@ -3698,9 +3653,9 @@
         "unit": "qram"
       },
       {
-        "name": "Tartalet",
-        "quantity": "10",
-        "unit": "ədəd"
+        "name": "Qaymaq",
+        "quantity": "50",
+        "unit": "ml"
       }
     ]
   },
@@ -3880,17 +3835,17 @@
     ]
   },
   {
-    "name": "Albalı kompotu",
-    "description": "Təzə albalıdan hazırlanan sərinləşdirici içki.",
+    "name": "Qaysı Kompotu",
+    "description": "Təbii və sərinləşdirici qaysı meyvəsindən hazırlanan kompot.",
     "category": "İçki",
     "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/albali-kompotu.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Albalıları yuyub çəyirdəklərini təmizləyin.\n2. Qazana su və şəkər tozu əlavə edib şərbət qaynadaq.\n3. Albalıları əlavə edib 10 dəqiqə qaynadaq və soyudun.",
+    "instructions": "1. Qaysıları yaxşıca yuyub tumlarını çıxarın.\n2. Qazana su və şəkər tozu əlavə edib şərbət qaynadın.\n3. Qaysıları suya əlavə edib orta odda 15 dəqiqə bişirin.\n4. Soyutduqdan sonra stəkanlara tökərək süfrəyə verin.",
     "ingredients": [
       {
-        "name": "Albalı",
+        "name": "Qaysı",
         "quantity": "500",
         "unit": "qram"
       },
@@ -4123,33 +4078,6 @@
     ]
   },
   {
-    "name": "Toyuqlu tərəvəz şorbası",
-    "description": "Sadə və yüngül toyuq şorbası.",
-    "category": "Şorba",
-    "prepTime": 45,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-terevez-sorbasi.png",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıbdidikləyin.\n2. Bulyona kartof və yerkökü doğrayıb əlavə edin.\n3. Tərəvəzlər bişdikdən sonra toyuq ətini geri qatın.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "1",
-        "unit": "ədəd"
-      }
-    ]
-  },
-  {
     "name": "Turp salatı",
     "description": "Vitaminlərlə zəngin quru turp salatı.",
     "category": "Salat",
@@ -4204,29 +4132,39 @@
     ]
   },
   {
-    "name": "Qozlu çuğundur salatı",
-    "description": "Bişmiş çuğundur və qoz qarışımından ibarət zərif salat.",
+    "name": "Qozlu və narlı çuğundur salatı",
+    "description": "Zəngin dadı və rəngi ilə süfrələri bəzəyən salat.",
     "category": "Salat",
     "prepTime": 40,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-cugundur-salati.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-ve-narli-cugundur-salati.png",
     "videoUrl": "",
-    "instructions": "1. Çuğunduru bişirib sürtgəcdən keçirin.\n2. Üzərinə döyülmüş qoz və sarımsaq əlavə edin.\n3. Mayonez ilə qarışdırın.",
+    "instructions": "1. Çuğundur bişirilir və sürtgəcdən keçirilir.\n2. Üzərinə döyülmüş qoz və nar dənələri əlavə edilir.\n3. Mayonez ilə qarışdırılır.",
     "ingredients": [
       {
         "name": "Çuğundur",
-        "quantity": "2",
+        "quantity": "3",
         "unit": "ədəd"
       },
       {
         "name": "Qoz",
-        "quantity": "60",
+        "quantity": "100",
         "unit": "qram"
+      },
+      {
+        "name": "Nar",
+        "quantity": "0.5",
+        "unit": "ədəd"
       },
       {
         "name": "Mayonez",
         "quantity": "3",
         "unit": "xörək qaşığı"
+      },
+      {
+        "name": "Duz",
+        "quantity": "0.5",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -4334,33 +4272,6 @@
       {
         "name": "Quzu əti",
         "quantity": "300",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Pendirli qızardılmış çörək",
-    "description": "Tez hazırlanan isti qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 10,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-qizardilmis-corek.png",
-    "videoUrl": "",
-    "instructions": "1. Çörək dilimlərinin üzərinə pendir qoyun.\n2. Tavada və ya sobada pendir əriyənə qədər qızdırın.\n3. İsti şəkildə süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Çörək",
-        "quantity": "4",
-        "unit": "dilim"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "80",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "20",
         "unit": "qram"
       }
     ]
@@ -5027,33 +4938,6 @@
     ]
   },
   {
-    "name": "Heyva Kompotu",
-    "description": "Təzə heyvadan hazırlanan xoş ətirli kompot",
-    "category": "İçki",
-    "prepTime": 40,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/heyva-kompotu.png",
-    "videoUrl": "",
-    "instructions": "1. Heyvalar təmizlənib dilim-dilim doğranır.\n2. Qazana su və şəkər tozu əlavə edilir.\n3. Heyvalar yumşalana qədər qaynadılır.",
-    "ingredients": [
-      {
-        "name": "Heyva",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
     "description": "Kəklikotu ilə dəmlənmiş ənənəvi qara çay",
     "instructions": "1. Çaynikə qara çay və kəklikotu tökülür.\n2. Üzərinə qaynar su əlavə edilir.\n3. 10 dəqiqə dəmlənməyə qoyulur.",
     "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/i-sti-qaracay.png",
@@ -5416,43 +5300,6 @@
     ]
   },
   {
-    "name": "Düyülü toyuq şorbası",
-    "description": "Yüngül və faydalı ev şorbası.",
-    "category": "Şorba",
-    "prepTime": 45,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/duyulu-toyuq-sorbasi.png",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin.\n2. Əti didib bulyona qaytarın.\n3. Yuyulmuş düyü, kartof və xırda doğranmış yerkökü əlavə edin.\n4. Yumşalana qədər bişirin və üzərinə göyərti səpib servis edin.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Düyü",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      }
-    ]
-  },
-  {
     "name": "Lobya və pomidor şorbası",
     "description": "Zəngin tərkibli qatısı qatı şorba.",
     "category": "Şorba",
@@ -5586,14 +5433,14 @@
     ]
   },
   {
-    "name": "Badımcan ləvəngi qəlyanaltısı",
-    "description": "Badımcan içi ilə hazırlanan xüsusi qəlyanaltı.",
+    "name": "Badımcan ləvəngi qelyanaltısı",
+    "description": "Badımcanın içərisinə qoz və soğan qarışığı doldurularaq bişirilən qəlyanaltı.",
     "category": "Qəlyanaltı",
-    "prepTime": 35,
+    "prepTime": 50,
     "difficulty": "Orta",
     "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-levengi-qelyanaltisi.png",
     "videoUrl": "",
-    "instructions": "1. Badımcanları sobada bişirib qabığını soyun.\n2. Qoz, soğan və turşunu qarışdıraraq içlik hazırlayın.\n3. Badımcanların ortasını yarıb içliyi doldurun.\n4. Soyuq şəkildə süfrəyə verin.",
+    "instructions": "1. Badımcanları uzunsov dilimlərə doğrayıb duzlu suda saxlayın, sonra qurudub qızardın.\n2. Qoz ləpəsi və soğanı ətçəkəndən keçirin.\n3. Üzərinə narşərab, duz və istiot əlavə edib qarışdırın.\n4. Qızardılmış badımcan dilimlərinin üzərinə içlik çəkib rulet formasında bükün.\n5. Üzərini göyərtilərlə bəzəyib süfrəyə verin.",
     "ingredients": [
       {
         "name": "Badımcan",
@@ -5602,8 +5449,8 @@
       },
       {
         "name": "Qoz",
-        "quantity": "80",
-        "unit": "qram"
+        "quantity": "1",
+        "unit": "stəkan"
       },
       {
         "name": "Soğan",
@@ -5611,8 +5458,8 @@
         "unit": "ədəd"
       },
       {
-        "name": "Lavaşana",
-        "quantity": "1",
+        "name": "Narşərab",
+        "quantity": "2",
         "unit": "xörək qaşığı"
       }
     ]
@@ -5756,14 +5603,14 @@
     ]
   },
   {
-    "name": "Limonlu çay",
-    "description": "Günün istənilən vaxtı içilən klassik qara çay.",
+    "name": "Limonlu nanə çayı",
+    "description": "Təzə nanə yarpaqları və limonla dəmlənən ətirli çay.",
     "category": "İçki",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/limonlu-cay.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Çaynikdə qara çay dəmləyin.\n2. Stəkana çay süzün.\n3. İçərisinə bir dilim limon və istəyə görə şəkər əlavə edin.",
+    "instructions": "1. Çaynikə qara çay və təzə nanə yarpaqları tökün.\n2. Üzərinə qaynar su əlavə edib 10 dəqiqə dəmləyin.\n3. Stəkanlara süzüb limon dilimi əlavə edin.",
     "ingredients": [
       {
         "name": "Qara çay",
@@ -5771,9 +5618,14 @@
         "unit": "çay qaşığı"
       },
       {
+        "name": "Nanə",
+        "quantity": "4",
+        "unit": "yarpaq"
+      },
+      {
         "name": "Limon",
-        "quantity": "1",
-        "unit": "ədəd"
+        "quantity": "2",
+        "unit": "dilim"
       },
       {
         "name": "Su",
@@ -5906,14 +5758,14 @@
     ]
   },
   {
-    "name": "Quzu Ətindən Plov",
-    "description": "Azərbaycan mətbəxinin şah əsəri.",
+    "name": "Quzu ətindən noxudlu plov",
+    "description": "Azərbaycan mətbəxinin şah əsərlərindən olan ətli plov növü.",
     "category": "Əsas Yemək",
-    "prepTime": 90,
+    "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-plov.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda isladın.\n2. Quzu ətini tikələrə doğrayıb bişirin.\n3. Düyünü qaynadıb süzün.\n4. Qazanın dibinə qazmaq qoyub düyü və əti qat-qat yığın.\n5. Dəmə qoyun.",
+    "instructions": "1. Düyünü duzlu suda isladın.\n2. Quzu ətini və noxudu ayrıca bişirin.\n3. Düyünü qaynayan suda yarıbişmiş vəziyyətə gətirib süzün.\n4. Qazana qazmaq qoyub üzərini düyü, ət və noxudla qatlayaraq dəmə qoyun.",
     "ingredients": [
       {
         "name": "Düyü",
@@ -5926,14 +5778,14 @@
         "unit": "qram"
       },
       {
+        "name": "Noxud",
+        "quantity": "1",
+        "unit": "stəkan"
+      },
+      {
         "name": "Kərə yağı",
         "quantity": "100",
         "unit": "qram"
-      },
-      {
-        "name": "Zəfəran",
-        "quantity": "1",
-        "unit": "çimdik"
       }
     ]
   },
@@ -6226,34 +6078,39 @@
     ]
   },
   {
-    "description": "Göbələk və xiyar ilə təravətli salat.",
-    "instructions": "1. Göbələyi doğrayıb qovurun.\n2. Xiyarları uzunsov doğrayın.\n3. Mayonez və duz ilə qarışdırın.",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelek-salati.png",
-    "videoUrl": "",
+    "name": "Toyuq və Göbələk Salatı",
+    "description": "Doyumlu və zərif dadlı salat",
     "category": "Salat",
-    "name": "Göbələk salatı",
-    "prepTime": 20,
-    "difficulty": "Asan",
+    "prepTime": 30,
+    "difficulty": "Orta",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-gobelek-salati.png",
+    "videoUrl": "",
+    "instructions": "1. Toyuq ətini qaynadıb didin.\n2. Göbələyi doğrayıb yağda qızardın.\n3. Xiyarları uzunsov doğrayın.\n4. Bütün məhsulları qarışdırıb duz və mayonez əlavə edin.",
     "ingredients": [
       {
-        "unit": "qram",
+        "name": "Toyuq əti",
+        "quantity": "250",
+        "unit": "qram"
+      },
+      {
         "name": "Göbələk",
-        "quantity": "300"
+        "quantity": "200",
+        "unit": "qram"
       },
       {
-        "unit": "ədəd",
         "name": "Xiyar",
-        "quantity": "2"
+        "quantity": "2",
+        "unit": "ədəd"
       },
       {
-        "unit": "xörək qaşığı",
         "name": "Mayonez",
-        "quantity": "3"
+        "quantity": "3",
+        "unit": "xörək qaşığı"
       },
       {
-        "unit": "çay qaşığı",
         "name": "Duz",
-        "quantity": "0.5"
+        "quantity": "1",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -6413,38 +6270,6 @@
     ]
   },
   {
-    "name": "Lobyə plov",
-    "description": "Lobya və düyü ilə hazırlanan ənənəvi aş.",
-    "category": "Əsas Yemək",
-    "prepTime": 90,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/lobye-plov.png",
-    "videoUrl": "",
-    "instructions": "1. Lobyanı qaynadın.\n2. Düyünü suda bişirib süzün.\n3. Qazanın dibinə qazmaq qoyub düyü və lobyanı qat-qat yığın, dəmə qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Lobya",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Qaymaqlı yumurta",
     "description": "Səhər yeməyi üçün zəngin və dadlı qaymaqlı yumurta resepti.",
     "category": "Səhər Yeməyi",
@@ -6477,28 +6302,33 @@
     ]
   },
   {
-    "name": "Pendirli omlet",
-    "description": "Səhər süfrəsi üçün pendirli və göyərtili sadə omlet.",
+    "name": "Göyərtili pendirli omlet",
+    "description": "Ənənəvi kənd üsulu ilə hazırlanan təzə göyərtili və pendirli isti səhər yeməyi.",
     "category": "Səhər Yeməyi",
     "prepTime": 12,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-omlet.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Yumurtaları bir qabda duzla çalın.\n2. Ağ pendiri əzməklə xırdalayın.\n3. Göyərtini incə doğrayın və yumurtaya qatın.\n4. Tavada yağ qızdırıb qarışığı tökün və hər iki üzünü qızardın.",
+    "instructions": "1. Yumurtaları qaba qırıb duz ilə çalın.\n2. Ağ pendiri çəngəllə əzin və yumurtaya qatın.\n3. Yaşıl soğan və cəfərini xırda doğrayıb qarışığa əlavə edin.\n4. Qızdırılmış tavada kərə yağını əridib kütləni tökin və qapağı bağlayaraq bişirin.",
     "ingredients": [
       {
         "name": "Yumurta",
-        "quantity": "2",
+        "quantity": "3",
         "unit": "ədəd"
       },
       {
         "name": "Ağ pendir",
-        "quantity": "60",
+        "quantity": "100",
         "unit": "qram"
       },
       {
-        "name": "Göyərti",
-        "quantity": "1",
+        "name": "Yaşıl soğan",
+        "quantity": "3",
+        "unit": "ədəd"
+      },
+      {
+        "name": "Cəfəri",
+        "quantity": "0.5",
         "unit": "dəstə"
       },
       {
@@ -6600,34 +6430,39 @@
     ]
   },
   {
-    "name": "Pendirli kətə",
-    "description": "Ənənəvi kənd sayağı pendirli kökə.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-kete.png",
+    "description": "İçərisi pendir və göyərti ilə doldurulmuş yumşaq səhər kökəsi.",
+    "instructions": "1. Xəmir üçün un, su və duzu qarışdırıb yoğurun.\n2. İçlik üçün pendir və şüyüdü doğrayıb qarışdırın.\n3. Xəmiri yayaraq içliyi qoyun və bükün.\n4. Quru tavada hər iki üzünü qızardın.",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-goyertili-kete.png",
     "videoUrl": "",
-    "instructions": "1. Un, duz və suyu qarışdıraraq xəmir yoğurun.\n2. Pendiri əzin və içlik hazırlayın.\n3. Xəmiri kündələrə ayırıb yayn, ortasına pendir qoyub bükün.\n4. Quru tavada hər iki üzünü qızardın.",
+    "category": "Səhər Yeməyi",
+    "name": "Pendirli göyərtili kətə",
+    "prepTime": 30,
+    "difficulty": "Orta",
     "ingredients": [
       {
+        "unit": "qram",
         "name": "Un",
-        "quantity": "300",
-        "unit": "qram"
+        "quantity": "300"
       },
       {
-        "name": "Pendir",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
+        "unit": "ml",
         "name": "Su",
-        "quantity": "150",
-        "unit": "ml"
+        "quantity": "150"
       },
       {
+        "unit": "qram",
+        "name": "Pendir",
+        "quantity": "150"
+      },
+      {
+        "unit": "dəstə",
+        "name": "Şüyüd",
+        "quantity": "1"
+      },
+      {
+        "unit": "çay qaşığı",
         "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
+        "quantity": "1"
       }
     ]
   },
@@ -6955,51 +6790,14 @@
     ]
   },
   {
-    "name": "Toyuq və Göbələk Salatı",
-    "description": "Doyumlu və zərif dadlı salat",
-    "category": "Salat",
-    "prepTime": 30,
+    "name": "Badımcan və pomidor ləvəngisi",
+    "description": "Ləvəngi içliyi ilə doldurulmuş zəngin dadlı badımcan yeməyi.",
+    "category": "Əsas Yemək",
+    "prepTime": 60,
     "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-gobelek-salati.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-levengisi.png",
     "videoUrl": "",
-    "instructions": "1. Toyuq ətini qaynadıb didin.\n2. Göbələyi doğrayıb yağda qızardın.\n3. Xiyarları uzunsov doğrayın.\n4. Bütün məhsulları qarışdırıb duz və mayonez əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "250",
-        "unit": "qram"
-      },
-      {
-        "name": "Göbələk",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Xiyar",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan Ləvəngisi",
-    "description": "Qoz və soğandan hazırlanan milli qəlyanaltı",
-    "category": "Qəlyanaltı",
-    "prepTime": 45,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-levengisi.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları uzununa kəsib duzlayın və qızardın.\n2. Qoz və soğanı ətçəkəndən keçirin.\n3. Üzərinə lavaşana əlavə edib içlik hazırlayın.\n4. İçliyi badımcanlara qoyub bükün.",
+    "instructions": "1. Badımcanların ortasını yarıb duzlu suda bir az saxlayın, sonra qurulayın.\n2. Qoz ləpəsini və soğanı ətçəkəndən keçirin.\n3. Üzərinə turşu, duz və istiot əlavə edib qarışdırın.\n4. Badımcanların içini bu qarışıqla doldurun.\n5. Tavada az yağda qapağı bağlı şəkildə bişirin.",
     "ingredients": [
       {
         "name": "Badımcan",
@@ -7013,18 +6811,18 @@
       },
       {
         "name": "Soğan",
-        "quantity": "1",
+        "quantity": "2",
         "unit": "ədəd"
       },
       {
-        "name": "Lavaşana",
-        "quantity": "1",
+        "name": "Turşu",
+        "quantity": "2",
         "unit": "xörək qaşığı"
       },
       {
         "name": "Bitki yağı",
-        "quantity": "50",
-        "unit": "ml"
+        "quantity": "4",
+        "unit": "xörək qaşığı"
       },
       {
         "name": "Duz",
@@ -7076,39 +6874,39 @@
     ]
   },
   {
-    "description": "Ətirli və ləzzətli düyü yeməyi",
-    "instructions": "1. Düyünü duzlu suda yarımbişmiş hala gətirib süzün.\n2. Balqabağı təmizləyib dilimlərə bölün və yağda qızardın.\n3. Qazanın dibinə qazmaq qoyub düyü və balqabağı qat-qat yığın.\n4. Zəfəran suyu əlavə edib dəmə qoyun.",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaq-plovu.png",
-    "videoUrl": "",
+    "name": "Balqabaqlı düyü plovu",
+    "description": "Şirin balqabaq və quru meyvələrlə hazırlanan ətirli plov növü.",
     "category": "Əsas Yemək",
-    "name": "Balqabaq plovu",
-    "prepTime": 60,
+    "prepTime": 70,
     "difficulty": "Çətin",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaqli-duyu-plovu.png",
+    "videoUrl": "",
+    "instructions": "1. Düyünü duzlu suda islağa qoyun, sonra yarıbişmiş şəkildə süzün.\n2. Balqabağı kubiklərə doğrayıb kərə yağında azca qovurun.\n3. Qazan dibinə qazmaq qoyub üzərinə düyü və balqabaq qatlarını növbə ilə yığın.\n4. Dəmlənməyə qoyun və süfrəyə verərkən qarışdırın.",
     "ingredients": [
       {
-        "unit": "qram",
         "name": "Düyü",
-        "quantity": "400"
+        "quantity": "500",
+        "unit": "qram"
       },
       {
-        "unit": "qram",
         "name": "Balqabaq",
-        "quantity": "300"
+        "quantity": "400",
+        "unit": "qram"
       },
       {
-        "unit": "qram",
         "name": "Kərə yağı",
-        "quantity": "100"
+        "quantity": "100",
+        "unit": "qram"
       },
       {
-        "unit": "çay qaşığı",
-        "name": "Zəfəran",
-        "quantity": "1"
+        "name": "Şəkər tozu",
+        "quantity": "2",
+        "unit": "xörək qaşığı"
       },
       {
-        "unit": "xörək qaşığı",
         "name": "Duz",
-        "quantity": "1"
+        "quantity": "1",
+        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -7290,46 +7088,56 @@
     ]
   },
   {
-    "description": "Azərbaycan mətbəxinin əsas və ləzzətli ət yeməklərindən biri.",
-    "instructions": "1. Dana ətini kubik doğrayıb öz suyunda bişirin.\n2. Suyunu çəkdikdən sonra kərə yağı və soğan əlavə edib qızardın.\n3. Duz və istiot vurun.",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/dana-etinden-qovurma.png",
-    "videoUrl": "",
+    "name": "Dana ətindən soğanlı qovurma",
+    "description": "Yumşaq dana əti və bol soğanla tavada hazırlanan əsas yemək.",
     "category": "Əsas Yemək",
-    "name": "Dana ətindən qovurma",
-    "prepTime": 60,
+    "prepTime": 50,
     "difficulty": "Orta",
+    "imageResource": "",
+    "videoUrl": "",
+    "instructions": "1. Dana ətini kiçik tikələrə doğrayıb öz suyunda bişənə qədər qovurun.\n2. Soğanları aypara formasında doğrayıb ətə əlavə edin.\n3. Duz, istiot vurub qızılı rəng alanadək qovurmağa davam edin.",
     "ingredients": [
       {
-        "unit": "qram",
         "name": "Dana əti",
-        "quantity": "500"
+        "quantity": "600",
+        "unit": "qram"
       },
       {
-        "unit": "ədəd",
         "name": "Soğan",
-        "quantity": "2"
+        "quantity": "4",
+        "unit": "ədəd"
       },
       {
-        "unit": "qram",
         "name": "Kərə yağı",
-        "quantity": "50"
+        "quantity": "40",
+        "unit": "qram"
+      },
+      {
+        "name": "Duz",
+        "quantity": "1",
+        "unit": "çay qaşığı"
       }
     ]
   },
   {
-    "name": "Şəkərli qoğal",
-    "description": "Ənənəvi şirin qoğal növü.",
+    "name": "Şəkərli şorqoğal",
+    "description": "Qat-qat xəmiri və ədviyyatlı-şirin içliyi ilə seçilən milli ənənəvi şirniyyat.",
     "category": "Şirniyyat",
-    "prepTime": 90,
+    "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sekerli-qogal.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sekerli-sorqogal.png",
     "videoUrl": "",
-    "instructions": "1. Mayalı xəmir yoğurun və qatlayaraq yağlayın.\n2. İçinə şəkər və un qarışığı qoyun.\n3. Üzərinə yumurta sarısı çəkib sobada bişirin.",
+    "instructions": "1. Mayalı xəmir yoğurun və kündələrə ayırın.\n2. Un, şəkər tozu, ərinmiş kərə yağı və şirin ədviyyatları qarışdıraraq içlik hazırlayın.\n3. Kündələri nazik açaraq aralarını yağlayın, içlik səpib bükün və qoğal forması verin.\n4. Üzərinə yumurta sarısı çəkib xaşqax səpərək sobada bişirin.",
     "ingredients": [
       {
         "name": "Un",
         "quantity": "4",
         "unit": "stəkan"
+      },
+      {
+        "name": "Maya",
+        "quantity": "1",
+        "unit": "çay qaşığı"
       },
       {
         "name": "Şəkər tozu",
@@ -7338,8 +7146,13 @@
       },
       {
         "name": "Kərə yağı",
-        "quantity": "150",
+        "quantity": "200",
         "unit": "qram"
+      },
+      {
+        "name": "Yumurta",
+        "quantity": "1",
+        "unit": "ədəd"
       }
     ]
   },
@@ -7489,17 +7302,17 @@
     ]
   },
   {
-    "name": "Kəsməkli və göyərtili səhər kökəsi",
-    "description": "Evdə sürətlə hazırlana bilən faydalı və doyurucu səhər yeməyi.",
+    "name": "Kəsmikli və göyərtili səhər kökəsi",
+    "description": "Kəsmik və müxtəlif göyərtilərlə hazırlanan duzlu səhər bişirintisi.",
     "category": "Səhər Yeməyi",
-    "prepTime": 20,
+    "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmekli-ve-goyertili-seher-kokesi.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmikli-ve-goyertili-seher-kokesi.png",
     "videoUrl": "",
-    "instructions": "1. Kəsmək, yumurta və doğranmış göyərtilər bir qabda qarışdırılır.\n2. Üzərinə un və duz əlavə olunaraq xəmir yoğrulur.\n3. Kökələr düzəldilib tavada az yağda hər iki üzü qızardılır.",
+    "instructions": "1. Kəsmiyi yumurta ilə qarışdırın, üzərinə doğranmış göyərtiləri əlavə edin.\n2. Az miqdər un və qabartma tozu qataraq yumşaq xəmir yoğurun.\n3. Kiçik kökələr düzəldib tavada az yağda hər iki tərəfini qızardın.",
     "ingredients": [
       {
-        "name": "Kəsmək",
+        "name": "Kəsmik",
         "quantity": "200",
         "unit": "qram"
       },
@@ -7515,13 +7328,8 @@
       },
       {
         "name": "Un",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
+        "quantity": "1",
+        "unit": "stəkan"
       }
     ]
   },
@@ -7580,14 +7388,14 @@
     ]
   },
   {
-    "name": "Südçörəyi səhər sıyığı",
-    "description": "Uşaqlıq xatirələrini xatırladan isti süd və çörək yeməyi.",
+    "name": "Südçörəyi Sıyığı",
+    "description": "Uşaqlıq xatirələrini oyadan ənənəvi səhər yeməyi.",
     "category": "Səhər Yeməyi",
-    "prepTime": 10,
+    "prepTime": 15,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sudcoreyi-seher-siyigi.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sudcoreyi-siyigi.png",
     "videoUrl": "",
-    "instructions": "1. Süd qazana tökülüb qızdırılır.\n2. İçərisinə xırda doğranmış çörək tikələri əlavə olunur.\n3. Üzərinə kərə yağı və şəkər tozu əlavə edilərək qarışdırılır.",
+    "instructions": "1. Qazana südü tökün və qaynama həddinə çatdırın.\n2. Çörəyi kiçik kubiklər şəklində doğrayın.\n3. Qaynayan südün üzərinə çörək tikələrini əlavə edin.\n4. Kərə yağı və şəkər tozu qataraq zəif odda 3 dəqiqə qaynarıb yumşalmasını gözləyin və süfrəyə verin.",
     "ingredients": [
       {
         "name": "Süd",
@@ -7595,8 +7403,8 @@
         "unit": "ml"
       },
       {
-        "name": "Çörək",
-        "quantity": "2",
+        "name": "Ağ çörək",
+        "quantity": "3",
         "unit": "dilim"
       },
       {
@@ -7607,7 +7415,7 @@
       {
         "name": "Şəkər tozu",
         "quantity": "1",
-        "unit": "xörək qaşığı"
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -7644,43 +7452,6 @@
       {
         "name": "Duz",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Quzu ətindən qovurma",
-    "description": "Azərbaycanın dağ bölgələrinə məxsus ənənəvi ət yeməyi.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-qovurma.png",
-    "videoUrl": "",
-    "instructions": "1. Quzu əti kiçik tikələrə doğranır.\n2. Öz quyruq yağı ilə qazanda qovrulmağa başlanır.\n3. Soğan və ədviyyatlar əlavə olunub tam bişənə qədər qovrulur.",
-    "ingredients": [
-      {
-        "name": "Quzu əti",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Quyruq yağı",
-        "quantity": "50",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Istiot",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
@@ -7866,54 +7637,17 @@
     ]
   },
   {
-    "name": "Qozlu və narlı çuğundur salatı",
-    "description": "Zəngin dadı və rəngi ilə süfrələri bəzəyən salat.",
-    "category": "Salat",
-    "prepTime": 40,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-ve-narli-cugundur-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Çuğundur bişirilir və sürtgəcdən keçirilir.\n2. Üzərinə döyülmüş qoz və nar dənələri əlavə edilir.\n3. Mayonez ilə qarışdırılır.",
-    "ingredients": [
-      {
-        "name": "Çuğundur",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Nar",
-        "quantity": "0.5",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Toyuqlu və xırtıldayan kahı salatı",
-    "description": "Yüngül və doyurucu toyuq salatı.",
+    "name": "Toyuq və xırtıldayan kahı salatı",
+    "description": "Toyuq əti, kahı və suxari ilə hazırlanan yüngül və doyumlu salat.",
     "category": "Salat",
     "prepTime": 25,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuqlu-ve-xirtildayan-kahi-salati.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-xirtildayan-kahi-salati.png",
     "videoUrl": "",
-    "instructions": "1. Toyuq döş əti bişirilib kub şəkildə doğranır.\n2. Kahı yarpaqları əllə parçalanır.\n3. Üzərinə duz və duru yağ əlavə olunub qarışdırılır.",
+    "instructions": "1. Toyuq ətini qaynadın və kiçik tikələrə didikləyin.\n2. Kahı yarpaqlarını əllə irri-iri doğrayın.\n3. Çörəyi kubik şəklində doğrayıb sobada qızardaraq suxari hazırlayın.\n4. Hamısını qaba yığıb üzərinə zeytun yağı və limon suyu əlavə edib qarışdırın.",
     "ingredients": [
       {
-        "name": "Toyuq döş əti",
+        "name": "Toyuq əti",
         "quantity": "300",
         "unit": "qram"
       },
@@ -7923,14 +7657,14 @@
         "unit": "ədəd"
       },
       {
-        "name": "Bitki yağı",
+        "name": "Çörək",
         "quantity": "2",
-        "unit": "xörək qaşığı"
+        "unit": "dilim"
       },
       {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
+        "name": "Zeytun yağı",
+        "quantity": "3",
+        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -8201,38 +7935,6 @@
     ]
   },
   {
-    "name": "Südçörəyi Sıyığı",
-    "description": "Uşaqlıq xatirələrini oyadan ənənəvi səhər yeməyi.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sudcoreyi-siyigi.png",
-    "videoUrl": "",
-    "instructions": "1. Qazana südü tökün və qaynama həddinə çatdırın.\n2. Çörəyi kiçik kubiklər şəklində doğrayın.\n3. Qaynayan südün üzərinə çörək tikələrini əlavə edin.\n4. Kərə yağı və şəkər tozu qataraq zəif odda 3 dəqiqə qaynarıb yumşalmasını gözləyin və süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Süd",
-        "quantity": "400",
-        "unit": "ml"
-      },
-      {
-        "name": "Ağ çörək",
-        "quantity": "3",
-        "unit": "dilim"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "20",
-        "unit": "qram"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Kəsmikli Səhər Bulka",
     "description": "Ev üsulu yumşaq kəsmikli xəmir məmulatı.",
     "category": "Səhər Yeməyi",
@@ -8329,14 +8031,14 @@
     ]
   },
   {
-    "name": "Quzu Ətindən Sac",
-    "description": "Azərbaycan mətbəxinin şah əsərlərindən olan ləzzətli əsas yemək.",
+    "name": "Quzu ətindən sac qovurma",
+    "description": "Sac üzərində quzu əti, tərəvəzlər və ədviyyatlarla bişirilən ləzzətli yemək.",
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-sac.png",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-sac-qovurma.png",
     "videoUrl": "",
-    "instructions": "1. Quzu ətini kiçik doğrayıb öz yağında qovurmağa başlayın.\n2. Soğan, bibər və pomidorları əlavə edin.\n3. Kartof dilimlərini ayrıca qızardıb ətə qatın.\n4. Sac üzərində odun üzərində və ya sobada qızardaraq süfrəyə verin.",
+    "instructions": "1. Quzu ətini kiçik tikələrə doğrayıb öz piyində qovurun.\n2. Üzərinə doğranmış soğan, bolqar bibəri və pomidor əlavə edin.\n3. Duz, istiot və ədviyyatlar vurub tərəvəzlər suyunu çəkənə qədər bişirin.\n4. İsti sac üzərində süfrəyə verin.",
     "ingredients": [
       {
         "name": "Quzu əti",
@@ -8356,11 +8058,6 @@
       {
         "name": "Pomidor",
         "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "4",
         "unit": "ədəd"
       }
     ]
@@ -8392,43 +8089,6 @@
       },
       {
         "name": "Lavaşana",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan və Pomidor Salat",
-    "description": "Manqal ətri verən ləzzətli tərəvəz salatı.",
-    "category": "Salat",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-salat.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcan və pomidorları sobada və ya manqalda qovurub bişirin.\n2. Qabığını soyub bıçaqla xırda doğrayın.\n3. Üzərinə sarımsaq, göyərti və zeytun yağı əlavə edin.\n4. Duz səpib qarışdırın və süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "40",
-        "unit": "qram"
-      },
-      {
-        "name": "Zeytun yağı",
         "quantity": "3",
         "unit": "xörək qaşığı"
       }
@@ -8504,43 +8164,6 @@
     ]
   },
   {
-    "name": "Turp və Yerkökü Salat",
-    "description": "Vitaminlərlə zəngin xırtıldayan tərəvəz salatı.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/turp-ve-yerkoku-salat.png",
-    "videoUrl": "",
-    "instructions": "1. Turp və yerkökünü sürtgəcdən keçirin.\n2. Üzərinə incə doğranmış keşniş əlavə edin.\n3. Duz, limon suyu və bitki yağı ilə dadlandırın.",
-    "ingredients": [
-      {
-        "name": "Turp",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Keşniş",
-        "quantity": "30",
-        "unit": "qram"
-      },
-      {
-        "name": "Limon suyu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Kükü aş",
     "description": "Ənənəvi göyərtili kükünün qatılması ilə hazırlanan fərqli və dadlı plov növü.",
     "category": "Əsas Yemək",
@@ -8601,75 +8224,6 @@
         "name": "Bitki yağı",
         "quantity": "3",
         "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan ləvəngi qelyanaltısı",
-    "description": "Badımcanın içərisinə qoz və soğan qarışığı doldurularaq bişirilən qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-levengi-qelyanaltisi.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları uzunsov dilimlərə doğrayıb duzlu suda saxlayın, sonra qurudub qızardın.\n2. Qoz ləpəsi və soğanı ətçəkəndən keçirin.\n3. Üzərinə narşərab, duz və istiot əlavə edib qarışdırın.\n4. Qızardılmış badımcan dilimlərinin üzərinə içlik çəkib rulet formasında bükün.\n5. Üzərini göyərtilərlə bəzəyib süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Narşərab",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Şəkərli şorqoğal",
-    "description": "Qat-qat xəmiri və ədviyyatlı-şirin içliyi ilə seçilən milli ənənəvi şirniyyat.",
-    "category": "Şirniyyat",
-    "prepTime": 120,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sekerli-sorqogal.png",
-    "videoUrl": "",
-    "instructions": "1. Mayalı xəmir yoğurun və kündələrə ayırın.\n2. Un, şəkər tozu, ərinmiş kərə yağı və şirin ədviyyatları qarışdıraraq içlik hazırlayın.\n3. Kündələri nazik açaraq aralarını yağlayın, içlik səpib bükün və qoğal forması verin.\n4. Üzərinə yumurta sarısı çəkib xaşqax səpərək sobada bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "4",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Maya",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "1",
-        "unit": "ədəd"
       }
     ]
   },
@@ -8760,75 +8314,6 @@
     ]
   },
   {
-    "name": "Göbələkli və pendirli tartalet",
-    "description": "Xırtıldayan səbətciklər içərisində göbələk və pendir qarışığı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 30,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-ve-pendirli-tartalet.png",
-    "videoUrl": "",
-    "instructions": "1. Hazır tartalet səbətciklərini sobaya hazırlayın.\n2. Göbələk və soğanı xırda doğrayıb tavada yağda qovurun.\n3. Üzərinə az miqdər qaymaq əlavə edib qatılaşana qədər bişirin.\n4. Hazır kütləni səbətciklərə doldurun, üzərinə sürtgəcdən keçirilmiş pendir səpib sobada əridin.",
-    "ingredients": [
-      {
-        "name": "Göbələk",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Qaymaq",
-        "quantity": "50",
-        "unit": "ml"
-      }
-    ]
-  },
-  {
-    "name": "Almalı peçenye",
-    "description": "İçərisində təzə alma və darçın olan ev sayağı xırtıldayan peçenye.",
-    "category": "Şirniyyat",
-    "prepTime": 45,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/almali-pecenye.png",
-    "videoUrl": "",
-    "instructions": "1. Un, kərə yağı, xama və çimdik duzu qarışdıraraq yumşaq xəmir yoğurun.\n2. Almaları sürtgəcdən keçirib şəkər tozu və darçın ilə tavada bir az bişirin.\n3. Xəmiri açıb üçbucaq formalı dilimlərə kəsin, içərisinə alma qoyub bükün.\n4. Sobada qızılı rəng alana qədər bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "2.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Xama",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Alma",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      }
-    ]
-  },
-  {
     "name": "İsti nanəli çay",
     "description": "Təzə nanə yarpaqları ilə dəmlənmiş xoş ətirli qara çay.",
     "category": "İçki",
@@ -8852,102 +8337,6 @@
         "name": "Su",
         "quantity": "1",
         "unit": "litr"
-      }
-    ]
-  },
-  {
-    "name": "Kəsmikli və göyərtili səhər kökəsi",
-    "description": "Kəsmik və müxtəlif göyərtilərlə hazırlanan duzlu səhər bişirintisi.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmikli-ve-goyertili-seher-kokesi.png",
-    "videoUrl": "",
-    "instructions": "1. Kəsmiyi yumurta ilə qarışdırın, üzərinə doğranmış göyərtiləri əlavə edin.\n2. Az miqdər un və qabartma tozu qataraq yumşaq xəmir yoğurun.\n3. Kiçik kökələr düzəldib tavada az yağda hər iki tərəfini qızardın.",
-    "ingredients": [
-      {
-        "name": "Kəsmik",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Un",
-        "quantity": "1",
-        "unit": "stəkan"
-      }
-    ]
-  },
-  {
-    "name": "Quzu ətindən sac qovurma",
-    "description": "Sac üzərində quzu əti, tərəvəzlər və ədviyyatlarla bişirilən ləzzətli yemək.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-sac-qovurma.png",
-    "videoUrl": "",
-    "instructions": "1. Quzu ətini kiçik tikələrə doğrayıb öz piyində qovurun.\n2. Üzərinə doğranmış soğan, bolqar bibəri və pomidor əlavə edin.\n3. Duz, istiot və ədviyyatlar vurub tərəvəzlər suyunu çəkənə qədər bişirin.\n4. İsti sac üzərində süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Quzu əti",
-        "quantity": "700",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      }
-    ]
-  },
-  {
-    "name": "Toyuq və xırtıldayan kahı salatı",
-    "description": "Toyuq əti, kahı və suxari ilə hazırlanan yüngül və doyumlu salat.",
-    "category": "Salat",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-xirtildayan-kahi-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini qaynadın və kiçik tikələrə didikləyin.\n2. Kahı yarpaqlarını əllə irri-iri doğrayın.\n3. Çörəyi kubik şəklində doğrayıb sobada qızardaraq suxari hazırlayın.\n4. Hamısını qaba yığıb üzərinə zeytun yağı və limon suyu əlavə edib qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kahı",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Çörək",
-        "quantity": "2",
-        "unit": "dilim"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -9017,38 +8406,6 @@
         "name": "Duz",
         "quantity": "0.5",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Keçi pendirli kükü",
-    "description": "Ənənəvi göyərtili kükünün keçi pendiri ilə fərqli hazırlanması.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/keci-pendirli-kuku.png",
-    "videoUrl": "",
-    "instructions": "1. Göyərtiləri xırda doğrayın.\n2. Yumurtaları dərin qaba qırıb çalın.\n3. Göyərti və xırdalanmış keçi pendirini yumurtaya qatın.\n4. Tavada kərə yağı əridib qarışığı tökün və hər iki üzünü qızardın.",
-    "ingredients": [
-      {
-        "name": "Yumurta",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Keçi pendiri",
-        "quantity": "80",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "30",
-        "unit": "qram"
       }
     ]
   },
@@ -9513,19 +8870,24 @@
     ]
   },
   {
-    "name": "Toyuq və kahı salatı",
-    "description": "Doyurucu toyuq salatı",
+    "name": "Toyuq salatı",
+    "description": "Haşlanmış toyuq sinə əti və xırtıldayan tərəvəzlərlə.",
     "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-ve-kahi-salati.png",
+    "prepTime": 25,
+    "difficulty": "Asan",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-salati.png",
     "videoUrl": "",
-    "instructions": "1. Toyuq ətini bişirib didin.\n2. Kahını əllə doğrayın.\n3. Sous ilə qarışdırın.",
+    "instructions": "1. Toyuq sinə ətini qaynadıb uzunsov parça şəklində didin.\n2. Bolqar bibəri və kahını nazik doğrayın.\n3. Mayonez və duz ilə qarışdırın.",
     "ingredients": [
       {
-        "name": "Toyuq əti",
+        "name": "Toyuq sinə əti",
         "quantity": "300",
         "unit": "qram"
+      },
+      {
+        "name": "Bolqar bibəri",
+        "quantity": "1",
+        "unit": "ədəd"
       },
       {
         "name": "Kahı",
@@ -9594,50 +8956,23 @@
     ]
   },
   {
-    "name": "Quzu qovurması",
-    "description": "Ənənəvi quzu əti qovurması",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-qovurmasi.png",
-    "videoUrl": "",
-    "instructions": "1. Quzu ətini doğrayıb öz yağında qovurun.\n2. Soğan və duz əlavə edin.\n3. Qızarana qədər bişirin.",
-    "ingredients": [
-      {
-        "name": "Quzu əti",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "50",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Qaymaq və Bal",
-    "description": "Təbii kənd qaymağı və bal ilə səhər yeməyi",
+    "name": "Xama və Bal",
+    "description": "Təbii kənd xaması və balın klassik səhər təam birləşməsi.",
     "category": "Səhər Yeməyi",
     "prepTime": 5,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qaymaq-ve-bal.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Qaymağı boşqaba çəkin.\n2. Üzərinə süzmə bal əlavə edin.\n3. Təzə çörəklə süfrəyə verin.",
+    "instructions": "1. Kiçik kasa içərisinə xamanı qoyun.\n2. Xamanın üzərinə süzmə balı əlavə edin.\n3. İstəyə görə qarışdırmadan təzə çörəklə yeyin.",
     "ingredients": [
       {
-        "name": "Qaymaq",
+        "name": "Xama",
         "quantity": "150",
         "unit": "qram"
       },
       {
         "name": "Bal",
-        "quantity": "100",
+        "quantity": "50",
         "unit": "qram"
       }
     ]
@@ -9692,34 +9027,39 @@
     ]
   },
   {
-    "name": "Şirin Plov",
-    "description": "Quru meyvələr və düyüdən hazırlanan bayram plovu",
+    "name": "Üzümlü Şirin Plov",
+    "description": "Quru meyvələr və düyüdən hazırlanan bayram plovu.",
     "category": "Əsas Yemək",
     "prepTime": 90,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/sirin-plov.png",
+    "difficulty": "Orta",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda qaynadasınız.\n2. Quru meyvələri kərə yağında qovurun.\n3. Qazanın dibinə qazmaq qoyub düyü və meyvələri qat-qat yığın.\n4. Dəmə qoyun.",
+    "instructions": "1. Düyünü duzlu suda yarıbişmiş halda süzün.\n2. Quru üzüm və qaysıları kərə yağında qovurun.\n3. Qazanın dibinə qazmaq qoyub üzərinə düyü və meyvələri qat-qat yığın.\n4. Zəfəran dəmləməsi əlavə edib dəmə qoyun.",
     "ingredients": [
       {
         "name": "Düyü",
-        "quantity": "3",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Qaysı",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "İşgən",
-        "quantity": "100",
+        "quantity": "500",
         "unit": "qram"
       },
       {
         "name": "Kərə yağı",
         "quantity": "150",
         "unit": "qram"
+      },
+      {
+        "name": "Kişmiş",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Qaysı",
+        "quantity": "100",
+        "unit": "qram"
+      },
+      {
+        "name": "Zəfəran",
+        "quantity": "1",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -9801,38 +9141,6 @@
         "name": "Yerkökü",
         "quantity": "1",
         "unit": "ədəd"
-      }
-    ]
-  },
-  {
-    "name": "Çoban Salat",
-    "description": "Klassik xiyar, pomidor və göyərti salatı",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/coban-salat.png",
-    "videoUrl": "",
-    "instructions": "1. Xiyar və pomidorları kubik doğrayın.\n2. Göyərti və soğanı əlavə edin.\n3. Duz, zeytun yağı və sirkə ilə qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Xiyar",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -10152,48 +9460,6 @@
     ]
   },
   {
-    "name": "Badımcan və pomidor ləvəngisi",
-    "description": "Ləvəngi içliyi ilə doldurulmuş zəngin dadlı badımcan yeməyi.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-ve-pomidor-levengisi.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanların ortasını yarıb duzlu suda bir az saxlayın, sonra qurulayın.\n2. Qoz ləpəsini və soğanı ətçəkəndən keçirin.\n3. Üzərinə turşu, duz və istiot əlavə edib qarışdırın.\n4. Badımcanların içini bu qarışıqla doldurun.\n5. Tavada az yağda qapağı bağlı şəkildə bişirin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Turşu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "4",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Quzu ətindən buğlama",
     "description": "Tərəvəzlərlə öz şirəsində bişən ətirli quzu əti yeməyi.",
     "category": "Əsas Yemək",
@@ -10232,43 +9498,6 @@
         "name": "Duz",
         "quantity": "1.5",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Balqabaqlı düyü plovu",
-    "description": "Şirin balqabaq və quru meyvələrlə hazırlanan ətirli plov növü.",
-    "category": "Əsas Yemək",
-    "prepTime": 70,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/balqabaqli-duyu-plovu.png",
-    "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda islağa qoyun, sonra yarıbişmiş şəkildə süzün.\n2. Balqabağı kubiklərə doğrayıb kərə yağında azca qovurun.\n3. Qazan dibinə qazmaq qoyub üzərinə düyü və balqabaq qatlarını növbə ilə yığın.\n4. Dəmlənməyə qoyun və süfrəyə verərkən qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Balqabaq",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -10480,46 +9709,14 @@
     ]
   },
   {
-    "name": "Toyuq salatı",
-    "description": "Haşlanmış toyuq sinə əti və xırtıldayan tərəvəzlərlə.",
+    "name": "Qırmızı çuğundur və qoz salatı",
+    "description": "Bişmiş çuğundur, qoz və sarımsaqla hazırlanan ətirli salat.",
     "category": "Salat",
-    "prepTime": 25,
+    "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/toyuq-salati.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Toyuq sinə ətini qaynadıb uzunsov parça şəklində didin.\n2. Bolqar bibəri və kahını nazik doğrayın.\n3. Mayonez və duz ilə qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Toyuq sinə əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kahı",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Çuğundur və qoz salatı",
-    "description": "Qaynadılmış çuğundur və üyüdülmüş qozdan hazırlanan ləzzətli salat.",
-    "category": "Salat",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/cugundur-ve-qoz-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Çuğunduru qaynadıb sürtgəcdən keçirin.\n2. Qozu xırda döyün və çuğundura əlavə edin.\n3. Sarımsaq və mayonez ilə dadlandırın.",
+    "instructions": "1. Çuğunduru bişirib sürtgəcdən keçirin.\n2. Qoz ləpəsini xırda doğrayın və ya döyün.\n3. Sarımsağı əzin.\n4. Çuğundur, qoz və sarımsağı qarışdırıb mayonez, duz əlavə edin.",
     "ingredients": [
       {
         "name": "Çuğundur",
@@ -10538,8 +9735,13 @@
       },
       {
         "name": "Mayonez",
-        "quantity": "2",
+        "quantity": "3",
         "unit": "xörək qaşığı"
+      },
+      {
+        "name": "Duz",
+        "quantity": "0.5",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -10709,38 +9911,6 @@
     ]
   },
   {
-    "name": "Nar və qoz salatı",
-    "description": "Çuğundur, qoz və nar dənələrindən ibarət bayram salatı.",
-    "category": "Salat",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/nar-ve-qoz-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Çuğunduru bişirib sürtgəcdən keçirin.\n2. Qozu döyün və çuğundura qatın.\n3. Mayonez ilə qarışdırıb üzərinə nar dənələri düzün.",
-    "ingredients": [
-      {
-        "name": "Çuğundur",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Nar",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Badamlı peçenye",
     "description": "Üzərində bütöv badam olan ev peçenyesi.",
     "category": "Şirniyyat",
@@ -10815,24 +9985,29 @@
     ]
   },
   {
-    "name": "Qozlu İspanaq Salatı",
-    "description": "Təzə ispanaq yarpaqları və qoz ilə hazırlanan sağlam salat",
+    "name": "Qozlu və İspanaqlı Salat",
+    "description": "Təzə ispanaq yarpaqları, qoz ləpəsi və xüsusi sous ilə hazırlanan vitaminli salat.",
     "category": "Salat",
-    "prepTime": 15,
+    "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-i-spanaq-salati.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. İspanaq yarpaqlarını yuyub qurulayın və dərin qaba qoyun.\n2. Qoz ləpəsini quru tavada bir az qovurub xırdalayın.\n3. Salatın üzərinə xırdalanmış qoz səpin.\n4. Zeytun yağı və limon suyu qarışığını üzərinə gəzdirib süfrəyə verin.",
+    "instructions": "1. İspanaq yarpaqlarını təmizləyib yuyun və iri doğrayın.\n2. Qoz ləpəsini blenderdə xırdalayın.\n3. Sarımsağı əzin və zeytun yağı ilə limon suyu ilə qarışdırın.\n4. İspanaq və qozları qaba qoyub üzərinə hazırladığınız sousu tökün.\n5. Yaxşıca qarışdırıb süfrəyə verin.",
     "ingredients": [
       {
         "name": "İspanaq",
-        "quantity": "200",
+        "quantity": "300",
         "unit": "qram"
       },
       {
         "name": "Qoz",
-        "quantity": "60",
+        "quantity": "100",
         "unit": "qram"
+      },
+      {
+        "name": "Sarımsaq",
+        "quantity": "2",
+        "unit": "diş"
       },
       {
         "name": "Zeytun yağı",
@@ -10843,6 +10018,11 @@
         "name": "Limon suyu",
         "quantity": "2",
         "unit": "xörək qaşığı"
+      },
+      {
+        "name": "Duz",
+        "quantity": "0.5",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -11261,43 +10441,6 @@
       {
         "name": "Un",
         "quantity": "50",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Göyərtili pendirli blinçik",
-    "description": "İçliyi göyərtili pendirdən olan nazik blinçiklər.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/goyertili-pendirli-blincik.png",
-    "videoUrl": "",
-    "instructions": "1. Süd, un, yumurta və duzdan blinçik xəmiri hazırlayıb nazik bişirin.\n2. Göyərtiləri xırda doğrayıb pendirlə qarışdırın.\n3. İçliyi blinçiklərin içərisinə qoyub bükün.",
-    "ingredients": [
-      {
-        "name": "Süd",
-        "quantity": "300",
-        "unit": "ml"
-      },
-      {
-        "name": "Un",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "50",
-        "unit": "qram"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "150",
         "unit": "qram"
       }
     ]
@@ -11810,38 +10953,6 @@
     ]
   },
   {
-    "name": "Çolpa Ləvəngisi",
-    "description": "Qoz və soğan içlikli bütöv çolpa",
-    "category": "Əsas Yemək",
-    "prepTime": 80,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/colpa-levengisi.png",
-    "videoUrl": "",
-    "instructions": "1. Qozu ətçəkəndən keçirin, xırda doğranmış soğan və turşuluqla qarışdırın.\n2. Çolpanı təmizləyib duzlayın və içini hazırladığınız qarışıqla doldurun.\n3. Sobada qızılı rəng alanadək bişirin.",
-    "ingredients": [
-      {
-        "name": "Çolpa",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Lavaşana",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Gürzə",
     "description": "Ənənəvi ətli xəmir xörəyi",
     "category": "Əsas Yemək",
@@ -11870,38 +10981,6 @@
         "name": "Su",
         "quantity": "200",
         "unit": "ml"
-      }
-    ]
-  },
-  {
-    "name": "Qatıqlı sarımsaqlı şorba",
-    "description": "Qatıq əsaslı isti və dadlı şorba.",
-    "category": "Şorba",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qatiqli-sarimsaqli-sorba.png",
-    "videoUrl": "",
-    "instructions": "1. Qatığı azca un və yumurta ilə çalın.\n2. Qaynar su əlavə edib qarışdıraraq bişirin.\n3. Süfrəyə verdikdə sarımsaq əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Qatıq",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Un",
-        "quantity": "1",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
       }
     ]
   },
@@ -12098,24 +11177,24 @@
     ]
   },
   {
-    "name": "Gavalı salatı",
-    "description": "Turşməzə gavalı qurusu və qozdan hazırlanan fərqli salat.",
+    "name": "Gavalı və qoz salatı",
+    "description": "Qurudulmuş gavalı və qoz ləpəsindən hazırlanan turşməzə salat.",
     "category": "Salat",
-    "prepTime": 25,
+    "prepTime": 20,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gavali-salati.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Gavalı qurusunu suda yumşaldıb doğrayın.\n2. Qozu xırdalayın.\n3. Sarımsaq və mayonez əlavə edib qarışdırın.",
+    "instructions": "1. Qara qurudulmuş gavalını isti suda saxlayıb yumşaldın, sonra nazik doğrayın.\n2. Qoz ləpəsini bıçaqla xırdalayın.\n3. Sarımsağı əzin və bütün məhsulları qaba yığın.\n4. Mayonez və ya xama ilə qarışdırın.",
     "ingredients": [
       {
-        "name": "Gavalı qurusu",
+        "name": "Gavalı",
         "quantity": "200",
         "unit": "qram"
       },
       {
         "name": "Qoz",
-        "quantity": "0.5",
-        "unit": "stəkan"
+        "quantity": "100",
+        "unit": "qram"
       },
       {
         "name": "Sarımsaq",
@@ -12162,14 +11241,14 @@
     ]
   },
   {
-    "name": "Qızardılmış noxud",
-    "description": "Duzlu və ədviyyatlı qızardılmış noxud qəlyanaltısı.",
+    "name": "Qızardılmış noxud qəlyanaltısı",
+    "description": "Ədviyyatlı və xırtıldayan sobada bişmiş noxud.",
     "category": "Qəlyanaltı",
     "prepTime": 30,
     "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qizardilmis-noxud.png",
+    "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Bişmiş noxudları qurudun.\n2. Yağ və duz əlavə edin.\n3. Tavada qızardın.",
+    "instructions": "1. Bişmiş noxudu qurusun deyə dəsmala qoyun.\n2. Üzərinə yağ, duz və qırmızı bibər əlavə edin.\n3. Sobada 180 dərəcədə xırtıldayana qədər qovurun.",
     "ingredients": [
       {
         "name": "Noxud",
@@ -12180,6 +11259,11 @@
         "name": "Bitki yağı",
         "quantity": "2",
         "unit": "xörək qaşığı"
+      },
+      {
+        "name": "Qırmızı bibər",
+        "quantity": "1",
+        "unit": "çay qaşığı"
       },
       {
         "name": "Duz",
@@ -12248,38 +11332,6 @@
     ]
   },
   {
-    "name": "Qovurmalı plov",
-    "description": "Ət qovurması ilə verilən düyü plovu.",
-    "category": "Əsas Yemək",
-    "prepTime": 90,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qovurmali-plov.png",
-    "videoUrl": "",
-    "instructions": "1. Düyünü suda qaynadıb süzün.\n2. Əti soğanla qovurun.\n3. Düyü və əti qazanda qovuşdurub dəmə qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Ət",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
     "name": "Pomidor salatı",
     "description": "Təzə pomidor və göyərtilərdən hazırlanan sadə salat.",
     "category": "Salat",
@@ -12302,38 +11354,6 @@
       {
         "name": "Zeytun yağı",
         "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Qozlu badımcan",
-    "description": "Qızardılmış badımcan içi qozlu qarışıqla.",
-    "category": "Qəlyanaltı",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/qozlu-badimcan.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları uzunsov doğrayıb qızardın.\n2. Qoz və sarımsağı əzin.\n3. Badımcanların evinə qozlu qarışıq qoyub bükün.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "3",
         "unit": "xörək qaşığı"
       }
     ]
@@ -12404,43 +11424,6 @@
         "name": "Duz",
         "quantity": "0.5",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "description": "İçərisi pendir və göyərti ilə doldurulmuş yumşaq səhər kökəsi.",
-    "instructions": "1. Xəmir üçün un, su və duzu qarışdırıb yoğurun.\n2. İçlik üçün pendir və şüyüdü doğrayıb qarışdırın.\n3. Xəmiri yayaraq içliyi qoyun və bükün.\n4. Quru tavada hər iki üzünü qızardın.",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/pendirli-goyertili-kete.png",
-    "videoUrl": "",
-    "category": "Səhər Yeməyi",
-    "name": "Pendirli göyərtili kətə",
-    "prepTime": 30,
-    "difficulty": "Orta",
-    "ingredients": [
-      {
-        "unit": "qram",
-        "name": "Un",
-        "quantity": "300"
-      },
-      {
-        "unit": "ml",
-        "name": "Su",
-        "quantity": "150"
-      },
-      {
-        "unit": "qram",
-        "name": "Pendir",
-        "quantity": "150"
-      },
-      {
-        "unit": "dəstə",
-        "name": "Şüyüd",
-        "quantity": "1"
-      },
-      {
-        "unit": "çay qaşığı",
-        "name": "Duz",
-        "quantity": "1"
       }
     ]
   },
@@ -13085,38 +12068,6 @@
     ]
   },
   {
-    "name": "Can ətindən basdırma",
-    "description": "Ləzzətli və ədviyyatlı ət əsas yeməyi.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Çətin",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/can-etinden-basdirma.png",
-    "videoUrl": "",
-    "instructions": "1. Can ətini dilimlərə doğrayın.\n2. Soğan, duz, istiot və ədviyyatlarla əti marinadlayın.\n3. Əti şişlərə taxaraq manqalda və ya sobada qızardın.",
-    "ingredients": [
-      {
-        "name": "Can əti",
-        "quantity": "800",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "İstiot",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Göbələkli plov",
     "description": "Ətirli düyü və təzə göbələkdən hazırlanan plov.",
     "category": "Əsas Yemək",
@@ -13435,43 +12386,6 @@
     ]
   },
   {
-    "name": "Təzə xiyar və pomidor salatı",
-    "description": "Yay aylarının vazkeçilməz təravətli tərəvəz salatı.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/teze-xiyar-ve-pomidor-salati.png",
-    "videoUrl": "",
-    "instructions": "1. Xiyar və pomidorları yuyub uyğun ölçüdə doğrayın.\n2. Göyərtiləri və soğanı xırda doğrayıb tərəvəzlərə əlavə edin.\n3. Üzərinə zeytun yağı və duz tökün.\n4. Yaxşıca qarışdırıb süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Xiyar",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Kənd sayağı qoğal",
     "description": "İçərisinə ədviyyatlar qatılmış ənənəvi şorqoğal.",
     "category": "Şirniyyat",
@@ -13734,38 +12648,6 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan Qəlyanaltısı",
-    "description": "Qozlu içliklə bükülmüş badımcan dilimləri.",
-    "category": "Qəlyanaltı",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/badimcan-qelyanaltisi.png",
-    "videoUrl": "",
-    "instructions": "1. Badımcanı uzun dilimlərə doğrayıb qızardın.\n2. Qoz, sarımsaq və xamanı qarışdırıb içlik hazırlayın.\n3. İçliyi badımcan dilimlərinə çəkib rulet kimi bükün.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Xama",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -14358,33 +13240,6 @@
     ]
   },
   {
-    "name": "Armud kompotu",
-    "description": "Təzə armuddan bişirilən sərinləşdirici kompot.",
-    "category": "İçki",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/armud-kompotu.png",
-    "videoUrl": "",
-    "instructions": "1. Armudlar təmizlənir və doğranır.\n2. Su və şəkər tozu qazana tökülüb qaynadılır.\n3. Armudlar suya əlavə edilərək 15 dəqiqə qaynadılır.",
-    "ingredients": [
-      {
-        "name": "Armud",
-        "quantity": "5",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "2",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
     "name": "Pendirli bulka",
     "description": "Ev üsulu pendirli səhər bulkası.",
     "category": "Səhər Yeməyi",
@@ -14434,33 +13289,6 @@
       {
         "name": "Duz",
         "quantity": "5",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Göbələkli rulet",
-    "description": "Lavaş içinə yığılan göbələkli qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/gobelekli-rulet.png",
-    "videoUrl": "",
-    "instructions": "1. Göbələk və soğan doğranıb tavada qızardılır.\n2. Lavaşın üzərinə mayonez çəkilir.\n3. Göbələk qoyulub bükülür və dilimlənir.",
-    "ingredients": [
-      {
-        "name": "Lavaş",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göbələk",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "50",
         "unit": "qram"
       }
     ]
@@ -14665,38 +13493,6 @@
     ]
   },
   {
-    "name": "Dana ətindən soğanlı qovurma",
-    "description": "Yumşaq dana əti və bol soğanla tavada hazırlanan əsas yemək.",
-    "category": "Əsas Yemək",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Dana ətini kiçik tikələrə doğrayıb öz suyunda bişənə qədər qovurun.\n2. Soğanları aypara formasında doğrayıb ətə əlavə edin.\n3. Duz, istiot vurub qızılı rəng alanadək qovurmağa davam edin.",
-    "ingredients": [
-      {
-        "name": "Dana əti",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "40",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Badımcan və kartoflu sac",
     "description": "Sac üzərində tərəvəz və ət tikələri ilə bişirilən milli yemək.",
     "category": "Əsas Yemək",
@@ -14761,18 +13557,18 @@
     ]
   },
   {
-    "name": "Düyülü və təzə göyərtili şorba",
-    "description": "Yüngül və faydalı tərəvəzli şorba növü.",
+    "name": "Noxudlu və tərəvəzli şorba",
+    "description": "Noxud və müxtəlif tərəvəzlərdən bişirilən qidalı şorba.",
     "category": "Şorba",
-    "prepTime": 30,
-    "difficulty": "Asan",
+    "prepTime": 50,
+    "difficulty": "Orta",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Qaynayan suya yuyulmuş düyü və kartof kubiklərini əlavə edin.\n2. Tərəvəzlər yumşaldıqdan sonra xırda doğranmış göyərtiləri qatın.\n3. Duz və istiot əlavə edib altını söndürün.",
+    "instructions": "1. Noxudu əvvəlcədən suda isladın və yumşalana qədər qaynadın.\n2. Doğranmış soğan, kök və kartofu qazana əlavə edin.\n3. Duz və ədviyyat vurub bişməyə qoyun.",
     "ingredients": [
       {
-        "name": "Düyü",
-        "quantity": "0.5",
+        "name": "Noxud",
+        "quantity": "1",
         "unit": "stəkan"
       },
       {
@@ -14781,34 +13577,7 @@
         "unit": "ədəd"
       },
       {
-        "name": "Göyərti",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
-    "name": "Paxlalı və tərəvəzli şorba",
-    "description": "Quru paxla və müxtəlif tərəvəzlərlə bişən doyurucu şorba.",
-    "category": "Şorba",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Paxlanı əvvəlcədən suda saxlayıb yumşalana qədər qaynadın.\n2. Üzərinə xırda doğranmış yerkökü və soğan əlavə edin.\n3. Bulyon hazır olduqdan sonra duz vurub süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Paxla",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Yerkökü",
+        "name": "Kök",
         "quantity": "1",
         "unit": "ədəd"
       },
@@ -14825,29 +13594,29 @@
     ]
   },
   {
-    "name": "Toyuq bulyonlu əriştə şorbası",
-    "description": "Ev sayağı əriştə və toyuq əti ilə hazırlanan isti şorba.",
+    "name": "Toyuq bulyonlu vermeşel şorbası",
+    "description": "Yüngül və ətirli toyuq şorbası.",
     "category": "Şorba",
     "prepTime": 35,
     "difficulty": "Asan",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin və əti didikləyin.\n2. Qaynayan bulyona ev əriştəsini tökün.\n3. Bişməyə yaxın didiklənmiş toyuq ətini və duz əlavə edin.",
+    "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin və əti didikləyin.\n2. Bulyona sürtgəcdən keçirilmiş yerkökü əlavə edin.\n3. Vermeşel əlavə edib bişməyə qoyun.\n4. Didiklənilən toyuq əti və duz əlavə edib ocaqdan götürün.",
     "ingredients": [
       {
         "name": "Toyuq əti",
-        "quantity": "300",
+        "quantity": "400",
         "unit": "qram"
       },
       {
-        "name": "Əriştə",
-        "quantity": "1",
+        "name": "Vermeşel",
+        "quantity": "0.5",
         "unit": "stəkan"
       },
       {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
+        "name": "Yerkökü",
+        "quantity": "1",
+        "unit": "ədəd"
       },
       {
         "name": "Duz",
@@ -14975,38 +13744,6 @@
     ]
   },
   {
-    "name": "Heyva və alma kompotu",
-    "description": "Təzə heyva və alma meyvələrindən hazırlanan təbii kompot.",
-    "category": "İçki",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Heyva və almanı dilimlərə doğrayıb çəyirdəklərini təmizləyin.\n2. Qazana su və şəkər tozu əlavə edib qaynadın.\n3. Meyvələri suya tökərək zəif odda 20 dəqiqə bişirin.",
-    "ingredients": [
-      {
-        "name": "Heyva",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Alma",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "2",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
     "name": "Nar və qozlu çuğundur şirəsi",
     "description": "Nar və çuğundur suyundan hazırlanan güclü vitaminli içki.",
     "category": "İçki",
@@ -15078,33 +13815,6 @@
       {
         "name": "Zeytun",
         "quantity": "50",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Səbzi Plov",
-    "description": "Göyərtili ənənəvi plov",
-    "category": "Əsas Yemək",
-    "prepTime": 120,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyünü suda qaynadataq süzün.\n2. Göyərtiləri doğrayıb ətlə qovurun.\n3. Düyü və qovurmanı qazana qat-qat yığın.\n4. Dəm almağa qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "4",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Quzu əti",
-        "quantity": "400",
         "unit": "qram"
       }
     ]
@@ -15357,75 +14067,6 @@
         "name": "Kərə yağı",
         "quantity": "30",
         "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Şah plovu",
-    "description": "Xəmirdə bişən, qızıl rəngli və zəfəranlı ləzzətli şah plov.",
-    "category": "Əsas Yemək",
-    "prepTime": 180,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyü duzlu suda yarıbişmiş halda qaynadılıb süzülür.\n2. Qazanın dibinə lavaş sərilir, düyü, qaysı və ət qat-qat yığılır.\n3. Üzəri lavaşla örtülüb sobada qızarana qədər bişirilir.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Quzu əti",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Lavaş",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qaysı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "200",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Badımcan ezməsi",
-    "description": "Közlənmiş badımcan və qozdan hazırlanan dadlı qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Badımcanlar közlənib qabığı soyulur.\n2. Qoz və sarımsaqla birlikdə əzilir.\n3. Üzərinə zeytun yağı əlavə olunub qarışdırılır.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -15779,43 +14420,6 @@
     ]
   },
   {
-    "name": "Şor Qogalı",
-    "description": "Novruz bayramının əsas simvolu olan, ədviyyatlı və qat-qat xəmirli milli şirniyyat.",
-    "category": "Şirniyyat",
-    "prepTime": 120,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Un, maya və sudan yumşaq xəmir yoğurub acımağa qoyun.\n2. İçlik üçün un, əridilmiş kərə yağı və ədviyyatları qarışdırın.\n3. Acımış xəmirin kündələrini açıb aralarına yağ sürtərək qat-qat yığın.\n4. İçlik qoyub dairəvi formada bükün və üzərinə yumurta sarısı çəkib sobada bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Maya",
-        "quantity": "10",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "5",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
     "name": "Şəhid xörəyi - Bozbaş",
     "description": "Qoyun əti, noxod və kartofdan hazırlanan ənənəvi sulu yemək.",
     "category": "Əsas Yemək",
@@ -15853,43 +14457,6 @@
     ]
   },
   {
-    "name": "Üzümlü Şirin Plov",
-    "description": "Quru meyvələr və düyüdən hazırlanan bayram plovu.",
-    "category": "Əsas Yemək",
-    "prepTime": 90,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda yarıbişmiş halda süzün.\n2. Quru üzüm və qaysıları kərə yağında qovurun.\n3. Qazanın dibinə qazmaq qoyub üzərinə düyü və meyvələri qat-qat yığın.\n4. Zəfəran dəmləməsi əlavə edib dəmə qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Kişmiş",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Qaysı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Zəfəran",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Pendirli Səhər Bulka",
     "description": "İçində duzlu pendir olan yumşaq səhər bulkası.",
     "category": "Səhər Yeməyi",
@@ -15923,38 +14490,6 @@
         "name": "Pendir",
         "quantity": "200",
         "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Gürzə şorbası",
-    "description": "Ətli xəmir bükümləri ilə hazırlanan isti şorba.",
-    "category": "Şorba",
-    "prepTime": 45,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Ət, soğan və ədviyyatlardan qiymə hazırlayın.\n2. Xəmiri yayıb kvadratlar kəsin və içlik qoyub gürzə bükün.\n3. Qaynayan bulyona gürzələri əlavə edib bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Mal əti qiyməsi",
-        "quantity": "250",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Su",
-        "quantity": "1",
-        "unit": "litr"
       }
     ]
   },
@@ -16040,43 +14575,6 @@
     ]
   },
   {
-    "name": "Lobya plovu",
-    "description": "Qırmızı lobya və ət ilə bişirilən ətirli aş növü.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Lobyanı əvvəlcədən qaynadın.\n2. Düyünü qaynadıb süzün.\n3. Qazanın dibinə qazmaq qoyub düyü və lobyanı qat-qat yığın, dəmləyin.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Qırmızı lobya",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Dana əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Kartof kotleti",
     "description": "Qaynadılmış kartofdan hazırlanan və tavada qızardılan yemək.",
     "category": "Əsas Yemək",
@@ -16114,18 +14612,18 @@
     ]
   },
   {
-    "name": "Gavalı şorbası",
-    "description": "Turşməzə tamlı quru gavalı ilə hazırlanan ətli şorba.",
+    "name": "Turşməzə gavalı şorbası",
+    "description": "Fərqli dadı ilə seçilən meyvəli ət şorbası.",
     "category": "Şorba",
-    "prepTime": 45,
-    "difficulty": "Orta",
+    "prepTime": 60,
+    "difficulty": "Çətin",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Əti bişirib bulyon hazırlayın.\n2. Quru gavalını yuyub ətə əlavə edin.\n3. Kartof və soğan doğrayıb şorbaya qatın və yumşalana qədər bişirin.",
+    "instructions": "1. Mal ətini tikələrə doğrayıb suda bişirin.\n2. Quru gavalıları yuyub ətə qatın.\n3. Kartof və soğanı əlavə edib bişməyə davam edin.\n4. Duz, istiot və nanə qurusu əlavə edib süfrəyə verin.",
     "ingredients": [
       {
-        "name": "Dana əti",
-        "quantity": "300",
+        "name": "Mal əti",
+        "quantity": "400",
         "unit": "qram"
       },
       {
@@ -16142,11 +14640,6 @@
         "name": "Soğan",
         "quantity": "1",
         "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
       }
     ]
   },
@@ -16183,38 +14676,6 @@
       {
         "name": "Duz",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Turp və kök salatı",
-    "description": "Rəndələnmiş turp və kökdən hazırlanan xırtıldayan salat.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Turp və kökü sürtgəcdən keçirin.\n2. Üzərinə duz və duru yağ əlavə edin.\n3. Yaxşıca qarışdırıb süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Turp",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kök",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
@@ -16547,38 +15008,6 @@
     ]
   },
   {
-    "name": "Turşu xiyar və pomidor salatı",
-    "description": "Turşu tərəvəzlərdən hazırlanan dadlı qarnir salat.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Turşu xiyar və pomidorları doğrayın.\n2. Üzərinə göyərtilər əlavə edib zeytun yağı ilə qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Turşu xiyar",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Şirin çay",
     "description": "Ənənəvi armudu stəkanda süfrəyə verilən qara çay.",
     "category": "İçki",
@@ -16786,38 +15215,6 @@
     ]
   },
   {
-    "name": "Gavalı və qoz salatı",
-    "description": "Qurudulmuş gavalı və qoz ləpəsindən hazırlanan turşməzə salat.",
-    "category": "Salat",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Qara qurudulmuş gavalını isti suda saxlayıb yumşaldın, sonra nazik doğrayın.\n2. Qoz ləpəsini bıçaqla xırdalayın.\n3. Sarımsağı əzin və bütün məhsulları qaba yığın.\n4. Mayonez və ya xama ilə qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Gavalı",
-        "quantity": "200",
-        "unit": "qram"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Şəki şirin kətəsi",
     "description": "İçliyi şəkər və yağdan ibarət un məmulatı.",
     "category": "Şirniyyat",
@@ -16973,14 +15370,14 @@
     ]
   },
   {
-    "name": "Balqabaq qutabı",
-    "description": "İçliyi şirin balqabaq və soğandan ibarət sevimli qutab növü.",
+    "name": "Balqabaqlı qutab",
+    "description": "Ənənəvi Azərbaycan qutabının balqabaqla hazırlanan növü.",
     "category": "Qəlyanaltı",
-    "prepTime": 50,
+    "prepTime": 40,
     "difficulty": "Orta",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Un, su və duzdan xəmir yoğurun.\n2. Balqabağı sürtgəcdən keçirib soğanla qovurun.\n3. Xəmiri kiçik kündələrə ayırıb açın.\n4. İçlik qoyub aypara formasında bükün.\n5. Quru tavada hər iki üzünü qızardın.",
+    "instructions": "1. Un, su və duzdan xəmir yoğurun və kündələrə ayırın.\n2. Balqabağı təmizləyib sürtgəcdən keçirin, soğanla birlikdə az yağda qovurun.\n3. Kündələri nazik açıb içlik qoyun və aypara şəklində bükün.\n4. Quru tav hər iki tərəfini qızardın.",
     "ingredients": [
       {
         "name": "Un",
@@ -16993,6 +15390,11 @@
         "unit": "stəkan"
       },
       {
+        "name": "Duz",
+        "quantity": "1",
+        "unit": "çay qaşığı"
+      },
+      {
         "name": "Balqabaq",
         "quantity": "400",
         "unit": "qram"
@@ -17001,11 +15403,6 @@
         "name": "Soğan",
         "quantity": "1",
         "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "50",
-        "unit": "qram"
       }
     ]
   },
@@ -17043,43 +15440,6 @@
         "name": "Qoz",
         "quantity": "0.5",
         "unit": "stəkan"
-      }
-    ]
-  },
-  {
-    "name": "Əriştəli mərci şorbası",
-    "description": "Qırmızı mərci və ev əriştəsindən hazırlanan doyurucu şorba.",
-    "category": "Şorba",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Mərcini su ilə yuyub qaynadın.\n2. Soğan və yerkökünü yağda qovurub əlavə edin.\n3. Əriştəni qatın və yumşalanadək bişirin.\n4. Nanə qurusu səpib ocaqdan götürün.",
-    "ingredients": [
-      {
-        "name": "Mərci",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Əriştə",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -17522,14 +15882,14 @@
     ]
   },
   {
-    "name": "Balıq qızartması sous ilə",
-    "description": "Xırtıldayan qızardılmış balıq və xüsusi limonlu sous.",
+    "name": "Balıq Qızartması Souslu",
+    "description": "Xırtıldayan balıq dilimləri və xüsusi sarımsaqlı sous ilə.",
     "category": "Əsas Yemək",
     "prepTime": 30,
-    "difficulty": "Orta",
+    "difficulty": "Asan",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Balıq dilimlərini unlayın.\n2. Tavada qızmar yağda hər iki üzünü qızardın.\n3. Limon suyunu duzla qarışdırıb üzərinə səpün.",
+    "instructions": "1. Balıq təmizlənir, hissələrə bölünür və duzlanıb unlanır.\n2. Qızmar yağda hər iki üzü qızardılır.\n3. Sarımsaq və göyərtilərdən ibarət sous hazırlanıb balığın üzərinə çəkilir.",
     "ingredients": [
       {
         "name": "Balıq",
@@ -17542,162 +15902,14 @@
         "unit": "xörək qaşığı"
       },
       {
-        "name": "Limon",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
         "name": "Bitki yağı",
-        "quantity": "4",
-        "unit": "xörək qaşığı"
+        "quantity": "100",
+        "unit": "ml"
       },
       {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Göbələkli və tərəvəzli şorba",
-    "description": "Ətirli göbələk və təzə tərəvəzlərdən hazırlanan yüngül şorba.",
-    "category": "Şorba",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Göbələkləri və soğanı doğrayıb yağda qovurun.\n2. Qazana su töküb qaynadın.\n3. Doğranmış kartof və kökü əlavə edin.\n4. Göbələkləri də qazana tökÜb bişirin.",
-    "ingredients": [
-      {
-        "name": "Göbələk",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kartof",
+        "name": "Sarımsaq",
         "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kök",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
-    "name": "Toyuq bulyonlu düyü şorbası",
-    "description": "Düyü və toyuq əti ilə zəngin isti şorba.",
-    "category": "Şorba",
-    "prepTime": 40,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin.\n2. Əti didib yenidən bulyona qatın.\n3. Yuyulmuş düyünü və sürtgəcdən keçmiş kökü əlavə edin.\n4. Düyü yumşalana qədər bişirin.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Düyü",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kök",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Noxudlu və tərəvəzli şorba",
-    "description": "Noxud və müxtəlif tərəvəzlərdən bişirilən qidalı şorba.",
-    "category": "Şorba",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Noxudu əvvəlcədən suda isladın və yumşalana qədər qaynadın.\n2. Doğranmış soğan, kök və kartofu qazana əlavə edin.\n3. Duz və ədviyyat vurub bişməyə qoyun.",
-    "ingredients": [
-      {
-        "name": "Noxud",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kök",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.5",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
-    "name": "Qızardılmış noxud qəlyanaltısı",
-    "description": "Ədviyyatlı və xırtıldayan sobada bişmiş noxud.",
-    "category": "Qəlyanaltı",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Bişmiş noxudu qurusun deyə dəsmala qoyun.\n2. Üzərinə yağ, duz və qırmızı bibər əlavə edin.\n3. Sobada 180 dərəcədə xırtıldayana qədər qovurun.",
-    "ingredients": [
-      {
-        "name": "Noxud",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Qırmızı bibər",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
+        "unit": "diş"
       }
     ]
   },
@@ -17760,28 +15972,6 @@
       },
       {
         "name": "Xama",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Kərə yağı və Bal",
-    "description": "Sadə və ləzzətli səhər neməti.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 5,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Boşqaba təbii kərə yağı qoyun.\n2. Üzərinə süzmə bal əlavə edin.\n3. İsti çörəklə süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Kərə yağı",
-        "quantity": "50",
-        "unit": "qram"
-      },
-      {
-        "name": "Bal",
         "quantity": "3",
         "unit": "xörək qaşığı"
       }
@@ -17901,33 +16091,33 @@
     ]
   },
   {
-    "name": "Toyuq və Göyərti Salatı",
-    "description": "Doyurucu toyuqlu salat.",
+    "name": "Toyuq və Göyərti Salatası",
+    "description": "Bol göyərtili və vitaminli toyuq salatı.",
     "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Orta",
+    "prepTime": 20,
+    "difficulty": "Asan",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Toyuq ətini qaynadıb didin.\n2. Kahı və göyərtiləri doğrayın.\n3. Hamısını qarışdırıb duz və yağ əlavə edin.",
+    "instructions": "1. Bişmiş toyuq əti xırda liflərə ayrılır.\n2. Göyərtilər yuyulub doğranır.\n3. Qaba yığılıb duz və xama ilə qarışdırılır.",
     "ingredients": [
       {
         "name": "Toyuq əti",
-        "quantity": "200",
+        "quantity": "300",
         "unit": "qram"
       },
       {
-        "name": "Kahı",
+        "name": "Göy soğanı",
         "quantity": "1",
-        "unit": "ədəd"
+        "unit": "dəstə"
       },
       {
-        "name": "Göyərti",
+        "name": "Şüyüd",
         "quantity": "0.5",
         "unit": "dəstə"
       },
       {
-        "name": "Duru yağ",
-        "quantity": "2",
+        "name": "Xama",
+        "quantity": "3",
         "unit": "xörək qaşığı"
       }
     ]
@@ -18056,38 +16246,6 @@
     ]
   },
   {
-    "name": "Qızardılmış Badımcan",
-    "description": "Sarımsaqlı qatıqla servis edilən badımcan qəlyanaltısı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Badımcanı dairəvi doğrayıb duza qoyun.\n2. Tavada yağda hər iki tərəfini qızardın.\n3. Üzərinə sarımsaqlı qatıq çəkin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qatıq",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "50",
-        "unit": "ml"
-      }
-    ]
-  },
-  {
     "description": "Ənənəvi göyərtili kükünün sobada bişirilən yüngül və dadlı versiyası.",
     "instructions": "1. Göyərtiləri təmizləyib xırda doğrayın.\n2. Yumurtaları bir qabda çalın, duz və istiot əlavə edin.\n3. Doğranmış göyərtiləri yumurta qarışığına qatın.\n4. Tavaya və ya formalı qaba yağ sürtüb qarışığı əlavə edin.\n5. 180 dərəcə qızdırılmış sobada qızaranadək bişirin.",
     "imageResource": "",
@@ -18204,43 +16362,6 @@
     ]
   },
   {
-    "name": "Badımcan bükümləri",
-    "description": "Qızardılmış badımcan dilimlərinə qozlu içlik qoyularaq bükülən qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 35,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları uzunsov dilimlərlə doğrayıb yağda qızardın.\n2. Qoz, sarımsaq və mayonezi qarışdırıb içlik hazırlayın.\n3. İçliyi badımcan dilimlərinə qoyub rulet kimi bükün.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "120",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "50",
-        "unit": "ml"
-      }
-    ]
-  },
-  {
     "name": "Blinçik",
     "description": "Kəsmiklə doldurulmuş səhər yeməyi.",
     "category": "Səhər Yeməyi",
@@ -18268,33 +16389,6 @@
       {
         "name": "Kəsmik",
         "quantity": "250",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Pendirli biskvit",
-    "description": "Ev üsulu duzlu qəlyanaltı.",
-    "category": "Qəlyanaltı",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Un, kərə yağı və rəndələnmiş pendiri qarışdırın.\n2. Xəmir hazırlayıb sobada bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "250",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "100",
         "unit": "qram"
       }
     ]
@@ -18396,38 +16490,6 @@
     ]
   },
   {
-    "name": "Quzu əti ilə qovurma",
-    "description": "Soğan və ədviyyatla bişirilmiş dadlı ət yeməyi.",
-    "category": "Əsas Yemək",
-    "prepTime": 45,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Quzu ətini doğrayıb öz yağında qovurun.\n2. Soğan əlavə edib qızardın.\n3. Duz və istiot vurub süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Quzu əti",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "İstiot",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Toyuq və kartof qızartması",
     "description": "Soba və ya tavada bişən ləzzətli yemək.",
     "category": "Əsas Yemək",
@@ -18487,14 +16549,14 @@
     ]
   },
   {
-    "name": "Bolqar bibəri salatı",
-    "description": "Rəngli bibərlərdən hazırlanan dadlı və yüngül salat.",
+    "name": "Bolqar Bibəri Salatası",
+    "description": "Rəngbərəng bibərlərdən hazırlanan təravətli salat.",
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Bolqar bibərlərini uzunsov doğrayın.\n2. Üzərinə soğan və göyərti əlavə edin.\n3. Duz, limon suyu və yağ ilə soslayın.",
+    "instructions": "1. Bolqar bibərləri uzunsov incə doğranır.\n2. Üzərinə qırmızı soğan halqa şəkildə əlavə edilir.\n3. Zeytun yağı, sirkə və duz ilə soslanılır.",
     "ingredients": [
       {
         "name": "Bolqar bibəri",
@@ -18502,83 +16564,19 @@
         "unit": "ədəd"
       },
       {
-        "name": "Soğan",
+        "name": "Qırmızı soğan",
         "quantity": "1",
         "unit": "ədəd"
       },
       {
-        "name": "Limon",
-        "quantity": "0.5",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
+        "name": "Zeytun yağı",
+        "quantity": "3",
         "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Kartof salatı",
-    "description": "Haşlanmış kartof və göyərtidən sadə salat.",
-    "category": "Salat",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kartofu bişirib kub şəklində doğrayın.\n2. Soğan və göyərti əlavə edin.\n3. Duz və bitki yağı ilə dadlandırın.",
-    "ingredients": [
-      {
-        "name": "Kartof",
-        "quantity": "4",
-        "unit": "ədəd"
       },
       {
-        "name": "Soğan",
+        "name": "Sirkə",
         "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Yumurta çığırtması",
-    "description": "Toyuq əti və yumurta ilə hazırlanan dadlı yemək.",
-    "category": "Əsas Yemək",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini qaynadıb tikələrə ayırın.\n2. Tavada soğanı qovurub toyuq ətini əlavə edin.\n3. Üzərinə çalınmış yumurta töküb bişirin.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "30",
-        "unit": "qram"
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -18615,38 +16613,6 @@
     ]
   },
   {
-    "name": "Pendirli Bükmə",
-    "description": "Lavaş və pendirdən hazırlanan qəlyanaltı",
-    "category": "Qəlyanaltı",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Lavaşın üzərinə əzilmiş pendir və göyərti çəkin.\n2. Rulet formasında bükün.\n3. Hissələrə bölüb tavada qızardın.",
-    "ingredients": [
-      {
-        "name": "Lavaş",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "30",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
     "name": "Qızardılmış Nohud",
     "description": "Ədviyyatlı quru noxud qəlyanaltısı",
     "category": "Qəlyanaltı",
@@ -18675,95 +16641,6 @@
         "name": "İstiot",
         "quantity": "0.5",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "description": "İçliyi kəsmiklə doldurulmuş nazik qızardılmış blinçiklər",
-    "instructions": "1. Süd, yumurta, un, şəkər tozu və duzu qarışdıraraq duru xəmir hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Kəsmiyi şəkər tozu və vanil ilə qarışdıraraq içlik hazırlayın.\n4. Hər blinçiyin ortasına kəsmik qoyub bükün.\n5. Kərə yağında hər iki üzünü qızardın.",
-    "imageResource": "",
-    "videoUrl": "",
-    "category": "Səhər Yeməyi",
-    "name": "Kəsmi̇kli̇ Blinçik",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "ingredients": [
-      {
-        "unit": "stəkan",
-        "name": "Süd",
-        "quantity": "2"
-      },
-      {
-        "unit": "ədəd",
-        "name": "Yumurta",
-        "quantity": "2"
-      },
-      {
-        "unit": "stəkan",
-        "name": "Un",
-        "quantity": "1.5"
-      },
-      {
-        "unit": "xörək qaşığı",
-        "name": "Şəkər tozu",
-        "quantity": "3"
-      },
-      {
-        "unit": "qram",
-        "name": "Kəsmik",
-        "quantity": "300"
-      },
-      {
-        "unit": "paket",
-        "name": "Vanil",
-        "quantity": "1"
-      },
-      {
-        "unit": "qram",
-        "name": "Kərə yağı",
-        "quantity": "50"
-      }
-    ]
-  },
-  {
-    "name": "Şirin Balqabaq Sıyıq",
-    "description": "Balqabaq və düyü ilə hazırlanan ətirli səhər yeməyi",
-    "category": "Səhər Yeməyi",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Balqabağı təmizləyib kubiklərə doğrayın.\n2. Qazana su və balqabaq töküb yumşalana qədər qaynadın.\n3. Yuyulmuş düyünü əlavə edin.\n4. Süd və şəkər tozu əlavə edib zəif odda düyü bişənə qədər qaynadaq.\n5. Kərə yağı qataraq süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Balqabaq",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Düyü",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Süd",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "30",
-        "unit": "qram"
-      },
-      {
-        "name": "Su",
-        "quantity": "1",
-        "unit": "stəkan"
       }
     ]
   },
@@ -19008,38 +16885,6 @@
         "name": "Su",
         "quantity": "2",
         "unit": "litr"
-      }
-    ]
-  },
-  {
-    "name": "Çoban Salatası",
-    "description": "Təzə tərəvəzlərdən hazırlanan klassik yay salatı",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Xiyar, pomidor və bibərləri kubik şəklində doğrayın.\n2. Qırmızı soğanı və göyərtiləri xırda doğrayın.\n3. Hamısını dərin qaba yığın.\n4. Duz, zeytun yağı və limon suyu əlavə edib qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Xiyar",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -19349,38 +17194,6 @@
     ]
   },
   {
-    "name": "Çuğundur və kök salatı",
-    "description": "Bişmiş çuğundur və kökdən hazırlanan vitaminli salat.",
-    "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Çuğundur və kökü ayrıca qaynadıb sürtgəcdən keçirin.\n2. Sarımsaq və duz əlavə edin.\n3. Mayonez ilə qarışdırıb servis qabına çəkin.",
-    "ingredients": [
-      {
-        "name": "Çuğundur",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kök",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Şirin un halvası",
     "description": "Ənənəvi un və kərə yağından hazırlanan şirniyyat.",
     "category": "Şirniyyat",
@@ -19409,38 +17222,6 @@
         "name": "Su",
         "quantity": "1",
         "unit": "stəkan"
-      }
-    ]
-  },
-  {
-    "name": "Limonlu nanə çayı",
-    "description": "Təzə nanə yarpaqları və limonla dəmlənən ətirli çay.",
-    "category": "İçki",
-    "prepTime": 10,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Çaynikə qara çay və təzə nanə yarpaqları tökün.\n2. Üzərinə qaynar su əlavə edib 10 dəqiqə dəmləyin.\n3. Stəkanlara süzüb limon dilimi əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Qara çay",
-        "quantity": "2",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Nanə",
-        "quantity": "4",
-        "unit": "yarpaq"
-      },
-      {
-        "name": "Limon",
-        "quantity": "2",
-        "unit": "dilim"
-      },
-      {
-        "name": "Su",
-        "quantity": "0.5",
-        "unit": "litr"
       }
     ]
   },
@@ -19615,48 +17396,6 @@
     ]
   },
   {
-    "name": "Mimoza Salatası",
-    "description": "Qat-qat yığılan pendirli və toyuqlu bayram salatı.",
-    "category": "Salat",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Toyuq əti, kartof, yerkökü və yumurta qaynadılır.\n2. Sürtgəcdən keçirilmiş məhsullar qaba qat-qat yığılır: kartof, toyuq, yerkökü, yumurta ağı, pendir və yumurta sarısı.\n3. Hər qatın arası mayonezlənir.",
-    "ingredients": [
-      {
-        "name": "Toyuq sinə əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "200",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
     "name": "Pendir və göyərti",
     "description": "Səhər süfrəsinin ayrılmaz hissəsi.",
     "category": "Səhər Yeməyi",
@@ -19711,28 +17450,6 @@
     ]
   },
   {
-    "name": "Göyərti salatı",
-    "description": "Müxtəlif göyərtilərdən hazırlanan vitaminli salat.",
-    "category": "Salat",
-    "prepTime": 10,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Göyərtiləri yuyub xırda doğrayın.\n2. Duz əlavə edib qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Göyərti",
-        "quantity": "2",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Qaymaqlı Pide",
     "description": "Səhər süfrələri üçün ləzzətli çörək növü.",
     "category": "Səhər Yeməyi",
@@ -19756,38 +17473,6 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Manqal Salatası",
-    "description": "Közlənmiş tərəvəzlərdən hazırlanan dadlı salat.",
-    "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Badımcan, pomidor və bibərləri manqalda və ya sobada közləyin.\n2. Qabıqlarını soyub bıçaqla xırda doğrayın.\n3. Üzərinə göyərti, sarımsaq və zeytun yağı əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
       }
     ]
   },
@@ -19861,43 +17546,6 @@
     ]
   },
   {
-    "name": "Badımcan Salatası",
-    "description": "Qızardılmış badımcan və pomidordan hazırlanan iştahaaçan salat.",
-    "category": "Salat",
-    "prepTime": 25,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Badımcanları dairəvi doğrayıb duzlu suda saxlayın, sonra qızardın.\n2. Pomidorları kubik doğrayıb sarımsaqla qarışdırın.\n3. Badımcan və pomidorları qat-qat qaba yığıb üzərinə göyərti səpin.",
-    "ingredients": [
-      {
-        "name": "Badımcan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "4",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Turp Salatası",
     "description": "Rəndələnmiş qara turp və göyərtidən hazırlanan sağlam salat.",
     "category": "Salat",
@@ -19963,43 +17611,6 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Göyərtili pendirli omlet",
-    "description": "Ənənəvi kənd üsulu ilə hazırlanan təzə göyərtili və pendirli isti səhər yeməyi.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 12,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Yumurtaları qaba qırıb duz ilə çalın.\n2. Ağ pendiri çəngəllə əzin və yumurtaya qatın.\n3. Yaşıl soğan və cəfərini xırda doğrayıb qarışığa əlavə edin.\n4. Qızdırılmış tavada kərə yağını əridib kütləni tökin və qapağı bağlayaraq bişirin.",
-    "ingredients": [
-      {
-        "name": "Yumurta",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Ağ pendir",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Yaşıl soğan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Cəfəri",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "15",
-        "unit": "qram"
       }
     ]
   },
@@ -20172,34 +17783,34 @@
     ]
   },
   {
-    "name": "Kartoflu ev sayağı kotlet",
-    "description": "Mal qiyməsi və kartof püresindən hazırlanan yumşaq ev kotleti.",
+    "name": "Kartoflu ev sayağı küftə",
+    "description": "Ət və kartofun mükəmməl uyğunluğu ilə hazırlanan isti yemək.",
     "category": "Əsas Yemək",
-    "prepTime": 40,
+    "prepTime": 50,
     "difficulty": "Orta",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Kartofu bişirib əzin və püre halına gətirin.\n2. Mal qiyməsini xırda doğranmış soğan, duz və qara bibər ilə qarışdırın.\n3. Qiyməni və kartof püresini birlikdə yoğurub kiçik kotletlər düzəldin.\n4. Hər iki üzünü qızdırılmış tavada duru yağda qızardın.",
+    "instructions": "1. Çəkilmiş əti soğan və duz-istiotla yoğurub kiçik küftələr düzəldin.\n2. Kartof və soğanı təmizləyib iri doğrayın.\n3. Qazanda su qaynabsın, əvvəlcə kartofları əlavə edin.\n4. Qaynamağa başlayanda küftələri suya salın.\n5. Yemək bişənə qədər zəif odda qaynadın, üzərinə göyərti səpib süfrəyə verin.",
     "ingredients": [
       {
-        "name": "Mal qiyməsi",
+        "name": "Çəkilmiş mal əti",
         "quantity": "400",
         "unit": "qram"
       },
       {
         "name": "Kartof",
-        "quantity": "3",
+        "quantity": "4",
         "unit": "ədəd"
       },
       {
         "name": "Soğan",
-        "quantity": "1",
+        "quantity": "2",
         "unit": "ədəd"
       },
       {
-        "name": "Duru yağ",
-        "quantity": "4",
-        "unit": "xörək qaşığı"
+        "name": "Su",
+        "quantity": "1.2",
+        "unit": "litr"
       },
       {
         "name": "Duz",
@@ -20207,9 +17818,9 @@
         "unit": "çay qaşığı"
       },
       {
-        "name": "Qara bibər",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
+        "name": "Göyərti",
+        "quantity": "0.3",
+        "unit": "dəstə"
       }
     ]
   },
@@ -20392,70 +18003,28 @@
     ]
   },
   {
-    "name": "Qırmızı çuğundur və qoz salatı",
-    "description": "Bişmiş çuğundur, qoz və sarımsaqla hazırlanan ətirli salat.",
-    "category": "Salat",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Çuğunduru bişirib sürtgəcdən keçirin.\n2. Qoz ləpəsini xırda doğrayın və ya döyün.\n3. Sarımsağı əzin.\n4. Çuğundur, qoz və sarımsağı qarışdırıb mayonez, duz əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Çuğundur",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Turp, kök və göyərti salatı",
-    "description": "Vitaminlərlə zəngin xırtıldayan tərəvəz salatı.",
+    "name": "Kahı və göyərti salatı",
+    "description": "Vitaminlərlə zəngin yüngül yaşıl salat.",
     "category": "Salat",
     "prepTime": 15,
     "difficulty": "Asan",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Turp və kökü təmizləyib sürtgəcdən keçirin.\n2. Cəfəri və şüyüdü xırda doğrayın.\n3. Hamısını bir qaba qoyub zeytun yağı, limon şirəsi və duz əlavə edib qarışdırın.",
+    "instructions": "1. Kahı yarpaqlarını yuyub əllə iri parçalara doğrayın.\n2. Göyərtiləri xırda doğrayın.\n3. Yaşıl soğanı halqa şəklində kəsin.\n4. Hamısını salat qabına qoyun.\n5. Duz, zeytun yağı və limon suyu əlavə edib qarışdırın.",
     "ingredients": [
       {
-        "name": "Turp",
-        "quantity": "2",
+        "name": "Kahı",
+        "quantity": "1",
         "unit": "ədəd"
       },
       {
-        "name": "Kök",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Cəfəri",
-        "quantity": "0.5",
+        "name": "Göyərti",
+        "quantity": "1",
         "unit": "dəstə"
       },
       {
-        "name": "Şüyüd",
-        "quantity": "0.5",
+        "name": "Yaşıl soğan",
+        "quantity": "1",
         "unit": "dəstə"
       },
       {
@@ -20545,15 +18114,20 @@
     ]
   },
   {
-    "name": "Alma və darçınlı piroq",
-    "description": "Təzə almalar və ətirli darçınla hazırlanan yumşaq piroq.",
+    "name": "Alma və darçınlı rulet piroq",
+    "description": "Təzə almalar və ətirli darçınla hazırlanan yumşaq peçenye piroq.",
     "category": "Şirniyyat",
     "prepTime": 50,
     "difficulty": "Orta",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Yumurta və şəkər tozunu ağaranadək çalın.\n2. Üzərinə un, qabartma tozu və əridilmiş kərə yağı əlavə edib qarışdırın.\n3. Almaların qabığını soyub dilimləyin və xəmirə qatın.\n4. Darçın səpib sobada bişirin.",
+    "instructions": "1. Yumurta və şəkər tozunu ağaranadək çalın, üzərinə qatıq və yağ əlavə edin.\n2. Un və qabartma tozunu qataraq xəmir yoğurun.\n3. Almaları soyub sürtgəcdən keçirin, darçınla qarışdırıb xəmirin evinə yayın.\n4. Rulet şəklində büküb sobada bişirin.",
     "ingredients": [
+      {
+        "name": "Un",
+        "quantity": "2.5",
+        "unit": "stəkan"
+      },
       {
         "name": "Alma",
         "quantity": "3",
@@ -20561,7 +18135,7 @@
       },
       {
         "name": "Yumurta",
-        "quantity": "3",
+        "quantity": "2",
         "unit": "ədəd"
       },
       {
@@ -20570,14 +18144,9 @@
         "unit": "stəkan"
       },
       {
-        "name": "Un",
-        "quantity": "2",
+        "name": "Qatıq",
+        "quantity": "0.5",
         "unit": "stəkan"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
       },
       {
         "name": "Darçın",
@@ -20587,7 +18156,7 @@
       {
         "name": "Qabartma tozu",
         "quantity": "1",
-        "unit": "paket"
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -20737,19 +18306,24 @@
     ]
   },
   {
-    "name": "Pendirli bişmiş kökə",
-    "description": "Sobada bişmiş, ətirli və pendirli yumşaq səhər kökəsi.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 30,
-    "difficulty": "Asan",
+    "name": "Pendirli bişmiş kökələr",
+    "description": "Səhər yeməyi və ya çay üçün duzlu kökələr.",
+    "category": "Qəlyanaltı",
+    "prepTime": 25,
+    "difficulty": "Orta",
     "imageResource": "",
     "videoUrl": "",
-    "instructions": "1. Qatıq, yumurta, ərinmiş kərə yağı və duzu bir qabda qarışdırın.\n2. Sürtgəcdən keçirilmiş pendir və unu əlavə edib yumşaq xəmir yoğurun.\n3. Xəmirdən kiçik kündələr düzəldib üzərinə yumurta sarısı sürtün.\n4. 180 dərəcə qızdırılmış sobada qızarana qədər bişirin.",
+    "instructions": "1. Qaba qatıq, yumurta, əridilmiş yağ və duz əlavə edib qarışdırın.\n2. Sürtgəcdən keçirilmiş pendir və unu əlavə edib yumşaq xəmir yoğurun.\n3. Xəmirdən kiçik kündələr düzəldib kökə forması verin.\n4. Sobanın sinisinə düzün.\n5. Üzərinə yumurta sarısı sürtüb qızılı rəng alanadək bişirin.",
     "ingredients": [
       {
-        "name": "Qatıq",
-        "quantity": "1",
+        "name": "Un",
+        "quantity": "2",
         "unit": "stəkan"
+      },
+      {
+        "name": "Qatıq",
+        "quantity": "150",
+        "unit": "qram"
       },
       {
         "name": "Yumurta",
@@ -20762,14 +18336,14 @@
         "unit": "qram"
       },
       {
-        "name": "Un",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
         "name": "Kərə yağı",
         "quantity": "50",
         "unit": "qram"
+      },
+      {
+        "name": "Duz",
+        "quantity": "0.5",
+        "unit": "çay qaşığı"
       }
     ]
   },
@@ -20954,38 +18528,6 @@
     ]
   },
   {
-    "name": "Toyuq bulyonlu vermeşel şorbası",
-    "description": "Yüngül və ətirli toyuq şorbası.",
-    "category": "Şorba",
-    "prepTime": 35,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini suda qaynadıb bulyon əldə edin və əti didikləyin.\n2. Bulyona sürtgəcdən keçirilmiş yerkökü əlavə edin.\n3. Vermeşel əlavə edib bişməyə qoyun.\n4. Didiklənilən toyuq əti və duz əlavə edib ocaqdan götürün.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Vermeşel",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Yerkökü",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Yerkökü və qoz salatı",
     "description": "Faydalı və dadlı yerkökü salatı.",
     "category": "Salat",
@@ -21164,33 +18706,6 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Alça kompotu",
-    "description": "Təzə alçadan hazırlanan sərinləşdirici ev kompotu.",
-    "category": "İçki",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Alçaları yuyub qazana tökün.\n2. Su və şəkər tozu əlavə edib qaynamağa qoyun.\n3. Qaynadıqdan sonra soyudub soyuq halda süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Alça",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Su",
-        "quantity": "1",
-        "unit": "litr"
       }
     ]
   },
@@ -21436,38 +18951,6 @@
     ]
   },
   {
-    "name": "Balıq Qızartması Souslu",
-    "description": "Xırtıldayan balıq dilimləri və xüsusi sarımsaqlı sous ilə.",
-    "category": "Əsas Yemək",
-    "prepTime": 30,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Balıq təmizlənir, hissələrə bölünür və duzlanıb unlanır.\n2. Qızmar yağda hər iki üzü qızardılır.\n3. Sarımsaq və göyərtilərdən ibarət sous hazırlanıb balığın üzərinə çəkilir.",
-    "ingredients": [
-      {
-        "name": "Balıq",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Un",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "100",
-        "unit": "ml"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      }
-    ]
-  },
-  {
     "name": "Toyuq Əti ilə Kahı Salatası",
     "description": "Təzə kahı və toyuq filesinin yüngül sousla qarışığı.",
     "category": "Salat",
@@ -21494,38 +18977,6 @@
       },
       {
         "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Toyuq və Göyərti Salatası",
-    "description": "Bol göyərtili və vitaminli toyuq salatı.",
-    "category": "Salat",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Bişmiş toyuq əti xırda liflərə ayrılır.\n2. Göyərtilər yuyulub doğranır.\n3. Qaba yığılıb duz və xama ilə qarışdırılır.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Göy soğanı",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Şüyüd",
-        "quantity": "0.5",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Xama",
         "quantity": "3",
         "unit": "xörək qaşığı"
       }
@@ -21592,38 +19043,6 @@
         "name": "Mayonez",
         "quantity": "2",
         "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Bolqar Bibəri Salatası",
-    "description": "Rəngbərəng bibərlərdən hazırlanan təravətli salat.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Bolqar bibərləri uzunsov incə doğranır.\n2. Üzərinə qırmızı soğan halqa şəkildə əlavə edilir.\n3. Zeytun yağı, sirkə və duz ilə soslanılır.",
-    "ingredients": [
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qırmızı soğan",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Sirkə",
-        "quantity": "1",
-        "unit": "çay qaşığı"
       }
     ]
   },
@@ -21788,38 +19207,6 @@
     ]
   },
   {
-    "name": "Kök və Qoz Salatı",
-    "description": "Faydalı və dadlı yerkökü salatı",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kökləri təmizləyib sürtgəcdən keçirin.\n2. Üzərinə döyülmüş qoz əlavə edin.\n3. Mayonez və duz qataraq qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Kök",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "40",
-        "unit": "qram"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Qayğanaq ruleti",
     "description": "Göyərtili və pendirli maraqlı səhər yeməyi.",
     "category": "Səhər Yeməyi",
@@ -21885,43 +19272,6 @@
         "name": "Şəkər pudrası",
         "quantity": "2",
         "unit": "xörək qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Üzümlü plov",
-    "description": "Şirin quru üzüm və ət ilə hazırlanan bayram plovu.",
-    "category": "Əsas Yemək",
-    "prepTime": 80,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Dügünü suda bişirib süzün.\n2. Quru üzümü kərə yağında yüngülcə qovurun.\n3. Qazanın dibinə qazmaq qoyub düyü və üzümü qatlayaraq dəmə qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Kişmiş",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Zəfəran",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
       }
     ]
   },
@@ -22054,38 +19404,6 @@
       {
         "name": "Qara bibər",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Kələm Salatası",
-    "description": "Vitaminli kələm salatı",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kələmi nazik doğrayın.\n2. Kökü sürtgəcdən keçirin.\n3. Yağ və duz əlavə edin.",
-    "ingredients": [
-      {
-        "name": "Kələm",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Kök",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bitki yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
@@ -22472,38 +19790,6 @@
     ]
   },
   {
-    "name": "Qatıqlı omlet",
-    "description": "Qatıqla zənginləşdirilmiş dadlı və yumşaq səhər omleti.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 10,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Yumurtaları dərin qaba sındırıb qatıq və duz ilə çırpın.\n2. Tavada kərə yağını qızdırın.\n3. Qarışığı tavaya töküb zəif odda hər iki üzünü qızardın.",
-    "ingredients": [
-      {
-        "name": "Yumurta",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Qatıq",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "20",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çimdik"
-      }
-    ]
-  },
-  {
     "name": "Səhər kəsmik sıyığı",
     "description": "Kəsmik və süd ilə hazırlanan faydalı səhər yeməyi.",
     "category": "Səhər Yeməyi",
@@ -22585,28 +19871,6 @@
       {
         "name": "Duz",
         "quantity": "2",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Xama və Bal",
-    "description": "Təbii kənd xaması və balın klassik səhər təam birləşməsi.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 5,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kiçik kasa içərisinə xamanı qoyun.\n2. Xamanın üzərinə süzmə balı əlavə edin.\n3. İstəyə görə qarışdırmadan təzə çörəklə yeyin.",
-    "ingredients": [
-      {
-        "name": "Xama",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Bal",
-        "quantity": "50",
         "unit": "qram"
       }
     ]
@@ -22790,48 +20054,6 @@
     ]
   },
   {
-    "name": "Kartoflu ev sayağı küftə",
-    "description": "Ət və kartofun mükəmməl uyğunluğu ilə hazırlanan isti yemək.",
-    "category": "Əsas Yemək",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Çəkilmiş əti soğan və duz-istiotla yoğurub kiçik küftələr düzəldin.\n2. Kartof və soğanı təmizləyib iri doğrayın.\n3. Qazanda su qaynabsın, əvvəlcə kartofları əlavə edin.\n4. Qaynamağa başlayanda küftələri suya salın.\n5. Yemək bişənə qədər zəif odda qaynadın, üzərinə göyərti səpib süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Çəkilmiş mal əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "4",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Su",
-        "quantity": "1.2",
-        "unit": "litr"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "0.3",
-        "unit": "dəstə"
-      }
-    ]
-  },
-  {
     "name": "Qovrulmuş pendirli çörək ruleti",
     "description": "Səhər yeməyi və çay üçün dadlı qəlyanaltı.",
     "category": "Qəlyanaltı",
@@ -22906,48 +20128,6 @@
     ]
   },
   {
-    "name": "Kahı və göyərti salatı",
-    "description": "Vitaminlərlə zəngin yüngül yaşıl salat.",
-    "category": "Salat",
-    "prepTime": 15,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kahı yarpaqlarını yuyub əllə iri parçalara doğrayın.\n2. Göyərtiləri xırda doğrayın.\n3. Yaşıl soğanı halqa şəklində kəsin.\n4. Hamısını salat qabına qoyun.\n5. Duz, zeytun yağı və limon suyu əlavə edib qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Kahı",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Göyərti",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Yaşıl soğan",
-        "quantity": "1",
-        "unit": "dəstə"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Limon suyu",
-        "quantity": "1",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Qovrulmuş duzlu noxud",
     "description": "Çay süfrəsi və ya istirahət üçün qəlyanaltı.",
     "category": "Qəlyanaltı",
@@ -23012,48 +20192,6 @@
       {
         "name": "Duz",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Pendirli bişmiş kökələr",
-    "description": "Səhər yeməyi və ya çay üçün duzlu kökələr.",
-    "category": "Qəlyanaltı",
-    "prepTime": 25,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Qaba qatıq, yumurta, əridilmiş yağ və duz əlavə edib qarışdırın.\n2. Sürtgəcdən keçirilmiş pendir və unu əlavə edib yumşaq xəmir yoğurun.\n3. Xəmirdən kiçik kündələr düzəldib kökə forması verin.\n4. Sobanın sinisinə düzün.\n5. Üzərinə yumurta sarısı sürtüb qızılı rəng alanadək bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Qatıq",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pendir",
-        "quantity": "150",
-        "unit": "qram"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "50",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
@@ -23190,33 +20328,6 @@
         "name": "Qatıq",
         "quantity": "0.5",
         "unit": "stəkan"
-      }
-    ]
-  },
-  {
-    "name": "Kəsmikli Səhər Piroqu",
-    "description": "Səhər çayı ilə gözəl gedən yumşaq kəsmikli xəmərsiz yemək.",
-    "category": "Səhər Yeməyi",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kəsmiyi yumurta və şəkər tozu ilə qarışdırın.\n2. Formaya töküb sobaya qoyun.\n3. Üzü qızarana qədər bişirin.",
-    "ingredients": [
-      {
-        "name": "Kəsmik",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
       }
     ]
   },
@@ -23659,43 +20770,6 @@
     ]
   },
   {
-    "description": "Düyü və ət tikələri ilə zənginləşdirilmiş şorba.",
-    "instructions": "1. Ət tikələrini suda qaynadın.\n2. Yuyulmuş düyü və doğranmış kartof əlavə edin.\n3. Tərəvəzlər bişənə qədər zəif odda bişirin.\n4. Duz əlavə edib oddan götürün.",
-    "imageResource": "",
-    "videoUrl": "",
-    "category": "Şorba",
-    "name": "Mal ətli və düyülü şorba",
-    "prepTime": 45,
-    "difficulty": "Orta",
-    "ingredients": [
-      {
-        "unit": "qram",
-        "name": "Mal əti",
-        "quantity": "300"
-      },
-      {
-        "unit": "stəkan",
-        "name": "Düyü",
-        "quantity": "0.5"
-      },
-      {
-        "unit": "ədəd",
-        "name": "Kartof",
-        "quantity": "2"
-      },
-      {
-        "unit": "stəkan",
-        "name": "Su",
-        "quantity": "5"
-      },
-      {
-        "unit": "çay qaşığı",
-        "name": "Duz",
-        "quantity": "1"
-      }
-    ]
-  },
-  {
     "name": "Kartof qızartması soğanla",
     "description": "Tavada soğanla qızardılmış dadlı kartof yeməyi.",
     "category": "Əsas Yemək",
@@ -24105,48 +21179,6 @@
     ]
   },
   {
-    "name": "Toyuq ətindən buğlama",
-    "description": "Öz buxarında və ədviyyatlı bulyonunda bişən yumşaq toyuq yeməyi.",
-    "category": "Əsas Yemək",
-    "prepTime": 50,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Toyuq ətini hissələrə bölün.\n2. Qazana soğan, pomidor və bibərləri qat-qat yığın, üzərinə toyuq ətini düzün.\n3. Bir stəkan su və kərə yağı əlavə edin.\n4. Qazanın qapağını bağlayıb zəif odda 40 dəqiqə bişirin.",
-    "ingredients": [
-      {
-        "name": "Toyuq əti",
-        "quantity": "700",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Pomidor",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Bolqar bibəri",
-        "quantity": "1",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "50",
-        "unit": "qram"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Düyülü və noxudlu toyuq şorbası",
     "description": "Toyuq bulyonunda bişən, noxud və düyü ilə zəngin isti şorba.",
     "category": "Şorba",
@@ -24384,53 +21416,6 @@
     ]
   },
   {
-    "name": "Alma və darçınlı rulet piroq",
-    "description": "Təzə almalar və ətirli darçınla hazırlanan yumşaq peçenye piroq.",
-    "category": "Şirniyyat",
-    "prepTime": 50,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Yumurta və şəkər tozunu ağaranadək çalın, üzərinə qatıq və yağ əlavə edin.\n2. Un və qabartma tozunu qataraq xəmir yoğurun.\n3. Almaları soyub sürtgəcdən keçirin, darçınla qarışdırıb xəmirin evinə yayın.\n4. Rulet şəklində büküb sobada bişirin.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "2.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Alma",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Qatıq",
-        "quantity": "0.5",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Darçın",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Qabartma tozu",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
     "name": "Toyuq əti ilə dən şorbası",
     "description": "Yarma və quş ətindən hazırlanan şəfaverici ev şorbası.",
     "category": "Şorba",
@@ -24485,38 +21470,6 @@
       {
         "name": "Kartof",
         "quantity": "2",
-        "unit": "ədəd"
-      }
-    ]
-  },
-  {
-    "name": "Turşməzə gavalı şorbası",
-    "description": "Fərqli dadı ilə seçilən meyvəli ət şorbası.",
-    "category": "Şorba",
-    "prepTime": 60,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Mal ətini tikələrə doğrayıb suda bişirin.\n2. Quru gavalıları yuyub ətə qatın.\n3. Kartof və soğanı əlavə edib bişməyə davam edin.\n4. Duz, istiot və nanə qurusu əlavə edib süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Mal əti",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Gavalı qurusu",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Kartof",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
         "unit": "ədəd"
       }
     ]
@@ -24653,65 +21606,6 @@
         "name": "Sarımsaq",
         "quantity": "2",
         "unit": "diş"
-      }
-    ]
-  },
-  {
-    "name": "Quzu ətindən noxudlu plov",
-    "description": "Azərbaycan mətbəxinin şah əsərlərindən olan ətli plov növü.",
-    "category": "Əsas Yemək",
-    "prepTime": 120,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda isladın.\n2. Quzu ətini və noxudu ayrıca bişirin.\n3. Düyünü qaynayan suda yarıbişmiş vəziyyətə gətirib süzün.\n4. Qazana qazmaq qoyub üzərini düyü, ət və noxudla qatlayaraq dəmə qoyun.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "2",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Quzu əti",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Noxud",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
-    "name": "Can ətindən soğanlı qovurma",
-    "description": "Şirəli və ləzzətli ənənəvi ət qovurması.",
-    "category": "Əsas Yemək",
-    "prepTime": 60,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Can ətini xırda kubiklərə doğrayın.\n2. Qazanda əti öz suyunda bişənə qədər qovurun.\n3. Soğanları yarımhalqa şəklində doğrayıb ətə əlavə edin.\n4. Kərə yağı, duz və istiot vurub qızılı rəng alanadək qovurun.",
-    "ingredients": [
-      {
-        "name": "Can əti",
-        "quantity": "600",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "80",
-        "unit": "qram"
       }
     ]
   },
@@ -24866,38 +21760,6 @@
     ]
   },
   {
-    "name": "Paytaxt salatı klassik",
-    "description": "Kartof, kök və ət ilə hazırlanan bayram salatı.",
-    "category": "Salat",
-    "prepTime": 40,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Kartof, kök və yumurtanı bişirib kubik doğrayın.\n2. Turşu xiyar və əti də eyni formada doğrayın.\n3. Yaşıl noxud və mayonez əlavə edib qarışdırın.",
-    "ingredients": [
-      {
-        "name": "Kartof",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kök",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Yumurta",
-        "quantity": "3",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Mayonez",
-        "quantity": "150",
-        "unit": "qram"
-      }
-    ]
-  },
-  {
     "description": "Dadlı və faydalı manna sıyığı",
     "instructions": "1. Qazana süd töküb qızdırın.\n2. Süd qızınca manna yarmasını asta-asta səpələyin.\n3. Dayanmadan qarışdıraraq qatılaşana qədər bişirin.\n4. Şəkər tozu və duz əlavə edin.\n5. Süfrəyə verərkən üzərinə kərə yağı qoyun.",
     "imageResource": "",
@@ -24926,43 +21788,6 @@
         "unit": "qram",
         "name": "Kərə yağı",
         "quantity": "20"
-      }
-    ]
-  },
-  {
-    "name": "Balqabaqlı qutab",
-    "description": "Ənənəvi Azərbaycan qutabının balqabaqla hazırlanan növü.",
-    "category": "Qəlyanaltı",
-    "prepTime": 40,
-    "difficulty": "Orta",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Un, su və duzdan xəmir yoğurun və kündələrə ayırın.\n2. Balqabağı təmizləyib sürtgəcdən keçirin, soğanla birlikdə az yağda qovurun.\n3. Kündələri nazik açıb içlik qoyun və aypara şəklində bükün.\n4. Quru tav hər iki tərəfini qızardın.",
-    "ingredients": [
-      {
-        "name": "Un",
-        "quantity": "3",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Duz",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      },
-      {
-        "name": "Balqabaq",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "1",
-        "unit": "ədəd"
       }
     ]
   },
@@ -25000,70 +21825,6 @@
         "name": "Duz",
         "quantity": "1",
         "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Quzu əti ilə plov",
-    "description": "Şah plovun əsasını təşkil edən quzu ətli plov.",
-    "category": "Əsas Yemək",
-    "prepTime": 90,
-    "difficulty": "Çətin",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Düyünü duzlu suda isladıb qaynadın və süzün.\n2. Quzu ətini tikələrə doğrayıb soğanla qovurun.\n3. Qazanın dibinə qazmaq qoyub düyü və əti qat-qat yığın.\n4. Zəfəran dəmləyib üzərinə tökün və zəif odda dəmləyin.",
-    "ingredients": [
-      {
-        "name": "Düyü",
-        "quantity": "3",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Quzu əti",
-        "quantity": "700",
-        "unit": "qram"
-      },
-      {
-        "name": "Soğan",
-        "quantity": "2",
-        "unit": "ədəd"
-      },
-      {
-        "name": "Kərə yağı",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Zəfəran",
-        "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Gavalı kompotu",
-    "description": "Təravətləndirici gavalı kompotu.",
-    "category": "İçki",
-    "prepTime": 25,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Gavalını yuyub çəyirdəklərini çıxarın.\n2. Qazana su və şəkər tozu əlavə edib qaynadi.\n3. Gavalını suya salıb 15 dəqiqə bişirin.\n4. Soyudub süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Gavalı",
-        "quantity": "400",
-        "unit": "qram"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "2",
-        "unit": "litr"
       }
     ]
   },
@@ -25211,33 +21972,6 @@
     ]
   },
   {
-    "name": "Qaysı Kompotu",
-    "description": "Təbii və sərinləşdirici qaysı meyvəsindən hazırlanan kompot.",
-    "category": "İçki",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. Qaysıları yaxşıca yuyub tumlarını çıxarın.\n2. Qazana su və şəkər tozu əlavə edib şərbət qaynadın.\n3. Qaysıları suya əlavə edib orta odda 15 dəqiqə bişirin.\n4. Soyutduqdan sonra stəkanlara tökərək süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "Qaysı",
-        "quantity": "500",
-        "unit": "qram"
-      },
-      {
-        "name": "Şəkər tozu",
-        "quantity": "1",
-        "unit": "stəkan"
-      },
-      {
-        "name": "Su",
-        "quantity": "2",
-        "unit": "litr"
-      }
-    ]
-  },
-  {
     "name": "Nanəli Limon Çayı",
     "description": "Təravətləndirici və sakitləşdirici isti içki.",
     "category": "İçki",
@@ -25349,48 +22083,6 @@
       {
         "name": "Duz",
         "quantity": "1",
-        "unit": "çay qaşığı"
-      }
-    ]
-  },
-  {
-    "name": "Qozlu və İspanaqlı Salat",
-    "description": "Təzə ispanaq yarpaqları, qoz ləpəsi və xüsusi sous ilə hazırlanan vitaminli salat.",
-    "category": "Salat",
-    "prepTime": 20,
-    "difficulty": "Asan",
-    "imageResource": "",
-    "videoUrl": "",
-    "instructions": "1. İspanaq yarpaqlarını təmizləyib yuyun və iri doğrayın.\n2. Qoz ləpəsini blenderdə xırdalayın.\n3. Sarımsağı əzin və zeytun yağı ilə limon suyu ilə qarışdırın.\n4. İspanaq və qozları qaba qoyub üzərinə hazırladığınız sousu tökün.\n5. Yaxşıca qarışdırıb süfrəyə verin.",
-    "ingredients": [
-      {
-        "name": "İspanaq",
-        "quantity": "300",
-        "unit": "qram"
-      },
-      {
-        "name": "Qoz",
-        "quantity": "100",
-        "unit": "qram"
-      },
-      {
-        "name": "Sarımsaq",
-        "quantity": "2",
-        "unit": "diş"
-      },
-      {
-        "name": "Zeytun yağı",
-        "quantity": "3",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Limon suyu",
-        "quantity": "2",
-        "unit": "xörək qaşığı"
-      },
-      {
-        "name": "Duz",
-        "quantity": "0.5",
         "unit": "çay qaşığı"
       }
     ]
