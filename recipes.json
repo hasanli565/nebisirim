@@ -754,7 +754,7 @@
     "category": "Əsas Yemək",
     "prepTime": 90,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-eti-ile-noxudlu-plov.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda isladın.\n2. Quzu ətini noxud və soğanla birlikdə yumşalana qədər ayrıca bişirin.\n3. Düyünü qaynayan suda bişirib süzün.\n4. Qazanın dibinə qazmaq üçün xəmir və ya lavaş sərin.\n5. Süzülmüş düyünü, əti, noxud və əridilmiş kərə yağını qazana qat-qat yığıb dəmə qoyun.",
     "ingredients": [
@@ -3177,7 +3177,7 @@
   {
     "description": "İçliyi kəsmiklə doldurulmuş nazik qızardılmış blinçiklər",
     "instructions": "1. Süd, yumurta, un, şəkər tozu və duzu qarışdıraraq duru xəmir hazırlayın.\n2. Tavada nazik blinçiklər bişirin.\n3. Kəsmiyi şəkər tozu və vanil ilə qarışdıraraq içlik hazırlayın.\n4. Hər blinçiyin ortasına kəsmik qoyub bükün.\n5. Kərə yağında hər iki üzünü qızardın.",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/kesmi-kli-blincik.png",
     "videoUrl": "",
     "category": "Səhər Yeməyi",
     "name": "Kəsmi̇kli̇ Blinçik",
@@ -4541,7 +4541,7 @@
     "category": "Şirniyyat",
     "prepTime": 50,
     "difficulty": "Orta",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/alma-ve-darcinli-rulet-piroq.png",
     "videoUrl": "",
     "instructions": "1. Yumurta və şəkər tozunu ağaranadək çalın, üzərinə qatıq və yağ əlavə edin.\n2. Un və qabartma tozunu qataraq xəmir yoğurun.\n3. Almaları soyub sürtgəcdən keçirin, darçınla qarışdırıb xəmirin evinə yayın.\n4. Rulet şəklində büküb sobada bişirin.",
     "ingredients": [
@@ -5100,7 +5100,7 @@
     "category": "İçki",
     "prepTime": 10,
     "difficulty": "Asan",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/limonlu-nane-cayi.png",
     "videoUrl": "",
     "instructions": "1. Çaynikə qara çay və təzə nanə yarpaqları tökün.\n2. Üzərinə qaynar su əlavə edib 10 dəqiqə dəmləyin.\n3. Stəkanlara süzüb limon dilimi əlavə edin.",
     "ingredients": [
@@ -5250,7 +5250,7 @@
     "category": "Əsas Yemək",
     "prepTime": 120,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/quzu-etinden-noxudlu-plov.png",
     "videoUrl": "",
     "instructions": "1. Düyünü duzlu suda isladın.\n2. Quzu ətini və noxudu ayrıca bişirin.\n3. Düyünü qaynayan suda yarıbişmiş vəziyyətə gətirib süzün.\n4. Qazana qazmaq qoyub üzərini düyü, ət və noxudla qatlayaraq dəmə qoyun.",
     "ingredients": [
@@ -5314,7 +5314,7 @@
     "category": "Əsas Yemək",
     "prepTime": 60,
     "difficulty": "Çətin",
-    "imageResource": "",
+    "imageResource": "https://raw.githubusercontent.com/hasanli565/nebisirim/main/images/dana-etinden-sac-i-cinde-qovurma.png",
     "videoUrl": "",
     "instructions": "1. Dana ətini xırda kubiklərə doğrayıb öz suyunda bişirin.\n2. Ət suyunu çəkdikdən sonra quyruq yağı əlavə edib qızardın.\n3. Üzərinə doğranmış soğanı, bibərləri və pomidorları əlavə edin.\n4. Tərəvəzlər yumşalana qədər bir yerdə qovurun.\n5. Duz və ədviyyatlar əlavə edib isti süfrəyə verin.",
     "ingredients": [
