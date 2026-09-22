@@ -1,27 +1,42 @@
 import json
 import re
 import shutil
-from difflib import SequenceMatcher
 from pathlib import Path
+from difflib import SequenceMatcher
 
 INPUT_FILE = Path("recipes.json")
 BACKUP_FILE = Path("recipes.backup.json")
 DUPLICATES_FILE = Path("duplicates.json")
-
-# Oxşarlıq hədləri
-NAME_THRESHOLD = 0.72
-CONTENT_THRESHOLD = 0.78
-VERY_SIMILAR_THRESHOLD = 0.88
+GROUPS_FILE = Path("similar_groups.json")
 
 
-def normalize_text(text):
-    """Mətni müqayisə üçün standartlaşdırır."""
+# ============================================================
+# AYARLAR
+# ============================================================
+
+# Ərzaqların neçə faizi eyni olmalıdır
+INGREDIENT_SIMILARITY = 0.65
+
+# Adların minimum oxşarlığı
+NAME_SIMILARITY = 0.55
+
+# Çox güclü ad uyğunluğu
+STRONG_NAME_SIMILARITY = 0.75
+
+# 1-2 əlavə ərzağa icazə
+MAX_EXTRA_INGREDIENTS = 2
+
+
+# ============================================================
+# NORMALİZASİYA
+# ============================================================
+
+def normalize(text):
     if not text:
         return ""
 
-    text = str(text).lower()
+    text = str(text).lower().strip()
 
-    # Azərbaycan hərflərini standartlaşdır
     replacements = {
         "ə": "e",
         "ı": "i",
@@ -35,131 +50,308 @@ def normalize_text(text):
     for old, new in replacements.items():
         text = text.replace(old, new)
 
-    # mötərizə və xüsusi işarələri sil
     text = re.sub(r"[^a-z0-9\s]", " ", text)
+    text = re.sub(r"\s+", " ", text)
 
-    # artıq boşluqları sil
-    text = re.sub(r"\s+", " ", text).strip()
-
-    return text
+    return text.strip()
 
 
-def words(text):
-    return set(normalize_text(text).split())
+# ============================================================
+# SÖZLƏR
+# ============================================================
+
+STOP_WORDS = {
+    "ve",
+    "ile",
+    "uchun",
+    "ucun",
+    "azerbaycan",
+    "azerbaycan",
+    "usulu",
+    "usulda",
+    "qaydasinda",
+    "qaydasında",
+    "ev",
+    "evde",
+    "evsayaqi",
+    "klassik",
+    "milli",
+    "dadli",
+    "lezzetli",
+    "asan",
+}
 
 
-def text_similarity(a, b):
-    a = normalize_text(a)
-    b = normalize_text(b)
+def word_set(text):
+    text = normalize(text)
+
+    result = set()
+
+    for word in text.split():
+
+        if len(word) <= 1:
+            continue
+
+        if word in STOP_WORDS:
+            continue
+
+        result.add(word)
+
+    return result
+
+
+# ============================================================
+# ADDAKI AÇAR SÖZLƏR
+# ============================================================
+
+DISH_WORDS = {
+    "levengi",
+    "dolma",
+    "plov",
+    "kabab",
+    "qutab",
+    "dushbere",
+    "dusbere",
+    "sorba",
+    "salat",
+    "kotlet",
+    "piti",
+    "buglama",
+    "qovurma",
+    "kuku",
+    "omlet",
+    "piroq",
+    "sirniyyat",
+    "keks",
+    "tort",
+    "kurabiye",
+    "pechenye",
+    "shor",
+    "ichki",
+}
+
+
+def dish_words(name):
+    words = word_set(name)
+    return words & DISH_WORDS
+
+
+# ============================================================
+# AD OXŞARLIĞI
+# ============================================================
+
+def name_similarity(name1, name2):
+
+    a = normalize(name1)
+    b = normalize(name2)
 
     if not a or not b:
-        return 0.0
+        return 0
 
-    return SequenceMatcher(None, a, b).ratio()
+    direct = SequenceMatcher(None, a, b).ratio()
 
-
-def word_similarity(a, b):
-    wa = words(a)
-    wb = words(b)
+    wa = word_set(name1)
+    wb = word_set(name2)
 
     if not wa or not wb:
-        return 0.0
+        return direct
 
-    intersection = len(wa & wb)
+    common = len(wa & wb)
     union = len(wa | wb)
 
-    return intersection / union if union else 0.0
+    jaccard = common / union if union else 0
+
+    return max(direct, jaccard)
 
 
-def ingredients_text(recipe):
+# ============================================================
+# ƏRZAQLAR
+# ============================================================
+
+def ingredient_names(recipe):
+
+    result = set()
+
     ingredients = recipe.get("ingredients", [])
 
-    result = []
-
     for item in ingredients:
+
         name = item.get("name", "")
-        quantity = item.get("quantity", "")
-        unit = item.get("unit", "")
 
-        result.append(
-            f"{name} {quantity} {unit}"
-        )
+        name = normalize(name)
 
-    return " ".join(result)
+        if not name:
+            continue
 
+        # Məsələn:
+        # "2 ədəd soğan" kimi gələn halları təmizləmək
+        name = re.sub(r"\d+", " ", name)
+        name = re.sub(r"\s+", " ", name).strip()
 
-def recipe_content(recipe):
-    return " ".join([
-        recipe.get("name", ""),
-        recipe.get("description", ""),
-        ingredients_text(recipe),
-        recipe.get("instructions", "")
-    ])
+        result.add(name)
+
+    return result
 
 
-def is_same_recipe(recipe1, recipe2):
-    name1 = recipe1.get("name", "")
-    name2 = recipe2.get("name", "")
+# ============================================================
+# ƏRZAQ OXŞARLIĞI
+# ============================================================
 
-    desc1 = recipe1.get("description", "")
-    desc2 = recipe2.get("description", "")
+def ingredient_similarity(recipe1, recipe2):
 
-    instr1 = recipe1.get("instructions", "")
-    instr2 = recipe2.get("instructions", "")
+    a = ingredient_names(recipe1)
+    b = ingredient_names(recipe2)
 
-    ing1 = ingredients_text(recipe1)
-    ing2 = ingredients_text(recipe2)
+    if not a or not b:
+        return 0, 0, 0
 
-    # Ad oxşarlığı
-    name_sim = text_similarity(name1, name2)
-    name_word_sim = word_similarity(name1, name2)
+    common = a & b
 
-    # Tərkib oxşarlığı
-    ingredient_sim = max(
-        text_similarity(ing1, ing2),
-        word_similarity(ing1, ing2)
-    )
+    # kiçik dəstin neçə faizi böyük dəstdə var
+    smaller = min(len(a), len(b))
 
-    # Təlimat oxşarlığı
-    instruction_sim = text_similarity(instr1, instr2)
+    coverage = len(common) / smaller if smaller else 0
 
-    # Təsvir oxşarlığı
-    description_sim = text_similarity(desc1, desc2)
+    # Jaccard
+    union = a | b
 
-    # Çox güclü uyğunluq
-    if name_sim >= VERY_SIMILAR_THRESHOLD:
-        if ingredient_sim >= 0.65 or instruction_sim >= 0.70:
-            return True
+    jaccard = len(common) / len(union) if union else 0
 
-    # Adlar çox oxşardırsa və tərkib də oxşardırsa
-    if name_sim >= NAME_THRESHOLD or name_word_sim >= NAME_THRESHOLD:
-        if ingredient_sim >= CONTENT_THRESHOLD:
-            return True
+    extra = len(union) - len(common)
 
-        if instruction_sim >= CONTENT_THRESHOLD:
-            return True
+    return coverage, jaccard, extra
 
-    # Ad bir az fərqli olsa da bütün məzmun demək olar eynidirsə
-    content1 = recipe_content(recipe1)
-    content2 = recipe_content(recipe2)
 
-    overall_sim = text_similarity(content1, content2)
+# ============================================================
+# ƏRZAQ ADLARINI YAXIN SAYMA
+# ============================================================
 
-    if overall_sim >= VERY_SIMILAR_THRESHOLD:
+def ingredients_semantically_similar(a, b):
+
+    if a == b:
         return True
 
-    # Ad fərqlidir, amma tərkib + hazırlanma qaydası eynidir
-    if ingredient_sim >= 0.90 and instruction_sim >= 0.80:
+    similarity = SequenceMatcher(None, a, b).ratio()
+
+    if similarity >= 0.82:
+        return True
+
+    # bəzi sözlər bir-birinin variantıdır
+    aliases = {
+        ("lavaşana", "alca tursusu"),
+        ("alca tursusu", "lavaşana"),
+        ("duz", "qaya duzu"),
+        ("yag", "kərə yagi"),
+        ("bitki yagi", "yag"),
+    }
+
+    if (a, b) in aliases:
         return True
 
     return False
 
 
+def smart_ingredient_similarity(recipe1, recipe2):
+
+    a = ingredient_names(recipe1)
+    b = ingredient_names(recipe2)
+
+    if not a or not b:
+        return 0, 0
+
+    matched = 0
+
+    for ingredient_a in a:
+
+        found = False
+
+        for ingredient_b in b:
+
+            if ingredients_semantically_similar(
+                ingredient_a,
+                ingredient_b
+            ):
+                found = True
+                break
+
+        if found:
+            matched += 1
+
+    smaller = min(len(a), len(b))
+
+    coverage = matched / smaller if smaller else 0
+
+    return coverage, matched
+
+
+# ============================================================
+# RESEPTİN EYNİ OLUB-OLMAMASI
+# ============================================================
+
+def is_same_recipe(recipe1, recipe2):
+
+    name1 = recipe1.get("name", "")
+    name2 = recipe2.get("name", "")
+
+    name_sim = name_similarity(name1, name2)
+
+    ing_sim, matched = smart_ingredient_similarity(
+        recipe1,
+        recipe2
+    )
+
+    a = ingredient_names(recipe1)
+    b = ingredient_names(recipe2)
+
+    if not a or not b:
+        return False
+
+    total_difference = len(a | b) - matched
+
+    # --------------------------------------------------------
+    # 1. Ad çox oxşardır + ərzaqların böyük hissəsi eynidir
+    # --------------------------------------------------------
+
+    if name_sim >= NAME_SIMILARITY:
+
+        if ing_sim >= INGREDIENT_SIMILARITY:
+
+            if total_difference <= MAX_EXTRA_INGREDIENTS:
+                return True
+
+    # --------------------------------------------------------
+    # 2. Ad çox güclü oxşardır
+    # --------------------------------------------------------
+
+    if name_sim >= STRONG_NAME_SIMILARITY:
+
+        if ing_sim >= 0.60:
+
+            if total_difference <= 3:
+                return True
+
+    # --------------------------------------------------------
+    # 3. Eyni əsas yemək sözü
+    # --------------------------------------------------------
+
+    dishes1 = dish_words(name1)
+    dishes2 = dish_words(name2)
+
+    if dishes1 and dishes2 and dishes1 & dishes2:
+
+        if ing_sim >= 0.75:
+
+            if total_difference <= 3:
+                return True
+
+    return False
+
+
+# ============================================================
+# SAXLANACAQ RESEPTİ SEÇ
+# ============================================================
+
 def recipe_score(recipe):
-    """
-    Eyni reseptlərdən hansını saxlamaq üçün keyfiyyət balı.
-    Daha dolğun resepti saxlamağa çalışırıq.
-    """
 
     score = 0
 
@@ -168,94 +360,186 @@ def recipe_score(recipe):
     instructions = recipe.get("instructions", "")
     ingredients = recipe.get("ingredients", [])
 
-    score += min(len(name), 80)
-    score += min(len(description), 200)
-    score += min(len(instructions), 600)
+    # Daha dolğun resept üstün olsun
+    score += len(name)
 
-    score += len(ingredients) * 20
+    score += min(len(description), 300)
 
+    score += min(len(instructions), 800)
+
+    score += len(ingredients) * 25
+
+    # Şəkilli resepti üstün tut
     if recipe.get("imageResource"):
-        score += 50
+        score += 100
 
+    # Videolu resepti üstün tut
     if recipe.get("videoUrl"):
-        score += 20
+        score += 30
 
     return score
 
 
+# ============================================================
+# ƏSAS
+# ============================================================
+
 def main():
 
     if not INPUT_FILE.exists():
+
         print("XETA: recipes.json tapilmadi!")
+
         return
 
-    print("recipes.json oxunur...")
+    print()
+    print("=" * 60)
+    print("RESEPT OXSARLIQ TEMIZLEME")
+    print("=" * 60)
+    print()
 
-    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    # JSON oxu
+    with open(
+        INPUT_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
         recipes = json.load(f)
 
     if not isinstance(recipes, list):
-        print("XETA: JSON siyahı formatında deyil!")
+
+        print("XETA: recipes.json siyahi formatinda deyil!")
+
         return
-
-    print(f"Ilkin resept sayi: {len(recipes)}")
-
-    # Backup
-    shutil.copy2(INPUT_FILE, BACKUP_FILE)
-    print(f"Backup yaradildi: {BACKUP_FILE}")
-
-    kept = []
-    duplicates = []
 
     total = len(recipes)
 
-    for i, recipe in enumerate(recipes):
+    print(f"Ilkin resept sayi: {total}")
 
-        is_duplicate = False
-        duplicate_of = None
+    # Backup
+    shutil.copy2(
+        INPUT_FILE,
+        BACKUP_FILE
+    )
 
-        for j, existing in enumerate(kept):
+    print(f"Backup yaradildi: {BACKUP_FILE}")
 
-            if is_same_recipe(recipe, existing):
+    kept = []
 
-                is_duplicate = True
-                duplicate_of = j
+    duplicates = []
+
+    similar_groups = []
+
+    processed = 0
+
+    # ========================================================
+    # RESEPTLƏRİ QRUPLA
+    # ========================================================
+
+    for recipe in recipes:
+
+        processed += 1
+
+        matched_index = None
+
+        # Artıq saxlanılan reseptlərlə müqayisə
+        for index, existing in enumerate(kept):
+
+            if is_same_recipe(
+                recipe,
+                existing
+            ):
+
+                matched_index = index
+
                 break
 
-        if is_duplicate:
+        # ====================================================
+        # OXSAR TAPILDI
+        # ====================================================
 
-            # Hansı daha dolğundursa onu saxla
-            existing = kept[duplicate_of]
+        if matched_index is not None:
 
-            current_score = recipe_score(recipe)
-            existing_score = recipe_score(existing)
+            existing = kept[matched_index]
 
-            if current_score > existing_score:
+            score_new = recipe_score(recipe)
+            score_old = recipe_score(existing)
+
+            # Yeni resept daha dolğundursa onu saxla
+            if score_new > score_old:
 
                 duplicates.append({
                     "removed": existing,
                     "kept": recipe,
-                    "reason": "Oxşar resept - daha dolğun versiya saxlanıldı"
+                    "reason": "Eyni esas resept, daha dolgun variant saxlanildi"
                 })
 
-                kept[duplicate_of] = recipe
+                kept[matched_index] = recipe
 
             else:
 
                 duplicates.append({
                     "removed": recipe,
                     "kept": existing,
-                    "reason": "Oxşar resept"
+                    "reason": "Eyni esas resept"
                 })
 
         else:
+
             kept.append(recipe)
 
-        if (i + 1) % 25 == 0 or i + 1 == total:
-            print(f"Yoxlanildi: {i + 1}/{total}")
+        if processed % 25 == 0 or processed == total:
 
-    # Əsas recipes.json
-    with open(INPUT_FILE, "w", encoding="utf-8") as f:
+            print(
+                f"Yoxlanildi: {processed}/{total} | "
+                f"Saxlanilib: {len(kept)} | "
+                f"Oxsar: {len(duplicates)}"
+            )
+
+    # ========================================================
+    # OXSAR QRUPLARI GÖSTƏR
+    # ========================================================
+
+    groups = {}
+
+    for item in duplicates:
+
+        kept_name = item["kept"].get(
+            "name",
+            ""
+        )
+
+        if kept_name not in groups:
+
+            groups[kept_name] = []
+
+        groups[kept_name].append(
+            item["removed"]
+        )
+
+    for kept_name, removed_list in groups.items():
+
+        group = {
+            "kept": kept_name,
+            "removed": [
+                item.get("name", "")
+                for item in removed_list
+            ]
+        }
+
+        similar_groups.append(group)
+
+    # ========================================================
+    # recipes.json YAZ
+    # ========================================================
+
+    with open(
+        INPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
         json.dump(
             kept,
             f,
@@ -263,8 +547,16 @@ def main():
             indent=2
         )
 
-    # Silinənlər
-    with open(DUPLICATES_FILE, "w", encoding="utf-8") as f:
+    # ========================================================
+    # duplicates.json
+    # ========================================================
+
+    with open(
+        DUPLICATES_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
         json.dump(
             duplicates,
             f,
@@ -272,16 +564,42 @@ def main():
             indent=2
         )
 
+    # ========================================================
+    # similar_groups.json
+    # ========================================================
+
+    with open(
+        GROUPS_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            similar_groups,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    # ========================================================
+    # NƏTİCƏ
+    # ========================================================
+
     print()
-    print("=" * 50)
+    print("=" * 60)
     print("HAZIRDIR")
-    print("=" * 50)
+    print("=" * 60)
+
     print(f"Ilkin resept sayi : {total}")
     print(f"Saxlanilan        : {len(kept)}")
     print(f"Silinen oxsar     : {len(duplicates)}")
-    print(f"Backup             : {BACKUP_FILE}")
-    print(f"Silinenler         : {DUPLICATES_FILE}")
-    print("=" * 50)
+    print()
+
+    print(f"Backup            : {BACKUP_FILE}")
+    print(f"Silinenler        : {DUPLICATES_FILE}")
+    print(f"Oxsar qruplar     : {GROUPS_FILE}")
+
+    print("=" * 60)
 
 
 if __name__ == "__main__":
